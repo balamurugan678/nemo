@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context" xmlns:oxm="http://www.springframework.org/schema/oxm"
+       xmlns:sws="http://www.springframework.org/schema/web-services"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd 
+    http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm.xsd 
+      http://www.springframework.org/schema/web-services http://www.springframework.org/schema/web-services/web-services.xsd">
+
+    <ctx:property-placeholder location="classpath:nemo-tfl-common.properties, classpath:nemo-mock-payment-gateway.properties"
+                              ignore-unresolvable="true"/>
+
+    <bean id="applicationProperties"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:nemo-tfl-common.properties</value>
+                <value>classpath:nemo-mock-payment-gateway.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <ctx:annotation-config/>
+
+    <ctx:component-scan
+            base-package="com.novacroft.nemo.mock_payment_gateway.cyber_source.application_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_payment_gateway.cyber_source.controller"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_payment_gateway.cyber_source.end_point"/>
+
+    <bean id="tilesViewResolver" class="com.novacroft.nemo.common.support.CachingUrlTilesViewResolver"/>
+
+    <bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/config/layouts.xml</value>
+                <value>/WEB-INF/tiles/config/pages.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="cyberSourcePostConfiguration"
+          class="com.novacroft.nemo.mock_payment_gateway.cyber_source.configuration.PostConfiguration">
+        <property name="postProfiles">
+            <list>
+                <bean class="com.novacroft.nemo.mock_payment_gateway.cyber_source.configuration.PostProfile">
+                    <property name="id" value="OOL2014_SA_SOP_DEV"/>
+                    <property name="name" value="OOL2014_SA_SOP_DEV"/>
+                    <property name="companyName" value="Transport for London"/>
+                    <property name="customResponseUrl" value="${onlinePaymentReplyUrl}"/>
+                    <property name="active" value="true"/>
+                </bean>
+                <bean class="com.novacroft.nemo.mock_payment_gateway.cyber_source.configuration.PostProfile">
+                    <property name="id" value="OOL2014_SA_SOP_DEV_1"/>
+                    <property name="name" value="OOL2014_SA_SOP_DEV_1"/>
+                    <property name="companyName" value="Transport for London"/>
+                    <property name="customResponseUrl" value="${innovatorPaymentReplyUrl}"/>
+                    <property name="active" value="true"/>
+                </bean>
+            </list>
+        </property>
+        <property name="postSecurity">
+            <bean class="com.novacroft.nemo.mock_payment_gateway.cyber_source.configuration.PostSecurity">
+                <property name="name" value="${securityKeyName}"/>
+                <property name="key" value="${securityKeyValue}"/>
+            </bean>
+        </property>
+    </bean>
+
+    <oxm:jaxb2-marshaller id="cyberSourceTransactionProcessorMarshaller">
+        <oxm:class-to-be-bound name="com.novacroft.cyber_source.web_service.model.transaction.RequestMessage"/>
+        <oxm:class-to-be-bound name="com.novacroft.cyber_source.web_service.model.transaction.ReplyMessage"/>
+    </oxm:jaxb2-marshaller>
+
+    <bean class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping"/>
+
+    <bean class="org.springframework.ws.server.endpoint.adapter.DefaultMethodEndpointAdapter">
+        <property name="methodArgumentResolvers" ref="methodProcessor"/>
+        <property name="methodReturnValueHandlers" ref="methodProcessor"/>
+    </bean>
+
+    <bean id="methodProcessor" class="org.springframework.ws.server.endpoint.adapter.method.MarshallingPayloadMethodProcessor">
+        <constructor-arg ref="cyberSourceTransactionProcessorMarshaller"/>
+    </bean>
+
+    <bean id="nemoUserContext" class="com.novacroft.nemo.common.support.NemoUserContextImpl">
+        <property name="userName" value="mock-payment-gateway"/>
+    </bean>
+
+    <sws:interceptors>
+        <bean class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor">
+            <property name="securementActions" value="UsernameToken"/>
+            <property name="securementUsername" value="${CyberSource.soap.merchantId}"/>
+            <property name="securementPassword" value="${CyberSource.soap.password}"/>
+            <property name="securementPasswordType" value="PasswordText"/>
+        </bean>
+    </sws:interceptors>
+
+</beans>

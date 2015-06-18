@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.42">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+content_installer.install('JourneyHistory.breadcrumb.link', 'Journey history');
+content_installer.install('JourneyHistory.title', 'Oyster journey history');
+content_installer.install('JourneyHistory.emailTravelStatements.heading', 'Journey history by email');
+content_installer.install('JourneyHistory.downloadStatement.heading', 'Download your journey history as');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

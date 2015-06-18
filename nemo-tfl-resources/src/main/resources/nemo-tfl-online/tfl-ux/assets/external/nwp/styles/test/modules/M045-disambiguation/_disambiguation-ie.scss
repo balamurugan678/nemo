@@ -1,0 +1,27 @@
+.lt-ie8 {
+
+  .disambiguation-box {
+    width: 29%;
+    .disambiguation-items {
+      margin-left: 0;
+      list-style: decimal inside none;
+    }
+    li {
+      margin-left: 0;
+      clear: both;
+      .small-icon {
+        display: none;
+      }
+      a {
+        padding-top: 0;
+      }
+    }
+    .map-markers {
+      display: none;
+    }
+    .place-name {
+      position: static;
+    }
+  }
+
+}

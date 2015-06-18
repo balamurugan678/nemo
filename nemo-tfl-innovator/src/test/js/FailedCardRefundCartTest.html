@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>content.js Unit Tests</title>
+    <link rel="stylesheet" href="../resources/qunit-1.12.0.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../resources/qunit-1.12.0.js"></script>
+<script src="../../main/webapp/scripts/jquery.min.js"></script>
+<script src="../../main/webapp/scripts/jquery-ui.js"></script>
+<script src="../../main/webapp/scripts/failedCardRefundCart.js"></script>
+
+<input id="dateOfRefund" type="text" />
+
+
+<script>
+    $(document).ready(function () {
+        var TEST_PAGE_NAME = "pageName";
+        var SHORT_DATE_PATTERN = "dd/mm/yyyy";
+        
+        module("adddatepickers");
+        test("should add date picker to dateOfRefund", function () {
+        	ok($("#dateOfRefund").datepicker("widget").is(":visible"));
+        });
+        
+        
+
+    });
+</script>
+</body>
+</html>

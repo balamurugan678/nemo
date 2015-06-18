@@ -1,0 +1,519 @@
+/**************************************************
+RAINBOW BOARD
+* Created: 19/02/2013
+* Pattern library URL: http://
+**************************************************/
+
+.rainbow-board {
+  display: none;
+  border-top: 1px solid $light-grey-border-colour;
+
+  .line-text {
+    padding: 5px 5px 5px 10px;
+
+    span {
+      @extend %new-johnson;
+      text-shadow: none;
+      font-weight: normal;
+      font-weight: normal;
+    }
+
+  }
+  .lines-wrapper {
+    width: 50%;
+  }
+
+  table tr {
+    background-color: #fff;
+  }
+  &.stations-status table .line-text {
+    background-color: $darker-subtle-grey;
+    color: $dark-grey;
+  }
+
+  td {
+    vertical-align: middle;
+    padding: 0;
+    height: 100%;
+
+  }
+  .service-status {
+    width: 50%;
+    background-color: #fff;
+    strong {
+      display: block
+    }
+    a {
+      display: block;
+      padding: 9px 25px 9px 10px;
+      height: 100%;
+      text-decoration: none;
+      position: relative;
+      min-height: 32px;
+    }
+  }
+  .info-dropdown {
+    display: none;
+  }
+  .status-toggle {
+    width: 20px;
+    position: absolute;
+    vertical-align: middle;
+    top: 50%;
+    margin-top: -10px;
+    float: right;
+    right: 5px;
+    span {
+      @include svg-icon(23, 1, $img-width: 20px, $img-height: 20px, $x-offset: -6px, $y-offset: -6px);
+    }
+  }
+  .selected {
+    &.has-disruption {
+      border-bottom: 0;
+    }
+    .status-toggle {
+      span {
+        @include svg-icon(24, 1, $img-width: 20px, $img-height: 20px, $x-offset: -6px, $y-offset: -6px);
+      }
+    }
+    + .info-dropdown {
+      background: $disruption-colour;
+      display: table-row;
+      .lt-ie8 & {
+        display: block;
+        zoom: 1;
+        position: relative;
+      }
+    }
+  }
+  caption, thead {
+    /*  display: none; 	not acessible by screen readers */
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .collapsed-lines {
+    display: none;
+  }
+
+  tr {
+    border-bottom: 1px solid $lighter-grey-border-colour;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  tbody ~ tbody tr:first-child {
+    border-top: 1px solid $lighter-grey-border-colour;
+  }
+  table {
+    position: relative;
+    &:first-child:before {
+      display: none;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      display: block;
+      background-color: $lighter-grey-border-colour;
+    }
+  }
+  .service-status {
+    color: $dark-grey;
+  }
+  .good-service-message {
+    position: relative;
+    padding: 9px 10px;
+  }
+  &.stations-status {
+    .line-text {
+      text-shadow: none;
+      font-weight: normal;
+    }
+  }
+  &.roads {
+    .tag {
+      border-right: 0px none;
+      width: 10px;
+      min-width: 10px;
+    }
+
+    .select-corridor {
+      .line-text {
+        background-color: $darker-subtle-grey;
+        color: $dark-grey;
+        text-shadow: none;
+        font-weight: normal;
+        width: 30%;
+        padding-left: 10px;
+      }
+    }
+    .service-status {
+      width: auto;
+    }
+    td {
+      cursor: pointer;
+      .has-disruption {
+        background: $disruption-colour;
+        > div {
+          position: relative;
+          height: 100%;
+        }
+      }
+    }
+    .disruption-info-link {
+      overflow: hidden;
+      &:after {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 1);
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -16px;
+        margin-right: -6px;
+      }
+    }
+    table tr td.line-text {
+      @include transition(background-color 0.3s);
+    }
+    table tr:hover {
+      td.line-text {
+        @include transition(none);
+        @include darken-hover-and-focus($darker-subtle-grey, 5%);
+      }
+    }
+  }
+  .road-disruption-colour-span {
+    width: 5px;
+  }
+  .re-plan-button {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #fff;
+    padding: 10px;
+    margin: 10px 0;
+    color: $darker-grey;
+    border: solid 1px $lighter-grey-border-colour;
+    border-bottom: solid 3px $light-grey-border-colour;
+    &:after {
+      @include svg-icon(21, 1);
+      position: absolute;
+      top: 5px;
+      right: 0;
+      content: "";
+    }
+    &:hover {
+      text-decoration: none;
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+  }
+  .close-disruption-info {
+    float: right;
+    margin-bottom: 10px;
+
+    .no-js & {
+      display: none;
+    }
+  }
+}
+
+.no-disruptions {
+  display: block;
+  padding: 10px;
+  background-color: $green-info-colour;
+  p {
+    margin-bottom: 0px;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.board-wrapper {
+  ~ .link-button {
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    margin-bottom: 0;
+  }
+  &.lines-status {
+    padding: 0;
+    border-bottom: 1px solid $lighter-grey-border-colour;
+    border-top: 1px solid $lighter-grey-border-colour;
+    .rainbow-board {
+      display: block;
+    }
+    .no-disruption {
+      display: table-row;
+    }
+    .service-status {
+      color: $dark-grey;
+      position: relative;
+      height: 100%;
+    }
+  }
+  .rainbow-board {
+    div.collapsed-lines {
+      display: block;
+      min-height: 60px;
+      border-bottom: 1px solid $lighter-grey-border-colour;
+      border-top: 0;
+      position: relative;
+      .line-text {
+        border-top: 1px solid $lighter-grey-border-colour;
+        &:first-child {
+          border-top: 0px;
+        }
+      }
+      .service-status {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        .vertical-center-message {
+          position: absolute;
+          top: 50%;
+          margin-top: -22px;
+        }
+      }
+    }
+
+    &.roads {
+      margin-top: 0;
+      .collapsed-lines {
+        display: table-row;
+      }
+      .tag {
+        display: none;
+
+        &.roads-a316 + .line-text {
+          background: $roads-a316;
+          color: #fff;
+        }
+        &.roads-a41 + .line-text {
+          background: $roads-a41;
+          color: #fff;
+        }
+        &.roads-a40 + .line-text {
+          background: $roads-a40;
+        }
+        &.roads-a23 + .line-text {
+          background: $roads-a23;
+        }
+        &.roads-a21 + .line-text {
+          background: $roads-a21;
+          color: #fff;
+        }
+        &.roads-a3 + .line-text {
+          background: $roads-a3;
+          color: #fff;
+        }
+        &.roads-a2 + .line-text {
+          background: $roads-a2;
+          color: #fff;
+        }
+        &.roads-a1 + .line-text {
+          background: $roads-a1;
+          color: #fff;
+        }
+        &.roads-a205 + .line-text, &.roads-south-circular-a205 + .line-text {
+          background: $roads-a205;
+          color: #fff;
+        }
+        &.roads-a406 + .line-text, &.roads-north-circular-a406 + .line-text {
+          background: $roads-a406;
+          color: #fff;
+        }
+        &.roads-a24 + .line-text {
+          background: $roads-a24;
+          color: #fff;
+        }
+        &.roads-a13 + .line-text {
+          background: $roads-a13;
+        }
+        &.roads-a12 + .line-text {
+          background: $roads-a12;
+          color: #fff;
+        }
+        &.roads-a10 + .line-text {
+          background: $roads-a10;
+          color: #fff;
+        }
+        &.roads-a4 + .line-text {
+          background: $roads-a4;
+        }
+        &.roads-a20 + .line-text {
+          background: $roads-a20;
+        }
+        &.roads-central-london, &.roads-central-london-red-routes {
+          + .line-text {
+            background: $roads-central-london;
+          }
+        }
+        &.roads-blackwall-tunnel + .line-text {
+          background: $roads-blackwall-tunnel;
+        }
+
+      }
+    }
+  }
+  .lines-wrapper {
+    padding: 0;
+    vertical-align: top;
+    .line-text {
+      display: block;
+      width: 100%;
+      height: 10px;
+    }
+  }
+  .no-disruption {
+    display: none;
+  }
+  .service-status {
+    a {
+      overflow: hidden;
+      @include transition(background-color 0.3s);
+      &:hover, &:focus {
+        @include custom-colour-hover-and-focus($jp-subtle-blue);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        right: 0;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 1);
+      }
+    }
+  }
+  .collapsed-lines {
+    a {
+      color: $dark-grey;
+      &:visited {
+        color: $dark-grey;
+      }
+    }
+  }
+  .status-toggle {
+    display: none;
+  }
+}
+
+.rainbow-board tr {
+  .has-disruption {
+    background-color: $disruption-colour;
+  }
+  td {
+    @include transition(background-color 0.3s);
+  }
+  &:hover, &:focus {
+    td {
+      @include transition(none);
+    }
+    td.service-status {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+    td.bakerloo {
+      @include darken-hover-and-focus($bakerloo-line-colour, 5%);
+    }
+    td.central {
+      @include darken-hover-and-focus($central-line-colour, 5%);
+    }
+    td.circle {
+      @include darken-hover-and-focus($circle-line-colour, 5%);
+    }
+    td.district {
+      @include darken-hover-and-focus($district-line-colour, 5%);
+    }
+    td.dlr, td.docklands, td.docklands-light-railway {
+      @include darken-hover-and-focus($dlr-colour, 5%);
+    }
+    td.hammersmith {
+      @include darken-hover-and-focus($hammersmith-line-colour, 5%);
+    }
+    td.jubilee {
+      @include darken-hover-and-focus($jubilee-line-colour, 5%);
+    }
+    td.metropolitan {
+      @include darken-hover-and-focus($metropolitan-line-colour, 5%);
+    }
+    td.northern {
+      @include darken-hover-and-focus($northern-line-colour, 5%);
+    }
+    td.overground {
+      @include darken-hover-and-focus($overground-colour, 5%);
+    }
+    td.piccadilly {
+      @include darken-hover-and-focus($piccadilly-line-colour, 5%);
+    }
+    td.victoria {
+      @include darken-hover-and-focus($victoria-line-colour, 5%);
+    }
+    td.waterloo {
+      @include darken-hover-and-focus($waterloo-line-colour, 5%);
+    }
+    td.tramlink1 {
+      @include darken-hover-and-focus($tram-route-one-colour, 5%);
+    }
+    td.tramlink2 {
+      @include darken-hover-and-focus($tram-route-two-colour, 5%);
+    }
+    td.tramlink3 {
+      @include darken-hover-and-focus($tram-route-three-colour, 5%);
+    }
+    td.tramlink4 {
+      @include darken-hover-and-focus($tram-route-four-colour, 5%);
+    }
+    td.rb1 {
+      @include darken-hover-and-focus($rivers-rb1, 5%);
+    }
+    td.rb2 {
+      @include darken-hover-and-focus($rivers-rb2, 5%);
+    }
+    td.rb3 {
+      @include darken-hover-and-focus($rivers-rb3, 5%);
+    }
+    td.rb4 {
+      @include darken-hover-and-focus($rivers-rb4, 5%);
+    }
+    td.rb5 {
+      @include darken-hover-and-focus($rivers-rb5, 5%);
+    }
+    td.rb6 {
+      @include darken-hover-and-focus($rivers-rb6, 5%);
+    }
+    td.city-cruises {
+      @include darken-hover-and-focus($rivers-city-cruises, 5%);
+    }
+    td.westminster-greenwich {
+      @include darken-hover-and-focus($rivers-westminster-greenwich, 5%);
+    }
+    td.westminster-st-katherines-circular {
+      @include darken-hover-and-focus($rivers-westminster-st-katherines-circular, 5%);
+    }
+    td.westminster-passenger-services-association, td.wetsminster-passenger-services-association {
+      @include darken-hover-and-focus($rivers-westminster-passenger-services-association, 5%);
+    }
+    td.woolwich-free-ferry {
+      @include darken-hover-and-focus($rivers-woolwich-free-ferry, 5%);
+    }
+    td.emirates {
+      @include darken-hover-and-focus($cable-car-colour, 5%);
+    }
+  }
+  &.has-disruption {
+    &:hover, &:focus {
+      td.service-status {
+        @include darken-hover-and-focus($disruption-colour, 5%);
+      }
+    }
+  }
+}
+
+.rainbow-board.stations-status tr:hover td.line-text {
+  @include darken-hover-and-focus($darker-subtle-grey, 5%);
+}

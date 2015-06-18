@@ -1,0 +1,30 @@
+﻿<% if (modeNames.length == 1 && modeNames[0] === "bus") { %>
+	<% if (stopLetter.length > 0 && stopLetter.length <= 3)  { %>
+		<% if (stopLetter.length == 1) { %>
+			<div aria-hidden="true" class="station-pin-single <%= chosen ? ' pin-chosen' : '' %> <%= highlighted ? ' pin-highlighted' : '' %> station-pin-single-mode-bus-with-letter<%= chosen ? '-chosen' : '' %><%= highlighted ? '-highlighted' : '' %><%= compassPoint ? ' station-pin-single-mode-bus-compass-' + compassPoint : '' %><%= onBusRoute ? ' on-bus-route' : '' %>"><%= stopLetter %></div>
+		<% } else if (stopLetter.length == 2) { %>
+			<div aria-hidden="true" class="station-pin-single <%= chosen ? ' pin-chosen' : '' %> <%= highlighted ? ' pin-highlighted' : '' %> station-pin-single-mode-bus-with-double-letter<%= chosen ? '-chosen' : '' %><%= highlighted ? '-highlighted' : '' %><%= compassPoint ? ' station-pin-single-mode-bus-compass-' + compassPoint : '' %><%= onBusRoute ? ' on-bus-route' : '' %>"><%= stopLetter %></div>
+		<% } else { %>
+			<div aria-hidden="true" class="station-pin-single <%= chosen ? ' pin-chosen' : '' %> <%= highlighted ? ' pin-highlighted' : '' %> station-pin-single-mode-bus-with-triple-letter<%= chosen ? '-chosen' : '' %><%= highlighted ? '-highlighted' : '' %><%= compassPoint ? ' station-pin-single-mode-bus-compass-' + compassPoint : '' %><%= onBusRoute ? ' on-bus-route' : '' %>"><%= stopLetter %></div>
+		<% } %>
+	<% } else { %>
+		<div aria-hidden="true" class="station-pin-single <%= chosen ? ' pin-chosen' : '' %> <%= highlighted ? ' pin-highlighted' : '' %> station-pin-single-mode-<%= modeNames[0] %><%= compassPoint ? ' station-pin-single-mode-bus-compass-' + compassPoint : '' %><%= onBusRoute ? ' on-bus-route' : '' %>"></div>
+	<% } %>
+	<% if (Object.keys(linesStartingOrStopping).length != 0) { %>
+	<div aria-hidden="true" class="bus-route-label <%= chosen ? ' pin-chosen' : '' %>">
+		<% $.each(linesStartingOrStopping, function (index, line) { %>
+			<%= line.lineName %>
+		<% }); %>
+	</div>
+	<% } %>
+<% } else { %>
+	<div aria-hidden="true" class="station-pin<%= highlighted ? ' station-pin-highlighted' : '' %><%= chosen ? ' pin-chosen' : '' %><%= hasLabel ? '' : ' no-label' %>">
+		<!--<div class="left-endcap"></div>-->
+		<div class="modes">
+			<% for(var index = 0; index < modeNames.length; index++) { %>
+			<div class="mode mode-<%= modeNames[index] %>"></div>
+			<% } %>
+		</div>
+		<div aria-hidden="true" class="label"><%= label %></div>
+	</div>
+<% } %>

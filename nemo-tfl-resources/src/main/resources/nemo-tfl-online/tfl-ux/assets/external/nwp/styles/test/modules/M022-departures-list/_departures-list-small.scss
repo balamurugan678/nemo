@@ -1,0 +1,64 @@
+/**************************************************
+	M022 - depeartures list
+
+* Author: Alex Faunt
+* Created: 23/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M022-departures-list
+
+**************************************************/
+.departures-list {
+  list-style-type: none;
+  margin: 0;
+
+  li {
+    border-top: 1px dotted $light-grey-border-colour;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+}
+
+.departure {
+
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 10px 70px 10px 20px;
+    position: relative;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 10px;
+      height: 40px;
+      width: 10px;
+      background-color: $light-grey-border-colour;
+    }
+
+    &:hover {
+      background-color: $jp-subtle-blue;
+      @include transition(background-color 0.3s);
+    }
+  }
+
+  .departure-headline {
+    color: $dark-grey;
+    margin: 0;
+  }
+
+  .departure-time {
+    color: #BB3300;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+  }
+
+  .calling-at {
+    color: $subtle-grey2;
+    margin: 0;
+  }
+}

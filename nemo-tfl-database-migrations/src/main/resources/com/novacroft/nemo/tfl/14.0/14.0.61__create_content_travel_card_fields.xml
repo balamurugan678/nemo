@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.61">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('discountType.mandatoryFieldEmpty.genericError', 'Discount type was not specified');
+				  content_installer.install('passengerType.mandatoryFieldEmpty.genericError', 'PassengerType was not specified');
+			   end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

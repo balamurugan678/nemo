@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="14.0.29" >
+	<sql splitStatements="false">
+            <![CDATA[
+BEGIN
+   content_installer.install('startdateolderthan56.error',  'Sorry, journey history start date can not be older than 56 days. Please choose different dates');
+   content_installer.install('datediffmorethan56.error',  'Sorry, journey history is not displayed for more than 56 days. Please choose different dates');
+   content_installer.install('greaterThanOrEqualCurrentDate.error',  'Sorry, journey history dates should be from past. Please choose different dates');
+END;
+]]>
+        </sql>
+	</changeSet>
+</databaseChangeLog>

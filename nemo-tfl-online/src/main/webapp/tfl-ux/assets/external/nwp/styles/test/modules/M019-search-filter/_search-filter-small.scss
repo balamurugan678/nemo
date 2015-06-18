@@ -1,0 +1,123 @@
+/**************************************************
+Search Filter
+
+* Author: J Boyle 
+* Created: 12/07/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C16+-+Search+filters
+
+**************************************************/
+.search-filter {
+  @extend %transparent-grey-bottom-border;
+  @include clearfix;
+  background-color: $subtle-grey;
+  margin-bottom: 20px;
+  padding: 10px 10px 20px 10px;
+  #search-filter-form {
+    position: relative;
+    padding-right: 52px;
+  }
+  &.bus {
+    margin-top: 0;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  /*.text-input {
+      float: left;
+      width: 80%;
+  }*/
+  .submit-button {
+    width: 42px;
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+  .plain-button {
+    margin-top: 10px;
+    display: inline-block;
+    width: 47.3%;
+    border: solid 1px $light-grey-border-colour;
+    color: $linkcolour;
+  }
+  .buttons-wrapper {
+    clear: both
+  }
+  &.without-box {
+    background-color: #fff;
+    padding: 0;
+    border: 0;
+  }
+  &.button-text-search {
+    /*.text-input {
+        width: 65%;
+    }
+    .submit-button {
+        width: 30%;
+    }*/
+    #search-filter-form {
+      position: relative;
+      padding-right: 80px;
+    }
+    .submit-button {
+      width: 70px;
+    }
+  }
+  .heading {
+    display: block;
+    margin-bottom: 4px;
+    > [class*=icon] {
+      float: left;
+      margin-left: -8px;
+    }
+    h3 {
+      float: left;
+      margin-bottom: 0;
+      padding-top: 8px;
+    }
+  }
+}
+
+.filter-by-box {
+  position: relative;
+
+  > .heading {
+    @extend %new-johnson-bold;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+  .reset-filters {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  .filter-box-wrap {
+    float: left;
+    width: 100%;
+    .selector {
+      width: 100%;
+    }
+    &:nth-child(odd) {
+      float: right;
+    }
+  }
+}
+
+.release-archive {
+  h2 {
+    border-bottom: 1px solid #A8A8A8;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    font-size: 34px;
+  }
+  .plain-button {
+    border: solid 1px #CCC;
+    border-top: none;
+    &:first-child {
+      border-top: solid 1px #CCC;
+    }
+  }
+}
+
+
+ 

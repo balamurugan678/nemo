@@ -1,0 +1,495 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.6.2 on 16-05-2014@04:05  by Creative*/
+.icon {
+    background-image: url("../assets/oyster/Sprite_V3_x2.png");
+    background-image: url("../assets/oyster/Sprite_V3.png") \9;
+    background-size: 96px 2624px;
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.icon.vertically-centred {
+    margin-top: -16px;
+}
+
+.home-icon {
+    background-position: -32px -96px;
+}
+
+.right-arrow {
+    background-position: 0px -640px;
+    right: 0;
+}
+
+.down-arrow {
+    background-position: 0px -672px;
+}
+
+.plus-icon {
+    background-position: 0px -704px;
+}
+
+.minus-icon {
+    background-position: 0px -736px;
+}
+
+.warning-icon {
+    background-position: 0px -832px;
+}
+
+.form-error-icon {
+    background-position: -32px -2528px;
+}
+
+.error-icon {
+    background-position: -32px -832px;
+}
+
+.autocompleted-icon {
+    background-position: -64px -1312px;
+}
+
+.capped-icon {
+    background-position: -64px -480px;
+}
+
+.expand-collapse-icon {
+    background-position: -32px -704px;
+}
+
+.expanded .expand-collapse-icon {
+    background-position: -32px -736px;
+}
+
+.oyster-icon {
+    background-position: -64px -448px;
+}
+
+.oyster-tap-icon {
+    background-position: -64px -416px;
+}
+
+.contactless-icon {
+    background-position: -64px -384px;
+}
+
+.oyster-card-icon {
+    background-position: 0px -1280px;
+}
+
+.to-icon {
+    background-position: -32px -1280px;
+}
+
+.card-icon {
+    background-position: -64px -1248px;
+}
+
+.calendar-icon {
+    background-position: -64px -1280px;
+}
+
+.tick-icon {
+    background-position: -32px -192px;
+}
+
+.document-icon {
+    background-position: -64px -192px;
+}
+
+.spreadsheet-icon {
+    background-position: -64px -160px;
+}
+
+.bullet-icon {
+    background-position: 0px -1152px;
+}
+
+.form-tooltip-icon {
+    background-position: -64px -352px;
+}
+
+.info-icon {
+    background-position: -64px -352px;
+}
+
+.tube-icon {
+    background-position: 0px -1056px;
+}
+
+.bus-icon {
+    background-position: 0px -320px;
+}
+
+.rail-icon {
+    background-position: 0px -352px;
+}
+
+.river-icon {
+    background-position: 0px -352px;
+}
+
+.dlr-icon {
+    background-position: 0px -352px;
+}
+
+.tram-icon {
+    background-position: 0px -352px;
+}
+
+.mail-icon {
+    background-position: -64px -1152px;
+}
+
+.phone-icon {
+    background-position: -64px -1216px;
+}
+
+.email-icon {
+    background-position: -64px -1184px;
+}
+
+.oyster-interchange-icon {
+    background-position: -32px -448px;
+}
+
+.manually-corrected-icon {
+    background-position: -32px -544px;
+}
+
+.info-i-icon {
+    background-position: -64px -1920px;
+}
+
+.cross-brushstroke-icon {
+    background-position: -64px -2528px;
+}
+
+.tick-brushstroke-icon {
+    background-position: 0px -2560px;
+}
+
+.lt-ie9 .breadcrumbs li.home a {
+    background-image: url("../assets/oyster/Sprite_V2_x2.png");
+    background-image: url("../assets/oyster/Sprite_V2.png") \9;
+    background-size: 96px 2624px;
+}
+
+.lt-ie9 .checkbox-list > ul > .oo-input-container.ticked > label:after {
+    background-image: url("../assets/oyster/Sprite_V3_x2.png");
+    background-image: url("../assets/oyster/Sprite_V3.png") \9;
+    background-size: 96px 2624px;
+    background-position: -3px -771px;
+}
+
+.lt-ie9 .selector {
+    background: none;
+    border: none;
+}
+
+.lt-ie9 .selector span {
+    display: none;
+}
+
+.lt-ie9 .selector select {
+    top: 0;
+    height: auto;
+    filter: alpha(opacity=100);
+    border: #cacaca solid 1px;
+    padding: 10px 0 5px 5px;
+}
+
+.lt-ie9 .hide-text {
+    line-height: 800%;
+    overflow: hidden;
+}
+
+.lt-ie9 .home .hide-text {
+    line-height: 150%;
+    overflow: hidden;
+}
+
+.lt-ie9 .form-control-wrap .form-element-accordian-control {
+    display: inline-block;
+}
+
+.lt-ie9 .oo-responsive-form .inline-form-controls .inline-input {
+    margin-right: 2px;
+}
+
+.lt-ie9 .checkbox-list label:after, .lt-ie9 .checkbox-list label:before, .lt-ie9 .styled-checkbox label:after, .lt-ie9 .styled-checkbox label:before, .lt-ie9 .radiobutton-list label:after, .lt-ie9 .radiobutton-list label:before, .lt-ie9 .checkbox-list .ticked label:after, .lt-ie9 .checkbox-list .ticked label:before, .lt-ie9 .styled-checkbox .ticked label:after, .lt-ie9 .styled-checkbox .ticked label:before, .lt-ie9 .radiobutton-list .ticked label:after, .lt-ie9 .radiobutton-list .ticked label:before {
+    content: none;
+    display: none;
+    background: none;
+}
+
+.lt-ie9 .checkbox-list label, .lt-ie9 .styled-checkbox label, .lt-ie9 .radiobutton-list label, .lt-ie9 .checkbox-list .ticked label, .lt-ie9 .styled-checkbox .ticked label, .lt-ie9 .radiobutton-list .ticked label {
+    position: relative;
+    width: 80%;
+    display: inline-block;
+    background-image: none;
+}
+
+.lt-ie9 .checkbox-list li, .lt-ie9 .styled-checkbox li, .lt-ie9 .radiobutton-list li, .lt-ie9 .checkbox-list .ticked li, .lt-ie9 .styled-checkbox .ticked li, .lt-ie9 .radiobutton-list .ticked li {
+    position: relative;
+    background: none;
+    margin: 0;
+}
+
+.lt-ie9 .checkbox-list input[type="checkbox"], .lt-ie9 .checkbox-list input[type="radio"], .lt-ie9 .styled-checkbox input[type="checkbox"], .lt-ie9 .styled-checkbox input[type="radio"], .lt-ie9 .radiobutton-list input[type="checkbox"], .lt-ie9 .radiobutton-list input[type="radio"], .lt-ie9 .checkbox-list .ticked input[type="checkbox"], .lt-ie9 .checkbox-list .ticked input[type="radio"], .lt-ie9 .styled-checkbox .ticked input[type="checkbox"], .lt-ie9 .styled-checkbox .ticked input[type="radio"], .lt-ie9 .radiobutton-list .ticked input[type="checkbox"], .lt-ie9 .radiobutton-list .ticked input[type="radio"] {
+    background: none;
+    filter: alpha(opactity=1);
+}
+
+.lt-ie9 .checkbox-list .instructional-container ol, .lt-ie9 .styled-checkbox .instructional-container ol, .lt-ie9 .radiobutton-list .instructional-container ol, .lt-ie9 .checkbox-list .ticked .instructional-container ol, .lt-ie9 .styled-checkbox .ticked .instructional-container ol, .lt-ie9 .radiobutton-list .ticked .instructional-container ol {
+    margin-left: 16px;
+}
+
+.lt-ie9 .checkbox-list .instructional-container ol li, .lt-ie9 .styled-checkbox .instructional-container ol li, .lt-ie9 .radiobutton-list .instructional-container ol li, .lt-ie9 .checkbox-list .ticked .instructional-container ol li, .lt-ie9 .styled-checkbox .ticked .instructional-container ol li, .lt-ie9 .radiobutton-list .ticked .instructional-container ol li {
+    list-style: decimal;
+}
+
+.lt-ie9 .checkbox-list .instructional-container ol li .item-content, .lt-ie9 .styled-checkbox .instructional-container ol li .item-content, .lt-ie9 .radiobutton-list .instructional-container ol li .item-content, .lt-ie9 .checkbox-list .ticked .instructional-container ol li .item-content, .lt-ie9 .styled-checkbox .ticked .instructional-container ol li .item-content, .lt-ie9 .radiobutton-list .ticked .instructional-container ol li .item-content {
+    margin-left: 0;
+}
+
+.lt-ie9 .checkbox-list .instructional-container ol li .item-content:before, .lt-ie9 .styled-checkbox .instructional-container ol li .item-content:before, .lt-ie9 .radiobutton-list .instructional-container ol li .item-content:before, .lt-ie9 .checkbox-list .ticked .instructional-container ol li .item-content:before, .lt-ie9 .styled-checkbox .ticked .instructional-container ol li .item-content:before, .lt-ie9 .radiobutton-list .ticked .instructional-container ol li .item-content:before {
+    content: none;
+}
+
+.lt-ie8 .form-progress.two-step .form-step {
+    width: 40%;
+}
+
+.lt-ie8 .form-progress.three-step .form-step {
+    width: 20%;
+}
+
+.lt-ie8 .form-progress.four-step .form-step {
+    width: 15%;
+}
+
+.lt-ie8 .form-progress.five-step .form-step {
+    width: 10%;
+}
+
+.lt-ie8 .form-progress .step-text {
+    position: absolute;
+    left: 10px;
+}
+
+.lt-ie8 .inline-header {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.lt-ie8 .link-boxes .link-box {
+    width: 49%;
+}
+
+.lt-ie8 .oo-journey-table-column {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.lt-ie8 .oo-journey-table-column .expandable-box {
+    position: relative;
+}
+
+.lt-ie8 .oo-journey-table-column .controls {
+    position: relative;
+}
+
+.lt-ie8 .oo-journey-table-column .oo-journey-table-column {
+    position: relative;
+}
+
+.lt-ie8 .oo-journey-table-column .link-open-table-content {
+    position: relative;
+}
+
+.lt-ie8 .expandable-box .controls.inline-side-control {
+    padding: 0;
+}
+
+.lt-ie8 .expandable-box .controls.inline-side-control.before {
+    background-position: -32px -704px;
+    content: "";
+    top: 50%;
+    position: absolute;
+    margin-top: -16px;
+    left: -7px;
+    background-image: url("../assets/oyster/Sprite_V3_x2.png");
+    background-image: url("../assets/oyster/Sprite_V3.png") \9;
+    background-size: 96px 2624px;
+    width: 32px;
+    height: 32px;
+    height: 40px;
+    top: 15px;
+    left: -35px;
+}
+
+.lt-ie8 .icon-column {
+    position: relative;
+}
+
+.lt-ie8 .icon-column .icon {
+    bottom: 0;
+}
+
+.lt-ie8 .csc-payment-row .csc-row-subtitle {
+    line-height: 21px;
+}
+
+.lt-ie8 .date-payment-summary {
+    position: relative;
+}
+
+.lt-ie8 .date-payment-summary .content {
+    position: relative;
+}
+
+.lt-ie8 .right-aligned {
+    position: relative;
+    bottom: 30px;
+    display: inline;
+}
+
+.lt-ie8 .form-step {
+    position: relative;
+    height: 22px;
+}
+
+.lt-ie8 .ticked-list li .content, .lt-ie8 .crossed-list li .content {
+    filter: alpha(opacity=100);
+    height: 21px;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.lt-ie8 .instructional-container ol li {
+    list-style: decimal;
+}
+
+.lt-ie8 .csc-time-and-icon .icon {
+    position: relative;
+    top: 3px;
+    left: 7px;
+}
+
+.lt-ie8 .card-summary {
+    position: relative;
+    width: 100%;
+}
+
+.lt-ie8 .oo-responsive-form .inline-form-controls .inline-input {
+    margin-right: 1px;
+}
+
+.lt-ie8 .oo-responsive-form .with-message .form-control {
+    display: inline;
+}
+
+.lt-ie8 .oo-responsive-form .expanded.with-message > .oo-tooltip-container {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.lt-ie8 .oo-responsive-form .message-wrapper.error-message {
+    display: inline-block;
+    *display: inline;
+    zoom: 1;
+}
+
+.lt-ie8 .oo-journey-table-column {
+    display: inline;
+}
+
+.lt-ie8 .oo-journey-table-column .right-arrow {
+    right: 0px;
+}
+
+.lt-ie8 .fc-calendar-wrapper {
+    height: 380px;
+    width: 320px;
+}
+
+.lt-ie8 .fc-calendar-wrapper .current-month {
+    width: 320px;
+    height: 40px;
+    position: relative;
+}
+
+.lt-ie8 .fc-calendar-wrapper .current-month .calendar-previous-month, .lt-ie8 .fc-calendar-wrapper .current-month .calendar-next-month {
+    color: white;
+    font-weight: bolder;
+}
+
+.lt-ie8 .fc-calendar-wrapper .current-month .calendar-month {
+    width: 100px;
+    height: 30px;
+    color: black;
+    filter: alpha(opactity=100);
+    display: inline-block;
+    text-align: top;
+}
+
+.lt-ie8 .fc-calendar-wrapper .current-month .calender-year {
+    text-align: top;
+    width: 50px;
+    height: 30px;
+    filter: alpha(opactity=100);
+    display: inline-block;
+}
+
+.lt-ie8 .fc-calendar-wrapper .fc-calendar {
+    height: 340px;
+    width: 320px;
+}
+
+.lt-ie8 .fc-calendar-wrapper .fc-calendar .fc-head {
+    width: 320px;
+    height: 44px;
+}
+
+.lt-ie8 .fc-calendar-wrapper .fc-calendar .fc-body .fc-row {
+    width: 320px;
+    height: 44px;
+}
+
+.lt-ie8 .fc-calendar-wrapper .fc-calendar .fc-body .fc-row .cell {
+    width: 44px;
+    height: 44px;
+}
+
+.lt-ie8 .fc-calendar-wrapper .fc-calendar .fc-body .fc-row .cell .fc-date {
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: -20px 0 0 -20px;
+}
+
+.lt-ie8 .expanded .start-hidden {
+    overflow: hidden;
+    position: relative;
+}
+
+.lt-ie8 .extra-form-options + .form-control-wrap {
+    position: relative;
+}
+
+.lt-ie8 .input-list .instructional-container > .content {
+    background-color: #eff6fd;
+}
+
+.lt-ie8 .card-images .highlight-number {
+    left: 120px;
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.46">
+        <insert schemaName="${schemaName}" tableName="EVENT">
+            <column name="ID" valueComputed="EVENT_SEQ.NEXTVAL"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="NAME" value="AdHocLoadRequested"/>
+            <column name="DESCRIPTION" value="Ad hoc load requested"/>
+            <column name="DISPLAYORDER" valueNumeric="99"/>
+            <column name="DISPLAYONLINE" valueNumeric="1"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        <insert schemaName="${schemaName}" tableName="EVENT">
+            <column name="ID" valueComputed="EVENT_SEQ.NEXTVAL"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="NAME" value="AdHocLoadReadyForPickUp"/>
+            <column name="DESCRIPTION" value="Ad hoc load ready for pick up"/>
+            <column name="DISPLAYORDER" valueNumeric="99"/>
+            <column name="DISPLAYONLINE" valueNumeric="1"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        <insert schemaName="${schemaName}" tableName="EVENT">
+            <column name="ID" valueComputed="EVENT_SEQ.NEXTVAL"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="NAME" value="AdHocLoadPickedUp"/>
+            <column name="DESCRIPTION" value="Ad hoc load picked up"/>
+            <column name="DISPLAYORDER" valueNumeric="99"/>
+            <column name="DISPLAYONLINE" valueNumeric="1"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        <insert schemaName="${schemaName}" tableName="EVENT">
+            <column name="ID" valueComputed="EVENT_SEQ.NEXTVAL"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="NAME" value="AdHocLoadPickUpWindowExpired"/>
+            <column name="DESCRIPTION" value="Ad hoc load pick up window expired"/>
+            <column name="DISPLAYORDER" valueNumeric="99"/>
+            <column name="DISPLAYONLINE" valueNumeric="1"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        <insert schemaName="${schemaName}" tableName="EVENT">
+            <column name="ID" valueComputed="EVENT_SEQ.NEXTVAL"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="NAME" value="AdHocLoadFailed"/>
+            <column name="DESCRIPTION" value="Ad hoc load failed"/>
+            <column name="DISPLAYORDER" valueNumeric="99"/>
+            <column name="DISPLAYONLINE" valueNumeric="1"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

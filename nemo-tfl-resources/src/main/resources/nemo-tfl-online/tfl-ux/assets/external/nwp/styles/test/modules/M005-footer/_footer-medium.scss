@@ -1,0 +1,95 @@
+/**************************************************
+	A3 Footer
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A3+-+Footer
+
+**************************************************/
+
+#footer {
+  .footer-links {
+    padding: 20px 0 10px;
+    @extend %c4;
+    background: none;
+    margin-bottom: 0;
+    li {
+      border-right: 1px solid $light-grey-border-colour;
+      &.social, &.choose-language {
+        border-right: none;
+      }
+    }
+  }
+  a.info-for-link {
+    cursor: default;
+    &:focus, &:hover {
+      h2.heading {
+        background-color: transparent;
+      }
+    }
+  }
+  h2.heading {
+    margin: 20px 0 0 0;
+    @extend %c8;
+    padding: 7px 0 7px 5%;
+    border: none;
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: default;
+    &:before {
+      display: none;
+    }
+  }
+  .expanded h2.heading:before {
+    display: none;
+  }
+  .info-for {
+    @extend %c8;
+    padding: 0 0 10px;
+    margin-bottom: 0;
+    background: none;
+    li {
+      display: block;
+      float: left;
+      @include nested(4, 8);
+      &:nth-child(2n) {
+        margin-left: 0;
+      }
+      padding: 7px 0;
+      border: none;
+
+      a {
+        display: inline;
+        padding: 0;
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .secondary-footer {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    ul {
+      li {
+        float: left;
+        margin: 0 1% 0 0;
+      }
+    }
+    span {
+      margin-top: 11px;
+      float: right;
+      display: block;
+    }
+  }
+
+  .footer-MOL-logo {
+    float: right;
+    width: auto;
+    //margin-bottom:20px;
+  }
+
+}
+

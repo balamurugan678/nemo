@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.2.03">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   content_installer.install('passengerType.label', 'Passenger Type');
+				   content_installer.install('discountType.label', 'Discount Type');
+				   content_installer.install('tradedTicket.passengerType.label', 'Traded ticket passenger Type');
+				   content_installer.install('tradedTicket.discountType.label', 'Traded ticket discount Type');
+				   
+				   content_installer.install('cartItemCmd.startDate.placeholder', 'Enter a date');
+				   content_installer.install('cartItemCmd.endDate.placeholder', 'Enter a date');
+				   content_installer.un_install('rate.label');
+				   content_installer.un_install('tradedTicket.rate.label');
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

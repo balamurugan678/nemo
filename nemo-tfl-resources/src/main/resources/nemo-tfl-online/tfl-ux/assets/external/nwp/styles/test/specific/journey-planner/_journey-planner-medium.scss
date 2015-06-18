@@ -1,0 +1,603 @@
+.journey-planner-results .journey-results .expandable-box .content {
+  margin-left: 0;
+}
+
+.expanded {
+  .journey-planner-promo {
+    display: none;
+  }
+}
+
+.journey-form {
+  background-color: transparent;
+}
+
+.jp-tab {
+  span {
+    &.description {
+      padding-left: 10px;
+      display: inline;
+    }
+  }
+}
+
+.journey-options {
+  .option {
+    width: 50%;
+    float: left;
+  }
+}
+
+.basic-journey-options {
+  padding: 0;
+  border-bottom: 0px none;
+}
+
+.journey-planner-start {
+  .basic-journey-options {
+    background-color: transparent;
+    margin: 0;
+  }
+}
+
+.journey-planner-results {
+  .basic-journey-options {
+    margin-left: $gridGutterWidth;
+    margin-right: $gridGutterWidth;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .hours-mins {
+    margin-top: 18px;
+  }
+}
+
+#plan-a-journey {
+  position: relative;
+  z-index: 200;
+  //float: left;
+  padding: 10px;
+  background-color: $subtle-grey;
+  width: 100%;
+  @extend %transparent-grey-bottom-border;
+}
+
+.journey-planner-results {
+  .toggle-options {
+    text-align: center;
+  }
+
+  #plan-a-journey {
+    padding: 10px 2% 0 2%;
+    .geolocation-box {
+      margin-bottom: 0;
+      &.clearfix:after {
+        clear: none;
+      }
+    }
+    label[for='From'], label[for='To'] {
+      @include nested(1, 12);
+      float: left;
+    }
+    label[for='From'] {
+      margin-left: 0;
+    }
+    #From, #To {
+      @include nested(5, 12);
+      float: left;
+      width: 100%;
+      //margin: 0 0 10px 0;
+    }
+    #From {
+      //width:87%;
+      margin: 0;
+    }
+    #To {
+      margin: 0;
+    }
+    .time-options {
+      margin: 3px 0 16px;
+      float: left;
+      width: 50%;
+      p {
+        width: 100%;
+        margin-left: 0;
+        padding-right: 60px;
+        margin-right: -60px;
+        strong {
+          display: block;
+          float: left;
+          width: 20.2%;
+          min-width: 65px;
+        }
+      }
+    }
+    .from-and-to {
+      float: left;
+      margin: 0 2.5% 10px 0;
+      width: 47.5%;
+    }
+    //
+    //		.cancel-button {
+    //			height: 44px;
+    //			margin-right: 5%;
+    //			padding: 10px;
+    //			width: 35%;
+    //		}
+    //
+    //		input.primary-button {
+    //			width: 60%;
+    //		}
+    //
+    //		.update-buttons{
+    //			float:right;
+    //			@include nested(5,12);
+    //			margin: 5px 0 0 5px;
+    //		}
+
+    .national-search {
+      margin: 17px 2.54% 14px;
+      width: 40%;
+    }
+
+    .journey-result-summary {
+      .from-to-wrapper {
+        width: 30%;
+        float: left;
+      }
+
+      .summary-row.clearfix > strong {
+        float: left;
+      }
+
+      .secondary-button {
+        float: right;
+        margin-top: -55px;
+      }
+    }
+  }
+  .geolocation-map {
+    display: none;
+  }
+  .time-options {
+    width: 48.5%;
+    margin-right: 3%;
+    float: left;
+  }
+  .toggle-options {
+    clear: both;
+    float: none;
+    &.more-options:after {
+      @include svg-icon-position-only(22, 1);
+    }
+    &.less-options:after {
+      @include svg-icon-position-only(20, 1);
+    }
+  }
+  //	input.primary-button {
+  //		width: 40%;
+  //		float: right;
+  //	}
+
+  .cancel-button {
+    //height: 44px;
+    margin-right: 5%;
+    //padding: 10px;
+    width: 35%;
+  }
+  input.primary-button {
+    width: 60%;
+  }
+  .update-buttons {
+    float: right;
+    @include nested(5, 12);
+    margin: 5px 0 0 5px;
+  }
+  #more-journey-options {
+    margin: 0 $gridGutterWidth;
+    @extend %c12;
+  }
+
+  .checkbox-list.modes-of-transport {
+
+    ul {
+      border: none;
+      li {
+        &:first-child, &:nth-child(2) {
+          border-top: 1px solid $light-grey-border-colour;
+          &.focus {
+            margin-top: 0;
+          }
+        }
+        &.focus {
+          border: 1px dashed $linkcolour;
+          margin-left: 0;
+        }
+      }
+    }
+    li {
+      float: left;
+      width: 48.5%;
+      border: 1px solid $light-grey-border-colour;
+      border-top: none;
+      &.odd {
+        margin-right: 3%;
+        &.focus {
+          margin-top: -1px;
+          margin-left: 0;
+        }
+      }
+
+    }
+  }
+  .max-walking-time {
+    margin-right: 20px;
+  }
+  .go-via {
+    width: 50%;
+    clear: none;
+    float: left;
+  }
+  #save-journey-planner-preferences {
+    &:before {
+      display: block;
+      visibility: hidden;
+      clear: both;
+      height: 0;
+      content: " ";
+      font-size: 0;
+    }
+    left: -2.2%;
+    width: 104.4%;
+  }
+}
+
+.toggle-options {
+  &.less-options {
+    &:after {
+      @extend %sprite-images;
+      @include svg-icon(19, 1, 28px, 22px, $display: inline-block);
+    }
+    margin-bottom: 5px;
+  }
+  &.more-options {
+    &:after {
+      @extend %sprite-images;
+      @include svg-icon(21, 1, 28px, 22px, $display: inline-block);
+    }
+  }
+  margin-bottom: 0;
+}
+
+#more-journey-options {
+  float: left;
+  padding: 20px 2%;
+  @extend %c6;
+  background-color: #EFF6FE;
+  @extend %transparent-grey-bottom-border;
+  //	.primary-button {
+  //        //display: none;
+  //        @extend %visually-hidden;
+  //    }
+}
+
+#save-journey-planner-preferences {
+  position: relative;
+  left: -4.2%;
+  width: 108.4%;
+  padding: 15px 4.2%;
+  //top: 20px;
+  margin-bottom: -20px;
+  background-color: #fff;
+  border-top: 1px dashed $light-grey-border-colour;
+}
+
+#recent-journeys {
+  background-color: $subtle-grey;
+  padding: 15px;
+  position: relative;
+  top: 20px;
+  margin-bottom: 20px;
+}
+
+.switch-button {
+  top: -15px;
+  margin: 51px 0 -20px -16px;
+}
+
+.summary-results {
+  .content {
+    margin-left: 0;
+    background: none;
+  }
+  .always-visible, .start-hidden {
+    float: left;
+    width: 50%;
+    background-color: #fff;
+  }
+  .always-visible {
+    cursor: inherit;
+  }
+  .start-hidden.summary {
+    display: block;
+    padding: 8px;
+    min-height: 176px;
+    background-color: #fff;
+    background-image: none;
+  }
+  .controls {
+    display: none;
+  }
+  .journey-steps {
+    margin-left: 8px;
+    padding-left: 0;
+    .time {
+      display: table-cell;
+    }
+  }
+}
+
+.line-status-info {
+  background-color: $disruption-colour;
+  .start-hidden {
+    min-height: 0;
+  }
+  .always-visible, .start-hidden {
+    width: 100%;
+    //border-bottom: none;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.line-status-heading {
+  background-color: $disruption-colour !important;
+  border-bottom: none !important;
+  &:hover, &:focus {
+    @include darken-hover-and-focus($disruption-colour, 10%);
+  }
+}
+
+.half-width-buttons {
+  margin: 0 3% 10px 3%;
+  :first-child {
+    margin: 0 30% 0 0;
+    width: 20%;
+  }
+  :last-child {
+    margin: 0 0 0 30%;
+    width: 20%;
+    float: right;
+  }
+  a {
+    max-width: 120px;
+  }
+}
+
+.journey-form .r > :last-child {
+  margin-right: $gridGutterWidth;
+}
+
+.journey-planner-promo {
+  display: block;
+  position: absolute;
+  right: $gridGutterWidth;
+  width: 270px;
+  background-color: $dark-grey;
+  background-color: $semi-transparent-dark-grey;
+  padding: 15px;
+  //@include transition;
+  border-color: transparent;
+  cursor: pointer;
+  @extend %transparent-grey-bottom-border;
+  h3 {
+    @extend %new-johnson-bold;
+    font-size: 20px;
+    margin-bottom: 5px;
+    line-height: 110%;
+    color: #fff;
+    border-color: transparent;
+  }
+  p {
+    line-height: 120%;
+    color: $subtle-grey;
+    margin-bottom: 5px;
+    width: 90%;
+    &.image-attribution {
+      margin-top: 5px;
+      font-size: 12px;
+    }
+  }
+  &.hiding {
+    opacity: 0;
+  }
+  &.top {
+    top: 0;
+    &:before {
+      position: absolute;
+      bottom: -15px;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      //border-width: 15px 15px 0 15px;
+      border-color: transparent transparent transparent transparent;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 2);
+
+    }
+    &.hiding {
+      top: -100px;
+    }
+  }
+  &.bottom {
+    //bottom: 0;
+    top: 300px;
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin-top: -16px;
+      content: "";
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      //border-width: 0 15px 15px 15px;
+      border-color: transparent transparent transparent transparent;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 2);
+    }
+    &.hiding {
+      bottom: -100px;
+    }
+  }
+}
+
+.summary-results {
+  .always-visible {
+    position: relative;
+    @extend %transparent-grey-bottom-border;
+    .price-and-details {
+      display: block;
+      background-color: $jp-subtle-blue;
+      .coloured-button {
+        margin-right: 10px;
+      }
+      .show-detailed-results {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .start-hidden {
+    @extend %transparent-grey-bottom-border;
+    .price-and-details {
+      display: none;
+    }
+  }
+  .not-selected {
+    position: relative;
+    .always-visible {
+      > div {
+        @include linear-gradient(right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 25px, $fallback: "transparent");
+      }
+      cursor: pointer;
+    }
+    .content {
+      .start-hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+.full-results-container {
+  float: right;
+  width: (100%-(2*$gridGutterWidth))/2;
+  margin-left: 0;
+  .back-link {
+    display: none;
+  }
+  > .start-hidden {
+    width: 100%;
+    //background: #fff;
+    > .price-and-details {
+      display: none;
+    }
+    &.results-3 {
+      min-height: 562px;
+    }
+  }
+  table.journey-steps {
+    display: none;
+  }
+
+  .journey-details {
+    display: block;
+  }
+  &.publictransport {
+    > .start-hidden {
+      min-height: 726px;
+    }
+  }
+}
+
+.showing-full-details {
+  .summary-results {
+    margin-right: 0;
+    float: left;
+    width: (100%-(2*$gridGutterWidth))/2;
+  }
+  .auto-expand {
+    .always-visible {
+      width: 100%;
+    }
+  }
+  .show-detailed-results {
+    display: block;
+  }
+  .publictransport .publictransport-box {
+    display: block;
+  }
+
+  .walking .walking-box {
+    display: block;
+  }
+
+  .cycling .cycling-box {
+    display: block;
+  }
+}
+
+#alternatives {
+  @extend %c8;
+}
+
+.journey-detail-step {
+  .step-heading {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.leg-map {
+  height: 250px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-content-container {
+  position: relative;
+}
+
+#jp-hero .expanded.main-and-aside {
+  height: 1124px;
+}
+
+#ssp-hero .hero-content-container {
+  position: absolute;
+  top: 0;
+  right: 2.54%;
+}
+
+.expanded {
+  .hero-content-container {
+    display: none;
+  }
+}
+
+#jp-hero #more-journey-options {
+  right: 2.54%;
+  top: 0;
+  position: absolute;
+}
+
+.extra-options {
+  margin: 10px -2%;
+}

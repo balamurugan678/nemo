@@ -1,0 +1,34 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.6.2 on 16-05-2014@04:05  by Creative*/
+.aside {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 29.928%;
+}
+
+.main {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 62.396%;
+}
+
+#sidenav-container {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+#sidenav-heading {
+    padding: 10px;
+}
+
+.sidenav-item a {
+    padding: 0 2.54% 15px;
+}
+
+.large, .medium-large {
+    display: block;
+}
+
+.small, .medium, .small-medium {
+    display: none;
+}

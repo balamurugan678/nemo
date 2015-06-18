@@ -1,0 +1,31 @@
+/**************************************************
+	M023 - fast-plan
+
+* Author: Alex Faunt
+* Created: 10/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M023-fast-plan
+
+**************************************************/
+.fast-plan {
+  background-color: $darker-subtle-grey;
+  border-bottom: 3px solid $light-grey-border-colour;
+  padding: 16px 10px;
+  margin-bottom: 20px;
+
+  .half-width {
+    width: 50%;
+    padding-right: 5px;
+    float: left;
+    margin-bottom: 10px;
+
+    + .half-width {
+      padding-right: 0px;
+      padding-left: 5px;
+    }
+
+  }
+  > .link-button {
+    margin-bottom: 0;
+  }
+
+}

@@ -1,0 +1,127 @@
+/**************************************************
+	M044-platform-select
+* Author: Alex Faunt
+* Created: 30/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M044-platform-select
+**************************************************/
+
+.platform-select {
+  margin-bottom: 20px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+  }
+
+  ul.routes-list {
+    display: none;
+  }
+
+  &.expanded {
+    ul.routes-list {
+      display: block;
+    }
+    .current-platform {
+      div.route > a:after, .placeholder:after {
+        @include svg-icon-position-only(20, 1);
+      }
+    }
+
+  }
+
+  .current-platform {
+    cursor: pointer;
+
+    .route > a:after {
+      @include svg-icon-position-only(22, 1);
+    }
+
+    .placeholder {
+      padding: 0 42px 0 10px;
+      line-height: 40px;
+      min-height: 40px;
+      color: $subtle-grey2;
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        margin-top: -16px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(22, 1);
+      }
+    }
+  }
+
+  .routes-list {
+    border-left: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+    border-top: 0;
+    border-bottom: 1px solid $light-grey-border-colour;
+    margin: 0;
+
+    > .selected:first-child + .route.line {
+      border-top: 0px none;
+    }
+
+    &.current-platform {
+      border: 1px solid $link-border-colour;
+
+      .route > a:after {
+        @include svg-icon-position-only(22, 1);
+      }
+      .selected {
+        display: block;
+      }
+    }
+
+    .route {
+      border: 0px none;
+
+      h4 {
+        color: $dark-grey;
+        padding-top: 5px;
+        margin: 0;
+      }
+      > a {
+        padding-left: 30px;
+      }
+      .tag {
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      &.line {
+        border-top: 1px solid $light-grey-border-colour;
+
+        &:first-child {
+          border-top: 0px none;
+
+        }
+        .line-text {
+          display: block;
+          min-height: 30px;
+          padding: 4px 10px;
+          font-weight: normal;
+        }
+      }
+
+      .platforms {
+        margin: 0;
+        list-style-type: none;
+
+        .route > a {
+          min-height: 50px;
+          padding-top: 13px;
+        }
+
+        > :nth-child(odd) {
+          background: $subtler-grey;
+        }
+      }
+
+    }
+  }
+
+} 

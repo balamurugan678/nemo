@@ -1,0 +1,34 @@
+/**************************************************
+	M026 - live box
+
+* Author: Alex Faunt
+* Created: 23/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M026-live-box
+
+**************************************************/
+
+.live-box {
+  padding: 0;
+  position: relative;
+  margin-bottom: 20px;
+
+  .live-box-heading {
+    position: relative;
+    //padding: 10px 16px;
+  }
+  .live-box-title {
+    @extend %new-johnson-signing;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .live-box-time {
+    font-size: 18px;
+    position: absolute;
+    top: 6px;
+    right: 0;
+  }
+  .live-board-last-updated {
+    float: right;
+    color: $light-grey-text;
+  }
+}

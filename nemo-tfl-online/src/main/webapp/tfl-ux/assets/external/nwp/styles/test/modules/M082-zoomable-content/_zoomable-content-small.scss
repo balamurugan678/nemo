@@ -1,0 +1,36 @@
+/**************************************************
+	M082-zoomable-content
+
+* Author: Alex Faunt
+* Created: 08/01/2014
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M082-zoomable-content
+
+**************************************************/
+.zoomable-content {
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.panzoom-wrapper {
+  .zoom-in {
+    top: 10px;
+    left: 10px;
+  }
+  .zoom-out {
+    top: 50px;
+    left: 10px;
+  }
+  .full-screen {
+    top: 10px;
+    right: 10px;
+  }
+
+}
+
+.no-js .zoomable-content {
+  display: block;
+  overflow: scroll;
+}
+
+

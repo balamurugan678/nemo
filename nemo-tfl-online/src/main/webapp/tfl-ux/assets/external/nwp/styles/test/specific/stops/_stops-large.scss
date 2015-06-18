@@ -1,0 +1,41 @@
+.stops-placeholder {
+  height: 288px;
+  width: 100%;
+  &.station {
+    background-image: url('/static/' +$version+ '/images/placeholder/station-street.jpg');
+  }
+  &.station-street-view {
+    display: block;
+    background-image: url('/static/' +$version+ '/images/placeholder/station-street-view.jpg');
+  }
+  &.mode {
+    background-image: url('/static/' +$version+ '/images/placeholder/emirates_dt.jpg');
+  }
+  &.pier {
+    background-image: url('/static/' +$version+ '/images/placeholder/tram_dt.jpg');
+  }
+}
+
+.ssp-map-wrapper {
+  #map {
+    height: 400px;
+  }
+}
+
+// matching the height of the street view + map
+/*
+.station-street-view{
+	position: relative;
+	height: 310px;
+	overflow:hidden;
+
+	> img{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		// image attributes 320x380
+	}
+
+}
+*/

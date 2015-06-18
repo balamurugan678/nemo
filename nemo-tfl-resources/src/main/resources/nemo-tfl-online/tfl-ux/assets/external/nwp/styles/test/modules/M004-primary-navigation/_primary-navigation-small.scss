@@ -1,0 +1,377 @@
+/**************************************************
+	A1 Primary Navigation / M004 Primary Navigation
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C1+-+Accordion &
+                       \\Google Drive\NWP\Front-end\Pattern library\Modules\M004-primary-navigation
+
+**************************************************/
+
+.top-row {
+  border-bottom: 3px solid $top-nav-bottom-border-colour;
+  background-color: $dark-grey;
+  max-height: 58px;
+  &.show-search {
+    max-height: 113px;
+  }
+  a, a:visited {
+    color: #fff;
+  }
+  .logo {
+    @extend %content-box-sizing;
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 6px 1% 6px $gridGutterWidth;
+    width: 48px;
+    height: 43px;
+    background-color: #113B92;
+    background-position: center center;
+    text-transform: none;
+    cursor: pointer;
+    a {
+      &:focus, &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .main-roundel {
+    position: absolute;
+    @extend %sprite-images;
+    @include svg-icon-scaled(6, 2, 42px, 42px);
+  }
+  .tfl-name {
+    display: none;
+    margin: 7px 0 0 52px;
+    font-size: 16px;
+    font-family: "New Johnson Bold";
+    line-height: 100%;
+    text-transform: uppercase;
+  }
+}
+
+.collapsible-menu {
+  .plan-journey, .status-update, .maps, .fares-and-payments {
+    display: none;
+  }
+  a {
+    @include transition((background-color 0.3s, border-color), 0.3s);
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    &:hover, &:focus {
+      //background-color: lighten($dark-grey, 10);
+      @include lighten-hover-and-focus($dark-grey, 10%);
+      border-bottom: 3px solid $linkcolour;
+      margin-bottom: -3px;
+    }
+  }
+}
+
+.menu-visible {
+  .mainnav {
+    border-bottom: 3px solid $light-grey-border-colour;
+  }
+  .more {
+    a {
+      &:hover, &:focus {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+.extra-nav {
+  .plan-journey, .status-update, .maps, .fares-and-payments {
+    display: block;
+  }
+}
+
+.navigation-style-1 {
+  padding: 0;
+  margin: 0 0 10px 0;
+  > li {
+    display: block;
+    border-bottom: 1px solid $light-grey-border-colour;
+    background: $darker-subtle-grey;
+  }
+  .item-title {
+    @extend %new-johnson-bold;
+    display: block;
+    padding: 10px 30px 10px 10px;
+    color: $dark-grey;
+    font-size: 20px;
+    text-decoration: none;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include darken-hover-and-focus($darker-subtle-grey, 5%);
+    }
+  }
+  .footer-link {
+    display: block;
+    text-align: right;
+    padding: 9px 5px;
+  }
+  .selected {
+    background: #fff;
+    border: 1px solid $light-grey-border-colour;
+    border-bottom: 3px solid $lighter-grey-border-colour;
+    .item-title {
+      &:hover, &:focus {
+        @include darken-hover-and-focus(#fff, 5%);
+      }
+    }
+  }
+}
+
+.top-row-extras {
+  div {
+    float: left;
+  }
+  a {
+    display: block;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include lighten-hover-and-focus($dark-grey, 10%);
+      border-bottom: 3px solid $linkcolour;
+      margin-bottom: -3px;
+    }
+  }
+  .search, .login, input {
+    @extend %float-left;
+  }
+  .login {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    border-left: 1px solid $nav-divider-dark-grey;
+    border-right: 1px solid $nav-divider-darker-grey;
+    a {
+      padding: 13px 8px 42px;
+    }
+  }
+  input[type="text"] {
+    position: relative;
+    margin: 8px $gridGutterWidth;
+    padding: 5px;
+    width: 100% - (2*$gridGutterWidth);
+    height: 40px;
+    border: 1px solid $light-grey-border-colour;
+  }
+  span {
+    @extend %float-left;
+  }
+  .login-icon {
+    @extend %sprite-images;
+    @include svg-icon(5, 2, $img-width: 28px, $x-offset: -2px);
+  }
+  .expand {
+    @extend %sprite-images;
+    @include svg-icon(22, 3, $img-width: 8px, $x-offset: -12px);
+  }
+  .collapse {
+    @extend %sprite-images;
+    @include svg-icon(20, 3, $img-width: 8px, $x-offset: -12px, $display: none);
+  }
+  .search-icon {
+    @extend %sprite-images;
+    @include svg-icon(2, 1, $img-width: 28px, $x-offset: -2px);
+  }
+  .texts {
+    position: absolute;
+    right: 0;
+    width: 110px;
+  }
+  .search {
+    border-left: 1px solid $nav-divider-dark-grey;
+    a {
+      padding: 13px 14px 42px 4px;
+    }
+  }
+  .search-tools {
+    padding: 8px $gridGutterWidth;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 55px;
+    background: $dark-grey;
+    input[type='text'] {
+      margin: 0;
+      padding-right: 32px;
+      width: 100%;
+    }
+  }
+  #search-button {
+    position: absolute;
+    right: $gridGutterWidth + 1%;
+    margin-top: 5px;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(2, 3);
+    border: 0;
+    background-color: transparent;
+    color: $light-grey-border-colour;
+    line-height: 10px;
+    span {
+      //fixes strange mobile safari bug
+      text-indent: 1000%;
+    }
+  }
+  .more {
+    position: absolute;
+    right: 109px;
+    border-right: 1px solid $nav-divider-darker-grey;
+  }
+}
+
+.show-search {
+  border-bottom: 3px solid $light-grey-border-colour;
+  .top-row-extras {
+    height: 110px;
+    .search-tools {
+      background-color: $jp-subtle-blue;
+      display: block;
+      a.remove-content {
+        &:hover {
+          background-color: transparent;
+          border-bottom: none;
+        }
+      }
+    }
+    .texts {
+      .search {
+        @include linear-gradient(#d7dee4, $jp-subtle-blue);
+        a {
+          &:hover, &:focus {
+            background-color: transparent;
+          }
+          span.search-icon {
+            @include svg-icon-position-only(2, 2, $x-offset: -2px);
+          }
+          span.expand {
+            display: none;
+          }
+          span.collapse {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.collapsible-menu {
+  float: left;
+  margin-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  font-size: 14px;
+  li {
+    float: left;
+    &.more {
+      display: none;
+    }
+  }
+  a {
+    display: block;
+    padding: 18px 15px 13px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "New Johnson";
+    margin-bottom: -2px;
+  }
+}
+
+.more {
+  a {
+    display: block;
+    padding: 18px 8px 37px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "New Johnson";
+  }
+  .arrow {
+    display: inline-block;
+    @extend %sprite-images;
+    @include svg-icon(22, 3, 21px, 28px, $display: inline-block);
+    margin: -4px 0 0 -8px;
+  }
+  a.expanded, a.expanded:visited {
+    @include linear-gradient(#d7dee4, $jp-subtle-blue);
+    color: #000;
+    margin-bottom: -3px;
+    padding-bottom: 40px;
+    border-bottom: 0;
+    .arrow {
+      @include svg-icon-position-only(20, 3);
+    }
+  }
+}
+
+#mainnav {
+  background-color: $jp-subtle-blue;
+}
+
+.extra-nav {
+  @extend %new-johnson;
+  display: none;
+  padding-bottom: 2%;
+  &.expanded, a {
+    display: block;
+  }
+  .extras {
+    margin: 10px 3% 0 3%;
+    li {
+      float: left;
+      width: 48%;
+    }
+    .plan-journey, .maps {
+      margin-right: 4%;
+    }
+    a {
+      text-align: center;
+      border: 1px solid $light-grey-border-colour;
+      box-shadow: 0px 3px -2px 2px rgba(0, 0, 0, 0.15);
+      padding: 10px 0;
+      margin-bottom: 10px;
+      @include transition(background-color 0.3s);
+      &:hover, &:focus {
+        text-decoration: none;
+        background-color: darken(#fff, 5%);
+        @include darken-hover-and-focus(#fff, 5%);
+        color: darken($linkcolour, 10%);
+      }
+      &:active {
+        box-shadow: none;
+        margin-top: 3px;
+        margin-bottom: 7px;
+      }
+    }
+  }
+  h2 {
+    color: $dark-grey;
+    font-size: 16px;
+    margin: 10px 0 0;
+  }
+  .menu-sub-section {
+    margin: 0 3%;
+    width: 94%;
+    ul {
+      border-left: 1px solid $light-grey-border-colour;
+      margin-left: 5px;
+      margin-bottom: 0;
+      padding-left: 5px;
+      list-style-type: none;
+    }
+    a {
+      padding: 0 0 5px;
+    }
+  }
+  .getting-around {
+    li {
+      float: left;
+      width: 50%;
+    }
+  }
+}

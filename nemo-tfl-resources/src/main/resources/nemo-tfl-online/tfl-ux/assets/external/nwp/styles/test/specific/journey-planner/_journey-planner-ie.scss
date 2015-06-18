@@ -1,0 +1,203 @@
+.lt-ie8 {
+  .journey-planner-promo {
+    background-color: $dark-grey;
+  }
+  .jp-tab {
+    height: 20px;
+  }
+  #from {
+    width: 85%;
+  }
+  #plan-a-journey * {
+    *zoom: 1;
+  }
+  #more-journey-options {
+    margin-right: 0;
+    width: 60%;
+  }
+  .modes-of-transport.checkbox-list li {
+    width: 45%;
+  }
+  .modes-of-transport li label {
+    text-indent: 7px;
+  }
+
+  #save-journey-planner-preferences {
+    width: 100%;
+    left: -3.2%;
+  }
+  .hours-mins {
+    clear: both;
+  }
+  .journey-planner-results {
+    #plan-a-journey {
+      #From, #To, #Via {
+        padding: 0;
+      }
+      &.editing {
+        *zoom: 1;
+        display: block;
+      }
+    }
+    input.primary-button {
+      width: 50%;
+    }
+    #more-journey-options {
+      width: 92%;
+    }
+  }
+  .auto-expand.expandable-box {
+    .always-visible {
+      width: 32%;
+    }
+    .start-hidden {
+      width: 65%;
+    }
+  }
+  .showing-full-details {
+    .summary-results {
+      width: 30%;
+    }
+    .full-results-container {
+      width: 65%;
+      float: left;
+    }
+    .auto-expand.expandable-box {
+      .always-visible {
+        width: 100%;
+      }
+    }
+  }
+  table.journey-steps {
+    .logo div {
+      padding: 0;
+    }
+    thead {
+      visibility: hidden;
+    }
+  }
+  .time-and-mode {
+    > div {
+      left: 0;
+      .centred {
+        margin-left: 0;
+        &.walking-icon {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .step-heading {
+    .time-and-mode {
+      left: 0;
+    }
+  }
+  .transfer {
+    .time-and-mode {
+      left: 0;
+    }
+  }
+  .travel-preferences {
+    clear: both;
+  }
+  .tabs-style-2 {
+    li {
+      height: 42px;
+      margin-left: 0;
+      .icon-left {
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+}
+
+.lt-ie9 {
+  .full-results-container {
+    float: left;
+  }
+  .journey-planner-results {
+    .half-width-buttons {
+      margin-right: 0;
+      a {
+        width: 20%;
+        &:first-child {
+          margin-right: 54%;
+        }
+      }
+    }
+  }
+  ul.journey-steps li, table.journey-steps .logo div {
+    &.tube-icon {
+      @include svg-icon(34, 1);
+    }
+    &.national-rail-icon {
+      @include svg-icon(12, 1);
+    }
+    &.bus-icon {
+      @include svg-icon(11, 1);
+    }
+    &.dlr-icon,
+  , . docklands-icon, . docklands-light-railway-icon {
+    @include svg-icon(35, 1);
+  }
+    &.river-bus-icon {
+      @include svg-icon(3, 1);
+    }
+    &.tram-icon {
+      @include svg-icon(36, 2);
+    }
+    &.cable-car-icon {
+      @include svg-icon(16, 1);
+    }
+    &.overground-icon {
+      @include svg-icon(34, 3);
+    }
+    &.disruption-icon {
+      @include svg-icon(27, 1);
+    }
+  }
+  .journey-planner-widget {
+    display: block;
+    background-color: transparent;
+  }
+}
+
+.lt-ie10 {
+  .from-and-to, .go-via {
+    label.visually-hidden {
+      overflow: visible;
+      clip: auto;
+      height: auto;
+      position: static;
+      width: auto;
+      margin: auto;
+      visibility: visible;
+    }
+  }
+
+  .journey-planner-results {
+    .go-via {
+      label {
+        margin-top: -30px;
+      }
+    }
+    .change-time-options {
+      margin-top: 18px;
+    }
+    .hours-mins {
+      margin-top: 33px;
+    }
+  }
+  .lines {
+    span {
+      max-width: 4px;
+    }
+    .interchange {
+      max-width: 20px;
+    }
+  }
+  .lines .hail-and-ride {
+    margin-left: 0;
+  }
+}

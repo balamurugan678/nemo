@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.17">
+     <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   system_parameter_installer.install('autoTopUpResettlementPeriodDaysForWeeklyTravelcard', '10', 'Resettlement period for a card having a weekly Travelcard');
+				   system_parameter_installer.install('autoTopUpResettlementPeriodDaysForMonthlyTravelcard', '12', 'Resettlement period for a card having a monthly Travelcard');
+  				   system_parameter_installer.install('autoTopUpResettlementPeriodDaysFor3MonthTravelcard', '14', 'Resettlement period for a card having a 3 Month Travelcard');
+  				   system_parameter_installer.install('autoTopUpResettlementPeriodDaysFor6MonthTravelcard', '16', 'Resettlement period for a card having a 6 Month Travelcard');
+  				   system_parameter_installer.install('autoTopUpResettlementPeriodDaysForAnnualTravelcard', '18', 'Resettlement period for a card having an Annual Travelcard');
+  				   system_parameter_installer.install('autoTopUpResettlementPeriodDaysForOddPeriodTravelcard', '20', 'Resettlement period for a card having an Odd Period Travelcard');
+  				   system_parameter_installer.install('defaultAutoTopUpResettlementPeriodDays', '5', 'Default Resettlement period');
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

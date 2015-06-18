@@ -1,0 +1,185 @@
+/**************************************************
+	M084-large-icon-accordion
+* Author: Alex Faunt
+* Re-Created: 27/01/2013
+* Pattern library URL:  M084-large-icon-accordion
+**************************************************/
+.large-icon-accordion {
+
+  ul {
+    list-style-type: none;
+    margin: 0 0 20px;
+    padding: 0;
+
+    li {
+      position: relative;
+      border-bottom: 1px solid $light-grey-border-colour;
+
+      &:first-child {
+        border-top: 1px solid $light-grey-border-colour;
+      }
+
+      &.nearby {
+        a:before {
+          @include svg-icon-position-only(42, 2);
+        }
+      }
+      &.tube-and-rail {
+        a:before {
+          @include svg-icon-position-only(71, 1);
+        }
+      }
+      &.tube {
+        a:before {
+          @include svg-icon-position-only(45, 2);
+        }
+      }
+      &.rail {
+        a:before {
+          @include svg-icon-position-only(45, 3);
+        }
+      }
+      &.overground {
+        a:before {
+          @include svg-icon-position-only(46, 1);
+        }
+      }
+      &.dlr {
+        a:before {
+          @include svg-icon-position-only(46, 2);
+        }
+      }
+      &.tram {
+        a:before {
+          @include svg-icon-position-only(46, 3);
+        }
+      }
+      &.river {
+        a:before {
+          @include svg-icon-position-only(47, 2);
+        }
+      }
+      &.bus {
+        a:before {
+          @include svg-icon-position-only(49, 1);
+        }
+      }
+      &.cycle {
+        a:before {
+          @include svg-icon-position-only(49, 3);
+        }
+      }
+      &.poi {
+        a:before {
+          @include svg-icon-position-only(72, 2);
+        }
+      }
+      &.oyster {
+        a:before {
+          @include svg-icon-position-only(72, 3);
+        }
+      }
+      &.congestion {
+        a:before {
+          @include svg-icon-position-only(71, 3);
+        }
+      }
+      &.audio {
+        a:before {
+          @include svg-icon-position-only(71, 2);
+        }
+      }
+      &.lez {
+        a:before {
+          @include svg-icon-position-only(72, 1);
+        }
+      }
+      &.coach {
+        a:before {
+          @include svg-icon-position-only(47, 1);
+        }
+      }
+    }
+
+    a {
+      display: block;
+      min-height: 60px;
+      padding: 17px 32px 17px 70px;
+      position: relative;
+      @extend %new-johnson-bold;
+      text-decoration: none;
+      color: $dark-grey;
+      font-size: 22px;
+      line-height: 25px;
+      @include transition(background-color, 0.3s);
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        @extend %standard-sprite;
+        top: 50%;
+        margin-top: -16px;
+        z-index: 3;
+      }
+
+      &:before {
+        left: 14px;
+      }
+
+      &:after {
+        @include svg-icon-position-only(21, 1);
+        right: 0px;
+      }
+
+      .mini-map {
+        position: absolute;
+        left: 0;
+        width: 60px;
+        top: 0;
+        height: 100%;
+        background-color: $darker-subtle-grey;
+        background-position: center;
+        @include transition(background-color, 0.3s);
+      }
+
+      &.with-subtext {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 25px;
+
+        .subtext {
+          line-height: 15px;
+          margin-left: 1px;
+        }
+      }
+
+      &:hover, &:focus {
+        @include custom-colour-hover-and-focus($jp-subtle-blue);
+
+        .mini-map {
+          @include darken-hover-and-focus($darker-subtle-grey, 5%);
+        }
+      }
+    }
+
+    .subtext {
+      display: block;
+      color: $light-grey-text;
+      @extend %new-johnson;
+      font-size: 16px;
+    }
+
+    ul {
+      @extend %top-drop-shadow;
+      @extend %bottom-drop-shadow;
+      margin: 0;
+      background: #fff;
+
+      a {
+        font-size: 20px;
+        @extend %new-johnson;
+      }
+    }
+  }
+}

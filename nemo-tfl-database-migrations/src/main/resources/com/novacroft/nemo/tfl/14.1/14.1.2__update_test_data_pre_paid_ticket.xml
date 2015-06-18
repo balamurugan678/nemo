@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+<changeSet author="Novacroft" id="14.1.2" context="nemo_development">
+   <sql>
+       <![CDATA[
+       UPDATE ${schemaName}.ZONE SET EFFECTIVETO = TO_DATE('2018-10-01', 'YYYY-MM-DD');
+       UPDATE ${schemaName}.DURATION SET EFFECTIVETO = TO_DATE('2018-10-01', 'YYYY-MM-DD');
+       UPDATE ${schemaName}.PREPAIDTICKET SET EFFECTIVETO = TO_DATE('2018-10-01', 'YYYY-MM-DD');
+       UPDATE ${schemaName}.DISCOUNTTYPE SET EFFECTIVETO = TO_DATE('2018-10-01', 'YYYY-MM-DD');
+       UPDATE ${schemaName}.PASSENGERTYPE SET EFFECTIVETO = TO_DATE('2018-10-01', 'YYYY-MM-DD');
+       UPDATE ${schemaName}.PRICE SET EFFECTIVETO = TO_DATE('2018-10-01', 'YYYY-MM-DD');
+       
+       INSERT INTO ${schemaName}.PREPAIDTICKET (ID, CREATEDUSERID, CREATEDDATETIME, ADHOCPREPAIDTICKETCODE, EFFECTIVEFROM, EFFECTIVETO, DESCRIPTION, FROMDURATIONID, TODURATIONID, PASSENGERTYPEID, STARTZONEID, ENDZONEID, DISCOUNTTYPEID, EXTERNALID) 
+       VALUES (${schemaName}.PREPAIDTICKET_SEQ.nextval, 'Installer', TO_DATE('2014-10-01 16:39:50', 'YYYY-MM-DD HH24:MI:SS'), '509', TO_DATE('2014-01-01 16:40:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2018-10-01', 'YYYY-MM-DD'), '18+ Weekly Travelcard Zones 1 to 2', '1', '1', '1', '1', '2', '2', externalid_seq.nextval);
+       INSERT INTO ${schemaName}.PREPAIDTICKET (ID, CREATEDUSERID, CREATEDDATETIME, ADHOCPREPAIDTICKETCODE, EFFECTIVEFROM, EFFECTIVETO, DESCRIPTION, FROMDURATIONID, TODURATIONID, PASSENGERTYPEID, STARTZONEID, ENDZONEID, DISCOUNTTYPEID, EXTERNALID) 
+       VALUES (${schemaName}.PREPAIDTICKET_SEQ.nextval, 'Installer', TO_DATE('2014-10-01 16:39:50', 'YYYY-MM-DD HH24:MI:SS'), '509', TO_DATE('2014-01-01 16:40:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2018-10-01', 'YYYY-MM-DD'), 'Child Weekly Travelcard Zones 1 to 2', '1', '1', '2', '1', '2', '1', externalid_seq.nextval);
+       
+       INSERT INTO ${schemaName}.PRICE (ID, CREATEDUSERID, CREATEDDATETIME, PRICEINPENCE, PREPAIDTICKETID, EFFECTIVEFROM, EFFECTIVETO, EXTERNALID) 
+       VALUES (${schemaName}.PRICE_SEQ.nextval, 'Installer', TO_DATE('2014-10-01', 'YYYY-MM-DD'), '750', '7', TO_DATE('2014-01-01', 'YYYY-MM-DD'), TO_DATE('2015-01-01', 'YYYY-MM-DD'), externalid_seq.nextval);
+       INSERT INTO ${schemaName}.PRICE (ID, CREATEDUSERID, CREATEDDATETIME, PRICEINPENCE, PREPAIDTICKETID, EFFECTIVEFROM, EFFECTIVETO, EXTERNALID) 
+       VALUES (${schemaName}.PRICE_SEQ.nextval, 'Installer', TO_DATE('2014-10-01', 'YYYY-MM-DD'), '500', '8', TO_DATE('2014-01-01', 'YYYY-MM-DD'), TO_DATE('2015-01-01', 'YYYY-MM-DD'), externalid_seq.nextval);
+       ]]>
+   </sql>
+</changeSet>
+</databaseChangeLog>

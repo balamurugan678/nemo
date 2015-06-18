@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.44">
+    
+    	<createTable schemaName="${schemaName}" tableName="ZONE" tablespace="${tableTablespace}">
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="zone_pk"/>
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the zone" />
+    		<column name="NAME" type="varchar2(50)" remarks="Name of the zone"/>
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="zone_seq"/>
+    	
+    	<createTable schemaName="${schemaName}" tableName="DISCOUNTTYPE" tablespace="${tableTablespace}">
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="discounttype_pk"/>
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the discount type" />
+    		<column name="NAME" type="varchar2(50)" remarks="Name of the discount type" />
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="discounttype_seq"/>
+    	
+    	<createTable schemaName="${schemaName}" tableName="PASSENGERTYPE" tablespace="${tableTablespace}">
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="passengertype_pk"/>
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the passenger type" />
+    		<column name="NAME" type="varchar2(50)" remarks="Name of the passenger type" />
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="passengertype_seq"/>
+    	
+    	<createTable schemaName="${schemaName}" tableName="DURATION" tablespace="${tableTablespace}">
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="duration_pk"/>
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="DURATION" type="number(20)" remarks="Duration" />
+    		<column name="UNIT" type="varchar2(50)" remarks="Measurement unit of duration" />
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the duration" />
+    		<column name="NAME" type="varchar2(50)" remarks="Duration name" />
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="duration_seq"/>
+    	
+        <createTable schemaName="${schemaName}" tableName="PREPAIDTICKET" tablespace="${tableTablespace}">
+        	<column name="ID" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="prepaidticket_pk"/>
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="ADHOCPREPAIDTICKETCODE" type="varchar2(40)" remarks="Product code">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="DESCRIPTION" type="varchar2(255)" remarks="Description" />
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="FROMDURATIONID" type="number(38)" remarks="From Duration - Reference to DurationTable">
+                <constraints nullable="false" foreignKeyName="PREPAIDTICKET_FK1" references="DURATION(ID)" />
+            </column>
+            <column name="TODURATIONID" type="number(38)" remarks="To Duration - Reference to DurationTable">
+                <constraints foreignKeyName="PREPAIDTICKET_FK2" references="DURATION(ID)" />
+            </column>
+            <column name="PASSENGERTYPEID" type="number(38)" remarks="Reference to PassengerType Table">
+                <constraints nullable="false" foreignKeyName="PREPAIDTICKET_FK3" references="PASSENGERTYPE(ID)" />
+            </column>
+            <column name="STARTZONEID" type="number(38)" remarks="StartZone - Reference to Zone Table">
+                <constraints nullable="false" foreignKeyName="PREPAIDTICKET_FK4" references="ZONE(ID)" />
+            </column>
+            <column name="ENDZONEID" type="number(38)" remarks="EndZone - Reference to Zone Table">
+                <constraints foreignKeyName="PREPAIDTICKET_FK5" references="ZONE(ID)" />
+            </column>
+            <column name="DISCOUNTTYPEID" type="number(38)" remarks="Reference to Discount Type Table">
+                <constraints nullable="false" foreignKeyName="PREPAIDTICKET_FK6" references="DISCOUNTTYPE(ID)" />
+            </column>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+        </createTable>
+        <createSequence schemaName="${schemaName}" sequenceName="prepaidticket_seq"/>
+        
+        <createTable schemaName="${schemaName}" tableName="PRICE" tablespace="${tableTablespace}">
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="price_pk"/>
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="PRICEINPENCE" type="number(9)" remarks="Price in pence" />
+            <column name="PREPAIDTICKETID" type="number(38)" remarks="Reference to Prepaidticket Table">
+                <constraints nullable="false" foreignKeyName="PRICE_FK1" references="PREPAIDTICKET(ID)" />
+            </column>
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+                <constraints nullable="false" />
+            </column>
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="price_seq"/>
+        
+        
+        <createTable schemaName="${schemaName}" tableName="ZONE_AUD" tablespace="${tableTablespace}">
+    		<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the zone"/>
+    		<column name="NAME" type="varchar2(50)" remarks="Name of the zone"/>
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective">
+            </column>
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective">
+            </column>
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	
+    	<createTable schemaName="${schemaName}" tableName="DISCOUNTTYPE_AUD" tablespace="${tableTablespace}">
+    		<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record" />
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created" />
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the discount type"/>
+    		<column name="NAME" type="varchar2(50)" remarks="Name of the discount type"/>
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective" />
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective" />
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	
+    	<createTable schemaName="${schemaName}" tableName="PASSENGERTYPE_AUD" tablespace="${tableTablespace}">
+    		<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record" />
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created" />
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the passenger type"/>
+    		<column name="NAME" type="varchar2(50)" remarks="Name of the passenger type"/>
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective" />
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective" />
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	
+    	<createTable schemaName="${schemaName}" tableName="DURATION_AUD" tablespace="${tableTablespace}">
+    		<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record" />
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created" />
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="DURATION" type="number(20)" remarks="Duration" />
+    		<column name="UNIT" type="varchar2(50)" remarks="Measurement unit of duration" />
+    		<column name="CODE" type="varchar2(40)" remarks="Code of the duration" />
+    		<column name="NAME" type="varchar2(50)" remarks="Duration name" />
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective" />
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective" />
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	
+        <createTable schemaName="${schemaName}" tableName="PREPAIDTICKET_AUD" tablespace="${tableTablespace}">
+        	<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+        	<column name="ID" type="number(38)">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record" />
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created" />
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="ADHOCPREPAIDTICKETCODE" type="varchar2(40)" remarks="Product code" />
+            <column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective" />
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective" />
+            <column name="DESCRIPTION" type="varchar2(255)" remarks="Description" />
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="FROMDURATIONID" type="number(38)" remarks="From Duration - Reference to DurationTable" />
+            <column name="TODURATIONID" type="number(38)" remarks="To Duration - Reference to DurationTable" />
+            <column name="PASSENGERTYPEID" type="number(38)" remarks="Reference to PassengerType Table" />
+            <column name="STARTZONEID" type="number(38)" remarks="StartZone - Reference to Zone Table" />
+            <column name="ENDZONEID" type="number(38)" remarks="EndZone - Reference to Zone Table" />
+            <column name="DISCOUNTTYPEID" type="number(38)" remarks="Reference to Discount Type Table" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+        </createTable>
+        
+        <createTable schemaName="${schemaName}" tableName="PRICE_AUD" tablespace="${tableTablespace}">
+    		<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+    		<column name="ID" type="number(38)">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record" />
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created" />
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="PRICEINPENCE" type="number(9)" remarks="Price in pence" />
+            <column name="PREPAIDTICKETID" type="number(38)" remarks="Reference to Prepaidticket Table" />
+    		<column name="EFFECTIVEFROM" type="date" remarks="Date from which it is effective" />
+            <column name="EFFECTIVETO" type="date" remarks="Date to which it is effective" />
+            <column name="CUBICREFERENCE" type="varchar2(255)" remarks="Reference of the data import" />
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    </changeSet>
+</databaseChangeLog>

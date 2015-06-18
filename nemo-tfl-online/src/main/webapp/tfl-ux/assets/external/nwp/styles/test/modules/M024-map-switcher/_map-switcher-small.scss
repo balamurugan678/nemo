@@ -1,0 +1,33 @@
+/**************************************************
+	M025 - map switcher
+
+* Author: Alex Faunt
+* Created: 27/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M024-map-switcher
+
+**************************************************/
+
+.map-switcher {
+  height: 60px;
+  position: relative;
+
+  .map-switcher-container {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    padding-right: 10px;
+    float: left;
+    background: #fff;
+
+    .map-switcher-inner {
+      height: 100%;
+      position: relative;
+      border-bottom: 3px solid $lighter-dark-grey;
+    }
+
+    + .map-switcher-container {
+      padding-left: 10px;
+      padding-right: 0;
+    }
+  }
+}

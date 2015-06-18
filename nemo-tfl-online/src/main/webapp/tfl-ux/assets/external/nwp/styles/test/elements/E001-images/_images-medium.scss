@@ -1,0 +1,25 @@
+.image-box {
+  &.left-float, &.right-float {
+    width: 50%;
+    margin-bottom: 20px;
+
+  }
+  &.left-float {
+    float: left;
+    margin-right: 20px;
+  }
+  &.right-float {
+    float: right;
+    margin-left: 20px;
+  }
+}
+
+.main-and-aside {
+  .image-box {
+    &.left-float, &.right-float {
+      margin-bottom: 20px;
+    }
+
+  }
+
+}

@@ -1,0 +1,138 @@
+/**************************************************
+	C12 Image Gallery
+
+* Author: Steven Swinbank
+* Created: 20/03/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C12+-+Image+gallery
+
+**************************************************/
+
+//Galleria plugin styling
+.image-gallery {
+  .galleria-container {
+    //width:100%!important;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  .caption {
+    background-color: $darker-subtle-grey;
+    padding: 12px;
+    color: #6D6F75;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+    width: 100%;
+  }
+  .first-line {
+    margin-bottom: 30px;
+  }
+  .title {
+    float: left;
+    font-weight: bold;
+    font-size: 110%;
+    width: 80%;
+  }
+  .counter {
+    float: right;
+    text-align: right;
+    width: 20%;
+  }
+}
+
+#galleria {
+  width: 100%;
+  height: 100%;
+}
+
+#galleria-loader {
+  height: 1px
+}
+
+.galleria-container {
+  position: relative;
+  overflow: hidden;
+  //background: #000;
+  width: 100%;
+  height: 100%;
+
+  img {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+
+  }
+}
+
+.galleria-stage {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  overflow: hidden;
+}
+
+.galleria-loader {
+  background: #000;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: none;
+  background: url(../../../images/image-gallery-loader.gif) no-repeat 2px 2px;
+}
+
+.galleria-image-nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -62px;
+  width: 100%;
+  height: 62px;
+  left: 0;
+  .galleria-image-nav-left, .galleria-image-nav-right {
+    opacity: .3;
+    filter: alpha(opacity=30);
+    cursor: pointer;
+    width: 46px;
+    height: 42px;
+    position: absolute;
+    z-index: 2;
+    //background-position: 0 46px;
+    background: white;
+    top: 50%;
+    margin-top: 2%;
+  }
+  .galleria-image-nav-right {
+    left: auto;
+    right: 0px;
+    //background-position: -254px 46px;
+    z-index: 2;
+    &:before {
+      content: "";
+      position: absolute;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 1);
+      right: 5px;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+  .galleria-image-nav-left {
+    left: 0px;
+    //background-position: -254px 46px;
+    z-index: 2;
+    &:before {
+      content: "";
+      position: absolute;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(19, 1);
+      left: 4px;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+}
+

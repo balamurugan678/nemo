@@ -1,0 +1,10 @@
+.disambiguation-results-list-container {
+  padding-top: 10px;
+  background-color: #fff;
+  .showing-map-panel & {
+    padding-top: 0;
+  }
+  .map-panel {
+    margin-bottom: 10px;
+  }
+}

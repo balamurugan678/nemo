@@ -1,0 +1,56 @@
+/**************************************************
+RAINBOW BOARD
+* Author: Rodrigo Lopes
+* Created: 19/02/2013
+* Modified by:
+* Modified date:
+* Pattern library URL: http://
+**************************************************/
+
+.rainbow-board {
+  &.fade-to-black {
+    background: #000;
+    z-index: 0;
+    position: relative;
+    &:after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: #fff;
+      content: "";
+      display: block;
+      width: 1px;
+      height: 100%;
+      z-index: -1;
+    }
+
+    tr {
+      position: relative;
+      opacity: 0.9;
+      //border-top: 1px solid #3A3A3A;
+      &:first-child {
+        border-top: 0;
+      }
+      &.selected {
+        opacity: 1;
+        //border-top: 1px solid $lighter-grey-border-colour;
+
+        + .info-dropdown {
+          opacity: 1;
+          border-top: 0;
+        }
+      }
+    }
+    tbody tr:first-child.selected {
+      border-top: 0;
+    }
+
+    tbody ~ tbody tr:first-child {
+      border-top: 1px solid #3A3A3A;
+
+      &.selected {
+        border-top: 1px solid $lighter-grey-border-colour;
+      }
+    }
+  }
+}

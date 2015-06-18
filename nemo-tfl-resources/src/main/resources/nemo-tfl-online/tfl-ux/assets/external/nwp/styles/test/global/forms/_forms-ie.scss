@@ -1,0 +1,29 @@
+/**************************************************
+	B2 Form
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/B2+-+Form
+
+**************************************************/
+
+.lt-ie8 {
+  input[type="text"] {
+    padding: 5px 0;
+    height: 26px;
+  }
+  .selector {
+    background: none;
+    border: none;
+  }
+}
+
+.lt-ie9.no-js {
+  .checkbox-list, .styled-checkbox {
+    input[type='checkbox'] {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }
+  }
+}
+
+

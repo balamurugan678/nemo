@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<mapping>
+
+    <description>Object/XML mapping for Nemo TfL Common</description>
+
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.CardInfoRequestV2">
+        <map-to xml="CardInfoRequestV2"/>
+        <field name="prestigeId">
+            <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="userId">
+            <bind-xml name="UserID" node="element" location="OriginatorInfo"/>
+        </field>
+        <field name="password">
+            <bind-xml name="Password" node="element" location="OriginatorInfo"/>
+        </field>
+    </class>
+
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.AutoLoadRequest">
+        <map-to xml="AutoLoadRequest"/>
+        <field name="realTimeFlag">
+            <bind-xml name="RealTimeFlag" node="element"/>
+        </field>
+        <field name="prestigeId">
+            <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="autoLoadState">
+            <bind-xml name="AutoLoadState" node="element"/>
+        </field>
+        <field name="paymentMethod">
+            <bind-xml name="PaymentMethod" node="element"/>
+        </field>
+        <field name="pickupLocation">
+            <bind-xml name="PickupLocation" node="element"/>
+        </field>
+        <field name="userId">
+            <bind-xml name="UserID" node="element" location="OriginatorInfo"/>
+        </field>
+        <field name="password">
+            <bind-xml name="Password" node="element" location="OriginatorInfo"/>
+        </field>
+    </class>
+
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.AutoLoadResponse">
+        <map-to xml="AutoLoadResponse"/>
+        <field name="prestigeId">
+        <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="requestSequenceNumber">
+        <bind-xml name="RequestSequenceNumber" node="element"/>
+        </field>
+        <field name="autoLoadState">
+        <bind-xml name="AutoLoadState" node="element"/>
+        </field>
+        <field name="pickUpLocation" get-method="getPickupLocation" set-method="setPickupLocation">
+        <bind-xml name="PickupLocation" node="element" location="LocationInfo"/>
+        </field>
+        <field name="availableSlots">
+        <bind-xml name="AvailableSlots" node="element" location="LocationInfo"/>
+        </field>
+    </class>
+
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.RequestFailure">
+        <map-to xml="RequestFailure"/>
+        <field name="errorCode">
+            <bind-xml name="ErrorCode" node="element"/>
+        </field>
+        <field name="errorDescription">
+            <bind-xml name="ErrorDescription" type="CDATA" node="element"/>
+        </field>
+    </class>
+   
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.CardUpdateResponse">
+        <map-to xml="CardUpdateResponse"/>
+        <field name="prestigeId">
+        <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="requestSequenceNumber">
+        <bind-xml name="RequestSequenceNumber" node="element"/>
+        </field>
+        <field name="pickUpLocation" get-method="getPickupLocation" set-method="setPickupLocation">
+        <bind-xml name="PickupLocation" node="element" location="LocationInfo"/>
+        </field>
+        <field name="availableSlots">
+        <bind-xml name="AvailableSlots" node="element" location="LocationInfo"/>
+        </field>
+    </class>
+    
+  
+
+</mapping>

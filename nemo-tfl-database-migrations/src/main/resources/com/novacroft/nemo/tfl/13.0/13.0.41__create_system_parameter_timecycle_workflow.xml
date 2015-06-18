@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.38">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+   system_parameter_installer.install('workflowTimeCycleDuration', '1M', 'Length of time a case can be claimed for');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

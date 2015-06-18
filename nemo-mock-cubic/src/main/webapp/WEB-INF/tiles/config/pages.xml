@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="Home" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/home.jsp"/>
+    </definition>
+
+    <definition name="CurrentActionListFile" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/currentActionListFile.jsp"/>
+    </definition>
+
+    <definition name="AdHocDistribution" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/adHocDistribution.jsp"/>
+    </definition>
+
+    <definition name="AutoLoadChange" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/autoLoadChange.jsp"/>
+    </definition>
+
+    <definition name="AutoLoadPerformed" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/autoLoadPerformed.jsp"/>
+    </definition>
+
+    <definition name="AddCardResponse" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addCardResponse.jsp"/>
+    </definition>
+
+    <definition name="AddCardResponseNew" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addCardResponseNew.jsp"/>
+    </definition>
+
+    <definition name="AddCardPrePayTicketResponse" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addCardPrePayTicket.jsp"/>
+    </definition>
+
+    <definition name="AddCardUpdate" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addCardUpdate.jsp"/>
+    </definition>
+
+    <definition name="GetCard" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/getCard.jsp"/>
+    </definition>
+
+    <definition name="EditAutoLoadChange" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/editAutoLoadChange.jsp"/>
+    </definition>
+
+    <definition name="ListAutoLoadChange" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/listAutoLoadChange.jsp"/>
+    </definition>
+    
+    <definition name="Station" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/station.jsp"/>
+    </definition>
+    <definition name="Main" extends="single-page">
+        <put-attribute name="main" value="/WEB-INF/jsp/main.jsp"/>
+    </definition>
+
+</tiles-definitions>

@@ -1,0 +1,191 @@
+/**************************************************
+	M025 - routes list
+
+* Author: Alex Faunt
+* Created: 27/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M025-routes-list
+
+**************************************************/
+
+.routes-list {
+  list-style-type: none;
+  margin: 0 0 20px;
+  background-color: #fff;
+
+  .route {
+    position: relative;
+    border: 1px solid $lighter-dark-grey;
+    border-top: 0px none;
+
+    &:first-child {
+      border-top: 1px solid $lighter-dark-grey;
+    }
+
+    .tag {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0px;
+      width: 10px;
+      z-index: 1;
+      text-indent: -10000px;
+
+      &[class*=lines-] {
+        span {
+          position: static;
+          float: left;
+          display: block;
+          height: 100%;
+        }
+      }
+      &.lines-2 {
+        span {
+          width: 50%;
+        }
+      }
+      &.lines-3 {
+        span {
+          width: 33%;
+        }
+      }
+      &.lines-4 {
+        span {
+          width: 25%;
+        }
+      }
+      &.lines-5 {
+        span {
+          width: 20%;
+        }
+      }
+
+    }
+
+    &.disrupted {
+
+      > a {
+        background-color: $disruption-colour;
+        padding-right: 64px;
+        &:hover, &:focus {
+          background-color: darken($disruption-colour, 5%);
+        }
+      }
+
+      .disruption-icon {
+        position: absolute;
+        top: 50%;
+        right: 26px;
+        margin-top: -16px;
+      }
+    }
+
+    &[class*=river] {
+      a {
+        min-height: 92px;
+        padding-left: 62px;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 20px;
+          top: 10px;
+          @extend %standard-sprite;
+          @include svg-icon-position-only(13, 2);
+          background-color: $tflblue;
+        }
+      }
+    }
+
+    &.river-tour a:before {
+      background-color: $river-colour;
+    }
+
+    > a {
+      background-color: #fff;
+      text-decoration: none;
+      padding: 10px 32px 10px 20px;
+      display: block;
+      position: relative;
+      @include transition(background-color 0.3s);
+      &:hover, &:focus {
+        @include custom-colour-hover-and-focus($jp-subtle-blue);
+        @include transition(none);
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        margin-top: -16px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 1);
+      }
+
+      .station-details & {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+
+    &.cycling {
+      > a {
+        padding-left: 10px;
+      }
+    }
+
+    &.dlr, &.docklands, &.docklands-light-railway {
+      .tag {
+        background-color: #fff;
+        border-left: 3px solid $dlr-colour;
+        border-right: 3px solid $dlr-colour;
+      }
+    }
+
+    .route-headline {
+      color: $dark-grey;
+      margin: 0;
+      line-height: 18px;
+      font-weight: normal;
+    }
+
+    .route-info {
+      color: $subtle-grey2;
+      margin: 0;
+    }
+
+    .origin {
+      display: block;
+    }
+
+    .destination {
+      padding-left: 33px;
+      position: relative;
+      display: inline-block;
+
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(70, 1);
+        margin-left: -3px;
+        margin-top: -5px;
+      }
+    }
+  }
+}
+
+.routes-list-container {
+  background-color: $subtle-grey;
+  padding: 10px;
+  margin-bottom: 20px;
+  .routes-list {
+    margin-bottom: 10px;
+  }
+}
+

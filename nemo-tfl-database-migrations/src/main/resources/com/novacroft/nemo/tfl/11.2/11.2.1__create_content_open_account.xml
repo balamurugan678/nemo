@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.2.1">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('AccountDetails.newPassword.label', 'Password');
+  content_installer.install('AccountDetails.newPassword.placeholder', 'Password');
+  content_installer.install('AccountDetails.newPasswordConfirmation.label', 'Confirm Password');
+  content_installer.install('AccountDetails.newPasswordConfirmation.placeholder', 'Confirm Password');
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

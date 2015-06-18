@@ -1,0 +1,105 @@
+.status-map-placeholder {
+  background-image: url('/static/' +$version+ '/images/placeholder/tube_dt.jpg');
+  height: 400px;
+  width: 100%;
+
+  &.bus {
+    background-image: url('/static/' +$version+ '/images/placeholder/bus-dt.jpg');
+  }
+  &.cable-car {
+    background-image: url('/static/' +$version+ '/images/placeholder/emirates_dt.jpg');
+  }
+  &.tram {
+    background-image: url('/static/' +$version+ '/images/placeholder/tram_dt.jpg');
+  }
+  &.river-bus {
+    background-image: url('/static/' +$version+ '/images/placeholder/river_dt.jpg');
+  }
+  &.national-rail {
+    background-image: url('/static/' +$version+ '/images/placeholder/rail_dt.jpg');
+  }
+}
+
+.service-status-rainbow-board {
+  margin-top: 0;
+}
+
+.map-sliver {
+  height: 500px;
+  .stage-active & {
+    height: 100%;
+    border: 0;
+  }
+}
+
+.corridor-selected, .nearby-selected {
+  .corridor-details {
+    display: none;
+  }
+}
+
+.road-disruption {
+  .severity {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding-left: 10px;
+
+    .tag {
+      display: none;
+    }
+  }
+
+  .disruption-info {
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .updated {
+      float: right;
+    }
+    .vertical-button-container {
+      float: left;
+      width: 50% - $gridGutterWidth/2;
+      margin-bottom: 0;
+
+      &:last-child, &.last {
+        margin-left: $gridGutterWidth;
+      }
+    }
+  }
+
+}
+
+.large-status-information {
+  margin-top: 15px;
+  border: solid 1px #a8a8a8;
+  .line-text {
+    padding: 10px;
+    vertical-align: middle;
+  }
+}
+
+.disruption-type {
+  padding: 10px 20px;
+  width: 24%;
+  color: $primary-blue;
+  vertical-align: middle;
+}
+
+.disruption-message {
+  padding: 10px 20px;
+  vertical-align: middle;
+  .buttons-wrapper {
+    display: none;
+  }
+}
+
+.status-map-wrapper button {
+  display: block;
+}
+
+.sliver-overlay {
+  display: none;
+}

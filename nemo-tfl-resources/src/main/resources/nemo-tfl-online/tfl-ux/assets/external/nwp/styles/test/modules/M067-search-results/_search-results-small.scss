@@ -1,0 +1,245 @@
+.search-box-settings {
+  background: $darker-subtle-grey;
+  padding: 15px 10px 5px 10px;
+  border-bottom: 3px solid $lighter-dark-grey;
+  margin-bottom: 15px;
+}
+
+.search-title {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding-top: 5px;
+  .dots {
+    position: absolute;
+    width: 40px;
+    right: 0;
+    top: 1px;
+    bottom: 1px;
+    margin: 0;
+    padding: 0;
+    background: $dark-grey;
+    z-index: 999;
+    color: #fff;
+  }
+}
+
+.search-results {
+  position: relative;
+  margin-top: 15px;
+  background: #fff;
+  border-bottom: 1px solid $light-grey-border-colour;
+  .match-result-link, li.search-results {
+    display: table;
+    padding: 15px 15px 15px 0;
+    color: $dark-grey;
+    background: inherit;
+    height: 100%;
+    &:hover {
+      text-decoration: none;
+    }
+    &.docs {
+      a h3 {
+        position: relative;
+        padding-left: 35px;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          margin-top: -16px;
+          left: 0;
+          @extend %standard-sprite;
+          @include svg-icon-position-only(7, 3);
+        }
+      }
+      a.pdf h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(7, 3, 32px, 32px);
+        }
+
+      }
+      a.xlsx h3, a.xls h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(6, 3, 32px, 32px);
+        }
+      }
+      a.doc h3, a.docx h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(7, 3, 32px, 32px);
+        }
+      }
+      a.ppt h3, a.pptx h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(7, 3, 32px, 32px);
+        }
+      }
+      a.rtf h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(7, 3, 32px, 32px);
+        }
+      }
+      a.jpg h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(4, 3, 32px, 32px);
+        }
+      }
+      a.zip h3 {
+        &:before {
+          @extend %sprite-images;
+          @include svg-icon(5, 3, 32px, 32px);
+        }
+      }
+    }
+  }
+  .match-result-link p {
+    margin-bottom: 0;
+    padding-right: 25px;
+    color: $dark-grey;
+    overflow: hidden;
+    max-height: 110px;
+    position: relative;
+    line-height: 22px;
+    background: inherit;
+    word-wrap: break-word;
+    word-break: break-word;
+
+    em {
+      background: #d8e3f0;
+      font-style: normal;
+    }
+  }
+  a.search-url {
+    padding-top: 10px;
+  }
+  h3, .search-result-text a h3 {
+    word-wrap: break-word;
+    word-break: break-word;
+    color: $linkcolour;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.search-filter-results {
+  margin-bottom: 20px;
+}
+
+#pagination-items, #results-list {
+  margin-left: 0;
+  li {
+    list-style: none;
+    &.search-results {
+      margin-top: 30px;
+    }
+  }
+
+  .search-results {
+    @extend .search-results;
+    .search-result-text {
+      position: relative;
+      margin-bottom: 10px;
+      p {
+        margin-bottom: 0;
+        padding-right: 25px;
+        color: #000;
+
+      }
+      h3 {
+        color: #000;
+      }
+    }
+    .search-tags {
+      display: none;
+    }
+  }
+}
+
+.re-search {
+  margin-bottom: 5px;
+  span {
+    float: left;
+    width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  .remove-content-container {
+    float: left;
+    width: 100%;
+  }
+  .primary-button {
+    float: left;
+    width: 25%;
+    min-width: 70px;
+  }
+}
+
+.results-filter-box {
+  label.heading {
+    float: left;
+    width: 100%;
+    text-align: left;
+    &.results-from {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+  span.heading.results-from {
+    font-weight: bold;
+    border: none;
+  }
+  .sort-by {
+    float: left;
+    width: 100%;
+    margin-top: 5px;
+    .selector {
+      width: 100%;
+      float: left;
+    }
+    .primary-button {
+      margin-bottom: 10px;
+    }
+  }
+  .num-pages-holder {
+    width: 50% - $gridGutterWidth;
+    margin-right: $gridGutterWidth;
+    float: left;
+  }
+  .sort-by-holder {
+    width: 50%;
+    float: left;
+  }
+  .results-from {
+    span.heading {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    padding-top: 5px;
+    float: left;
+    width: 100%;
+    .selector {
+      width: 100%;
+      float: left;
+    }
+  }
+}
+   
+
+		
+    
+
+
+
+
+
+
+

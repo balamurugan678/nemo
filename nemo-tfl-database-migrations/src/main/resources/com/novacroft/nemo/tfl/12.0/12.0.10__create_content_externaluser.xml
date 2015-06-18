@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <property name="now" value="SYSDATE" dbms="oracle"/>
+    <changeSet author="Novacroft" id="12.0.10">
+
+        <insert tableName="externaluser" schemaName="${schemaName}">
+            <column name="id" valueComputed="${schemaName}.external_user_seq.nextval"/>
+            <column name="createduserid">Installer</column>
+            <column name="createddatetime" valueDate="${now}"/>
+            <column name="username">ExternalUserTest</column>
+            <column name="password">ExternalUserTest</column>
+            <column name="status">Active</column>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

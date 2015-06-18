@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<mapping>
+
+  <description>Object/XML mapping for Nemo TfL Common Get Card</description>
+  <class name="com.novacroft.nemo.tfl.common.domain.cubic.CardInfoResponseV2"  >
+        <map-to xml="CardInfoResponseV2" />
+        <field name="cardCapability">
+            <bind-xml name="CardCapability" node="element" />
+        </field>
+        <field name="cardDeposit">
+            <bind-xml name="CardDeposit" node="element" />
+        </field>
+        <field name="cardType">
+            <bind-xml name="CardType" node="element" />
+        </field>
+        <field name="cccLostStolenDateTime">
+            <bind-xml name="CCCLostStolenDateTime" node="element" />
+        </field>
+        <field name="prestigeId">
+            <bind-xml name="PrestigeID" node="element" />
+        </field>
+        <field name="photoCardNumber">
+            <bind-xml name="PhotocardNumber" node="element" />
+        </field>
+        <field name="registered">
+            <bind-xml name="Registered" node="element" />
+        </field>
+        <field name="passengerType">
+            <bind-xml name="PassengerType" node="element" />
+        </field>
+        <field name="autoLoadState">
+            <bind-xml name="AutoloadState" node="element" />
+        </field>
+      <field name="discountEntitlement1">
+          <bind-xml name="DiscountEntitleMent1" node="element"/>
+      </field>
+        <field name="discountExpiry1">
+            <bind-xml name="DiscountExpiry1" node="element" />
+        </field>
+      <field name="discountEntitlement2">
+          <bind-xml name="DiscountEntitleMent2" node="element"/>
+      </field>
+        <field name="discountExpiry2">
+            <bind-xml name="DiscountExpiry2" node="element" />
+        </field>
+      <field name="discountEntitlement3">
+          <bind-xml name="DiscountEntitleMent3" node="element"/>
+      </field>
+        <field name="discountExpiry3">
+            <bind-xml name="DiscountExpiry3" node="element" />
+        </field>
+        <field name="hotListReasons" type="com.novacroft.nemo.common.domain.cubic.HotListReasons" >
+            <bind-xml name="HotlistReasons" node="element" />
+        </field> 
+        <field name="holderDetails" type="com.novacroft.nemo.common.domain.cubic.HolderDetails" >
+            <bind-xml name="CardHolderDetails" node="element" />
+        </field>          
+        <field name="ppvDetails" type="com.novacroft.nemo.common.domain.cubic.PrePayValue" >
+            <bind-xml name="PPVDetails" node="element" />
+        </field>
+        <field name="pptDetails" type="com.novacroft.nemo.common.domain.cubic.PrePayTicketDetails" >
+            <bind-xml name="PPTDetails" node="element" />
+        </field> 
+        <field name="pendingItems" type="com.novacroft.nemo.common.domain.cubic.PendingItems" >
+            <bind-xml name="PendingItems" node="element" />
+        </field>
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.HotListReasons"  >
+        <map-to xml="HotlistReasonCode" />
+        <field name="hotListReasonCodes" type="java.lang.Integer" collection="arraylist">
+            <bind-xml name="HotlistReasonCode" node="element" />
+        </field>
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.HolderDetails"  >
+        <map-to xml="CardHolderDetails" />
+        <field name="title">
+            <bind-xml name="Title" node="element" />
+        </field>
+        <field name="firstName">
+            <bind-xml name="FirstName" node="element" />
+        </field>
+        <field name="middleInitial">
+            <bind-xml name="MiddleInitial" node="element" />
+        </field>
+        <field name="lastName">
+            <bind-xml name="LastName" node="element" />
+        </field>
+        <field name="dayTimeTelephoneNumber">
+            <bind-xml name="DayTimePhoneNumber" node="element" />
+        </field>
+        <field name="houseNumber">
+            <bind-xml name="HouseNumber" node="element" />
+        </field>
+        <field name="houseName">
+            <bind-xml name="HouseName" node="element" />
+        </field>
+        <field name="street">
+            <bind-xml name="Street" node="element" />
+        </field>
+        <field name="town">
+            <bind-xml name="Town" node="element" />
+        </field>
+        <field name="county">
+            <bind-xml name="County" node="element" />
+        </field>
+        <field name="postcode">
+            <bind-xml name="Postcode" node="element" />
+        </field>
+        <field name="emailAddress">
+            <bind-xml name="EmailAddress" node="element"/>
+        </field>
+        <field name="password">
+            <bind-xml name="Password" node="element"/>
+        </field>
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.PrePayValue"  >
+        <map-to xml="PPVDetails" />
+        <field name="requestSequenceNumber">
+            <bind-xml name="RequestSequenceNumber" node="element" />
+        </field>
+        <field name="realTimeFlag">
+            <bind-xml name="RealTimeFlag" node="element" />
+        </field>
+        <field name="prePayValue">
+            <bind-xml name="PrepayValue" node="element" />
+        </field>
+        <field name="balance">
+            <bind-xml name="Balance" node="element" />
+        </field>
+        <field name="currency">
+            <bind-xml name="Currency" node="element" />
+        </field>
+        <field name="pickupLocation">
+            <bind-xml name="PickupLocation" node="element" />
+        </field>
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.PrePayTicketDetails"  >
+        <map-to xml="PPTDetails" />
+        <field name="pptSlots" type="com.novacroft.nemo.common.domain.cubic.PrePayTicketSlot" collection="arraylist" >
+            <bind-xml name="PPTSlot" node="element" />
+        </field>
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.PrePayTicketSlot"  >
+        <map-to xml="PPTSlot" />
+        <field name="slotNumber">
+            <bind-xml name="SlotNumber" node="element" />
+        </field>
+        <field name="product">
+            <bind-xml name="Product" node="element" />
+        </field>
+         <field name="zone">
+            <bind-xml name="Zone" node="element" />
+        </field>
+        <field name="startDate">
+            <bind-xml name="StartDate" node="element" />
+        </field>
+        <field name="expiryDate">
+            <bind-xml name="ExpiryDate" node="element" />
+        </field>
+         <field name="passengerType">
+            <bind-xml name="PassengerType" node="element" />
+        </field>
+        <field name="discount">
+            <bind-xml name="Discount" node="element" />
+        </field>
+        <field name="state">
+            <bind-xml name="State" node="element" />
+        </field>
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.PendingItems"  >
+        <map-to xml="PendingItems" />
+        <field name="ppvs" type="com.novacroft.nemo.common.domain.cubic.PrePayValue" collection="arraylist" >
+            <bind-xml name="PPV" node="element" />
+        </field>
+        <field name="ppts" type="com.novacroft.nemo.common.domain.cubic.PrePayTicket" collection="arraylist" >
+            <bind-xml name="PPT" node="element" />
+        </field> 
+    </class>
+    
+    <class name="com.novacroft.nemo.common.domain.cubic.PrePayTicket"  >
+        <map-to xml="PPTSlot" />
+        <field name="requestSequenceNumber">
+            <bind-xml name="RequestSequenceNumber" node="element" />
+        </field>
+        <field name="realTimeFlag">
+            <bind-xml name="RealTimeFlag" node="element" />
+        </field>
+         <field name="productCode">
+            <bind-xml name="ProductCode" node="element" />
+        </field>
+        <field name="productPrice">
+            <bind-xml name="ProductPrice" node="element" />
+        </field>
+        <field name="currency">
+            <bind-xml name="Currency" node="element" />
+        </field>
+        <field name="startDate">
+            <bind-xml name="Startdate" node="element" />
+        </field>
+        <field name="expiryDate">
+            <bind-xml name="ExpiryDate" node="element" />
+        </field>
+        <field name="pickupLocation">
+            <bind-xml name="PickupLocation" node="element" />
+        </field>
+    </class>
+
+</mapping>

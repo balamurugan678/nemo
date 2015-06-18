@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.32">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('xml.parsing.error', 'XML is not well formed');
+  content_installer.install('cubic.unexpectedServer.error', 'An unexpected error occurred on the Cubic system');
+  content_installer.install('cubic.authentication.error', 'User credentials are incorrect or does not exist on the Cubic system');
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

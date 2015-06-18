@@ -1,0 +1,23 @@
+.top-row .logo {
+    width: 155px;
+}
+
+.top-row .logo .tfl-name {
+    display: block;
+}
+
+#footer .secondary-footer {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#footer .secondary-footer ul li {
+    float: left;
+    margin: 0 1% 0 0;
+}
+
+#footer .secondary-footer span {
+    margin-top: 8px;
+    float: right;
+    display: block;
+}

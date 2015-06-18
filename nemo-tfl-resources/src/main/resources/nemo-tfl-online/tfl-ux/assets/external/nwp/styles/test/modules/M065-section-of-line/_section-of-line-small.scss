@@ -1,0 +1,156 @@
+/**************************************************
+	M065-section-of-line
+* Author: Andrew Spencer
+* Created: 21/10/2013
+* Pattern library URL:  
+**************************************************/
+
+.line-info-box {
+  margin-bottom: 20px;
+
+  .content {
+    border-bottom: 0px;
+    .always-visible {
+      .controls {
+        display: block;
+        right: 5px;
+      }
+    }
+    &.expanded {
+      border-bottom: 1px solid $light-grey-border-colour;
+    }
+  }
+  .accordion-heading {
+    background-color: $subtle-grey;
+    border: 0px;
+    padding-right: 40px;
+    .line-name {
+      margin-left: 20px;
+      font-size: 20px;
+      margin-bottom: 0px;
+    }
+    .line-section {
+      margin-left: 20px;
+      font-size: 15px;
+      margin-bottom: 0px;
+    }
+
+    &.route {
+      .tag {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0px;
+        width: 10px;
+        z-index: 1;
+        text-indent: -10000px;
+      }
+    }
+  }
+
+  .start-hidden {
+    padding: 0px;
+    .stop-list {
+      margin-bottom: 0px;
+      li {
+        .lines {
+          overflow: visible;
+          left: -5px;
+          span {
+            width: 6px;
+            .interchange {
+              height: 0px;
+              &:before {
+                width: 13px;
+                height: 13px;
+                background: white;
+                right: -16px;
+                bottom: -10px;
+                position: absolute;
+                -moz-border-radius: 20px;
+                -webkit-border-radius: 20px;
+                border-radius: 10px;
+                border-color: black;
+                border-style: solid;
+                z-index: 2;
+                content: "";
+              }
+            }
+          }
+        }
+
+        .interchange-list {
+          position: absolute;
+          right: 35px;
+          top: 5px;
+
+          div {
+            position: relative;
+            float: left;
+          }
+        }
+
+        .stop-link {
+          padding-left: 40px;
+          padding-right: 100px;
+          @include transition(background-color 0.3s);
+          &:hover, &:focus {
+
+            text-decoration: none;
+            background-color: #eff6fd;
+          }
+
+          &:after {
+            @include svg-icon(21, 1);
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            margin-top: -16px;
+            margin-right: -10px;
+          }
+        }
+
+        &:nth-child(even) {
+          background-color: $subtler-grey;
+        }
+
+        &:nth-child(odd) {
+          background-color: white;
+        }
+
+        &:first-child {
+          .lines {
+            top: 0px;
+          }
+          .start-of-line {
+            top: 18px;
+            .stop {
+              height: 6px;
+              top: 3px;
+            }
+          }
+        }
+
+        &:last-child {
+          .end-of-line {
+            height: 25px;
+            .stop {
+              height: 6px;
+              top: 22px;
+            }
+          }
+        }
+      }
+    }
+
+    .stop {
+      margin-top: -3px;
+      height: 6px;
+      width: 8px;
+    }
+  }
+}
+
+

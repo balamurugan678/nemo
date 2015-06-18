@@ -1,0 +1,79 @@
+//IE 7
+.lt-ie8 {
+  h1, h2, h3 {
+    line-height: 153.33%;
+  }
+  a.primary-button, a.secondary-button {
+    height: 24px;
+  }
+  li {
+    margin-left: 1em;
+    vertical-align: top;
+  }
+  .visually-hidden {
+    visibility: hidden;
+  }
+  .flat-button {
+    padding-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    img {
+      margin-top: 20px;
+    }
+  }
+  .icon-replacement-text {
+    display: block;
+  }
+  .plain-button {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .section-overview {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .tabs-style-1 {
+    overflow: hidden;
+  }
+}
+
+//IE 7&8
+.lt-ie9 {
+  body {
+    min-width: 900px;
+  }
+  input[type='text'] {
+    padding-top: 8px;
+  }
+
+  .large-status-information {
+    border: solid 1px #A8A8A8;
+    //height: 50px;
+    display: block;
+    margin-top: 15px;
+
+    .line-text {
+      padding: 10px 20px;
+      vertical-align: middle;
+    }
+
+    .disruption-type {
+      padding: 10px 20px;
+      vertical-align: middle;
+      width: 24%;
+      color: $primary-blue;
+
+    }
+
+    .disruption-message {
+      padding: 10px 20px;
+      vertical-align: middle;
+    }
+  }
+
+  .section-overview {
+    > div.main {
+      width: 60%;
+    }
+  }
+}

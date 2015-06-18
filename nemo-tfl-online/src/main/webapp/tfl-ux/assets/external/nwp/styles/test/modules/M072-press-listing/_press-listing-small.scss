@@ -1,0 +1,54 @@
+/**************************************************
+	M072-press-listing
+* Author: John Boyle
+* Created: 22/11/2013
+* Pattern library URL:  
+**************************************************/
+.press-listing-wrap {
+  margin-bottom: 15px;
+  .press-listing {
+    h2 {
+      margin-bottom: 0;
+    }
+    p {
+      color: #666;
+    }
+    .news-teaser {
+      background: #fff;
+      margin-bottom: 0;
+      margin-top: 0;
+      border: none;
+      border: 1px solid $lighter-dark-grey;
+    }
+    .latest {
+      @extend %new-johnson;
+      padding: 0 5px;
+      background: #1a5a92;
+      color: white;
+      font-size: 11pt;
+      font-weight: bold;
+      width: 62px;
+      margin-bottom: 10px;
+    }
+    &.multiple-release {
+      .news-teaser {
+        border-bottom: none;
+        > a {
+          border-bottom: none;
+        }
+        &:last-child {
+          border-bottom: 3px solid $lighter-dark-grey;
+        }
+      }
+    }
+  }
+  .plain-button {
+    background: $darker-subtle-grey;
+    border-bottom: 3px solid $lighter-dark-grey;
+    margin: 10px 0 15px 0;
+    &:after {
+      margin-right: 0;
+    }
+  }
+
+}

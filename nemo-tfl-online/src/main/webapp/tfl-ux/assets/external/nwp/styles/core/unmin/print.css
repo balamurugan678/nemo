@@ -1,0 +1,129 @@
+/* utility */
+/* glabal - large */
+/* line 10, ../../sass/global/base/_base-print.scss */
+.cookie-policy-notice,
+.beta-banner,
+.collapsible-menu,
+.extra-nav,
+.top-row-extras,
+.breadcrumb-container,
+.primary-footer,
+.secondary-footer ul,
+.primary-button,
+.secondary-button {
+    display: none !important;
+}
+
+/* line 14, ../../sass/global/base/_base-print.scss */
+.top-row {
+    border-bottom: 0 !important;
+}
+
+/* line 18, ../../sass/global/base/_base-print.scss */
+#footer {
+    border-top: 0 !important;
+}
+
+/* line 24, ../../sass/global/base/_base-print.scss */
+.tfl-name,
+.hero-headline,
+.secondary-footer span.heading {
+    color: #000 !important;
+}
+
+/* line 28, ../../sass/global/base/_base-print.scss */
+.hero-headline {
+    box-shadow: none !important;
+}
+
+/* line 37, ../../sass/global/base/_base-print.scss */
+.top-row,
+#mainnav,
+.hero-headline,
+.logo,
+#footer,
+.secondary-footer {
+    background-color: transparent !important;
+}
+
+/* line 41, ../../sass/global/base/_base-print.scss */
+#footer {
+    background-image: none !important;
+}
+
+/* line 45, ../../sass/global/base/_base-print.scss */
+.headline-container {
+    margin: 0 2.54% !important;
+}
+
+/* Specific - large */
+/* line 3, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.journey-planner-results,
+.basic-journey-options,
+#plan-a-journey {
+    background-color: transparent !important;
+}
+
+/* line 15, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.journey-types,
+#OptionsForPublictransport,
+.journey-planner-results .field-validation-information,
+.journey-steps,
+.json-all-stops,
+.view-on-a-map,
+.show-hide-links,
+.replan-route,
+.line-status.expandable-box .content {
+    display: none !important;
+}
+
+/* line 20, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+body:not(.showing-full-details) .all-stops {
+    display: none !important;
+}
+
+/* line 26, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.journey-details,
+.accessibility-details .details-pane,
+.line-status.expandable-box .content.expanded {
+    display: block !important;
+}
+
+/* line 30, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+#plan-a-journey {
+    margin-top: 0 !important;
+}
+
+/* line 35, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+#plan-a-journey,
+.journey-summary {
+    border-bottom: 0 !important;
+}
+
+/* line 39, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+#plan-a-journey {
+    border: 1px solid #cccccc !important;
+}
+
+/* line 45, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.summary-results > .expandable-box .always-visible, .summary-results > .expandable-box .start-hidden {
+    border: 1px solid #cccccc !important;
+    width: 100% !important;
+}
+
+/* line 53, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.journey-detail-step,
+.accessibility-details {
+    page-break-inside: avoid;
+}
+
+/* line 58, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.showing-full-details .not-selected {
+    display: none !important;
+}
+
+/* line 62, ../../sass/specific/journey-planner/_journey-planner-print.scss */
+.showing-full-details .summary-results,
+.showing-full-details .full-results-container {
+    width: 94.92%;
+}

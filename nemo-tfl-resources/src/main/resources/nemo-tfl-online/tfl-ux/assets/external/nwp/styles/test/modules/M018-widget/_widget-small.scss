@@ -1,0 +1,255 @@
+.widget-wrapper {
+  margin-bottom: 20px;
+  .content {
+    .payments-widget {
+      padding: 15px 0 0 0;
+      border: 0;
+    }
+
+    hr {
+      border-top: 1px dashed $light-grey-border-colour;
+      height: 0px;
+      background-color: transparent;
+    }
+  }
+  .padded-content {
+    padding: 10px;
+    > :last-child {
+      margin-bottom: 10px;
+    }
+  }
+  .widget-content {
+    .board-wrapper {
+      padding: 0;
+      .rainbow-board {
+        margin-top: 0;
+      }
+    }
+
+    .rainbow-list-wrapper {
+      margin: 0;
+
+      h2 {
+        display: none;
+      }
+
+      &.visible {
+        display: block;
+      }
+    }
+  }
+
+  &.homepage-style {
+    margin-bottom: 10px;
+    .expandable-box {
+      .content {
+        border-bottom: 0px;
+        margin-left: 0;
+      }
+
+      .journey-planner-widget {
+        border-bottom: 1px solid $light-grey-border-colour;
+      }
+    }
+  }
+}
+
+.widget-heading {
+  @extend %new-johnson-bold;
+  font-size: 20px;
+  width: 100%;
+  background: $darker-subtle-grey;
+  padding: 12px 40px 8px 14px;
+  color: $dark-grey;
+  cursor: pointer;
+  /*margin-top: -30px;*/
+  position: relative;
+
+  display: block;
+  text-decoration: none;
+
+  &:link, &:visited, &:hover, &:active {
+    text-decoration: none;
+  }
+
+  h3.widget-title,
+  .widget-title {
+    color: $dark-grey;
+    display: block;
+    font-size: inherit;
+    margin: 0;
+    line-height: inherit;
+
+    &.with-icon {
+      position: relative;
+      padding-right: 42px;
+
+      .i {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: block;
+      }
+
+    }
+  }
+  .widget-subtitle {
+    display: block;
+    font-size: 16px;
+  }
+
+  &.primary {
+    color: #fff;
+    background: $primary-blue;
+    padding-left: 50px;
+
+    .section-style {
+      text-transform: none;
+      background: transparent;
+      font-size: 20px;
+      padding: 0px;
+      display: inline;
+      font-family: New Johnson Bold;
+    }
+    .controls {
+      @include svg-icon-position-only(23, 2);
+    }
+
+    &:before {
+      content: "";
+      height: 48px;
+      width: 48px;
+      display: block;
+      position: absolute;
+      background-image: url('/static/' +$version+ '/images/homepage_sprite_x2.png');
+      background-size: 96px 144px;
+      background-image: url('/static/' +$version+ '/images/homepage_sprite.png') \9;
+      background-position: -48px 0;
+      top: 50%;
+      margin-top: -26px;
+      left: 0;
+    }
+  }
+}
+
+.expanded .widget-heading.primary .controls {
+  @include svg-icon-position-only(24, 2);
+}
+
+.widget-wrapper.always-expanded {
+  .widget-heading {
+    cursor: auto;
+    padding-right: 10px;
+  }
+  .widget-content {
+    border: 1px solid $light-grey-border-colour;
+
+    ~ .widget-content {
+      border-top: 0;
+    }
+  }
+
+  &.no-border {
+    .widget-content {
+      border: none 0px;
+    }
+  }
+}
+
+.widget-wrapper.info-widget {
+  .widget-heading {
+    background-color: $disruption-colour;
+    padding-left: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    &:hover, &:focus {
+      @include darken-hover-and-focus($disruption-colour, 5%);
+    }
+    &:before {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(27, 1);
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      left: 10px;
+      content: "";
+    }
+    .widget-title {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+  .widget-content {
+    border-top: 1px dashed $light-grey-border-colour;
+  }
+  .expandable-box {
+    .controls {
+      @include svg-icon-position-only(23, 1);
+    }
+    .expanded {
+      .controls {
+        @include svg-icon-position-only(24, 1);
+      }
+    }
+    .content {
+      border-bottom: 0;
+
+      &.expanded {
+
+        border-bottom: 1px solid $light-grey-border-colour;
+      }
+    }
+  }
+}
+
+.widget-wrapper.plain-widget {
+  .widget-content {
+    .link-button {
+      border: solid $light-grey-border-colour;
+      border-width: 1px 0 0;
+      margin-bottom: 0;
+
+      &:first-child {
+        border-top: 0px;
+      }
+    }
+    .routes-list {
+      margin-bottom: 0;
+      .route {
+        border: solid $light-grey-border-colour;
+        border-width: 1px 0 0;
+        &:first-child {
+          border-top: 0px;
+        }
+      }
+    }
+    .board-wrapper {
+      border: 0;
+      .rainbow-board {
+        border: 0;
+        tr {
+          border: 0;
+          border-top: 1px solid $light-grey-border-colour;
+          &:first-child {
+            border-top: 0;
+          }
+        }
+      }
+
+    }
+
+  }
+  &.no-border {
+    .widget-content {
+      border: none 0px;
+    }
+  }
+}
+
+//.widget-content .vertical-button-container{
+//	margin-top: 0;
+//}
+.widget-wrapper.fares-widget {
+  .start-hidden {
+    padding: 0;
+  }
+}

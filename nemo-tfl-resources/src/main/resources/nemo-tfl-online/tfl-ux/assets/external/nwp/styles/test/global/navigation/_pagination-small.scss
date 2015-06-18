@@ -1,0 +1,91 @@
+.pagination-controls {
+  border-bottom: 1px solid $lighter-grey-border-colour;
+  border-top: 1px solid $lighter-grey-border-colour;
+  margin: 15px 0;
+  padding: 10px 0;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .pagination {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    a {
+      border: none;
+      color: $primary-blue;
+      &.active_page {
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+        cursor: default;
+        &:hover, &:focus {
+          text-decoration: none;
+          background-color: #fff;
+        }
+      }
+      &.selected {
+        font-weight: bold;
+      }
+    }
+    .ellipse {
+      display: none !important;
+    }
+  }
+  .first_link, .last_link {
+    padding: 3px 8px;
+    margin: 3px;
+  }
+  .first_link {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      background: grey;
+      right: -2px;
+      height: 100%;
+      width: 1px;
+      top: 0;
+    }
+  }
+  .last_link {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      background: grey;
+      left: -2px;
+      height: 100%;
+      width: 1px;
+      top: 0;
+    }
+  }
+  .previous_link, .next_link {
+    padding: 8px 14px;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(19, 1);
+    span {
+      display: none;
+    }
+    &.no_more {
+      display: none;
+    }
+  }
+  .next_link {
+    @include svg-icon-position-only(21, 1);
+    background-position-x: -6px;
+  }
+  .separator {
+    border-left: solid 1px grey;
+    padding: 3px;
+    margin: 4px;
+    margin-right: -2px;
+  }
+}
+
+.page_link, .next_link, .previous_link, .first_link, .last_link {
+  padding: 3px 8px;
+  &:hover, &:focus {
+    text-decoration: none;
+    @include darken-hover-and-focus(#fff, 5%);
+  }
+}

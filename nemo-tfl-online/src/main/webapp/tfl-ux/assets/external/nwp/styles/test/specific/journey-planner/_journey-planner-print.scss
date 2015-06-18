@@ -1,0 +1,64 @@
+.journey-planner-results,
+.basic-journey-options,
+#plan-a-journey {
+  background-color: transparent !important;
+}
+
+.journey-types,
+#OptionsForPublictransport,
+.journey-planner-results .field-validation-information,
+.journey-steps,
+.json-all-stops,
+.view-on-a-map,
+.show-hide-links,
+.replan-route,
+.line-status.expandable-box .content {
+  display: none !important;
+}
+
+body:not(.showing-full-details) .all-stops {
+  display: none !important;
+}
+
+.journey-details,
+.accessibility-details .details-pane,
+.line-status.expandable-box .content.expanded {
+  display: block !important;
+}
+
+#plan-a-journey {
+  margin-top: 0 !important;
+}
+
+#plan-a-journey,
+.journey-summary {
+  border-bottom: 0 !important;
+}
+
+#plan-a-journey {
+  border: 1px solid $light-grey-border-colour !important;
+}
+
+.summary-results {
+  > .expandable-box {
+    .always-visible, .start-hidden {
+      border: 1px solid $light-grey-border-colour !important;
+      width: 100% !important;
+    }
+  }
+}
+
+.journey-detail-step,
+.accessibility-details {
+  page-break-inside: avoid;
+}
+
+.showing-full-details {
+  .not-selected {
+    display: none !important;
+  }
+  .summary-results,
+  .full-results-container {
+    width: 100% - (2 * $gridGutterWidth);
+  }
+}

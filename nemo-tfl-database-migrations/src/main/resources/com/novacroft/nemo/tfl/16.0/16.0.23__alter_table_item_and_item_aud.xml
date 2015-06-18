@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.23">
+        <addColumn schemaName="${schemaName}" tableName="ITEM">
+            <column name="AUTOTOPUPACTIVITY" type="VARCHAR2(40)" remarks="Field used in the auto top-up history table"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ITEM_AUD">
+            <column name="AUTOTOPUPACTIVITY" type="VARCHAR2(40)" remarks="Field used in the auto top-up history table"/>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

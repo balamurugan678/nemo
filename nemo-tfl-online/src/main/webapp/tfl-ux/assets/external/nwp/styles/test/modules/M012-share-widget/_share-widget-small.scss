@@ -1,0 +1,90 @@
+/**************************************************
+	B8 Social media share widget
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/B8+-+Social+media+share
+
+**************************************************/
+
+.share-widget-wrapper {
+  border-left: 1px solid $light-grey-border-colour;
+  border-right: 1px solid $light-grey-border-colour;
+  border-top: 1px solid $light-grey-border-colour;
+  position: relative;
+  width: 180px;
+  margin: 0 auto 10px;
+  z-index: 1001;
+  background-color: #fff;
+  @extend %transparent-grey-bottom-border;
+  &.hidden {
+    display: none;
+  }
+  .share-widget {
+    display: block;
+    padding: 2px;
+    cursor: pointer;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include darken-hover-and-focus(#FFF, 5%);
+      text-decoration: none;
+    }
+    &:hover, &:focus {
+      + .share-list {
+        overflow: visible;
+        clip: auto;
+        height: auto;
+      }
+    }
+    .icon {
+      float: left;
+    }
+    .share-text {
+      float: left;
+      margin: 5px;
+    }
+  }
+  .share-list {
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    height: 0;
+    position: absolute;
+
+    background: #fff;
+    top: 36px;
+    right: -1px;
+    border-left: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+    border-top: 1px solid $light-grey-border-colour;
+    width: 180px;
+    @extend %transparent-grey-bottom-border;
+    list-style: none outside none;
+    margin: 0;
+    &.visible-for-focus {
+      clip: auto;
+      height: auto;
+    }
+    &:hover, &:focus {
+      overflow: visible;
+      clip: auto;
+      height: auto;
+    }
+    li {
+      a {
+        display: block;
+        padding: 0;
+        clear: both;
+        span {
+          float: left;
+          &.text {
+            padding: 5px;
+          }
+        }
+        &:hover, &:focus {
+          background: darken(#fff, 5%);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+        
+        <property name="now" value="SYSDATE" dbms="oracle"/>
+    <changeSet author="Novacroft" id="14.0.60">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+   select_list_installer.install_list('PassengerTypes', 'Passenger Types');
+   
+   select_list_installer.install_option('PassengerTypes', '0', 10);
+   select_list_installer.install_option('PassengerTypes', '1', 20);
+   
+   select_list_installer.install_list('DiscountTypes', 'Discount Types');
+   
+   select_list_installer.install_option('DiscountTypes', '100', 10);
+   select_list_installer.install_option('DiscountTypes', '101', 20);
+   select_list_installer.install_option('DiscountTypes', '102', 30);
+   select_list_installer.install_option('DiscountTypes', '103', 40);
+   select_list_installer.install_option('DiscountTypes', '104', 50);
+   
+   content_installer.install('PassengerTypes.0.option', 'Adult');
+   content_installer.install('PassengerTypes.1.option', 'Child');
+   
+   content_installer.install('DiscountTypes.100.option', 'No Discount');
+   content_installer.install('DiscountTypes.101.option', '18+');
+   content_installer.install('DiscountTypes.102.option', 'Full Time Education');
+   content_installer.install('DiscountTypes.103.option', 'Apprentice');
+   content_installer.install('DiscountTypes.104.option', 'JCP');
+   
+end;
+]]>
+        </sql>
+        
+        
+    </changeSet>
+</databaseChangeLog>

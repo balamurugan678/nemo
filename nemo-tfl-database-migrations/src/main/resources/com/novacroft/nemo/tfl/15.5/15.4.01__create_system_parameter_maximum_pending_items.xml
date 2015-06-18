@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.4.01">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   system_parameter_installer.install('maximumAllowedPendingItems', 4, 'Maximum allowed pending items per card');
+				   content_installer.install('exceedsMaximumPendingItems.error', 'Caanot add an additional items as you not allowed more than 4 pending items at one time');
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

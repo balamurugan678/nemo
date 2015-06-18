@@ -1,0 +1,68 @@
+/**************************************************
+	M081-variable-message-sign
+
+* Author: Alex Faunt
+* Created: 08/01/2014
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M081-variable-message-sign
+
+**************************************************/
+.variable-message-sign {
+  padding: 20px;
+  min-height: 100px;
+  background-color: $dark-grey;
+  @extend %spot-grid-transparent;
+  margin-bottom: 3px;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 3px;
+    background: #000;
+    opacity: 0.1;
+    width: 100%;
+  }
+
+  .message {
+    text-transform: uppercase;
+    color: $variable-message-sign;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .message:first-child, .corners {
+    &:before, &:after {
+      content: "";
+      background: $variable-message-sign;
+      width: 6px;
+      height: 6px;
+      position: absolute;
+      border-radius: 50%;
+    }
+    &:before {
+      left: 7px;
+    }
+    &:after {
+      right: 7px;
+    }
+  }
+  .message:first-child {
+    &:before, &:after {
+      top: 7px;
+    }
+  }
+  .corners {
+    &:before, &:after {
+      bottom: 7px;
+    }
+  }
+  .corners {
+    height: 0px;
+    width: 0px;
+    display: block;
+  }
+
+}

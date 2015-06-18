@@ -1,0 +1,234 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.6.2 on 16-05-2014@04:05  by Creative*/
+.oo-button-group-spaced {
+    border-top: 1px solid #cccccc;
+}
+
+.oo-button-group-spaced input, .oo-button-group-spaced button, .oo-button-group-spaced a {
+    width: auto;
+    padding: 0 30px;
+}
+
+.oo-button-group-spaced .primary-button {
+    float: right;
+}
+
+.oo-button-group-spaced .secondary-button {
+    float: left;
+}
+
+.oo-responsive-form label {
+    display: block;
+}
+
+.oo-responsive-form .form-control, .oo-responsive-form .inline-message, .oo-responsive-form .first-column {
+    width: 43%;
+}
+
+.oo-responsive-form .form-control.checkbox-list, .oo-responsive-form .form-control.radiobutton-list, .oo-responsive-form .inline-message.checkbox-list, .oo-responsive-form .inline-message.radiobutton-list, .oo-responsive-form .first-column.checkbox-list, .oo-responsive-form .first-column.radiobutton-list {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.oo-responsive-form .inline-form-controls .form-control {
+    width: 43%;
+}
+
+.oo-responsive-form .inline-form-controls.with-message .form-control {
+    width: 43%;
+}
+
+.oo-responsive-form .inline-form-controls.with-message .form-control.with-validation-error {
+    width: 43%;
+}
+
+.oo-responsive-form.slim .inline-message {
+    width: 40%;
+}
+
+.oo-responsive-form .first-column {
+    /*elements already in a helf width wrapper do not need width halved again*/
+}
+
+.oo-responsive-form .first-column h1, .oo-responsive-form .first-column h2, .oo-responsive-form .first-column h3, .oo-responsive-form .first-column h4, .oo-responsive-form .first-column h5, .oo-responsive-form .first-column p {
+    width: 100%;
+}
+
+.oo-responsive-form .with-message > .form-control {
+    min-height: 50px;
+    width: 43%;
+}
+
+.oo-responsive-form .with-message > .form-control.with-validation-error {
+    width: 43%;
+}
+
+.oo-responsive-form .input-with-calendar-container .form-control {
+    width: 43%;
+}
+
+.oo-responsive-form .with-validation-error.form-control {
+    width: 43%;
+}
+
+.oo-responsive-form .with-validation-error + .tooltip-link {
+    display: none;
+}
+
+.oo-responsive-form .form-control-wrap .form-control {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper {
+    margin-left: 60px;
+    vertical-align: top;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.with-indicator:after {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid white;
+    left: -5px;
+    top: 14px;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.with-indicator:before {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 7px solid #cccccc;
+    left: -7px;
+    top: 14px;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.error-message {
+    display: inline-block;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.error-message .field-validation-error {
+    padding: 10px;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.error-message .field-validation-error:before {
+    top: 20px;
+    left: -50px;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.error-message.with-indicator:before {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 7px solid red;
+}
+
+.oo-responsive-form .form-control-wrap .message-wrapper.error-message.with-indicator:after {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid #ffefef;
+}
+
+.oo-responsive-form .expanded.with-message > .oo-tooltip-container {
+    display: inline-block;
+    margin-left: 60px;
+    margin-top: 0;
+}
+
+.oo-responsive-form .expanded.with-message > .oo-tooltip-container.with-indicator:before {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 7px solid #cccccc;
+    left: -12px;
+    top: 14px;
+}
+
+.oo-responsive-form .expanded.with-message > .oo-tooltip-container.with-indicator:after {
+    left: -10px;
+    top: 14px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 6px solid white;
+}
+
+.single-button .oo-back-button {
+    width: auto;
+    text-align: left;
+    margin-left: 15px;
+}
+
+.form-step .step-text {
+    width: 75%;
+    display: inline-block;
+    text-align: left;
+}
+
+.csc-card-status {
+    top: 0;
+    right: 0;
+    width: auto;
+}
+
+.vertical-button-container .csc-card-link {
+    padding: 15px;
+}
+
+.card-expandable-box .start-hidden {
+    display: block;
+}
+
+.card-expandable-box .controls {
+    display: none;
+}
+
+.input-with-calendar-container .toggle-calendar {
+    right: 50%;
+}
+
+.input-with-calendar-container .fc-calendar-wrapper {
+    width: 43%;
+}
+
+.csc-payment-row .block-link .right-arrow {
+    display: block;
+}
+
+.oo-journey-table-column.first-column {
+    width: 50%;
+}
+
+.oo-journey-table-column.second-column {
+    width: 23%;
+}
+
+.oo-journey-table-column.third-column {
+    width: 23%;
+    padding-right: 12px;
+}
+
+.oo-journey-table-column.third-column .icon {
+    right: 40px;
+}
+
+.explanitory-rows .csc-explanatory-row .icon {
+    right: 40px;
+}
+
+.form-control-wrap .form-element-accordian-control {
+    position: relative;
+}
+
+.form-control-wrap .form-element-accordian-control .icon {
+    position: absolute;
+    top: 0;
+    right: -43px;
+}
+
+.text-only {
+    position: relative;
+}
+
+.text-only .icon {
+    right: -48px;
+}
+
+.with-message > a.text.first-column {
+    width: 43%;
+}

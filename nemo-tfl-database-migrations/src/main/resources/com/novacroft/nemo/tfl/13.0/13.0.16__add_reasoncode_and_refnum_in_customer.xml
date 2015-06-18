@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.16">
+        <addColumn tableName="customer" schemaName="${schemaName}">
+            <column name="deletedreasoncode" type="varchar2(128)" remarks="Reason code for customer deletion"
+                    afterColumn="deleteddatetime">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer_AUD" schemaName="${schemaName}">
+            <column name="deletedreasoncode" type="varchar2(128)" remarks="Reason code for customer deletion"
+                    afterColumn="deleteddatetime">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer" schemaName="${schemaName}">
+            <column name="deletedreferencenumber" type="varchar2(128)" remarks="Reference number for customer deletion"
+                    afterColumn="deletedreasoncode">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer_AUD" schemaName="${schemaName}">
+            <column name="deletedreferencenumber" type="varchar2(128)" remarks="Reference number for customer deletion"
+                    afterColumn="deletedreasoncode">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer" schemaName="${schemaName}">
+            <column name="deletednote" type="varchar2(1024)" remarks="Note for customer deletion"
+                    afterColumn="deletedreferencenumber">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer_AUD" schemaName="${schemaName}">
+            <column name="deletednote" type="varchar2(1024)" remarks="Note for customer deletion"
+                    afterColumn="deletedreferencenumber">
+            </column>
+        </addColumn>
+
+    </changeSet>
+</databaseChangeLog>

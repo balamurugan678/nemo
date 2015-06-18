@@ -1,0 +1,633 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Tahoma, Arial;
+    font-size: 11px;
+}
+
+body.innovator #innovator-form {
+    background-color: #eee;
+}
+
+#innovator-form {
+    width: 1200px;
+}
+
+body.innovator form {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+body.innovator form.no-border {
+    border: 0px;
+    padding: 5px;
+}
+
+body.innovator div h2 {
+    clear: both;
+    font-size: 20px;
+    border-bottom: 1px solid #afafaf;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+    padding: 10px 0;
+}
+
+body.innovator label, body.innovator .label {
+    float: left;
+    clear: left;
+    width: 250px;
+    color: navy;
+    line-height: 24px;
+}
+
+body.innovator label.no-float {
+    float: none;
+    clear: none;
+    width: auto;
+}
+
+body.innovator .dataTables_filter input[type=text] {
+    float: none;
+    clear: none;
+    border: 1px solid #888;
+}
+
+body.innovator input[type=text], body.innovator input[type=checkbox], body.innovator textarea, body.innovator select {
+    float: left;
+    clear: right;
+    border: 1px solid #afafaf;
+    margin: 1px 5px;
+    padding-left: 1px;
+}
+
+body.innovator input[type=checkbox] {
+    margin: 6px 5px;
+}
+
+body.innovator input.no-float {
+    float: none;
+    clear: none;
+}
+
+.page-traversal-right {
+    float: right;
+    margin-right: 5px;
+}
+
+.page-traversal-left {
+    float: left;
+    margin-left: 5px;
+}
+
+#footer-area {
+    padding-top: 5px;
+    background-color: #eee;
+    height: 20px;
+    border-left: 1px solid #afafaf;
+    border-right: 1px solid #afafaf;
+    border-bottom: 1px solid #afafaf;
+}
+
+#header-area {
+    height: 24px;
+    clear: both;
+}
+
+#header-area + form div h2 {
+    padding-top: 0px;
+}
+
+#button-area {
+    padding-top: 5px;
+    padding-left: 5px;
+    border-top: 1px solid #afafaf;
+}
+
+#button-area-no-border {
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+.panel-top-left, .panel-top-right {
+    width: 9px;
+    height: 24px;
+    vertical-align: top;
+    font-size: 1px;
+}
+
+.panel-top-left {
+    background-image: url(../images/panel_top_left_slant.gif);
+    float: left;
+}
+
+.panel-top-right {
+    background-image: url(../images/panel_top_right_slant.gif);
+    float: right;
+}
+
+.panel_top_middle {
+    background-image: url(../images/panel_top_middle.gif);
+    width: 1182px;
+    font-weight: bold;
+}
+
+.page-header-title {
+    clear: both;
+    height: 24px;
+    background-color: #fff;
+    float: left;
+}
+
+.page-header-title span {
+    float: left;
+    height: 21px;
+    padding-top: 3px;
+}
+
+.quick-links-top {
+    float: left;
+    height: 20px;
+    width: 100%;
+}
+
+.quick-links-bottom {
+    height: 20px;
+    background-color: #eee;
+}
+
+#main-page-area {
+    border-left: 1px solid #afafaf;
+    border-right: 1px solid #afafaf;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead {
+    background-color: #afafaf;
+}
+
+table thead tr th {
+    border: 1px solid #ccc;
+}
+
+table tbody tr td {
+    border: 1px solid #ccc;
+}
+
+.dataTable-container {
+    background-color: #E4E4FF;
+    padding: 5px;
+    border: 1px solid #888;
+    padding-bottom: 30px;
+}
+
+span.icon.edit-icon {
+    background-image: url(../images/oysteredit.gif);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px;
+}
+
+span.icon.search-icon {
+    background-image: url(../images/oystersearch.gif);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin: 2px 5px;
+}
+
+table.display td {
+    border: none;
+    margin-right: 2px;
+}
+
+/*  
+button, input[type=button] {
+	border: 1px solid #afafaf;
+    padding: 3px;
+    box-shadow: 1px 1px #999;
+    margin-bottom: 3px;
+    cursor:pointer;
+}
+ */
+button, input[type=button], .button {
+    border: 1px solid #afafaf;
+    padding: 2px;
+    box-shadow: 1px 1px #999;
+    margin-bottom: 3px;
+    background-color: buttonface;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+' text-algin : center;
+}
+
+button:hover, input[type=button]:hover, .button:hover {
+    border: 1px solid #888;
+}
+
+button:active, input[type=button]:active, .button:active {
+    border: 1px solid #888;
+    background-color: #999;
+}
+
+button[disabled=disabled] {
+    background-color: #eee;
+    border: 1px solid #fff;
+}
+
+div#search-results {
+    margin-top: 5px;
+    border: 1px solid #afafaf;
+    padding: 3px;
+
+}
+
+table#searchresults {
+    margin-top: 5px;
+}
+
+table td {
+    background-color: #fff;
+    padding: 5px;
+}
+
+table.display td {
+    background-color: transparent;
+    padding: 0;
+}
+
+table.clickable tr:hover td {
+    background-color: #ABD7FF;
+    cursor: pointer;
+}
+
+table.clickable tr:hover td.sorting_1, table.clickable tr:hover td.sorting_2, table.clickable tr:hover td.sorting_3 {
+    background-color: #ABD7FF;
+    cursor: pointer;
+}
+
+table#searchresults th {
+    padding: 4px;
+}
+
+.loading {
+    background-image: url(../images/ajax-loader.gif);
+    height: 32px;
+    width: 32px;
+    margin: auto;
+}
+
+span.loading {
+    background-image: url(../images/ajax-loader.gif);
+    height: 32px;
+    width: 32px;
+    float: right;
+    display: none;
+}
+
+.loading-label {
+    background-image: url("../images/ajax-loader.gif");
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    height: 32px;
+    margin: auto;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+
+div#loading-box {
+    border: 1px solid #cfcfcf;
+    height: 50px;
+    width: 100px;
+    background: #fff;
+    display: none;
+}
+
+div#loading-box > span {
+    background-color: #C4C8D3;
+    display: block;
+    text-align: center;
+    padding: 2px;
+}
+
+div.mTop {
+    margin-top: 10px;
+}
+
+div#toolbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #eee;
+    padding: 2px;
+    border-top: 1px solid #aaa;
+    margin: 0px -5px;
+}
+
+div#toolbar button.save, button.cancel {
+    float: right;
+    margin-right: 14px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#address-box {
+    float: left;
+    clear: both;
+    margin-left: 254px;
+    margin-bottom: 5px;
+    display: none;
+}
+
+.field-validation-error {
+    float: left;
+    padding-top: 4px;
+    color: #880000;
+}
+
+.float-none{
+	float: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.break-line {
+    border-bottom: 1px solid #aaa;
+    float: left;
+    width: 95%;
+    clear: both;
+    margin: 10px 0px;
+}
+
+.cross, .tick {
+    height: 10px;
+    width: 10px;
+    float: left;
+    margin-top: 5px;
+}
+
+.cross {
+    background-image: url(../images/cross.gif);
+}
+
+.tick {
+    background-image: url(../images/tick.gif);
+}
+
+.customerLink {
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+#messageArea {
+    float: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.openwebaccount {
+    background-image: linear-gradient(to top, #0e304e 0%, #0e304e 2px, #123f67 2px, #315b7f 100%);
+    color: white;
+}
+
+td.table-right {
+    text-align: right;
+}
+
+fieldset.radiobutton-list {
+    border: 0px;
+    float: left;
+    margin-left: 5px;
+}
+
+fieldset.radiobutton-list + span.hint {
+    float: left;
+    margin-left: 5px;
+}
+
+.radiobutton-list ul {
+    list-style: none;
+}
+
+.radiobutton-list input[type=radio] {
+    margin-top: 4px;
+    float: left;
+}
+
+button.primary-button {
+    float: right;
+    margin-right: 5px;
+}
+
+td.bold {
+    font-weight: bold;
+    line-height: 22px
+}
+
+#cards td.hotlisted {
+    background-color: #FF6666;
+
+}
+
+.hint-color {
+    color: #2070b6;
+}
+
+.space-before-head {
+    margin-top: 15px;
+}
+
+.internalToolbar {
+    border-bottom: 1px solid #FF6666;
+    clear: both;
+    margin: 10px 0px;
+    padding-bottom: 8px;
+}
+
+.accordian-wrapper {
+    width: 600px;
+}
+
+.button-add {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("images/innovator-icons.png");
+    background-position: -367px -295px;
+    background-repeat: no-repeat;
+    background-size: 592px auto;
+    display: block;
+    float: left;
+    height: 16px;
+    width: 20px;
+
+}
+
+.button-search {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("images/innovator-icons.png");
+    background-position: -19px -220px;
+    background-repeat: no-repeat;
+    background-size: 592px auto;
+    display: block;
+    float: left;
+    height: 16px;
+    width: 20px;
+
+}
+
+.button-check {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("images/innovator-icons.png");
+    background-position: -367px -277px;
+    background-repeat: no-repeat;
+    background-size: 592px auto;
+    display: block;
+    float: left;
+    height: 16px;
+    width: 20px;
+}
+
+.button-admin {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("images/innovator-icons.png");
+    background-position: -367px -277px;
+    background-repeat: no-repeat;
+    background-size: 592px auto;
+    display: block;
+    float: left;
+    height: 16px;
+    width: 20px;
+}
+
+.dialog-display {
+    display: none;
+}
+
+.shoppingCart {
+    width: 700px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.link-button {
+    padding-right: 32px;
+    -webkit-transition: background-color, 0.3s;
+    -moz-transition: background-color, 0.3s;
+    transition: background-color, 0.3s;
+}
+
+/* line 420, small/_global-small.scss */
+.link-button:hover, .link-button:focus {
+    text-decoration: none;
+    background-color: #eff6fd;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+}
+
+#goodwillReasonMessageDiv {
+    width: 100%;
+}
+
+.message {
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.divider {
+    border-top: 1px solid #afafaf;
+    clear: both;
+}
+
+.spacer {
+    padding-top: 5px;
+    clear: both;
+}
+
+table#travelCardsTable {
+    width: 600px;
+}
+
+.width100Percent {
+    width: 100%;
+}
+
+.caseHistory {
+    padding: 7px;
+}
+
+.pad10 {
+    padding: 10px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.margin_top5 {
+    margin: 5px;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.pad7left {
+    padding-left: 7px;
+}
+
+.info {
+    line-height: 24px;
+}
+
+.log-file-box {
+    overflow-y: scroll;
+    height: 450px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+}
+
+.log-error {
+    color: red;
+    font-weight: 900;
+}
+
+.backdatedRefundWarningDiv {
+	width: 500px;
+	height: 20px; 
+	padding: 5px 0 0 0;
+	float: left; 
+	display: block;
+	clear: right;
+}
+
+.approvalListDropDowns {
+    width: 250px;
+}
+
+table.grid tr.grid_row td {
+	text-align: center;
+}

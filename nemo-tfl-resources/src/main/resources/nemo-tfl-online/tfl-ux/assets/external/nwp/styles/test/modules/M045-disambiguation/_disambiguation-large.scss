@@ -1,0 +1,53 @@
+/**************************************************
+	M045-disambiguation
+
+* Author: 
+* Created: 
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M045-disambiguation
+
+**************************************************/
+
+.disambiguation-wrapper {
+  position: relative;
+  background: #fff;
+  min-height: 600px;
+}
+
+.disambiguation-form {
+  background: transparent;
+}
+
+.r .disambiguation-form {
+  margin-left: $gridGutterWidth;
+  margin-right: $gridGutterWidth;
+}
+
+.disambiguation-box {
+  width: 33.3%;
+  margin: 0;
+  background-color: #fff;
+  padding: 10px;
+  min-height: 675px;
+  position: relative;
+}
+
+.disambiguation-map-outer-wrapper {
+  padding: 10px;
+  margin-left: 0;
+  &:last-child {
+    margin-right: 0;
+  }
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 33.3%;
+  width: auto;
+  height: auto;
+  margin: 0;
+
+  .disambiguation-map.map-sliver {
+    height: 100%;
+  }
+}

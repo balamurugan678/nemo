@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <ctx:property-placeholder location="classpath*:nemo-tfl-common.properties, classpath*:nemo-tfl-batch.properties"
+                              ignore-unresolvable="true" ignore-resource-not-found="true"/>
+
+    <bean id="applicationProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath*:nemo-tfl-common.properties</value>
+                <value>classpath*:nemo-tfl-batch.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.batch"/>
+
+    <bean id="tilesViewResolver"
+          class="com.novacroft.nemo.common.support.CachingUrlTilesViewResolver"/>
+
+    <!-- START:Quartz Configuration - Jobs and their Triggers-->
+    <bean name="importAdHocDistributionCubicFileJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="com.novacroft.nemo.tfl.batch.job.cubic.ImportAdHocDistributionCubicFileJob"/>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="cubicImportRootDir" value="${cubic.import.location}"/>
+            </map>
+        </property>
+        <property name="durability" value="true"/>
+    </bean>
+    <bean id="importAdHocDistributionCubicFileJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="group" value="CUBIC_IMPORT"/>
+        <property name="name" value="CUBIC_IMPORT_ADHOC_DIST"/>
+        <property name="jobDetail" ref="importAdHocDistributionCubicFileJob"/>
+        <property name="cronExpression" value="${cubic.import.adhocDistribution.cron}"/>
+    </bean>
+    
+    <bean name="messageSenderJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="com.novacroft.nemo.tfl.batch.job.MessageSenderJob"/>
+        <property name="durability" value="true"/>
+    </bean>
+    <bean id="messageSenderTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="group" value="MESSAGES"/>
+        <property name="name" value="SEND_MESSAGES"/>
+        <property name="jobDetail" ref="messageSenderJob"/>
+        <property name="cronExpression" value="${sendMessages.cron}"/>
+    </bean>
+
+    <bean name="importAutoLoadChangesCubicFileJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="com.novacroft.nemo.tfl.batch.job.cubic.ImportAutoLoadChangesCubicFileJob"/>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="cubicImportRootDir" value="${cubic.import.location}"/>
+            </map>
+        </property>
+        <property name="durability" value="true"/>
+    </bean>
+    <bean id="importAutoLoadChangesCubicFileJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="group" value="CUBIC_IMPORT"/>
+        <property name="name" value="CUBIC_IMPORT_AUTOLOAD_CHANGES"/>
+        <property name="jobDetail" ref="importAutoLoadChangesCubicFileJob"/>
+        <property name="cronExpression" value="${cubic.import.autoloadChanges.cron}"/>
+    </bean>
+
+    <bean name="importAutoLoadsPerformedCubicFileJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="com.novacroft.nemo.tfl.batch.job.cubic.ImportAutoLoadsPerformedCubicFileJob"/>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="cubicImportRootDir" value="${cubic.import.location}"/>
+            </map>
+        </property>
+        <property name="durability" value="true"/>
+    </bean>
+    <bean id="importAutoLoadsPerformedCubicFileJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="group" value="CUBIC_IMPORT"/>
+        <property name="name" value="CUBIC_IMPORT_AUTOLOAD_PERFORMED"/>
+        <property name="jobDetail" ref="importAutoLoadsPerformedCubicFileJob"/>
+        <property name="cronExpression" value="${cubic.import.autoLoadPerformed.cron}"/>
+    </bean>
+
+    <bean name="importCurrentActionListCubicFileJob" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+        <property name="jobClass" value="com.novacroft.nemo.tfl.batch.job.cubic.ImportCurrentActionListCubicFileJob"/>
+        <property name="jobDataAsMap">
+            <map>
+                <entry key="cubicImportRootDir" value="${cubic.import.location}"/>
+            </map>
+        </property>
+        <property name="durability" value="true"/>
+    </bean>
+    <bean id="importCurrentActionListCubicFileJobTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="group" value="CUBIC_IMPORT"/>
+        <property name="name" value="CUBIC_IMPORT_ACTIONLIST"/>
+        <property name="jobDetail" ref="importCurrentActionListCubicFileJob"/>
+        <property name="cronExpression" value="${cubic.import.currentActionList.cron}"/>
+    </bean>
+    <!-- END:Quartz Configuration - Jobs and their Triggers-->
+
+
+    <!-- START:Quartz Configuration - Scheduler-->
+    <bean id="nemoQuartzJobScheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="overwriteExistingJobs" value="true"/>
+        <property name="transactionManager" ref="transactionManager"/>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="jobFactory">
+            <bean class="com.novacroft.nemo.tfl.batch.support.AutowiringSpringBeanJobFactory"/>
+        </property>
+        <property name="quartzProperties">
+            <props>
+                <prop key="org.quartz.scheduler.skipUpdateCheck">true</prop>
+                <prop key="org.quartz.scheduler.instanceName">NemoQuartzJobScheduler</prop>
+                <prop key="org.quartz.threadPool.threadCount">8</prop>
+                <prop key="org.quartz.plugin.triggerHistory.class">org.quartz.plugins.history.LoggingTriggerHistoryPlugin</prop>
+                <prop key="org.quartz.plugin.triggerHistory.triggerFiredMessage">Trigger [{1}.{0}] fired job [{6}.{5}] scheduled
+                    at: {2, date, dd-MM-yyyy HH:mm:ss.SSS}, next scheduled at: {3, date, dd-MM-yyyy HH:mm:ss.SSS}
+                </prop>
+                <prop key="org.quartz.plugin.triggerHistory.triggerCompleteMessage">Trigger [{1}.{0}] completed firing job
+                    [{6}.{5}] with resulting trigger instruction code: {9}. Next scheduled at: {3, date, dd-MM-yyyy
+                    HH:mm:ss.SSS}
+                </prop>
+                <prop key="org.quartz.plugin.triggerHistory.triggerMisfiredMessage">Trigger [{1}.{0}] misfired job [{6}.{5}].
+                    Should have fired at: {3, date, dd-MM-yyyy HH:mm:ss.SSS}
+                </prop>
+            </props>
+        </property>
+        <!-- jobs-->
+        <property name="triggers">
+            <list>
+                <ref bean="importAdHocDistributionCubicFileJobTrigger"/>
+                <ref bean="importAutoLoadChangesCubicFileJobTrigger"/>
+                <ref bean="importAutoLoadsPerformedCubicFileJobTrigger"/>
+                <ref bean="importCurrentActionListCubicFileJobTrigger"/>
+                <ref bean="messageSenderTrigger"/>
+            </list>
+        </property>
+    </bean>
+    <!-- END:Quartz Configuration - Scheduler-->
+
+    <bean id="nemoUserContext" class="com.novacroft.nemo.common.support.NemoUserContextImpl">
+        <property name="userName" value="tfl-batch"/>
+    </bean>
+
+</beans>

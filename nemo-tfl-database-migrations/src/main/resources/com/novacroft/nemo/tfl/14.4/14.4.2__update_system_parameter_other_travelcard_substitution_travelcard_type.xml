@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.4.2">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+   system_parameter_installer.install('otherTravelCardSubstitutionTravelCardType', '7Day', 'Substitution travel card type used to calculating ticket price when the user selects other travelcard type');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

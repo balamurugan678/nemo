@@ -1,0 +1,17 @@
+/**************************************************
+	D5 Related links (internal/external)
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/D5+-+Related+Links
+
+**************************************************/
+
+.related-links {
+  width: 47.5%;
+  margin-right: 5%;
+  float: left;
+  &:last-child, &:nth-child(2n) {
+    margin-right: 0;
+  }
+}

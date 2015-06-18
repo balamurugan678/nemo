@@ -1,0 +1,180 @@
+/**************************************************
+	C16 SEARCH FILTER MODULE
+* Author: Rodrigo Lopes
+* Created: 21/02/2013
+* Modified by: Steven Swinbank
+* Modified date: 14/03/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C16+-+Search+filters
+**************************************************/
+.search-filter {
+  @extend %transparent-grey-bottom-border;
+  @include clearfix;
+  background: $subtle-grey;
+  margin-bottom: 15px;
+  padding: 10px 10px 20px 10px;
+  p {
+    margin-bottom: 10px;
+  }
+  h3 {
+    margin-top: 5px;
+    &.no-title {
+      display: none;
+    }
+  }
+  .text-input {
+    float: left;
+    width: 81%;
+  }
+  input[type="text"] {
+    width: 100%;
+    float: left;
+    height: 40px;
+  }
+  .submit-button {
+    width: 15%;
+    float: right;
+  }
+  input[type="submit"] {
+    height: 40px;
+    padding: 0;
+  }
+  .plain-button {
+    margin-top: 10px;
+    display: inline-block;
+    width: 47.3%;
+    border: solid 1px $light-grey-border-colour;
+    color: $linkcolour;
+  }
+  .buttons-wrapper {
+    clear: both
+  }
+}
+
+.filter-by-box {
+  position: relative;
+
+  > .heading {
+    @extend %new-johnson-bold;
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+
+  .reset-filters {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+
+  .filter-box-wrap {
+    float: left;
+    width: 100%;
+
+    .selector {
+      width: 100%;
+    }
+
+    &:nth-child(odd) {
+      float: right;
+    }
+  }
+}
+
+//generic-pagination-styles/////////////////////////////////////////////////////////////////////////////////
+
+.results-list-all {
+  //display: none;
+}
+
+//#search-results-pagination{
+/*
+.pagination {
+		text-align: center;
+		margin-bottom: 5px;
+		a {
+			padding: 3px 8px;
+			margin: 3px;
+			border: 1px solid $light-grey-border-colour;
+			&.active_page {
+				color: $dark-grey;
+			}
+		}
+	}
+*/
+
+//remove ul from this and hit the appropriate elements
+#pagination-items, #results-list {
+  margin-left: 0;
+  li {
+    list-style: none;
+  }
+
+  .search-results {
+    border-left: solid 1px $lighter-grey-border-colour;
+    border-right: solid 1px $lighter-grey-border-colour;
+    border-top: solid 1px $lighter-grey-border-colour;
+    padding: 15px;
+    @extend %transparent-grey-bottom-border;
+    margin-top: 15px;
+    @include transition(background-color 0.3s);
+
+    &:hover {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+    > a:hover {
+      text-decoration: none;
+    }
+    a {
+      color: #000;
+    }
+    .search-result-text {
+      position: relative;
+      p {
+        margin-bottom: 0;
+        padding-right: 25px;
+        color: #000;
+      }
+
+      h3 {
+        color: #000;
+      }
+
+      &:after {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 1);
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -16px;
+        margin-right: -6px;
+      }
+    }
+
+    .search-tags {
+      display: none;
+    }
+  }
+}
+
+//}
+//}
+
+.release-archive {
+
+  h2 {
+    border-bottom: 1px solid #A8A8A8;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    font-size: 34px;
+  }
+  .plain-button {
+    border: solid 1px #CCC;
+    border-top: none;
+    &:first-child {
+      border-top: solid 1px #CCC;
+    }
+  }
+}
+
+ 

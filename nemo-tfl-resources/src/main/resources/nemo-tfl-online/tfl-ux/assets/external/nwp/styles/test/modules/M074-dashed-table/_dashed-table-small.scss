@@ -1,0 +1,76 @@
+/**************************************************
+	M074 dashed table
+* Author: Alex Faunt
+* Created: 10/12/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M074-dashed-table
+**************************************************/
+
+// gone with display table rather than real table, due to FF and IE's inability to do relative cells properly.
+.dashed-table {
+  background-color: #fff;
+  display: table;
+  width: 100%;
+
+  .row {
+    display: table-row;
+
+    > * {
+      display: table-cell;
+      padding: 20px 10px;
+      position: relative;
+      border-bottom: 1px dashed $light-grey-border-colour;
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+
+      > p {
+        .sub-text {
+          display: block;
+          font-weight: normal;
+          color: $light-grey-text;
+        }
+      }
+    }
+
+    &:last-child > * {
+      border-bottom: 0;
+    }
+  }
+
+  .label {
+    &:before {
+      content: " ";
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      bottom: 10px;
+      border-right: 1px dashed $light-grey-border-colour;
+    }
+    > p {
+      display: inline-block;
+      vertical-align: top;
+      font-weight: bold;
+
+      &.with-icon {
+        position: relative;
+        padding-left: 38px;
+        .i {
+          position: absolute;
+          display: block;
+          left: 0;
+          top: 50%;
+          margin-top: -16px;
+        }
+      }
+
+    }
+  }
+
+}

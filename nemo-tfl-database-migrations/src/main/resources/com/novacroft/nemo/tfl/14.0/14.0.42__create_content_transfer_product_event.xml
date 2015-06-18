@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.42">
+          <insert tableName="event" schemaName="${schemaName}">
+            <column name="id" valueComputed = "${schemaName}.event_seq.nextval"/> 
+            <column name="createduserid">Installer</column>
+            <column name="createddatetime" valueDate="${now}"/>
+            <column name="modifieduserid">null</column>
+            <column name="modifieddatetime">null</column>
+            <column name="name">OysterCardTransferred</column>
+            <column name="description">OysterCardTransferred</column>
+            <column name="displayorder">99</column>
+            <column name="displayonline">0</column>
+            <column name="externalId" valueComputed="${schemaName}.externalid_seq.nextval"/>
+        </insert> 
+    </changeSet>
+</databaseChangeLog>

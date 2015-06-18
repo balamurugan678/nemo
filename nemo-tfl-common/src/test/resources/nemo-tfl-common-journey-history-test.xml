@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+       profile="nemo-tfl-common-journey-history-test">
+
+    <bean id="dateFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd"/>
+    </bean>
+
+    <bean id="dateTimeFormat" class="java.text.SimpleDateFormat">
+        <constructor-arg value="yyyy-MM-dd HH:mm"/>
+    </bean>
+
+    <bean id="testJourneyHistory" class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyHistoryDTO">
+        <property name="cardNumber" value="010651943402"/>
+        <property name="rangeFrom">
+            <bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2013-12-01"/>
+            </bean>
+        </property>
+        <property name="rangeTo">
+            <bean factory-bean="dateFormat" factory-method="parse">
+                <constructor-arg value="2014-01-31"/>
+            </bean>
+        </property>
+
+        <property name="journeyDays">
+            <list>
+                <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDayDTO">
+                    <property name="effectiveTrafficOn">
+                        <bean factory-bean="dateFormat" factory-method="parse">
+                            <constructor-arg value="2014-01-31"/>
+                        </bean>
+                    </property>
+                    <property name="dailyBalance" value="300"/>
+                    <property name="journeys">
+                        <list>
+                            <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDTO">
+                                <property name="suppressCode" value="false"/>
+                                <property name="addedStoredValueBalance" value="300"/>
+                                <property name="storedValueBalance" value="300"/>
+                                <property name="transactionAt">
+                                    <bean factory-bean="dateTimeFormat" factory-method="parse">
+                                        <constructor-arg value="2014-01-31 18:45"/>
+                                    </bean>
+                                </property>
+                                <property name="transactionLocation" value="1"/>
+                                <property name="exitAt">
+                                    <bean factory-bean="dateTimeFormat" factory-method="parse">
+                                        <constructor-arg value="2014-01-31 19:30"/>
+                                    </bean>
+                                </property>
+                                <property name="exitLocation" value="2"/>
+                                <!--<property name="routeId" value=""/>-->
+                                <property name="pseudoTransactionTypeId" value="1"/>
+                                <property name="journeyDisplay">
+                                    <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDisplayDTO">
+                                        <property name="effectiveTrafficOn">
+                                            <bean factory-bean="dateFormat" factory-method="parse">
+                                                <constructor-arg value="2014-01-31"/>
+                                            </bean>
+                                        </property>
+                                        <property name="transactionLocationName" value="StationA"/>
+                                        <property name="exitLocationName" value="StationB"/>
+                                        <property name="pseudoTransactionTypeDisplayDescription" value="Complete Journey"/>
+                                    </bean>
+                                </property>
+                            </bean>
+                            <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDTO">
+                                <property name="effectiveTrafficOn">
+                                    <bean factory-bean="dateFormat" factory-method="parse">
+                                        <constructor-arg value="2014-01-31"/>
+                                    </bean>
+                                </property>
+                                <property name="suppressCode" value="false"/>
+                                <property name="addedStoredValueBalance" value="150"/>
+                                <property name="storedValueBalance" value="150"/>
+                                <property name="transactionAt">
+                                    <bean factory-bean="dateTimeFormat" factory-method="parse">
+                                        <constructor-arg value="2014-01-31 16:10"/>
+                                    </bean>
+                                </property>
+                                <!--
+                                                                <property name="transactionLocation" value="1"/>
+                                                                <property name="transactionLocationName" value="StationA"/>
+                                -->
+                                <!--
+                                                                <property name="exitAt">
+                                                                    <bean factory-bean="dateTimeFormat" factory-method="parse">
+                                                                        <constructor-arg value="2014-01-31 19:30"/>
+                                                                    </bean>
+                                                                </property>
+                                -->
+                                <!--<property name="exitLocation" value="2"/>-->
+                                <!--<property name="exitLocationName" value="StationB"/>-->
+                                <property name="routeId" value="66"/>
+                                <property name="pseudoTransactionTypeId" value="2"/>
+                                <property name="pseudoTransactionTypeDisplayDescription" value="Bus Journey"/>
+                                <property name="journeyDisplay">
+                                    <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDisplayDTO">
+                                    </bean>
+                                </property>
+                            </bean>
+                            <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDTO">
+                                <property name="effectiveTrafficOn">
+                                    <bean factory-bean="dateFormat" factory-method="parse">
+                                        <constructor-arg value="2014-01-31"/>
+                                    </bean>
+                                </property>
+                                <property name="suppressCode" value="false"/>
+                                <property name="addedStoredValueBalance" value="400"/>
+                                <property name="storedValueBalance" value="400"/>
+                                <property name="transactionAt">
+                                    <bean factory-bean="dateTimeFormat" factory-method="parse">
+                                        <constructor-arg value="2014-01-31 15:35"/>
+                                    </bean>
+                                </property>
+                                <property name="transactionLocation" value="1"/>
+                                <property name="transactionLocationName" value="StationC"/>
+                                <!--
+                                                                <property name="exitAt">
+                                                                    <bean factory-bean="dateTimeFormat" factory-method="parse">
+                                                                        <constructor-arg value="2014-01-31 19:30"/>
+                                                                    </bean>
+                                                                </property>
+                                                                <property name="exitLocation" value="2"/>
+                                                                <property name="exitLocationName" value="StationB"/>
+                                -->
+                                <!--<property name="routeId" value=""/>-->
+                                <property name="pseudoTransactionTypeId" value="3"/>
+                                <property name="pseudoTransactionTypeDisplayDescription" value="Incomplete Journey"/>
+                                <property name="journeyDisplay">
+                                    <bean class="com.novacroft.nemo.tfl.common.transfer.oyster_journey_history.JourneyDisplayDTO">
+                                    </bean>
+                                </property>
+                            </bean>
+                        </list>
+                    </property>
+                </bean>
+            </list>
+        </property>
+    </bean>
+</beans>

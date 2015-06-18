@@ -1,0 +1,39 @@
+/**************************************************
+Pull Quotes Modules
+* Author: Andrew Spencer
+* Created: 19/09/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C3+-+Body+Content
+**************************************************/
+
+.pull-quote {
+  margin-bottom: 20px;
+  float: right;
+  width: 100%;
+  position: relative;
+  display: block;
+
+  .quote-body {
+    padding: 10px;
+    font-size: 1.3em;
+    border-top: solid 1px $light-grey-border-colour;
+    border-bottom: solid 1px $light-grey-border-colour;
+    color: $nav-divider-dark-grey;
+    font-family: New Johnson;
+    line-height: 1.3em;
+  }
+
+  .quote-footer {
+    background-color: $darker-subtle-grey;
+    padding: 5px 10px 5px 10px;
+    font-size: 0.9em;
+    .quotee-name {
+      font-weight: bold;
+
+    }
+
+    .quotee-job-title {
+    }
+
+  }
+
+}

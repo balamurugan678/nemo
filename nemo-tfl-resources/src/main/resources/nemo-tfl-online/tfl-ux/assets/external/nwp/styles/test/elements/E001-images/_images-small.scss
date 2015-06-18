@@ -1,0 +1,69 @@
+.image-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  .caption {
+    background-color: $subtle-grey;
+    padding: 10px;
+    font-size: 13px;
+    width: 100%;
+    display: block;
+  }
+
+  &.profile-pic {
+    text-align: left;
+    border: 1px solid $lighter-grey-border-colour;
+    padding: 2px;
+
+    img {
+      //width: auto;
+      height: auto;
+    }
+  }
+
+  &.light-box {
+    > a {
+      display: block;
+    }
+    .caption {
+      position: relative;
+      padding-right: 32px;
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        margin-top: -16px;
+
+        @extend %standard-sprite;
+        @include svg-icon-position-only(3, 2);
+      }
+
+    }
+
+  }
+
+  &.campaign-graphic {
+    padding: 10px 20px;
+    width: 280px;
+    border-style: solid;
+    border-color: $lighter-grey-border-colour;
+    border-width: 1px 0;
+    text-align: center;
+    img {
+      width: auto;
+    }
+  }
+
+  &.street-view {
+    @extend %top-drop-shadow;
+    margin-bottom: 20px;
+  }
+}

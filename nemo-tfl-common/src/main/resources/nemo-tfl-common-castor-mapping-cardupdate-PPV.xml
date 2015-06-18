@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<mapping>
+
+    <description>Object/XML mapping for Nemo TfL Common Pre Pay Value</description>
+  <class name="com.novacroft.nemo.tfl.common.domain.cubic.CardUpdatePrePayValueRequest"  >
+        <map-to xml="CardUpdateRequest" />
+        <field name="realTimeFlag">
+            <bind-xml name="RealTimeFlag" node="element" />
+        </field>
+        <field name="prestigeId">
+            <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="action">
+            <bind-xml name="Action" node="element"/>
+        </field>
+        <field name="prePayValue">
+            <bind-xml name="PrePayValue" node="element"  location="PPV"/>
+        </field>
+        <field name="currency">
+            <bind-xml name="Currency" node="element"  location="PPV"/>
+        </field>
+        <field name="paymentMethod">
+            <bind-xml name="PaymentMethod" node="element" />
+        </field>
+        <field name="pickupLocation">
+            <bind-xml name="PickupLocation" node="element" />
+        </field>
+        <field name="userId">
+            <bind-xml name="UserID" node="element" location="OriginatorInfo" />
+        </field>
+        <field name="password">
+            <bind-xml name="Password" node="element" location="OriginatorInfo"/>
+        </field>
+    </class>
+
+</mapping>

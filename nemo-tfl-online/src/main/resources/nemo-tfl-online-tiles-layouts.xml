@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="tfl-main-layout" template="/WEB-INF/tiles/resources/tfl-page.jsp">
+        <put-attribute name="pagename" value="pagename-not-set"/>
+        <put-attribute name="main" value="/WEB-INF/tiles/resources/default-main.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/resources/tfl-header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/resources/tfl-footer.jsp"/>
+    </definition>
+
+    <definition name="tfl-main-layout-with-my-account" extends="tfl-main-layout">
+        <put-attribute name="myAccount" value="/WEB-INF/jsp/myAccountContent.jsp" cascade="true"/>
+    </definition>
+
+</tiles-definitions>

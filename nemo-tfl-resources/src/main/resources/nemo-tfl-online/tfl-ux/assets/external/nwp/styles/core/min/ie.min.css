@@ -1,0 +1,626 @@
+.lt-ie8 h1, .lt-ie8 h2, .lt-ie8 h3 {
+    line-height: 153.33%
+}
+
+.lt-ie8 a.primary-button, .lt-ie8 a.secondary-button {
+    height: 24px
+}
+
+.lt-ie8 li {
+    margin-left: 1em;
+    vertical-align: top
+}
+
+.lt-ie8 .visually-hidden {
+    visibility: hidden
+}
+
+.lt-ie8 .flat-button {
+    padding-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px
+}
+
+.lt-ie8 .flat-button img {
+    margin-top: 20px
+}
+
+.lt-ie8 .icon-replacement-text {
+    display: block
+}
+
+.lt-ie8 .plain-button {
+    padding-right: 0;
+    padding-left: 0
+}
+
+.lt-ie8 .section-overview {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.lt-ie8 .tabs-style-1 {
+    overflow: hidden
+}
+
+.lt-ie9 body {
+    min-width: 900px
+}
+
+.lt-ie9 input[type='text'] {
+    padding-top: 8px
+}
+
+.lt-ie9 .large-status-information {
+    border: solid 1px #A8A8A8;
+    display: block;
+    margin-top: 15px
+}
+
+.lt-ie9 .large-status-information .line-text {
+    padding: 10px 20px;
+    vertical-align: middle
+}
+
+.lt-ie9 .large-status-information .disruption-type {
+    padding: 10px 20px;
+    vertical-align: middle;
+    width: 24%;
+    color: #1a5a92
+}
+
+.lt-ie9 .large-status-information .disruption-message {
+    padding: 10px 20px;
+    vertical-align: middle
+}
+
+.lt-ie9 .section-overview > div.main {
+    width: 60%
+}
+
+.lt-ie8 .module-grid > div {
+    width: 47%
+}
+
+.lt-ie8 .module-grid > div:first-child {
+    margin-right: 5%
+}
+
+.lt-ie8 .aside .module-grid > div {
+    width: 100%
+}
+
+.lt-ie8 input[type="text"] {
+    padding: 5px 0;
+    height: 26px
+}
+
+.lt-ie8 .selector {
+    background: none;
+    border: none
+}
+
+.lt-ie9.no-js .checkbox-list input[type='checkbox'], .lt-ie9.no-js .styled-checkbox input[type='checkbox'] {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+}
+
+.lt-ie8 .social-text p {
+    padding-left: 0
+}
+
+.lt-ie8 .mainnav {
+    margin-bottom: -4px
+}
+
+.lt-ie8 .top-row .logo {
+    height: 43px
+}
+
+.lt-ie8 .top-row .logo .main-roundel {
+    left: 30px
+}
+
+.lt-ie8 .top-row .collapsible-menu {
+    margin-top: -21px
+}
+
+.lt-ie8 .top-row-extras .login a {
+    height: 40px;
+    padding-bottom: 0
+}
+
+.lt-ie8 .more .text {
+    font-family: "New Johnson"
+}
+
+.lt-ie9 .extra-nav {
+    width: 900px;
+    left: 50%;
+    margin-left: -450px
+}
+
+.lt-ie9 .top-row .logo .main-roundel {
+    background-image: url("/static/1/images/homepage_sprite.png");
+    background-position: 0 -5px;
+    width: 48px
+}
+
+.lt-ie9 .top-row-extras input[type='text'] {
+    margin-right: 22px
+}
+
+.lt-ie9 #footer .info-for li {
+    width: 44%
+}
+
+.lt-ie8 .breadcrumbs li {
+    margin-left: 2px
+}
+
+.lt-ie8 .breadcrumbs li.home a {
+    width: 12px
+}
+
+.lt-ie9 .breadcrumbs a:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAfCAYAAADXwvzvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQzg4Q0Y2NUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQzg4Q0Y2NkU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDODhDRjYzRTZFQTExRTI5ODU5QzExM0REQUEwOUJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDODhDRjY0RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Gvx++QAAAVxJREFUeNqU1EtqwzAQAFBJFnQXaoEP0Cv0Fi00EEj2TdNLlbbkAM2qpb1GT1CyDfizsLNx8KczQQZbkTWywJaEPZpnfcyzLGsZY6s4jndQsyiKPqBaMqIIvLVt+w4BCttpml5Bn3kFcs5n8PIW203TbIqiOHoF6uA5ZEViXJblM1zOQK6/kWlyDgPcwPdmQohPpdQD9N0Zp5LFBcGTPKCOkL+BfG+ShXW0IfnRRhajs0aQrVQbOQiCnzAM7zqycK5Vj1zX9VOfLKgd0iMf+mQn1UUmM9rIRyhegViqqrrVzYOU8lX6BOExy/P8V59XBf21V0acTdy7epAXoF+TGXEW4VrjRoBsi+7vQG0ABs+/INtcE/8wG7mOBvGtC8IiJxAXPsfKJO5xLcnTYSHOzHfkVOLYz4okWqk+xAuqQVyOEQfUKcQB1SBuqaAzFQ4n1mciNpIkOfls/H8BBgBmJFBsyjnddAAAAABJRU5ErkJggg==)
+}
+
+.lt-ie9 .breadcrumbs .last-breadcrumb:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAfCAYAAAAx6zerAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQzg4Q0Y2OUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQzg4Q0Y2QUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDODhDRjY3RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDODhDRjY4RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VFCc4QAAAN1JREFUeNqMlEEKwyAQRUfpuotCDtAr9CBdtQcoPVfpBbLrQXoQwYW6EULsCAmo1ZkZSCLy9D/UqKy1CQDuxpgZmNL5lVJ6TdN0EsFKqSMOeIvgbcAVZ7+JYIlOBXM6uu2gdHSvc6TThUc6euTX09HUUrU6JNzqaG7XSh21HSRgdBwOOrMzlzoiONeyLBcRjLOCc+4rgr33YV3XJwvHGPPzwKbhNgVCCB9szuw67/HsppTx3BGt4km4jR/CvfjRD9uN78Kj+D+Yim+vLzK+grn4vQ54e+YvGb/XT4ABAKjsoFLl0Z5JAAAAAElFTkSuQmCC);
+    width: 11px;
+    right: -11px
+}
+
+.lt-ie8 ul.on-this-page-list {
+    width: 48%;
+    padding-left: 2%
+}
+
+.lt-ie8 ul.on-this-page-list:first-child {
+    padding-left: 0;
+    padding-right: 2%
+}
+
+.lt-ie8 ul.on-this-page-list a {
+    padding-left: 15px
+}
+
+.lt-ie8 ul.on-this-page-list + div.clearfix {
+    clear: both
+}
+
+.lt-ie8 ul.on-this-page-list > li > a {
+    *display: inline;
+    *zoom: 1
+}
+
+.nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
+    height: 32px;
+    width: 32px;
+    background-color: #fff
+}
+
+.nbs-flexisel-nav-left {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -576px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .nbs-flexisel-nav-left {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.nbs-flexisel-nav-right {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -640px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .nbs-flexisel-nav-right {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie8 .rainbow-board .selected + .info-dropdown {
+    display: block
+}
+
+.lt-ie8 .board-wrapper.lines-status .no-disruption {
+    display: block
+}
+
+.lt-ie8 .board-wrapper .rainbow-board .collapsed-lines {
+    display: block
+}
+
+.lt-ie8 .news-teaser {
+    border-bottom: 0
+}
+
+.lt-ie8 .news-teaser > a:hover {
+    border-bottom: 0;
+    margin-bottom: 6px
+}
+
+.lt-ie8 .coming-soon-widget .coming-soon-icon {
+    padding: 0;
+    text-align: left
+}
+
+.lt-ie8 .coming-soon-widget .coming-soon-icon p {
+    float: none
+}
+
+.lt-ie9 .coming-soon-widget {
+    background-position: 50% 50%
+}
+
+.lt-ie10:not(.lt-ie9) .flip-table.flipped {
+    display: block;
+    table-layout: fixed
+}
+
+.lt-ie10:not(.lt-ie9) .flip-table.flipped tbody, .lt-ie10:not(.lt-ie9) .flip-table.flipped tr, .lt-ie10:not(.lt-ie9) .flip-table.flipped td {
+    float: left;
+    width: 100%
+}
+
+.lt-ie10:not(.lt-ie9) .flip-table.flipped td {
+    text-align: left;
+    padding: 5px 10px;
+    box-sizing: border-box
+}
+
+.lt-ie10:not(.lt-ie9) .flip-table.flipped td:before {
+    display: inline;
+    width: auto;
+    padding: 0
+}
+
+.lt-ie10:not(.lt-ie9) .flip-table.flipped td .cell {
+    display: inline;
+    border-left: 0;
+    width: auto;
+    padding: 0 0 0 10px
+}
+
+.advert-tile .caption {
+    background-color: #2d3039
+}
+
+.lt-ie8 .homepage-top-links .flat-button {
+    width: 32%
+}
+
+.lt-ie8 .homepage-top-links .flat-button .text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%
+}
+
+.lt-ie9 .homepage-style .content {
+    margin-left: 0;
+    background-color: transparent
+}
+
+.lt-ie9 .homepage-style .content .always-visible {
+    margin-bottom: -9px
+}
+
+.lt-ie9 .homepage-top-links :first-child .text {
+    margin-top: 45px
+}
+
+.lt-ie8 .journey-planner-promo {
+    background-color: #2d3039
+}
+
+.lt-ie8 .jp-tab {
+    height: 20px
+}
+
+.lt-ie8 #from {
+    width: 85%
+}
+
+.lt-ie8 #plan-a-journey * {
+    *zoom: 1
+}
+
+.lt-ie8 #more-journey-options {
+    margin-right: 0;
+    width: 60%
+}
+
+.lt-ie8 .modes-of-transport.checkbox-list li {
+    width: 45%
+}
+
+.lt-ie8 .modes-of-transport li label {
+    text-indent: 7px
+}
+
+.lt-ie8 #save-journey-planner-preferences {
+    width: 100%;
+    left: -3.2%
+}
+
+.lt-ie8 .hours-mins {
+    clear: both
+}
+
+.lt-ie8 .journey-planner-results #plan-a-journey #From, .lt-ie8 .journey-planner-results #plan-a-journey #To, .lt-ie8 .journey-planner-results #plan-a-journey #Via {
+    padding: 0
+}
+
+.lt-ie8 .journey-planner-results #plan-a-journey.editing {
+    *zoom: 1;
+    display: block
+}
+
+.lt-ie8 .journey-planner-results input.primary-button {
+    width: 50%
+}
+
+.lt-ie8 .journey-planner-results #more-journey-options {
+    width: 92%
+}
+
+.lt-ie8 .auto-expand.expandable-box .always-visible {
+    width: 32%
+}
+
+.lt-ie8 .auto-expand.expandable-box .start-hidden {
+    width: 65%
+}
+
+.lt-ie8 .showing-full-details .summary-results {
+    width: 30%
+}
+
+.lt-ie8 .showing-full-details .full-results-container {
+    width: 65%;
+    float: left
+}
+
+.lt-ie8 .showing-full-details .auto-expand.expandable-box .always-visible {
+    width: 100%
+}
+
+.lt-ie8 table.journey-steps .logo div {
+    padding: 0
+}
+
+.lt-ie8 table.journey-steps thead {
+    visibility: hidden
+}
+
+.lt-ie8 .time-and-mode > div {
+    left: 0
+}
+
+.lt-ie8 .time-and-mode > div .centred {
+    margin-left: 0
+}
+
+.lt-ie8 .time-and-mode > div .centred.walking-icon {
+    margin-left: 0
+}
+
+.lt-ie8 .step-heading .time-and-mode {
+    left: 0
+}
+
+.lt-ie8 .transfer .time-and-mode {
+    left: 0
+}
+
+.lt-ie8 .travel-preferences {
+    clear: both
+}
+
+.lt-ie8 .tabs-style-2 li {
+    height: 42px;
+    margin-left: 0
+}
+
+.lt-ie8 .tabs-style-2 li .icon-left {
+    padding-left: 0 !important
+}
+
+.lt-ie9 .full-results-container {
+    float: left
+}
+
+.lt-ie9 .journey-planner-results .half-width-buttons {
+    margin-right: 0
+}
+
+.lt-ie9 .journey-planner-results .half-width-buttons a {
+    width: 20%
+}
+
+.lt-ie9 .journey-planner-results .half-width-buttons a:first-child {
+    margin-right: 54%
+}
+
+.lt-ie9 ul.journey-steps li.tube-icon, .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -1056px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.tube-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.national-rail-icon, .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -352px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.national-rail-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.bus-icon, .lt-ie9 table.journey-steps .logo div.bus-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -320px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.bus-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.bus-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.dlr-icon, .lt-ie9 ul.journey-steps li .docklands-icon, .lt-ie9 ul.journey-steps li .docklands-light-railway-icon, .lt-ie9 table.journey-steps .logo div.dlr-icon, .lt-ie9 table.journey-steps .logo div .docklands-icon, .lt-ie9 table.journey-steps .logo div .docklands-light-railway-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -1088px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.dlr-icon, .body-cms-preview .lt-ie9 ul.journey-steps li .docklands-icon, .body-cms-preview .lt-ie9 ul.journey-steps li .docklands-light-railway-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.dlr-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div .docklands-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div .docklands-light-railway-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.river-bus-icon, .lt-ie9 table.journey-steps .logo div.river-bus-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -64px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.river-bus-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.river-bus-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.tram-icon, .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: -32px -1120px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.tram-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.cable-car-icon, .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -480px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.cable-car-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.overground-icon, .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: -64px -1056px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.overground-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 ul.journey-steps li.disruption-icon, .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("/static/1/images/vsprite_x2.png");
+    background-image: url("/static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -832px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.disruption-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("/static/1/images/vsprite.png")
+}
+
+.lt-ie9 .journey-planner-widget {
+    display: block;
+    background-color: transparent
+}
+
+.lt-ie10 .from-and-to label.visually-hidden, .lt-ie10 .go-via label.visually-hidden {
+    overflow: visible;
+    clip: auto;
+    height: auto;
+    position: static;
+    width: auto;
+    margin: auto;
+    visibility: visible
+}
+
+.lt-ie10 .journey-planner-results .go-via label {
+    margin-top: -30px
+}
+
+.lt-ie10 .journey-planner-results .change-time-options {
+    margin-top: 18px
+}
+
+.lt-ie10 .journey-planner-results .hours-mins {
+    margin-top: 33px
+}
+
+.lt-ie10 .lines span {
+    max-width: 4px
+}
+
+.lt-ie10 .lines .interchange {
+    max-width: 20px
+}
+
+.lt-ie10 .lines .hail-and-ride {
+    margin-left: 0
+}
+
+.lt-ie8 .service-status-rainbow-board tr.visible {
+    display: block
+}
+
+.lt-ie9 #tubemap {
+    display: none
+}

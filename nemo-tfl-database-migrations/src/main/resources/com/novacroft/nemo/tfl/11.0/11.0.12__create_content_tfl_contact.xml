@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.12">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('organisation.name.long', 'Transport for London');
+  content_installer.install('organisation.name.short', 'TfL');
+  content_installer.install('contact.tfl.address.houseNameNumber', '4th Floor');
+  content_installer.install('contact.tfl.address.street', '14 Pier Walk');
+  content_installer.install('contact.tfl.address.town', 'London');
+  content_installer.install('contact.tfl.address.postcode', 'SE10 0ES');
+  content_installer.install('contact.tfl.address.country', '');
+  content_installer.install('contact.tfl.phone', '0343 222 1234');
+  content_installer.install('contact.tfl.fax', '020 7363 9561');
+  content_installer.install('contact.tfl.email', 'contact@tfl.gov.uk');
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<mapping>
+
+    <description>Object/XML mapping for testing</description>
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.CardRemoveUpdateRequest" >
+        <map-to xml="CardUpdateRequest" />
+        <field name="prestigeId">
+            <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="action">
+            <bind-xml name="Action" node="element"/>
+        </field>
+        <field name="originalRequestSequenceNumber">
+            <bind-xml name="OriginalRequestSequenceNumber" node="element"/>
+		</field>
+        <field name="userId">
+            <bind-xml name="UserID" node="element" location="OriginatorInfo" />
+        </field>
+        <field name="password">
+            <bind-xml name="Password" node="element" location="OriginatorInfo"/>
+        </field>
+    </class> 
+</mapping>

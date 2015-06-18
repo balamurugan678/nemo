@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+        
+        <property name="now" value="SYSDATE" dbms="oracle"/>
+    <changeSet author="Novacroft" id="13.2.02">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+   
+   select_list_installer.un_install_option('TravelCardDurations', '7Day');
+   select_list_installer.un_install_option('TravelCardDurations', '1Month');
+   select_list_installer.un_install_option('TravelCardDurations', '3Month');
+   select_list_installer.un_install_option('TravelCardDurations', '6Month');
+   select_list_installer.un_install_option('TravelCardDurations', 'Annual');
+   select_list_installer.un_install_option('TravelCardDurations', 'Unknown');
+   
+   select_list_installer.install_option('TravelCardDurations', '7 Day', 10);
+   select_list_installer.install_option('TravelCardDurations', 'Monthly', 20);
+   select_list_installer.install_option('TravelCardDurations', '3 Month', 30);
+   select_list_installer.install_option('TravelCardDurations', '6 Month', 40);
+   select_list_installer.install_option('TravelCardDurations', 'Annual', 50);
+   select_list_installer.install_option('TravelCardDurations', 'Other', 60);
+   
+end;
+]]>
+        </sql>
+        
+        
+    </changeSet>
+</databaseChangeLog>

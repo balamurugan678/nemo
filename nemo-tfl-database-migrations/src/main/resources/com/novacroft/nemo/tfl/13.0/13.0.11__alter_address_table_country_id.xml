@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.11">
+        <addColumn tableName="ADDRESS" schemaName="${schemaName}">
+            <column name="COUNTRY_ID" type="NUMBER(38)">
+            </column>
+        </addColumn>
+        <addForeignKeyConstraint baseColumnNames="COUNTRY_ID"
+                                 baseTableName="ADDRESS"
+                                 constraintName="FK_ADDRESS_COUNTRY"
+                                 deferrable="true"
+                                 initiallyDeferred="true"
+                                 referencedColumnNames="ID"
+                                 referencedTableName="COUNTRY"/>
+        <addColumn tableName="ADDRESS_AUD" schemaName="${schemaName}">
+            <column name="COUNTRY_ID" type="NUMBER(38)">
+            </column>
+        </addColumn>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.22">
+        <addColumn schemaName="${schemaName}" tableName="customer">
+            <column name="first_name_metaphone" type="varchar2(255)" remarks="Metaphone phonetic encoding for first name"/>
+            <column name="last_name_metaphone" type="varchar2(255)" remarks="Metaphone phonetic encoding for last name"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="customer_aud">
+            <column name="first_name_metaphone" type="varchar2(255)"/>
+            <column name="last_name_metaphone" type="varchar2(255)"/>
+        </addColumn>
+        <dropIndex schemaName="${schemaName}" tableName="customer" indexName="customer_idx1"/>
+        <createIndex schemaName="${schemaName}" tableName="customer" indexName="customer_idx4" tablespace="${indexTablespace}"
+                     unique="false">
+            <column name="first_name_metaphone"/>
+        </createIndex>
+        <createIndex schemaName="${schemaName}" tableName="customer" indexName="customer_idx5" tablespace="${indexTablespace}"
+                     unique="false">
+            <column name="last_name_metaphone"/>
+        </createIndex>
+        <sql>
+            <![CDATA[
+create index ${schemaName}.customer_idx6
+on ${schemaName}.customer
+(upper(firstname))
+tablespace ${indexTablespace}
+            ]]>
+        </sql>
+        <sql>
+            <![CDATA[
+create index ${schemaName}.customer_idx7
+on ${schemaName}.customer
+(upper(lastname))
+tablespace ${indexTablespace}
+            ]]>
+        </sql>
+        <dropTable schemaName="${schemaName}" tableName="metaphoneencoding" cascadeConstraints="true"/>
+        <dropSequence schemaName="${schemaName}" sequenceName="metaphoneencoding_seq"/>
+        <sql>
+            <![CDATA[
+drop function ${schemaName}.dologic
+            ]]>
+        </sql>
+        <sql>
+            <![CDATA[
+drop function ${schemaName}.metaphone
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

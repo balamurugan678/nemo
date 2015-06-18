@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.novacroft</groupId>
+        <artifactId>nemo-parent</artifactId>
+        <version>18.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>nemo-mock-payment-gateway</artifactId>
+    <packaging>war</packaging>
+    <name>TfL (nemo) payment gateway mock web application</name>
+    <description>Project Nemo: payment gateway simulator web application</description>
+    <dependencies>
+        <dependency>
+            <groupId>com.novacroft</groupId>
+            <artifactId>nemo-tfl-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.novacroft</groupId>
+            <artifactId>nemo-novacroft-common</artifactId>
+            <type>test-jar</type>
+            <version>${project.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

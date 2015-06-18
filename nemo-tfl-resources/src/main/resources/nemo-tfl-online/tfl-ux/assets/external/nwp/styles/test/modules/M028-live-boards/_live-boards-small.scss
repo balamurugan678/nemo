@@ -1,0 +1,163 @@
+/**************************************************
+	M028 - live boards
+
+* Author: Adrian Osmond
+* Created: 05/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M028-live-boards
+
+**************************************************/
+
+.live-board {
+  margin: 0;
+  color: $dark-grey;
+
+  li {
+    list-style: none outside none;
+  }
+
+  .live-board-subheading {
+    @extend %new-johnson-bold;
+    position: relative;
+    padding: 8px 12px 4px 14px;
+    margin-bottom: 0;
+    background: $darker-subtle-grey;
+    border-top: 1px solid $lighter-dark-grey;
+    border-bottom: 1px solid $lighter-dark-grey;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  &.updating {
+    .live-board-update {
+      @include animation(rotate 1.2s infinite reverse linear);
+    }
+  }
+  /*
+  .live-board-platform {
+      position: absolute;
+      top: 6px;
+      right: 10px;
+  }
+  */
+  .live-board-feed {
+    margin: 0;
+    counter-reset: item;
+    @extend %spot-grid-light;
+  }
+  .live-board-feed-item {
+    position: relative;
+    padding: 8px 70px 8px 48px;
+    border-top: 1px solid $lighter-dark-grey;
+    min-height: 39px;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  .live-board-route {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 38px;
+    height: 100%;
+    font-weight: bold;
+
+    &:before {
+      counter-increment: item;
+      content: counters(item, ".") " ";
+      z-index: 5;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      text-align: center;
+      padding: 8px 0;
+      color: inherit;
+      font-weight: inherit;
+    }
+  }
+  &.bus {
+    .live-board-feed-item {
+      padding-left: 60px;
+    }
+    .live-board-route {
+      text-align: center;
+      padding: 8px 0;
+      background-color: $bus-colour;
+      color: #fff;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .live-board-stops-en-route {
+    display: block;
+    // color: $subtle-grey2;
+    color: #767676; // design to change
+  }
+  .live-board-eta {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+  }
+  .live-board-link {
+    position: relative;
+    display: block;
+    padding: 7px 10px 10px 48px;
+    color: $linkcolour;
+    background: #fff;
+    border-top: 1px solid $lighter-dark-grey;
+
+    .down-icon-blue {
+      background-image: none;
+      width: 38px;
+      height: 100%;
+      background-color: $darker-subtle-grey;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 3px;
+        top: 4px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(23, 3);
+      }
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  .live-board-subboard {
+    border-top: 1px solid $lighter-dark-grey;
+
+    &:first-child {
+      border-top: 0px none;
+    }
+
+    .paginate-hidden {
+      display: none;
+    }
+
+    &.expanded {
+      .paginate-hidden {
+        display: block;
+      }
+      .live-board-feed-item {
+
+        &.hidden {
+          display: none;
+        }
+      }
+
+      .live-board-link {
+        display: none;
+      }
+    }
+  }
+}

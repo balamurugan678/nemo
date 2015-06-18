@@ -1,0 +1,29 @@
+/**************************************************
+RAINBOW BOARD
+* Author: Rodrigo Lopes
+* Created: 19/02/2013
+* Modified by:
+* Modified date:
+* Pattern library URL: http://
+**************************************************/
+.lt-ie8 {
+  .rainbow-board {
+    .selected {
+      + .info-dropdown {
+        display: block;
+      }
+    }
+  }
+  .board-wrapper {
+    &.lines-status {
+      .no-disruption {
+        display: block;
+      }
+    }
+    .rainbow-board {
+      .collapsed-lines {
+        display: block;
+      }
+    }
+  }
+}

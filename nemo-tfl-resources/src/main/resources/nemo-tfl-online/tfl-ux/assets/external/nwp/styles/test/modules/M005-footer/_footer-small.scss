@@ -1,0 +1,152 @@
+/**************************************************
+	A3 Footer
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A3+-+Footer
+
+**************************************************/
+
+#footer {
+  border-top: 3px solid $light-grey-border-colour;
+  margin-top: 50px;
+  @include linear-gradient(#292C34 0px, #373D48 6px, #1F2329 300px, $fallback: #202329);
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+
+  a, a:visited {
+    color: #CDCDCD;
+    font-size: 14px;
+    padding: 7px 0;
+    display: block;
+  }
+
+  .footer-links {
+    padding-top: 10px;
+    height: 100%;
+    margin: 0 $gridGutterWidth 10px;
+
+    .languages {
+      @extend %sprite-images;
+      @include svg-icon(42, 1, 32px, 25px, $display: inline-block);
+    }
+  }
+
+  h2.heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: block;
+    padding: 10px 9px 10px 30px;
+    background-color: $dark-grey;
+    color: #fff;
+    border-bottom: 3px solid #1B1D21;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 $gridGutterWidth;
+    position: relative;
+    &:before {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(23, 2);
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+  }
+
+  .info-for-link {
+    padding: 0;
+    &:visited, &:active {
+      padding: 0;
+    }
+    &:focus, &:hover {
+      text-decoration: none;
+      h2.heading {
+        @include lighten-hover-and-focus($dark-grey, 10%);
+      }
+    }
+  }
+
+  .info-for {
+    margin-bottom: 10px;
+    margin-left: $gridGutterWidth;
+    background-color: #202329;
+
+    li {
+      display: none;
+      padding: 0;
+      border-right: 1px solid #868F98;
+      border-bottom: 1px solid #868F98;
+      border-left: 1px solid #868F98;
+    }
+    a {
+      display: block;
+      padding: 18px 10px;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        right: 2px;
+        content: "";
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 2);
+      }
+    }
+  }
+  .expanded {
+    li {
+      display: block;
+    }
+    h2.heading {
+      &:before {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(24, 2);
+      }
+    }
+  }
+
+  .secondary-footer {
+    background-color: #2C2F38;
+    font-style: italic;
+
+    span.heading {
+      margin-left: $gridGutterWidth;
+      color: #fff;
+      font-size: 14px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a, a:visited {
+      color: #66CCCC;
+      text-decoration: underline;
+      font-size: 14px;
+    }
+  }
+}
+
+.footer-MOL-logo {
+  float: left;
+  padding: 0 $gridGutterWidth 10px $gridGutterWidth;
+  width: 100%;
+}
+
+.languages-footer {
+  a {
+    position: relative;
+    padding-left: 28px;
+    &:after {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(42, 1);
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -16px;
+      margin-left: -5px;
+    }
+  }
+}

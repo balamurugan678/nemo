@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.29">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('goodwillPaymentId.mandatoryFieldEmpty.error', 'You have not selected a Goodwill reason. Please check your entry and try again');
+				  content_installer.install('rate.mandatoryFieldEmpty.error', 'You have not selected a Rate. Please check your entry and try again');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

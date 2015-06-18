@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.189" context="nemo_development">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+CREATE OR REPLACE PACKAGE BODY createit AS
+
+  FUNCTION create_customer(firstName OUT VARCHAR2, lastName OUT VARCHAR2)
+    RETURN NUMBER;
+  PROCEDURE create_address(cardId NUMBER);
+  FUNCTION create_webaccount(cardId NUMBER, firstName VARCHAR2, lastName VARCHAR2)
+    RETURN NUMBER;
+  PROCEDURE create_card(webAccountId NUMBER, customerId NUMBER, rnd_cards_num NUMBER);
+  PROCEDURE create_paymentcard(cardId NUMBER);
+
+
+  PROCEDURE create_customers(
+      num           NUMBER
+    , address       BOOLEAN DEFAULT TRUE
+    , webaccount    BOOLEAN DEFAULT TRUE
+    , card          BOOLEAN DEFAULT TRUE
+    , rnd_cards_num NUMBER DEFAULT 1
+  ) AS
+    cardId       NUMBER := 0;
+    webAccountId NUMBER := 0;
+    firstName    VARCHAR2(100);
+    lastName     VARCHAR2(100);
+--MUST_CREATE_WEBACCOUNT EXCEPTION;
+    BEGIN
+--IF card AND NOT webaccount
+--THEN
+  --RAISE MUST_CREATE_WEBACCOUNT;
+--END IF;
+
+      FOR i IN 1..num LOOP
+        cardId := create_customer(firstName, lastName);
+        IF address
+        THEN
+          create_address(cardId);
+        END IF;
+        IF webaccount
+        THEN
+          webAccountId := create_webaccount(cardId, firstName, lastName);
+          IF card
+          THEN
+            create_card(webAccountId, webAccountId, rnd_cards_num);
+          END IF;
+        END IF;
+      END LOOP;
+
+--EXCEPTION
+--WHEN MUST_CREATE_WEBACCOUNT THEN
+--RAISE_APPLICATION_ERROR(-20201, 'You must create a webaccount to create cards please set webaccount attribute to true.');
+    END create_customers;
+
+  FUNCTION create_customer(firstName OUT VARCHAR2, lastName OUT VARCHAR2)
+    RETURN NUMBER AS
+    cardId      NUMBER := 0;
+    vn_sex      NUMBER := round(DBMS_RANDOM.VALUE(1, 2));
+    vn_name     NUMBER := round(DBMS_RANDOM.VALUE(1, 30));
+    vn_lastName NUMBER := round(DBMS_RANDOM.VALUE(1, 30));
+    vv_sex      VARCHAR2(2);
+    vv_title    VARCHAR2(10);
+    BEGIN
+      cardId := CUSTOMER_SEQ.NEXTVAL;
+      vv_sex := gender(vn_sex);
+      IF vv_sex = 'M'
+      THEN
+        vv_title := male_titles(round(DBMS_RANDOM.VALUE(1, 2)));
+        firstName := male_firstNames(vn_name);
+      ELSE
+        vv_title := female_titles(round(DBMS_RANDOM.VALUE(1, 4)));
+        firstName := female_firstNames(vn_name);
+      END IF;
+      lastName := lastNames(vn_lastName);
+
+      INSERT INTO CUSTOMER (
+        ID, CREATEDUSERID, CREATEDDATETIME, STATUS, TITLE,
+        firstName, INITIALS, lastName, DECEASED, ANONYMISED, READONLY, EMAILADDRESS, USERNAME,
+        SALT, PASSWORD, PHOTOCARDNUMBER, UNFORMATTEDEMAILADDRESS, PASSWORDCHANGEREQUIRED
+      ) VALUES (
+        cardId, 'TEST', sysdate, 'A', vv_title,
+        firstName, 'A', lastName, 0, 0, 0,
+        lower(firstName) || '.' || lower(lastName) || '@novacroft.com',
+        firstName || '.' || lastName,
+        gsalt, hashed, 0,
+        firstName || '.' || lastName || '@novacroft.com', 0
+      );
+      RETURN cardId;
+    END;
+
+
+  PROCEDURE create_address(cardId NUMBER) AS
+    vn_add NUMBER := round(DBMS_RANDOM.VALUE(1, 30));
+    vn_id  NUMBER;
+    gb_country_id NUMBER;
+    BEGIN
+      SELECT ID INTO gb_country_id FROM COUNTRY WHERE CODE='GB'; 
+      vn_id := ADDRESS_SEQ.NEXTVAL;
+      INSERT INTO ADDRESS (
+        ID, CREATEDUSERID, CREATEDDATETIME, NAME,
+        HOUSENAMENUMBER, STREET, TOWN, COUNTY, COUNTRY_ID, POSTCODE)
+      VALUES (
+        vn_id, 'TEST', sysdate, '',
+        addresses(vn_add).housenamenumber, addresses(vn_add).street, addresses(vn_add).town,
+        addresses(vn_add).county, gb_country_id, addresses(vn_add).postcode);
+-- update customer with new address id
+      UPDATE customer
+      SET addressid = vn_id
+      WHERE id = cardId;
+    END create_address;
+
+
+  FUNCTION create_webaccount(cardId NUMBER, firstName VARCHAR2, lastName VARCHAR2)
+    RETURN NUMBER AS
+    webAccountId NUMBER := 0;
+    BEGIN
+      webAccountId := WEBACCOUNT_SEQ.NEXTVAL;
+      INSERT INTO WEBACCOUNT (ID, CREATEDUSERID, CREATEDDATETIME,
+                              CUSTOMERID, USERNAME, EMAILADDRESS, SALT, PASSWORD, PHOTOCARDNUMBER,
+                              UNFORMATTEDEMAILADDRESS, ANONYMISED, READONLY, PASSWORDCHANGEREQUIRED
+      ) VALUES (
+        webAccountId, 'TEST', SYSDATE,
+        cardId, firstName || '.' || lastName, lower(firstName) || '.' || lower(lastName) || '@novacroft.com', gsalt, hashed, 0,
+        firstName || '.' || lastName || '@novacroft.com', 0, 0, 0
+      );
+      RETURN webAccountId;
+    END create_webaccount;
+
+
+  PROCEDURE create_card(webAccountId NUMBER, customerId NUMBER, rnd_cards_num NUMBER) AS
+    vn_num      NUMBER := round(DBMS_RANDOM.VALUE(1, rnd_cards_num));
+-- card_number number := round(DBMS_RANDOM.VALUE(100000000000, 999999999999));
+    card_id     NUMBER;
+    card_number NUMBER;
+
+    BEGIN
+      FOR i IN 1..vn_num LOOP
+        BEGIN
+          card_id := CARD_SEQ.NEXTVAL;
+          card_number := 100000000000 + remainder(card_id, 100000000000);
+          INSERT INTO CARD
+          (ID, CREATEDUSERID, CREATEDDATETIME, CARDNUMBER, WEBACCOUNTID, CUSTOMERID, NAME)
+          VALUES
+            (card_id, 'TEST', SYSDATE, card_number, webAccountId, customerId, '');
+
+          populate_mock_card(card_number);
+          EXCEPTION
+          WHEN DUP_VAL_ON_INDEX THEN
+          NULL;
+        END;
+      END LOOP;
+    END create_card;
+
+  PROCEDURE populate_mock_card(prestigeId VARCHAR2) AS
+
+    BEGIN
+      INSERT INTO mock_oystercard
+      (ID, CREATEDUSERID, CREATEDDATETIME, PRESTIGEID, REGISTERED, AUTOLOADSTATE, CARDCAPABILITY, CARDTYPE, CARDDEPOSIT) VALUES
+        (oystercard_seq.nextval, 'startup', sysdate, prestigeId, 0, 1, 1, 10, 0);
+      INSERT INTO MOCK_OYSTERCARDPREPAYVALUE (ID, CREATEDUSERID, CREATEDDATETIME, PRESTIGEID, CURRENCY, BALANCE) VALUES
+        (OYSTERCARDPREPAYVALUE_seq.nextval, 'startup', sysdate, prestigeId, 0, 220);
+      INSERT INTO MOCK_OYSTERCARDPREPAYTICKET (ID, CREATEDUSERID, CREATEDDATETIME, PRESTIGEID, SLOTNUMBER1, ZONE1, STATE1, SLOTNUMBER2, ZONE2, STATE2, SLOTNUMBER3, ZONE3, STATE3)
+      VALUES
+        (OYSTERCARDPREPAYTICKET_seq.nextval, 'startup', sysdate, prestigeId, 1, '1', 1, 2, '2', 2, 3, '3', 3);
+      INSERT INTO MOCK_OYSTERCARDPPVPENDING (ID, CREATEDUSERID, CREATEDDATETIME, MODIFIEDUSERID, MODIFIEDDATETIME, PRESTIGEID, REQUESTSEQUENCENUMBER, REALTIMEFLAG, PREPAYVALUE, CURRENCY, PICKUPLOCATION)
+      VALUES
+        (OYSTERCARDPPVPENDING_seq.nextval, 'startup', sysdate, NULL, NULL, prestigeId, 0, NULL, 0, 0, 582);
+      INSERT INTO MOCK_OYSTERCARDPPTPENDING
+      (ID, CREATEDUSERID, CREATEDDATETIME, PRESTIGEID) VALUES
+        (OYSTERCARDPPTPENDING_seq.nextval, 'startup', sysdate, prestigeId);
+      COMMIT;
+    END populate_mock_card;
+
+  PROCEDURE create_paymentcard(cardId NUMBER) AS
+    BEGIN
+      NULL;
+    END;
+
+
+  PROCEDURE make_usernames_unique AS
+    CURSOR cu_getUsernames IS
+      SELECT
+        username,
+        count(*)
+      FROM customer
+      GROUP BY username
+      HAVING count(*) > 1;
+    CURSOR cu_getUsers(v_username VARCHAR2) IS
+      SELECT
+        id,
+        username
+      FROM customer
+      WHERE username = v_username;
+    num NUMBER := 1;
+    BEGIN
+      FOR username IN cu_getUsernames LOOP
+        FOR usern IN cu_getUsers(username.username) LOOP
+          UPDATE customer
+          SET username = username || num
+          WHERE id = usern.id;
+          num := num + 1;
+        END LOOP;
+        num := 1;
+      END LOOP;
+      COMMIT;
+    END make_usernames_unique;
+END createit;
+]]>
+        </createProcedure>
+    </changeSet>
+</databaseChangeLog>

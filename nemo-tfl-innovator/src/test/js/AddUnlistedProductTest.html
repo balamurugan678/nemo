@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>addUnlistedProduct.js Unit Tests</title>
+    <link rel="stylesheet" href="../resources/qunit-1.12.0.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../resources/qunit-1.12.0.js"></script>
+<script src="../../main/webapp/scripts/jquery.min.js"></script>
+<script src="../../main/webapp/scripts/jquery-ui.js"></script>
+<script src="../../main/webapp/scripts/addUnlistedProduct.js"></script>
+
+<div><input type="hidden" id="AddUnlistedProductTest.cartItemCmd.startDate" />
+<input type="hidden" id="AddUnlistedProductTest.cartItemCmd.endDate" /></div>
+
+<div><input type="hidden" id="startDate" />
+<input type="hidden" id="endDate" /></div>
+
+<script>
+	var pageName = "AddUnlistedProductTest";
+	var shortDatePattern = 'dd/mm/yy';
+	
+    $(document).ready(function () {
+    	
+    	$("#startDate").datepicker({
+            dateFormat: shortDatePattern,
+            changeYear: true,
+            changeMonth: true,
+        });
+    	
+    	$("#endDate").datepicker({
+            dateFormat: shortDatePattern,
+            changeYear: true,
+            changeMonth: true,
+        });    	
+   
+    	$("#ui-datepicker-div").hide();
+    	
+        module("End date restrictions")
+        test("Minimum end date in date picker must be the same as the start date", function () {
+        	var dateDDMMYYYY = "10/12/2013";
+        	var dateMMDDYYYY = "12/10/2013";
+        	$("#startDate").val(dateDDMMYYYY);
+        	setDatepickerMinimumDate("endDate", $("#startDate"));
+			$("#startDate").datepicker( 'option', 'minDate', new Date(dateMMDDYYYY));
+			var resultMinDate = $("#endDate").datepicker( 'option', 'minDate');
+			var expectedMinDate = $("#startDate").datepicker( 'option', 'minDate');
+
+        	deepEqual(expectedMinDate, resultMinDate, "Minimum end date is the same as provided start date");
+        });
+        
+        test("Minimum end date in date picker must change when the start date is changed", function () {
+        	$("#AddUnlistedProductTest\\.cartItemCmd\\.endDate").datepicker( 'option', 'minDate', new Date("01/01/2001"));
+        	var startingMinDate = $("#AddUnlistedProductTest\\.cartItemCmd\\.endDate").datepicker( 'option', 'minDate');
+        	$("#AddUnlistedProductTest\\.cartItemCmd\\.startDate").datepicker( "setDate", new Date() );
+        	var startDate = $("#AddUnlistedProductTest\\.cartItemCmd\\.startDate").datepicker( "getDate" );
+        	$(".ui-datepicker-current-day").trigger("click");
+        	
+        	var newMinDate = $("#AddUnlistedProductTest\\.cartItemCmd\\.endDate").datepicker( 'option', 'minDate');
+        	
+        	notDeepEqual(newMinDate, startingMinDate, "Must not be equal");
+        });
+    });
+</script>
+</body>
+</html>

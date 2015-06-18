@@ -1,0 +1,44 @@
+//.re-search{
+//	span{
+//		width:inherit;
+//		margin-top:10px;
+//		float:left;
+//	}
+//	.remove-content-container{
+//		width:80%;
+//		margin: 0 $gridGutterWidth 0 10px;
+//	}
+//	.primary-button{
+//		float:left;
+//		width:18%;
+//	} 
+//} 
+
+.results-filter-box {
+  .results-from {
+    .selector {
+      width: 50%;
+      &:last-child {
+        width: 50% - $gridGutterWidth;
+        margin-left: $gridGutterWidth;
+      }
+    }
+
+  }
+  .num-pages-holder {
+    width: 35% - $gridGutterWidth;
+  }
+  .sort-by-holder {
+    width: 45% - $gridGutterWidth;
+    margin-right: $gridGutterWidth;
+  }
+  .primary-button {
+    float: left;
+    width: 20%;
+    margin-top: 27px;
+    margin-bottom: 0;
+  }
+}
+
+	
+

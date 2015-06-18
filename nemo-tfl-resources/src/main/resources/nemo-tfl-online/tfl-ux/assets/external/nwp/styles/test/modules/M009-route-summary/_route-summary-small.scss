@@ -1,0 +1,40 @@
+/**************************************************
+	M009 Route Summary
+
+* Author: 
+* Created: 
+* Pattern library URL: \\Google Drive\NWP\Front-end\Pattern library\Modules\M009-route-summary
+
+**************************************************/
+
+.route-summary {
+  background-color: $subtle-grey;
+  margin-bottom: 20px;
+  border-top: 1px solid $light-grey-border-colour;
+  border-bottom: 1px solid $light-grey-border-colour;
+  .box-section {
+    padding: 15px 20px;
+    border-top: 1px dotted $light-grey-border-colour;
+    position: relative;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  .station-stop-row {
+    position: relative;
+    padding-left: 50px;
+    padding-bottom: 10px;
+  }
+  .fixed-width-station-stop {
+    position: absolute;
+    left: 0;
+    top: 0;
+    //width: 50px;
+  }
+  .switch-directions-icon {
+    display: inline-block;
+    margin-top: -16px;
+    position: relative;
+    top: 4px;
+  }
+}

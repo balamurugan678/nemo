@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.2">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+create or replace package content_installer
+as
+
+  procedure install
+  (p_code varchar
+  ,p_locale varchar
+  ,p_content varchar);
+
+  procedure install
+  (p_code varchar
+  ,p_content varchar);
+
+  procedure un_install
+  (p_code varchar
+  ,p_locale varchar);
+
+  procedure un_install
+  (p_code varchar);
+
+end content_installer;
+            ]]>
+        </createProcedure>
+        <rollback>
+            drop package content_installer;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
+

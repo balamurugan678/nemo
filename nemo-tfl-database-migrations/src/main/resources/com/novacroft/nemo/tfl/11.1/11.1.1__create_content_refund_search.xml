@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.1.1">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('refundSearch.title', 'Refund Search');
+  content_installer.install('RefundCase.agent.label', 'Agent');
+  content_installer.install('RefundCase.bacsNumber.label', 'BACS Reference Number');
+  content_installer.install('RefundCase.chequeSerialNumber.label', 'Cheque Serial Number');
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

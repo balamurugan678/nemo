@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.20">
+        <sql splitStatements="false">
+            <![CDATA[
+BEGIN
+  ${schemaName}.content_installer.install('login.heading', 'fr_FR', 'Mon compte S''identifier');
+  ${schemaName}.content_installer.install('username.label', 'fr_FR', 'Email / Oyster ligne Nom d''utilisateur:');
+  ${schemaName}.content_installer.install('username.placeholder', 'fr_FR', 'Email / Oyster ligne nom d''utilisateur');
+  ${schemaName}.content_installer.install('password.label', 'fr_FR', 'Mot de passe:');
+  ${schemaName}.content_installer.install('password.placeholder', 'fr_FR', 'Mot de passe');
+  ${schemaName}.content_installer.install('signIn.button.label', 'fr_FR', 'Connexion');
+  ${schemaName}.content_installer.install('forgottenPassword.link', 'fr_FR', 'Mot de passe oublié');
+  ${schemaName}.content_installer.install('signUp.heading', 'fr_FR', 'Inscrivez-vous');
+  ${schemaName}.content_installer.install('signUp.link.label', 'fr_FR', 'Inscrivez-vous pour un compte');
+END;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

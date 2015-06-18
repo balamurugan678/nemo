@@ -1,0 +1,136 @@
+
+.article-teaser {
+  background: $subtle-grey;
+  //padding: 10px 5px;
+  padding: 20px;
+  //@extend %new-johnson;
+  font-family: arial;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.primary-teaser .news-teaser {
+  @extend %primary-teaser-style;
+}
+
+.content-area .news-teaser {
+  @extend %primary-teaser-style;
+}
+
+.secondary-teaser, .tertiary-teaser {
+  img {
+    display: none;
+  }
+}
+
+.news-teaser {
+  @extend %secondary-teaser-style;
+  margin-bottom: 20px;
+
+  position: relative;
+  h2 {
+    font-size: 20px;
+  }
+  img {
+    width: 100%;
+    height: auto
+  }
+  &.overground > a {
+    border-bottom-color: $overground-colour;
+  }
+  &.cablecar > a {
+    border-bottom-color: $cable-car-colour;
+  }
+  &.bus > a {
+    border-bottom-color: $bus-colour;
+  }
+  &.tram > a {
+    border-bottom-color: $tram-colour;
+  }
+  &.bch > a {
+    border-bottom-color: $bch-colour;
+  }
+  &.coach > a {
+    border-bottom-color: $coach-colour;
+  }
+  > a {
+    display: block;
+    @include transition((background-color 0.3s, border-color), 0.3s);
+    border-bottom: 3px solid $teaser-underline-colour;
+    &:focus, &:hover {
+      border-bottom-color: $linkcolour;
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+      text-decoration: none;
+    }
+  }
+  a.external-link {
+    &:after {
+      margin-right: 2px;
+
+    }
+    .text-link {
+      &:after {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(37, 2);
+      }
+    }
+  }
+  .text-link {
+    padding: 15px 30px 15px 15px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+  .text-only {
+    padding: 15px;
+  }
+  p {
+    margin-bottom: 0;
+    width: 90%;
+  }
+
+  .call-to-action-button {
+    background: $darker-subtle-grey;
+    padding: 10px;
+  }
+  .action-icon {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+  }
+  .vertical-button-container {
+    margin: 10px 0 0;
+  }
+}
+
+.content-area .news-teaser, .primary-teaser .news-teaser {
+  @extend %primary-teaser-style;
+  > a {
+    &:focus, &:hover {
+      @include custom-colour-hover-and-focus($dark-grey);
+    }
+  }
+}
+
+.content-image {
+  background: #f6f6f6;
+  img {
+    width: 100%;
+  }
+  span {
+    font-weight: bold;
+  }
+  .image-caption {
+    padding: 10px;
+  }
+} 
+
+

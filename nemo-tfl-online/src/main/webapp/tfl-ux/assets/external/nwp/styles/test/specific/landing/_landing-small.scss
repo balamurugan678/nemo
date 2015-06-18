@@ -1,0 +1,29 @@
+.SSP-search-wrapper {
+  .search-filter {
+    .heading {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.landing-page-teaser {
+  .news-teaser {
+    border-bottom: 0;
+    a {
+      position: relative;
+      .text-link {
+        position: relative;
+        right: 0;
+        width: 100%;
+        background-color: $dark-grey;
+        background-color: $semi-transparent-dark-grey;
+        &.sit-top {
+          bottom: 0;
+        }
+        &.sit-bottom {
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

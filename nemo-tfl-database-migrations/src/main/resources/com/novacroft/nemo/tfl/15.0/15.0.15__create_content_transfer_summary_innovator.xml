@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.15">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('transferSummary', 'Transfer Summary');
+				  content_installer.install('transferSummary.link', 'Transfer Summary');
+				  content_installer.install('transferSummary.url', 'TransferSummary.htm');
+				  content_installer.install('transferSummary.header', 'Transfer Summary');
+				  content_installer.install('transferSummary.transferProduct.button.label', 'Transfer Product');
+				  content_installer.install('transferSummary.sourceCardNumber.label', 'Source Card Number');
+				  content_installer.install('transferSummary.targetCardNumber.label', 'Target Card Number');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

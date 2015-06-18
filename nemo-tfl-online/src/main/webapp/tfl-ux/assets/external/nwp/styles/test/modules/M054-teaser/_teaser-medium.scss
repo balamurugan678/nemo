@@ -1,0 +1,35 @@
+
+#hero-teaser-container {
+  height: 415px;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  .content-area {
+    bottom: 20px;
+  }
+}
+
+.content-area {
+  position: absolute;
+  margin: 0;
+}
+
+.primary-teaser-container {
+  position: relative;
+  .news-teaser {
+    position: absolute;
+    @extend %primary-teaser-style;
+    &.full-takeover {
+      top: 120px;
+      img {
+        display: none;
+      }
+    }
+  }
+}
+
+.secondary-teaser {
+  img {
+    display: block
+  }
+}

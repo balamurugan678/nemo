@@ -1,0 +1,74 @@
+.combo {
+	padding: 0;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 38px;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    position: relative;
+    width: 100%;
+}
+
+.rightalign {
+	padding: 0 0 0 100px;
+}
+
+table.shoppingcart {
+    margin-top: 10px;
+    width: 100%;
+}
+.shoppingcart td, .shoppingcart th, .atu td, .atu th, .orderhistory td, .orderhistory th, .statement td, .statement th, .journeyhistory th, .journeyhistory td {
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    vertical-align: top;
+}
+.shoppingcart th, .atu th, .orderhistory th, .statement th, .journeyhistory th {
+    background: url("https://oyster.tfl.gov.uk/tfl-oyster/images/tfl2/table-header-background.gif") repeat-x scroll 0 0 #F7F7F7;
+    color: #333333;
+    text-align: left;
+    font-weight: bold;
+}
+.shoppingcart td, .atu td, .orderhistory td, .statement td, .journeyhistory td {
+    border: 1px solid #CCCCCC;
+}
+
+.buttonastext {
+	border: 0px;
+	padding: 1px 1px;
+	margin: 0;
+	font-size: 1.0em;
+	text-decoration: underline;
+	color: #1D318C;
+	width: 40%; 
+}
+
+.warn-button {
+    background-color: #f3f3f3;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, gainsboro), color-stop(2px, gainsboro), color-stop(2px, #f3f3f3), color-stop(100%, white));
+    background-image: -webkit-linear-gradient(bottom, gainsboro 0%, gainsboro 2px, #f3f3f3 2px, white 100%);
+    background-image: linear-gradient(to top, gainsboro 0%, gainsboro 2px, #f3f3f3 2px, white 100%);
+    color: #f03;
+    border: 1px solid #cccccc;
+}
+
+.warn-button:hover, .warn-button:focus {
+    background-color: #d9d9d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3c3c3), color-stop(2px, #c3c3c3), color-stop(2px, #d9d9d9), color-stop(100%, #e6e6e6));
+    background-image: -webkit-linear-gradient(bottom, #c3c3c3 0%, #c3c3c3 2px, #d9d9d9 2px, #e6e6e6 100%);
+    background-image: linear-gradient(to top, #c3c3c3 0%, #c3c3c3 2px, #d9d9d9 2px, #e6e6e6 100%);
+    text-decoration: none;
+}
+
+.rightalignbutton {
+	width: 30%; 
+	float: right;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.pagelinks {
+	margin-left: 20px;
+	margin-bottom: 20px;
+}

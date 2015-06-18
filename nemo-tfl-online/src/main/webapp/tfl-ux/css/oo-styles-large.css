@@ -1,0 +1,94 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.6.2 on 16-05-2014@04:05  by Creative*/
+h1 {
+    font-size: 36px;
+    line-height: 42px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    border: none;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+h4 {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.page-heading.with-border {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 20px;
+}
+
+.variable-heading-indent {
+    margin-left: 0;
+}
+
+.activated-product {
+    padding-top: 0;
+    border-top: none;
+}
+
+.csc-payment-row .csc-payment-from {
+    width: auto;
+    float: left;
+    line-height: 20px;
+}
+
+.csc-payment-row .arrow-and-to {
+    width: 50%;
+    float: left;
+    position: relative;
+    bottom: 5px;
+}
+
+.csc-payment-row .csc-row-subtitle {
+    clear: both;
+    line-height: 10px;
+}
+
+.activation-image {
+    height: 195px;
+}
+
+.card-image {
+    width: 255px;
+}
+
+[data-set="sidenav-container"] {
+    margin-top: 0;
+}
+
+.card-images .highlight-number {
+    left: 133px;
+}
+
+.csc-journey-from-to-line {
+    padding: 10px 10px 0 50px;
+}
+
+.link-boxes .link-box {
+    width: 50%;
+    float: left;
+}
+
+.link-boxes .link-box:last-child {
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+
+.link-boxes .link-box .icon {
+    right: 15px;
+}

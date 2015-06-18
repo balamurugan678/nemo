@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.76">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+content_installer.install('journeyHistory.link', 'Journey History');
+content_installer.install('journeyHistory.url', 'JourneyHistory.htm ');
+content_installer.install('JourneyHistory.breadcrumb.link', 'Travel statement');
+content_installer.install('JourneyHistory.title', 'Oyster travel statement');
+content_installer.install('JourneyHistory.startDate.placeholder', '');
+content_installer.install('JourneyHistory.endDate.placeholder', '');
+content_installer.install('JourneyHistory.endDate.label', 'Custom end date');
+content_installer.install('JourneyHistory.startDate.label', 'Custom start date');
+content_installer.install('JourneyHistory.getDetails.button.label', 'Go');
+content_installer.install('JourneyHistory.pdf.button.label', 'PDF');
+content_installer.install('JourneyHistory.pdf.button.tip', 'Download journey history statement in PDF format');
+content_installer.install('JourneyHistory.csv.button.label', 'CSV');
+content_installer.install('JourneyHistory.csv.button.tip', 'Download journey history statement in CSV format');
+content_installer.install('JourneyHistoryCmd.endDate.mandatoryFieldEmpty.error', 'Please enter an end date for journey.');
+content_installer.install('JourneyHistoryCmd.startDate.mandatoryFieldEmpty.error', 'Please enter a start date for journey.');
+content_installer.install('JourneyHistory.selectCard.selectList.placeholder', 'Oyster name/number');
+content_installer.install('JourneyHistory.selectCard.label', 'Oyster');
+content_installer.install('JourneyHistory.selectDate.placeholder', '');
+content_installer.install('JourneyHistory.selectDate.label', 'Date');
+content_installer.install('JourneyHistory.thisWeek', 'This week');
+content_installer.install('JourneyHistory.customPeriod', 'Custom period');
+content_installer.install('pleaseNote.text', 'Please note');
+content_installer.install('JourneyHistory.reminder.text', 'Recent travel may not be displayed or may appear incomplete as we wait to receive journey data.');
+content_installer.install('JourneyHistory.downloadStatement.heading', 'Download statement as');
+content_installer.install('JourneyHistory.orderRefundHistory.heading', 'Top-up / Travelcard activity');
+content_installer.install('JourneyHistory.orderRefundHistory.link', 'View order and refunds history');
+content_installer.install('JourneyHistory.emailTravelStatements.heading', 'Email travel statements');
+content_installer.install('JourneyHistory.emailTravelStatements.url', 'View order and refunds history');
+content_installer.install('JourneyHistory.emailTravelStatements.link', 'Weekly');
+content_installer.install('journey.warningExplanatory.text', 'We have no record of where you touched out.');
+content_installer.install('journey.warningExplanatory.url', 'JourneyHistoryItem.htm');
+content_installer.install('journey.warningExplanatory.link', 'Provide this information');
+content_installer.install('journey.cappingExplanatory.url', 'JourneyHistoryItem.htm');
+content_installer.install('journey.cappingExplanatory.link', 'More about capping');
+content_installer.install('journey.autoCompletionExplanatory.url', 'JourneyHistoryItem.htm');
+content_installer.install('journey.autoCompletionExplanatory.link', 'More about auto completion');
+content_installer.install('journey.manuallyCorrectedExplanatory.url', 'JourneyHistoryItem.htm');
+content_installer.install('journey.manuallyCorrectedExplanatory.link', 'More about manually corrected');
+content_installer.install('journey.totalSpent.heading', 'Total Spent');
+content_installer.install('journey.startBalance.heading', 'Start Balance');
+content_installer.install('journey.cardBalance.heading', 'Card Balance');
+content_installer.install('journey.topupActivated.text', 'Top-up activated');
+content_installer.install('journey.nationalRail.identifier.pattern', 'National Rail');
+content_installer.install('journey.londonUnderground.identifier.pattern', 'London Underground');
+content_installer.install('journey.busRouteIdUndefined.identifier.pattern', 'U');
+content_installer.install('journey.nationalLocationName.unknown.text', 'Unknown');
+content_installer.install('journey.fareCoveredByTravelCardZones.text', 'Your journey was covered by your travelcard zones ');
+content_installer.install('journey.fareNotCoveredByTravelCardZones.text', 'Your fare for this journey is ');
+content_installer.install('journey.oyster.text', 'Oyster');
+content_installer.install('journey.backJourneyHistory.button.label', 'Go back to travel statement');
+content_installer.install('journey.contactUsAboutJourney.url', 'JourneyHistory.htm');
+content_installer.install('journey.contactUsAboutJourney.link', 'Contact us about this journey');
+content_installer.install('journey.timeUnknown.text', '--:--');
+content_installer.install('JourneyHistoryItem.title', 'Oyster travel statement');
+content_installer.install('datediffmorethan56.error',  'Sorry, journey history is not displayed for more than 56 days.Please choose different dates');
+content_installer.install('JourneyHistory.noJourneyData.text', 'Sorry,no Journey History is present for the given dates');
+content_installer.install('pleaseWait.text', 'Please wait...');
+content_installer.install('service.busy.error', 'Your request could not be processed due to high load.  Please try again later or contact the Oyster Helpline on 0343 222 1234 for assistance.');
+content_installer.install('journey.date.heading', 'Date');
+content_installer.install('journey.dateTime.heading', 'Date/Time');
+content_installer.install('journey.startTime.heading', 'Start Time');
+content_installer.install('journey.endTime.heading', 'End Time');
+content_installer.install('journey.time.separator.text', '-');
+content_installer.install('journey.description.heading', 'Journey/Action');
+content_installer.install('journey.origin.destination.separator.text', 'to');
+content_installer.install('journey.topUp.separator.text', 'at');
+content_installer.install('journey.busRoute.prefix.text', 'Bus route');
+content_installer.install('journey.charge.heading', 'Charge');
+content_installer.install('journey.credit.heading', 'Credit');
+content_installer.install('journey.balance.heading', 'Balance');
+content_installer.install('journey.note.heading', 'Note');
+content_installer.install('journey.dailyBalance.text', 'daily total:');
+content_installer.install('journey.capped.toolTip', 'Fare capped');
+content_installer.install('journey.autoCompleted.toolTip', 'Automatically completed');
+content_installer.install('journey.manuallyCorrected.toolTip', 'Manually corrected');
+content_installer.install('journey.weekly.subject.text', 'Oyster Card {0} Journey History Weekly Statement for {1} - {2}');
+content_installer.install('journey.weekly.body.text', '<p>Please find attached your journey history weekly statement for Oyster card with number {0} and for the period {1} to {2}.</p>');
+content_installer.install('journey.monthly.subject.text', 'Oyster Card {0} Journey History Monthly Statement for {1} - {2}');
+content_installer.install('journey.monthly.body.text', '<p>Please find attached your journey history monthly statement for Oyster card with number {0} and for the period {1} to {2}.</p>');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

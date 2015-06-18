@@ -1,0 +1,368 @@
+/**************************************************
+	M029 - nearby-list
+
+* Author: Adrian Osmond
+* Created: 09/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M029-nearby-list
+
+**************************************************/
+
+.nearby-list {
+  list-style: none outside none;
+  margin: 0 0 20px;
+  overflow: hidden;
+  border-bottom: 1px solid $light-grey-border-colour;
+  .nearby-list-result {
+    position: relative;
+    border-top: 1px solid $light-grey-border-colour;
+    background-color: #fff;
+    &:last-child {
+      border-bottom: 1px solid $light-grey-border-colour;
+      .expandable-information {
+        .nearby-list-result:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+    &:nth-child(even) {
+      > .expanded-result-details > a {
+        > .nearby-mode-information {
+          background-color: $subtler-grey;
+        }
+      }
+    }
+    &.bch {
+      min-height: 90px;
+      .breakpoint-Small:not(.breakpoint-Large) & {
+        > .expanded-result-details > a {
+          cursor: default;
+          &:after {
+            content: none;
+          }
+          &:hover, &:focus {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+  .expandable-information:nth-child(even) {
+    .show-more {
+      .nearby-mode-information {
+        background-color: $subtler-grey;
+      }
+    }
+  }
+  .expanded-result-details {
+    > a {
+      padding: 10px 0;
+      color: $dark-grey;
+      &:hover, &:focus {
+        text-decoration: none;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -16px;
+        @include svg-icon(21, 1);
+      }
+
+    }
+  }
+
+  [data-mode-count='2'] {
+    > .expanded-result-details {
+      > a {
+        min-height: 80px;
+      }
+    }
+  }
+  [data-mode-count='3'] {
+    > .expanded-result-details {
+      > a {
+        min-height: 105px;
+      }
+    }
+  }
+  [data-mode-count='4'] {
+    > .expanded-result-details {
+      > a {
+        min-height: 130px;
+      }
+    }
+  }
+  [data-mode-count='5'] {
+    > .expanded-result-details {
+      > a {
+        min-height: 155px;
+      }
+    }
+  }
+
+  .nearby-mode-information {
+    width: 35px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: $subtle-grey;
+  }
+
+  .bus-route {
+    display: inline-block;
+    margin-right: 10px;
+    line-height: 100%;
+  }
+  a {
+    display: block;
+    position: relative;
+    min-height: 40px;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+  }
+  .nearby-mode-details {
+    padding: 0 35px 0 45px;
+    > span, > div {
+      &:last-child {
+        padding-bottom: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .show-more {
+    display: block;
+    background-color: #fff;
+    padding: 10px 35px 10px 45px;
+    &:hover, &:focus {
+      @include transition(margin-top 0.3s, background-color 0s);
+    }
+    &.expanded {
+      //needs to be imporant to override style attribute added by JS
+      margin-top: 0 !important;
+      .nearby-mode-information {
+        &:after {
+          border-width: 0 5px 5px 5px;
+          border-color: transparent transparent $tflblue transparent;
+        }
+      }
+    }
+    .nearby-mode-information {
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 17px;
+        left: 12px;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 5px 5px 0 5px;
+        border-color: $tflblue transparent transparent transparent;
+      }
+    }
+    .nearby-mode-details {
+      padding: 0;
+      line-height: 20px;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  .nearby-list-heading {
+    display: block;
+    padding-bottom: 5px;
+    font-weight: bold;
+  }
+  .nearby-list-information {
+    display: block;
+    position: relative;
+    line-height: 100%;
+    padding-bottom: 10px;
+  }
+  ul.nearby-list-information {
+    margin-left: 0;
+  }
+  .hidden-information {
+    > .expanded-result-details {
+      > a {
+        min-height: 65px;
+        .nearby-mode-information {
+          &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: 35px;
+            height: 24px;
+            background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAGCAYAAABJuCfcAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDNTE5NjI2NTEyNDcxMUUzQkEwOEE4M0NCOUJCNTM1RiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDNTE5NjI2NjEyNDcxMUUzQkEwOEE4M0NCOUJCNTM1RiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM1MTk2MjYzMTI0NzExRTNCQTA4QTgzQ0I5QkI1MzVGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM1MTk2MjY0MTI0NzExRTNCQTA4QTgzQ0I5QkI1MzVGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+o0RQtgAAAFVJREFUeNpi/Pr1azM3N3c7wwADoDsqmbi4uGpAjIF2CMgdTCDOQDoI5hAQmwUmCBT49////2+MjIx0cwjQPhD1D1kABBpBEgOIQfbDGQyDADcCBBgAfqj1cdeFneQAAAAASUVORK5CYII=);
+          }
+        }
+      }
+    }
+  }
+  .expandable-information {
+
+    > a {
+      border-top: 1px dotted $light-grey-border-colour;
+    }
+  }
+  .hidden-results {
+    list-style: none outside none;
+    margin: 0;
+    .nearby-list-result {
+      border-bottom: 0;
+      border-top: 1px dotted $light-grey-border-colour;
+    }
+  }
+  .bch-dock-bar {
+    display: block;
+    position: relative;
+    height: 10px;
+    margin-bottom: 5px;
+    border: 1px solid $bch-colour;
+    background-color: $subtle-grey;
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: $bch-colour;
+    }
+    &.full-125:after {
+      width: 12.5%;
+    }
+    &.full-250:after {
+      width: 25%;
+    }
+    &.full-375:after {
+      width: 37.5%;
+    }
+    &.full-500:after {
+      width: 50%;
+    }
+    &.full-625:after {
+      width: 62.5%;
+    }
+    &.full-750:after {
+      width: 75%;
+    }
+    &.full-875:after {
+      width: 87.5%;
+    }
+    &.full-1000:after {
+      width: 100%;
+    }
+  }
+  .bch-bike-spaces {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .line-container {
+    display: block;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 1px;
+  }
+  .line {
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+  .mode-icon {
+    position: absolute;
+    top: 5px;
+    left: 2px;
+  }
+  .multi-modal-station {
+    display: block;
+    position: relative;
+    width: 32px;
+    margin: 2px 0 0 2px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 5px 0;
+    box-shadow: 0 3px 0 0 $light-grey-border-colour;
+    @include transform(scale(0.85));
+    .mode-icon {
+      float: left;
+      position: static;
+      padding-top: 0;
+      margin-top: -2px;
+      margin-bottom: -2px;
+      &.tube-station-icon {
+        @include svg-icon-position-only(34, 1);
+      }
+      &.national-rail-station-icon {
+        @include svg-icon-position-only(12, 1);
+      }
+      &.dlr-station-icon, &.docklands-station-icon, &.docklands-light-railway-station-icon {
+        @include svg-icon-position-only(35, 1);
+      }
+      &.tram-station-icon {
+        @include svg-icon-position-only(36, 2);
+      }
+      &.overground-station-icon {
+        @include svg-icon-position-only(34, 3);
+      }
+      &.river-bus-station-icon {
+        @include svg-icon-position-only(13, 1);
+      }
+      &.coach-station-icon {
+        @include svg-icon-position-only(36, 1);
+      }
+      &.disrupted:before {
+        content: "";
+        display: block;
+        position: relative;
+        top: 6px;
+        left: 7px;
+        @include transform(scale(1.17647)); // = 1 / 0.85
+        @include svg-icon(43, 2);
+      }
+      &:last-child:after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: -7px;
+        left: 50%;
+        width: 0px;
+        height: 0px;
+        border-style: solid;
+        border-width: 7px 7px 0 7px;
+        border-color: $light-grey-border-colour transparent transparent transparent;
+        margin-left: -7px;
+      }
+    }
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      width: 0px;
+      height: 0px;
+      border-style: solid;
+      border-width: 5px 5px 0 5px;
+      border-color: #fff transparent transparent transparent;
+      margin-left: -5px;
+      z-index: 1;
+    }
+  }
+  .small-disrupted-icon {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    @include svg-icon-position-only(43, 2, $x-offset: -11px, $y-offset: -6px);
+  }
+}

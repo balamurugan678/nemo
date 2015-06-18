@@ -1,0 +1,126 @@
+/**************************************************
+List ToDropdown
+
+* Author: J Boyle 
+* Created: 12/07/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/Service+Status+Pages
+
+**************************************************/
+.for-dropdown {
+  .links-list {
+    top: 36px;
+    position: absolute;
+    min-width: 100%;
+    right: 0px;
+    border-top: 1px solid $light-grey-border-colour;
+    margin-top: 5px;
+    &#gla-list {
+      bottom: 45px;
+      top: auto;
+      border-top: 1px solid #484848;
+      li {
+        &.greater-london-authority-li {
+          display: block;
+          //color:#fff;
+          padding: 5px;
+          cursor: default;
+          padding-left: 10px;
+          border-bottom: 1px solid #484848;
+          &:hover {
+            background-color: transparent;
+          }
+          img {
+            margin-bottom: 2px;
+          }
+          &:after {
+            display: none;
+          }
+        }
+        &.lldc {
+          //margin-top: 5px;
+        }
+      }
+    }
+  }
+  .dropdown-button {
+    padding: 9px 30px 9px 7px;
+    border-bottom-width: 0;
+    padding-bottom: 10px;
+    margin-bottom: -3px;
+    position: relative;
+    z-index: 15;
+    //border: 1px solid $lighter-grey-border-colour;
+    &.gla-dropdown {
+      padding-bottom: 7px;
+      border-bottom: solid 1px $lighter-grey-border-colour;
+      &:after {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(22, 2);
+      }
+    }
+    &.dropdown-closed {
+      border-bottom-width: 1px;
+      padding-bottom: 7px;
+      margin-bottom: 0;
+      &.gla-dropdown {
+        &:after {
+          @extend %standard-sprite;
+          @include svg-icon-position-only(20, 2);
+        }
+      }
+    }
+  }
+
+}
+
+.r.no-overflow {
+  .links-list {
+    position: static;
+    margin-top: 0;
+  }
+  .dropdown-closed + .links-list {
+    padding: 0;
+    border: 0;
+    height: 0;
+  }
+}
+
+//no js styling for medium + large only
+.no-js {
+  #footer {
+    ul.info-for {
+      width: 25%;
+      li {
+        float: none;
+        margin: 0;
+        margin-left: 10%;
+        width: auto;
+      }
+    }
+
+    .footer-MOL-logo {
+      margin-top: -30px;
+      float: left;
+      margin-left: $gridGutterWidth;
+      width: 25%;
+      ul#gla-list {
+        margin-left: 0;
+        width: 100%;
+        li {
+          padding-right: 35px;
+          margin: 10px 0;
+          &:hover {
+            background: none;
+          }
+          a {
+            //padding-bottom:5px;
+            padding-right: 30px;
+            display: inline;
+          }
+          &.MOL-logo-dropdown {
+          }
+        }
+      }
+    }
+  }
+}

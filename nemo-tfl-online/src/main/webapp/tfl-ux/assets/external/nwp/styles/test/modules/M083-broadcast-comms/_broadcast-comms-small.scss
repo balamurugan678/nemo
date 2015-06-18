@@ -1,0 +1,49 @@
+/**************************************************
+	M083-Broadcast Comms
+* Author: John Boyle
+* Re-Created: 15/01/2013
+* Pattern library URL:  
+**************************************************/
+.broadcast-comms {
+  background: $disruption-colour;
+  width: 100%;
+  border-bottom: solid 2px #fdb813;
+  position: relative;
+  display: block;
+  color: #000;
+  &:hover, &:focus {
+    @include darken-hover-and-focus($disruption-colour, 5%);
+  }
+
+  .broadcast-icon {
+    height: 50px;
+    width: 50px;
+    background: url("http://png-3.findicons.com/files/icons/1684/ravenna/256/exclamation.png") no-repeat 0 0 !important;
+    background-size: 100% 100% !important;
+  }
+
+  .broadcast-text {
+    padding-left: 0px;
+    h2 {
+      margin-bottom: 0;
+    }
+    &:before {
+      //content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      left: 0;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(68, 2);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 0;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 1);
+    }
+  }
+}

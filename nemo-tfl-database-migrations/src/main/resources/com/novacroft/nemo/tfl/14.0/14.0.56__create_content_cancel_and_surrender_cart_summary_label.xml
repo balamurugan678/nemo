@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.56">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeSortCode.label', 'Payee sort code');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAccountNumber.label', 'Payee account number');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeFirstName.label', 'First Name');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeInitials.label', 'Middle Initial');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeLastName.label', 'Last Name');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAddressNumber.label', 'House/Building Name');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAddressStreet.label', 'Street');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAddressTown.label', 'Town');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAddressPostcode.label', 'Postcode');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAddressCounty.label', 'County');
+				  content_installer.install('CancelAndSurrenderCartSummary.payeeAddressCountry.label', 'County');
+				  content_installer.install('CancelAndSurrenderCartSummary.amountPayedViaBACS.label', 'BACS Amount');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,180 @@
+/**************************************************
+	M033-headline
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M033-headline
+
+**************************************************/
+
+.headline-container {
+  margin: 15px 0 10px;
+  padding: 5px 0;
+  position: relative;
+
+  h1 {
+    padding-bottom: 8px;
+  }
+  &.plain {
+    padding: 0;
+    font-family: "NJ Signing";
+    h1 {
+      font-family: "NJ Signing";
+    }
+  }
+  &.section-title {
+    padding: 5px 0;
+  }
+  &.with-tag {
+    padding-left: 20px;
+    &.bus {
+      padding-left: 0;
+      @include clearfix();
+      h1 {
+        float: left;
+        color: #fff;
+        background-color: $bus-colour;
+        padding: 12px 10px 4px;
+      }
+    }
+    .tag {
+      position: absolute;
+      display: block;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      width: 10px;
+    }
+    h1 {
+      padding-top: 13px;
+      padding-bottom: 8px;
+    }
+  }
+
+  &.content-page {
+    border-bottom: 1px solid $lighter-grey-border-colour;
+    padding: 0;
+    h1 {
+      @extend %new-johnson-signing;
+      line-height: 100%;
+      word-wrap: break-word;
+      text-decoration: none;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        line-height: inherit;
+      }
+    }
+  }
+
+  &[class*="mode-"] {
+    padding-right: 46px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 0;
+      width: 36px;
+      height: 30px;
+      bottom: 10px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+  &.mode-bus:after {
+    @extend .roundel-icon-bus;
+  }
+  &.mode-cable-car {
+
+    padding-right: 128px;
+    padding-top: 25px;
+    &:after {
+      @extend .roundel-icon-cable-car;
+      height: 50px;
+      width: 118px;
+    }
+
+    .headline-info {
+      padding-right: 128px;
+    }
+
+  }
+  &.mode-coach:after {
+    @extend .roundel-icon-coach;
+  }
+  &.mode-cycle:after {
+    @extend .roundel-icon-cycle;
+    height: 36px;
+  }
+  &.mode-dlr:after {
+    @extend .roundel-icon-dlr;
+  }
+  &.mode-overground:after {
+    @extend .roundel-icon-overground;
+  }
+  &.mode-river-bus:after {
+    @extend .roundel-icon-river-bus;
+  }
+  &.mode-tram:after {
+    @extend .roundel-icon-tram;
+  }
+  &.mode-tube:after {
+    @extend .roundel-icon-tube;
+  }
+
+  .headline-info {
+    padding: 5px 0 10px 10px;
+    position: relative;
+    min-height: 40px;
+    font-size: 16px;
+    &.with-icon {
+      padding-left: 35px;
+
+      > span {
+        position: absolute;
+        display: block;
+        left: 0;
+        top: 0;
+      }
+      > p {
+        margin: 0;
+        line-height: 16px;
+        padding-top: 4px;
+      }
+    }
+  }
+  .with-favourite & {
+    padding-bottom: 50px;
+
+    &:after {
+      bottom: 60px;
+    }
+
+    .favourite {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 10px;
+      margin: 0;
+    }
+  }
+
+  &.nearby-page:after, &.maps-page:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    @include svg-icon(0, 0, $img-width: 48px, $img-height: 48px, $sprite-file: 'homepage_sprite', $num-rows: 3, $num-columns: 2, $sprite-height: 48px, $sprite-width: 48px);
+
+  }
+  &.maps-page:after {
+    @include svg-icon-position-only(2, 2, $img-width: 48px, $img-height: 48px);
+  }
+  &.nearby-page:after {
+    @include svg-icon-position-only(3, 1, $img-width: 48px, $img-height: 48px);
+  }
+}
+

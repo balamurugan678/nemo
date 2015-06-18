@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.novacroft.nemo.common.domain">
+    <class name="SelectListOption" table="selectlistoption" mutable="false" lazy="false">
+        <cache usage="read-write"/>
+        <id column="id" name="id" type="java.lang.Long">
+            <generator class="sequence">
+                <param name="sequence">selectlistoption_seq</param>
+            </generator>
+        </id>
+        <property name="selectListId" type="java.lang.Long" column="selectlistid"/>
+        <property name="value" type="java.lang.String" column="value"/>
+        <property name="displayOrder" type="java.lang.Integer" column="displayorder"/>
+        <property name="createdUserId" type="java.lang.String" column="createduserid"/>
+        <property name="createdDateTime" type="timestamp" column="createddatetime"/>
+        <property name="modifiedUserId" type="java.lang.String" column="modifieduserid"/>
+        <property name="modifiedDateTime" type="timestamp" column="modifieddatetime"/>
+    </class>
+</hibernate-mapping>

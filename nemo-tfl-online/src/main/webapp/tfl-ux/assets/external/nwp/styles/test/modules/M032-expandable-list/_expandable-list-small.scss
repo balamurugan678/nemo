@@ -1,0 +1,311 @@
+/**************************************************
+    A6 Nested Vertical (side navigation)
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A6+-+Nested+vertical
+
+**************************************************/
+
+//selected + current + heading
+.expandable-list {
+  // on mobile needs to be full width of screen?
+  margin: 0 -2.7% 20px -2.7%;
+
+  //top level heading styles
+  .heading {
+    background-color: $dark-grey;
+    padding: 0 $gridGutterWidth;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    border-bottom: 3px solid $darker-grey;
+    padding-top: 3px;
+
+    &:hover {
+      background-color: $darker-grey;
+    }
+    h2 {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 23px;
+      margin-bottom: 0;
+      padding-top: 12px;
+      padding-bottom: 8px;
+      word-wrap: break-word;
+      display: block;
+    }
+  }
+  // remove base style of lists
+  ul {
+    list-style: none outside none;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
+  // all links have side padding - normally grey bg, and then when in an opened list it has a transparent bg.
+  .link-wrapper {
+    background: $darker-subtle-grey;
+    padding: 0 10px;
+
+    // base styling for all links in the nav.
+    > a, .list-content {
+      background: #fff;
+      display: block;
+      min-height: 40px;
+      line-height: 1.2;
+      padding: 10px 10px 8px 25px;
+      font-size: 1.1em;
+      border-bottom: 1px solid $light-grey-border-colour;
+      border-right: 1px solid $light-grey-border-colour;
+      border-left: 1px solid $light-grey-border-colour;
+      position: relative;
+    }
+    > a {
+      text-decoration: none;
+      color: $dark-grey;
+      padding: 12px 0 6px 25px;
+      // sideways bullet point style arrow
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: $primary-blue;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        margin-top: -3px;
+      }
+    }
+  }
+
+  // parent options have a down arrow rather than a circle
+  .parent > .link-wrapper > a:after {
+    margin-top: -4px;
+    margin-left: 1px;
+    border-width: 5px 7px;
+    border-color: transparent transparent transparent $primary-blue;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+  }
+
+  // first child in any list is responsible for the top border
+  li:first-child > .link-wrapper > a {
+    border-top: 1px solid $light-grey-border-colour;
+  }
+  // outermost list in side-nav first child is responsible for top padding
+  > ul > li:first-child {
+    > .link-wrapper {
+      padding-top: 10px;
+      > a {
+        border-top: 1px solid $light-grey-border-colour;
+      }
+    }
+  }
+  // outermost list in side-nav last child is responsible for bottom padding;
+  > ul > li:last-child {
+    > .link-wrapper {
+      padding-bottom: 10px;
+    }
+  }
+  > ul > li.last-child {
+    // ie8 hack
+    > .link-wrapper {
+      padding-bottom: 10px;
+    }
+  }
+
+  // inner contents other than the link are hidden in all li elements
+  li > * {
+    display: none;
+  }
+  li > .link-wrapper {
+    display: block;
+  }
+
+  .content {
+    margin: 0 10px;
+
+    &.with-borders {
+      border-left: 1px solid $light-grey-border-colour;
+      border-right: 1px solid $light-grey-border-colour;
+    }
+
+    .padded-content {
+      padding: 10px;
+      border-top: 1px dashed $light-grey-border-colour;
+
+      &:first-child {
+        border-top: 0px none;
+      }
+    }
+  }
+
+  .child-selected > ul > .parent:last-child > .link-wrapper {
+    padding-bottom: 10px;
+  }
+
+  // any selected li
+  li.selected {
+
+    // immediately selected links have black with white text;
+    > .link-wrapper > a {
+      color: #fff;
+      background: $dark-grey;
+      border-color: $dark-grey;
+
+      &:after {
+        border-color: #fff;
+      }
+    }
+
+    // li's which are parents
+    &.parent {
+      // contents are displayed
+      > * {
+        display: block;
+      }
+
+      // list breaks up + gets a bottom border
+      > .link-wrapper {
+        padding-bottom: 10px;
+
+        // the selected link is responsible for casting a shadow on child - repositioned for immediately selected links
+        @extend %top-drop-shadow;
+        &::after {
+          top: 100%;
+          left: 10px;
+          right: 10px;
+        }
+
+        // any selected parent the arrow points down - immediately selected versions have a white arrow
+        > a:after {
+          border-color: #fff transparent transparent transparent;
+          border-width: 7px 5px;
+          margin-top: -2px;
+          margin-left: -1px;
+        }
+
+      }
+      // list breaks up when item selected the next list element gets a top border + padding
+      + li {
+        > .link-wrapper {
+          padding-top: 10px;
+          > a {
+            border-top: 1px solid $light-grey-border-colour;
+          }
+
+          // the link after the selected link is responsible for casting a shadow on the child at the bottom
+          @extend %top-drop-shadow;
+          &::after {
+            bottom: 100%;
+            top: auto;
+            left: 10px;
+            right: 10px;
+          }
+        }
+      }
+
+      // lists inside selected have a transparent bg instead
+      ul .link-wrapper {
+        background: transparent;
+      }
+
+      &:last-child {
+        .content {
+          border-bottom: 1px solid $light-grey-border-colour;
+          margin-bottom: -1px;
+        }
+      }
+
+      // if a selected element's child is selected it gets the child-selected class affecting it and its childrens appearance
+      &.child-selected {
+        > .link-wrapper {
+          // the selected links shadow needs to repoisition
+          &::after {
+            left: 0;
+            right: 0;
+          }
+          // link changes to white with black text again - but bold
+          > a {
+            background: #fff;
+            color: $dark-grey;
+            border-color: $light-grey-border-colour;
+            font-weight: bold;
+
+            // arrow changes to blue again
+            &:after {
+              border-color: $primary-blue transparent transparent transparent;
+            }
+          }
+        }
+        // child selected list now becomes grey background
+        > ul > li > .link-wrapper {
+          background: $darker-subtle-grey;
+        }
+
+        &.no-grandchildren {
+          // if child is selected, but there are no grandchildren open, then no background again
+          ul > li > .link-wrapper {
+            background: transparent;
+          }
+          // shadow width reduced again
+          .link-wrapper::after {
+            left: 10px;
+            right: 10px;
+          }
+          // the selected links shadow needs to repoisition
+          + li > .link-wrapper::after {
+            left: 10px;
+            right: 10px;
+          }
+        }
+
+        // the selected links shadow needs to repoisition
+        + li > .link-wrapper::after {
+          left: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  // heirachy of arrows + padding for links
+  ul ul {
+    // children
+    .link-wrapper > a {
+      padding-left: 35px;
+      &:after {
+        left: 19px;
+      }
+    }
+    ul {
+      // grandchildren
+      .link-wrapper > a {
+        padding-left: 45px;
+        &:after {
+          left: 29px;
+        }
+      }
+      ul {
+        // great-grandchildren
+        .link-wrapper > a {
+          padding-left: 55px;
+          &:after {
+            left: 39px;
+          }
+        }
+      }
+    }
+  }
+
+  // current link
+  .current.selected a {
+    cursor: default;
+  }
+}
+

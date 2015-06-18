@@ -1,0 +1,133 @@
+<%@include file="/WEB-INF/jspf/pageCommon.jspf"%>
+<c:set var="autoTopUp" value="Auto Top-up"/>
+<c:set var="payAsYouGoCredit" value="Pay as you go credit"/>
+
+<div class="r">
+    <form:form method="post" action="<%= PageUrl.CHECKOUT%>" commandName="<%=PageCommand.CART%>"
+               cssClass="form-with-tooltips">
+
+        <div class="box borderless">
+            <table border="1" class="shoppingCart" id="shoppingCart">
+	            <thead>
+	                <tr id="shoppingCartHeaderRow">
+	                       <th></th>
+	                    <to:tableHeader id="item"/>
+	                    <to:tableHeader id="startDate"/>
+	                    <to:tableHeader id="endDate"/>
+	                    <to:tableHeader id="reminderDate"/>
+	                    <to:tableHeader id="price"/>
+	                </tr>
+                </thead>
+                <tbody>
+                <c:forEach items="${cartCmd.cartItemList}" var="cartItem" varStatus="status">
+                    <c:choose>
+                        <c:when test="${cartItem.item eq autoTopUp}">
+                            <tr class="cartItem">
+                            <td colspan="2">${cartItem.item}(<nemo-tfl:poundSterlingFormat amount="${cartItem.autoTopUpAmt}"/>)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td class="right-aligned" align="right">
+                                <nemo-tfl:poundSterlingFormat amount="${cartItem.price}"/>
+                            </td>
+                                                            
+                            </tr>
+                        </c:when>
+                        <c:otherwise>
+                            <tr class="cartItem">
+                                <td colspan="2">${cartItem.item}</td>
+                                <td>${cartItem.startDate}</td>
+                                <c:choose>
+                                    <c:when test="${cartItem.item eq payAsYouGoCredit}">
+                                        <td>&nbsp;</td>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <td>${cartItem.endDate}</td>
+                                    </c:otherwise>
+                                </c:choose>
+                                <td>${cartItem.emailReminder}</td>
+                                <td class="right-aligned" align="right">
+                                    <nemo-tfl:poundSterlingFormat amount="${cartItem.price}"/>
+                                </td>
+                            </tr>
+                        </c:otherwise>
+                    </c:choose>
+                </c:forEach>
+
+                <%-- <c:if test="${not empty cartCmd.refundableDepositAmt}"> --%>
+                    <tr id="subTotalRow">
+                        <td colspan="3" class="right-aligned">
+                            <span class="bold" id="subTotalSpan"><to:label id="subTotal"/></span>
+                         </td>
+                         <td colspan="3" id="subTotalAmountCell" align="right">
+                            <nemo-tfl:poundSterlingFormat amount="${cartCmd.subTotalAmt}"/>
+                          </td>
+                            
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="right-aligned">
+                            <span class="bold"><to:label id="refundableCardDeposit"/></span>
+                        </td>
+                        <td colspan="3" id="refundableDepositlAmountCell" align="right">
+                            <nemo-tfl:poundSterlingFormat amount="${cartCmd.refundableDepositAmt}"/>
+                        </td>
+                        
+                    </tr>
+                    <c:if test="${not empty cartCmd.shippingCost}">
+                        <tr> 
+	                        <td colspan="3" class="right-aligned">
+	                            <span class="label bold">${cartCmd.shippingType}: </span>
+	                        </td>
+	                        <td colspan="3" id="shippingCostCell" align="right">
+	                            <nemo-tfl:poundSterlingFormat amount="${cartCmd.shippingCost}"/>
+	                        </td>
+                        </tr>
+                     </c:if>
+                <%-- </c:if> --%>
+                <tr>
+                    <td colspan="3" class="bold right-aligned"><to:label id="total"/></td>
+                    <td colspan="3" class="right-aligned" id="totalAmountCell" align="right">
+                        <nemo-tfl:poundSterlingFormat amount="${cartCmd.totalAmt}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="right-aligned"><to:label id="webCreditAvailableAmount"/></td>
+                    <td colspan="3" class="right-aligned" align="right">
+                        <nemo-tfl:poundSterlingFormat amount="${cartCmd.webCreditAvailableAmount}"/>
+                    </td>
+                </tr>
+                <%-- <c:if test="${cartCmd.webCreditAvailableAmount > 0}"> --%>
+                    <tr>
+                        <td colspan="3" class="right-aligned"><to:label id="webCreditApplyAmount"/></td>
+                        <td colspan="3" class="right-aligned" align="right">
+                            <to:text id="webCreditApplyAmount" showLabel="false" cssClass="right" htmlEscape="false"/>
+                        </td>
+                    </tr>
+               <%--  </c:if> --%>
+                <tr>
+                    <td colspan="3" class="right-aligned"><to:label id="toPayAmount"/></td>
+                    <td colspan="3" class="right-aligned" id="toPayAmountCell" align="right">
+                        <nemo-tfl:poundSterlingFormat amount="${cartCmd.toPayAmount}"/>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <br/>
+
+        <div>
+            <to:linkButtonAndPopUp id="paymentTermsNotice"/>
+            <to:checkbox id="paymentTermsAccepted"/>
+        </div>
+
+        <br/>
+
+        <div class="button-container clearfix">
+            <to:secondaryButton id="cancel" buttonType="submit" targetAction="<%= PageParameterValue.CANCEL %>"/>
+            <to:primaryButton id="continue" buttonType="submit" targetAction="<%= PageParameterValue.CONTINUE %>"/>
+        </div>
+
+    </form:form>
+</div>

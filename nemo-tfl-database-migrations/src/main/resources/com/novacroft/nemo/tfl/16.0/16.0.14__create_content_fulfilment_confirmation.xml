@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.14">
+		<sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('FulfilOrderConfirmation.fulfilment.header', 'Fulfil Pending Orders');
+				  content_installer.install('FulfilOrderConfirmation.confirmation.text', 'Oyster card {0} successfully fulfilled');
+				  content_installer.install('FulfilOrderConfirmation.receipt.text', 'To view the receipt in a popup window ');
+				end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<mapping>
+
+    <description>Object/XML mapping for Nemo TfL Removal of Update Response</description>
+    <class name="com.novacroft.nemo.tfl.common.domain.cubic.CardRemoveUpdateResponse" >
+        <map-to xml="CardUpdateResponse" />
+        <field name="prestigeId">
+            <bind-xml name="PrestigeID" node="element"/>
+        </field>
+        <field name="requestSequenceNumber">
+            <bind-xml name="RequestSequenceNumber" node="element" />
+		</field>
+        <field name="removedRequestSequenceNumber">
+            <bind-xml name="RemovedRequestSequenceNumber" node="element" />
+		</field>
+    </class> 
+</mapping>

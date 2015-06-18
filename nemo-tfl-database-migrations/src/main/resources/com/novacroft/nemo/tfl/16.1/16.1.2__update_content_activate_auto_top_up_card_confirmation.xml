@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.1.2">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('autoTopUpConfirmEmail.body.text', '<p>
+					Your next step is to...Touch your Oyster card on a yellow card reader when you make a journey at{0} stop from (tomorrow) to activate the changes to your Auto top-up.<br>
+					Please ensure you activate these changes between {1} and {2}.<br> These changes will not be made to your Auto top-up if you do not activate them during the dates mentioned<br>
+					Your Reference : {3}</p>');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,11 @@
+.lt-ie8 {
+  .news-teaser {
+    > a {
+      &:hover {
+        border-bottom: 0;
+        margin-bottom: 6px;
+      }
+    }
+    border-bottom: 0;
+  }
+}

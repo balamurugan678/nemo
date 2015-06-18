@@ -1,0 +1,51 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.6.2 on 16-05-2014@04:05  by Creative*/
+.no-js .hidden-content-editable-form {
+    display: block;
+}
+
+.no-js .csc-toggle-content-start-hidden {
+    border-top: 1px solid #cccccc;
+}
+
+.no-js .selector {
+    /*span:before {
+        border:0;
+        width:0;
+        height:0;
+    }
+    select {
+        margin-top: 40px;
+        opacity: 1;
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    }*/
+}
+
+.no-js .label-in-accordian {
+    padding: 0;
+}
+
+.no-js .filter-submit.hidden {
+    display: block;
+}
+
+.no-js .remove-button-container {
+    display: block;
+}
+
+.no-js .confirmation .remove-product {
+    display: none;
+}
+
+.no-js .form-element-accordian-control .calendar-icon {
+    display: none;
+}
+
+.no-js .input-with-calendar-container input {
+    position: relative;
+    right: 0px;
+}
+
+.no-js .expandable-box .start-hidden {
+    display: block;
+}

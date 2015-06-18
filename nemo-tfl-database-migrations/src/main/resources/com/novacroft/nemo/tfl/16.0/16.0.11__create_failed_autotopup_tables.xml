@@ -1,0 +1,198 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.11">
+    
+    	<createTable schemaName="${schemaName}" tableName="FATU_CASE" tablespace="${tableTablespace}" remarks="Table to hold Failed Auto TopUp Cases">
+    		<column name="ID" type="number(38)" remarks="Surrogate primary key - generated from FATU_CASE_SEQ sequence">
+    			<constraints nullable="false" primaryKey="true" primaryKeyName="FATU_CASE_PK"/>
+    		</column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="CASEREFERENCENUMBER" type="number(38)" remarks="Failed Auto Top-Up Case Reference Number" />
+    		<column name="CASESTATUS" type="varchar2(30)" remarks="Status of Failed Auto Top-Up Case created"/>
+    		<column name="CASEPROGRESSIONSTATUS" type="varchar2(50)" remarks="Progression Status of the Failed Auto Top-Up Case"/>
+    		<column name="CUSTOMERLIABILITY" type="varchar2(30)" remarks="Validate the customer as Customer Liable or Customer Not Liable for Failed Auto Top-Up Case"/>
+    		<column name="FAILEDAUTOTOPUPAMOUNT" type="number(38)" remarks="Failed Auto Top-Up amount" />
+    		<column name="CARDNUMBER" type="varchar2(50)" remarks="Oyster Card Number of the Failed Auto Top-Up Case"/>
+            <column name="RESETTLEMENTENDDATE" type="date" remarks="End date of resettlement for Failed Auto Top-Up Case"/>
+    		<column name="CASENOTE" type="varchar2(1000)" remarks="Notes or Comments about Failed Auto Top-Up Case"/>
+            <column name="CUSTOMERID" type="number(38)" remarks="Reference to Customer Table with Customer ID">
+                <constraints foreignKeyName="FATU_CASE_FK1" references="CUSTOMER(ID)" />
+            </column>
+            <column name="CARDID" type="number(38)" remarks="Reference to Card Table with Card ID">
+                <constraints foreignKeyName="FATU_CASE_FK2" references="CARD(ID)" />
+            </column>
+            <column name="ORDERID" type="number(38)" remarks="Reference to Order Table">
+    			<constraints foreignKeyName="FATU_CASE_FK3" references="CUSTOMERORDER(ID)" />
+    		</column>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />            
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="FATU_CASE_SEQ"/>
+    	
+    <createTable schemaName="${schemaName}" tableName="FATU_PAYMENTDETAIL" tablespace="${tableTablespace}" remarks="Table to hold Payment details for Failed Auto TopUp Cases">
+    		<column name="ID" type="number(38)" remarks="Surrogate primary key - generated from FATU_PAYMENTDETAIL_SEQ sequence">
+    			<constraints nullable="false" primaryKey="true" primaryKeyName="FATU_PAYMENTDETAIL_PK"/>
+    		</column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="ACTORS" type="varchar2(30)" remarks="Actors either SYSTEM or USERNAME" />
+    		<column name="ATTEMPTS" type="NUMBER(10)" remarks="Number of Attempts payment done" />
+            <column name="CUSTOMERID" type="number(38)" remarks="Reference to Customer Table with Customer ID">
+                <constraints foreignKeyName="FATU_PAYMENTDETAIL_FK1" references="CUSTOMER(ID)" />
+            </column>
+            <column name="PAYMENTCARDID" type="number(38)" remarks="Reference to Payment Card Table with Payment Card ID">
+                <constraints foreignKeyName="FATU_PAYMENTDETAIL_FK2" references="PAYMENTCARD(ID)" />
+            </column>
+            <column name="FATUCASEID" type="number(38)" remarks="Reference to Card Table with Card ID">
+                <constraints foreignKeyName="FATU_PAYMENTDETAIL_FK3" references="FATU_CASE(ID)" />
+            </column>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="FATU_PAYMENTDETAIL_SEQ"/>
+    	
+        <createTable schemaName="${schemaName}" tableName="FATU_HISTORY" tablespace="${tableTablespace}" remarks="Table to hold History of Failed Auto TopUp Case details">
+    		<column name="ID" type="number(38)" remarks="Surrogate primary key - generated from FATU_HISTORY_SEQ sequence">
+    			<constraints nullable="false" primaryKey="true" primaryKeyName="FATU_HISTORY_PK"/>
+    		</column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="AUTOTOPUPDATE" type="date" remarks="Auto TopUp Date"/>
+            <column name="RESETTLEMENTATTEMPTDATE" type="date" remarks="Failed Autotopup resettlement date"/>
+            <column name="HOTLISTDATE" type="date" remarks="Card hot listed Date"/>
+            <column name="REFUNDDATE" type="date" remarks="Refund Date"/>
+            <column name="CASENOTE" type="varchar2(1000)" remarks="Notes or Comments about Failed Auto Top-Up Case"/>
+            <column name="ACTOR" type="varchar2(30)" remarks="Actors either SYSTEM or USERNAME"/>
+            <column name="CASESTATUS" type="varchar2(10)" remarks="Status of Failed Auto Top-Up Case created"/>
+            <column name="AUTOTOPUPAMOUNT" type="number(38)" remarks="Auto Top-Up amount" />
+            <column name="CUSTOMERID" type="number(38)" remarks="Reference to Customer Table with Customer ID">
+                <constraints foreignKeyName="FATU_HISTORY_FK1" references="CUSTOMER(ID)" />
+            </column>
+            <column name="FATUCASEID" type="number(38)" remarks="Reference to Card Table with Card ID">
+                <constraints foreignKeyName="FATU_HISTORY_FK2" references="FATU_CASE(ID)" />
+            </column>
+            <column name="FATUPAYMENTDETAILID" type="number(38)" remarks="Reference to Payment Card Table with Payment Card ID">
+                <constraints foreignKeyName="FATU_HISTORY_FK3" references="FATU_PAYMENTDETAIL(ID)" />
+            </column>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="FATU_HISTORY_SEQ"/>
+    
+        <createTable schemaName="${schemaName}" tableName="FATU_CASE_AUD" tablespace="${tableTablespace}" remarks="Failed Auto Top-Up audited table">
+        	<column name="REV" type="number">
+                <constraints nullable="false" />
+            </column>
+            <column name="REVTYPE" type="number">
+                <constraints nullable="false" />
+            </column>
+        	<column name="ID" type="number(38)" remarks="Surrogate primary key - generated for FATU_CASE Audit table">
+                <constraints nullable="false" />
+            </column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record" />
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created" />
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="CASEREFERENCENUMBER" type="number(38)" remarks="Failed Auto Top-Up Case Reference Number" />
+    		<column name="CASESTATUS" type="varchar2(30)" remarks="Status of Failed Auto Top-Up Case created"/>
+    		<column name="CASEPROGRESSIONSTATUS" type="varchar2(50)" remarks="Progression Status of the Failed Auto Top-Up Case"/>
+    		<column name="FAILEDAUTOTOPUPAMOUNT" type="number(38)" remarks="Failed Auto Top-Up amount" />
+    		<column name="CARDNUMBER" type="varchar2(50)" remarks="Oyster Card Number of the Failed Auto Top-Up Case"/>
+            <column name="RESETTLEMENTENDDATE" type="date" remarks="End date of resettlement for Failed Auto Top-Up Case"/>
+            <column name="CUSTOMERID" type="number(38)" remarks="Reference to Customer Table with Customer ID"/>
+            <column name="CARDID" type="number(38)" remarks="Reference to Card Table with Card ID"/>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+        </createTable>
+        
+        <createTable schemaName="${schemaName}" tableName="MESSAGE" tablespace="${tableTablespace}" remarks="Table to hold Messages sent from our system">
+    		<column name="ID" type="number(38)" remarks="Surrogate primary key - generated from MESSAGE_SEQ sequence">
+    			<constraints nullable="false" primaryKey="true" primaryKeyName="MESSAGE_PK"/>
+    		</column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="MESSAGETYPE" type="varchar2(20)" remarks="Type of message. Email or PhoneText"/>
+    		<column name="MOBILENUMBER" type="NUMBER(38)" remarks="Customer Mobile number used to send SMS" />
+    		<column name="MESSAGETO" type="varchar2(150)" remarks="To email address"/>
+    		<column name="MESSAGECC" type="varchar2(150)" remarks="CC email address"/>
+    		<column name="MESSAGEBCC" type="varchar2(150)" remarks="BCC email address"/>
+    		<column name="MESSAGEFROM" type="varchar2(150)" remarks="From email address"/>
+    		<column name="SUBJECT" type="varchar2(150)" remarks="Subject of email"/>
+    		<column name="MESSAGEBODY" type="CLOB" remarks="Body of email or the content of SMS"/>
+    		<column name="ATTEMPTS" type="NUMBER(10)" remarks="Number of Attempts done to send the message" />
+    		<column name="STATUS" type="varchar2(64)" remarks="Status of the message- RETRY/ABORTED/REQUESTED"/>
+    		<column name="CUSTOMERID" type="number(38)" remarks="Reference to Customer Table">
+    			<constraints foreignKeyName="MESSAGE_FK1" references="CUSTOMER(ID)" />
+    		</column>
+    		<column name="ORDERID" type="number(38)" remarks="Reference to Order Table">
+    			<constraints foreignKeyName="MESSAGE_FK2" references="CUSTOMERORDER(ID)" />
+    		</column>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="MESSAGE_SEQ"/>
+    	
+    	<createTable schemaName="${schemaName}" tableName="MESSAGEATTACHMENT" tablespace="${tableTablespace}" remarks="Table to hold attachments of Messages">
+    		<column name="ID" type="number(38)" remarks="Surrogate primary key - generated from MESSAGEATTACHMENT_SEQ sequence">
+    			<constraints nullable="false" primaryKey="true" primaryKeyName="MESSAGEATTACHMENT_PK"/>
+    		</column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="MESSAGEID" type="number(38)" remarks="Reference to Message Table">
+    			<constraints foreignKeyName="MESSAGEATTACHMENT_FK1" references="MESSAGE(ID)" />
+    		</column>
+    		<column name="CONTENT" type="BLOB" remarks="Actual attachment"/>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="MESSAGEATTACHMENT_SEQ"/>
+    	
+    	<createTable schemaName="${schemaName}" tableName="MESSAGEEVENT" tablespace="${tableTablespace}" remarks="Table to hold the details of attempts to send Messages">
+    		<column name="ID" type="number(38)" remarks="Surrogate primary key - generated from MESSAGEEVENT_SEQ sequence">
+    			<constraints nullable="false" primaryKey="true" primaryKeyName="MESSAGEEVENT_PK"/>
+    		</column>
+            <column name="CREATEDUSERID" type="varchar2(64)" remarks="Who created the record">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="CREATEDDATETIME" type="date" remarks="When (date and time) the record was created">
+            	<constraints nullable="false"/>
+            </column>
+            <column name="MODIFIEDUSERID" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="MODIFIEDDATETIME" type="date" remarks="When (date and time) the record was last modified"/>
+    		<column name="RESPONSE" type="varchar2(250)" remarks="Response from the message server"/>
+    		<column name="MESSAGEID" type="number(38)" remarks="Reference to Message Table">
+    			<constraints foreignKeyName="MESSAGEEVENT_FK1" references="MESSAGE(ID)" />
+    		</column>
+    		<column name="EVENTDATE" type="date" remarks="When event happened"/>
+            <column name="EXTERNALID" type="NUMBER(38)" remarks="External ID" />
+    	</createTable>
+    	<createSequence schemaName="${schemaName}" sequenceName="MESSAGEEVENT_SEQ"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.19">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  select_list_installer.un_install_list('PassengerTypes');
+				  select_list_installer.un_install_list('DiscountTypes');
+				  
+				  content_installer.un_install('PassengerTypes.0.option');
+				  content_installer.un_install('PassengerTypes.1.option');
+				   
+				  content_installer.un_install('DiscountTypes.100.option');
+				  content_installer.un_install('DiscountTypes.101.option');
+				  content_installer.un_install('DiscountTypes.102.option');
+				  content_installer.un_install('DiscountTypes.103.option');
+				  content_installer.un_install('DiscountTypes.104.option');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

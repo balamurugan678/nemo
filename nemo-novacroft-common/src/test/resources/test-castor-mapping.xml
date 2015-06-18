@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<mapping>
+
+    <description>Object/XML mapping for testing</description>
+
+    <class name="com.novacroft.nemo.common.domain.SystemParameter">
+        <map-to xml="SystemParameter"/>
+        <field name="code">
+            <bind-xml name="Code" node="element"/>
+        </field>
+        <field name="value">
+            <bind-xml name="Value" node="element"/>
+        </field>
+        <field name="purpose">
+            <bind-xml name="Purpose" node="element"/>
+        </field>
+    </class>
+
+</mapping>

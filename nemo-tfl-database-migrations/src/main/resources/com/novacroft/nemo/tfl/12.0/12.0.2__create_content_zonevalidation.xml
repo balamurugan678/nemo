@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="12.0.2">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+   content_installer.install('startZone.mandatoryFieldEmpty.genericError', 'Start zone was not specified');
+   content_installer.install('endZone.mandatoryFieldEmpty.genericError', 'End zone was not specified');
+   content_installer.install('integer.parse.error', 'Cannot parse to an Integer - field is not a numeric value');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

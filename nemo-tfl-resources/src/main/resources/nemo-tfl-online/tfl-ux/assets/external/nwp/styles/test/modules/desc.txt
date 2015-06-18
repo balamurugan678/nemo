@@ -1,0 +1,5 @@
+This is the Modules folder. Modules comprise the majority of things in the site, e.g. custom dropdown styling, date pickers, accordions etc.
+
+A module in here should correlate to a Partial View or to a static template. And also a prototype page.
+
+

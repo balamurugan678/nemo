@@ -1,0 +1,772 @@
+/* utility */
+/* line 39, ../../sass/utility/_placeholders.scss */
+.no-js .journey-planner-results #plan-a-journey #From, .no-js .journey-planner-results #plan-a-journey #To {
+    -webkit-box-shadow: inset 0px 3px 0px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 3px 0px 0 rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid #cccccc;
+}
+
+/* line 204, ../../sass/utility/_placeholders.scss */
+.no-js ul#gla-list li:after {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+}
+
+/* line 211, ../../sass/utility/_placeholders.scss */
+.body-cms-preview .no-js ul#gla-list li:after, .no-js ul#gla-list .body-cms-preview li:after {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 218, ../../sass/utility/_placeholders.scss */
+.no-js ul#gla-list li:after {
+    background-size: 96px 2560px;
+    height: 32px;
+    width: 32px;
+}
+
+/* global - no-js */
+/* line 2, ../../sass/global/base/_base-no-js.scss */
+.no-js .small {
+    display: block;
+}
+
+/* line 5, ../../sass/global/base/_base-no-js.scss */
+.no-js .medium {
+    display: block;
+}
+
+/* line 8, ../../sass/global/base/_base-no-js.scss */
+.no-js .large {
+    display: block;
+}
+
+/* line 11, ../../sass/global/base/_base-no-js.scss */
+.no-js .small-medium {
+    display: block;
+}
+
+/* line 14, ../../sass/global/base/_base-no-js.scss */
+.no-js .medium-large {
+    display: block;
+}
+
+/* line 17, ../../sass/global/base/_base-no-js.scss */
+.no-js .mainnav {
+    border-bottom: 1px solid #A8A8A8;
+}
+
+/* line 20, ../../sass/global/base/_base-no-js.scss */
+.no-js .cookie-policy-notice {
+    display: block;
+}
+
+/* line 23, ../../sass/global/base/_base-no-js.scss */
+.no-js #cookie-policy-button {
+    display: none;
+}
+
+/* line 27, ../../sass/global/base/_base-no-js.scss */
+.no-js .collapsible-menu .more {
+    display: none;
+}
+
+/* line 31, ../../sass/global/base/_base-no-js.scss */
+.no-js .extra-nav {
+    display: block;
+}
+
+/* line 33, ../../sass/global/base/_base-no-js.scss */
+.no-js .extra-nav .plan-journey, .no-js .extra-nav .status-update, .no-js .extra-nav .maps, .no-js .extra-nav .fares-and-payments {
+    float: left;
+    width: 46%;
+    margin-right: 2%;
+    display: block;
+}
+
+/* line 42, ../../sass/global/base/_base-no-js.scss */
+.no-js #footer .info-for li {
+    display: block;
+}
+
+/* line 44, ../../sass/global/base/_base-no-js.scss */
+.no-js #footer .info-for li.heading:before {
+    content: "";
+}
+
+/* line 51, ../../sass/global/base/_base-no-js.scss */
+.no-js .expandable-box .content .start-hidden {
+    display: block;
+}
+
+/* line 55, ../../sass/global/base/_base-no-js.scss */
+.no-js .expandable-box .content .always-visible .controls:before {
+    content: "";
+}
+
+/* line 60, ../../sass/global/base/_base-no-js.scss */
+.no-js .time-options .change-time-options {
+    display: block;
+}
+
+/* line 62, ../../sass/global/base/_base-no-js.scss */
+.no-js .time-options .change-time-options .hours-mins {
+    margin-top: 8px;
+}
+
+/* line 66, ../../sass/global/base/_base-no-js.scss */
+.no-js .time-defaults {
+    display: none;
+}
+
+/* line 69, ../../sass/global/base/_base-no-js.scss */
+.no-js .switch-button {
+    display: none;
+}
+
+/* line 73, ../../sass/global/base/_base-no-js.scss */
+.no-js .location-input-box input[type="text"] {
+    padding-right: 4px;
+}
+
+/* line 79, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results #plan-a-journey .from-and-to, .no-js .journey-planner-results #plan-a-journey .time-options, .no-js .journey-planner-results #plan-a-journey .update-buttons, .no-js .journey-planner-results #plan-a-journey .toggle-options {
+    display: block;
+}
+
+/* line 82, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results #plan-a-journey label[for='From'], .no-js .journey-planner-results #plan-a-journey label[for='To'] {
+    margin-top: 10px;
+}
+
+/* line 85, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results #plan-a-journey #From, .no-js .journey-planner-results #plan-a-journey #To {
+    color: #2d3039;
+    height: 40px;
+    border: 1px solid #cccccc;
+    cursor: auto;
+    padding-right: 4px;
+}
+
+/* line 93, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results #plan-a-journey .geolocation-box {
+    margin-bottom: 10px;
+}
+
+/* line 96, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results #plan-a-journey .extra-options {
+    display: block;
+}
+
+/* line 100, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results .go-via, .no-js .journey-planner-results .national-search {
+    display: block;
+}
+
+/* line 105, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results #more-journey-options input.primary-button {
+    float: none;
+    display: block;
+    margin-top: 48px;
+}
+
+/* line 111, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-results .loader {
+    display: none;
+}
+
+/* line 115, ../../sass/global/base/_base-no-js.scss */
+.no-js #more-journey-options {
+    display: block;
+}
+
+/* line 120, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-start .extra-options .toggle-options {
+    display: none;
+}
+
+/* line 123, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-start .extra-options .go-via, .no-js .journey-planner-start .extra-options .national-search {
+    display: block;
+}
+
+/* line 127, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-start #more-journey-options {
+    display: block;
+}
+
+/* line 129, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-start #more-journey-options input.primary-button {
+    display: block;
+}
+
+/* line 135, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-details {
+    display: block;
+}
+
+/* line 138, ../../sass/global/base/_base-no-js.scss */
+.no-js .show-detailed-results {
+    display: none;
+}
+
+/* line 143, ../../sass/global/base/_base-no-js.scss */
+.no-js .checkbox-list label:after, .no-js .checkbox-list label:before, .no-js .styled-checkbox label:after, .no-js .styled-checkbox label:before, .no-js .radiobutton-list label:after, .no-js .radiobutton-list label:before {
+    display: none;
+}
+
+/* line 147, ../../sass/global/base/_base-no-js.scss */
+.no-js .checkbox-list input[type="checkbox"], .no-js .checkbox-list input[type="radio"], .no-js .styled-checkbox input[type="checkbox"], .no-js .styled-checkbox input[type="radio"], .no-js .radiobutton-list input[type="checkbox"], .no-js .radiobutton-list input[type="radio"] {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/* line 153, ../../sass/global/base/_base-no-js.scss */
+.no-js .selector span:before {
+    border: 0;
+    width: 0;
+    height: 0;
+}
+
+/* line 158, ../../sass/global/base/_base-no-js.scss */
+.no-js .selector select {
+    margin-top: 40px;
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/* line 164, ../../sass/global/base/_base-no-js.scss */
+.no-js .table-container {
+    overflow-x: scroll;
+}
+
+/* line 168, ../../sass/global/base/_base-no-js.scss */
+.no-js .lines-stations-tab {
+    display: none;
+}
+
+/* line 173, ../../sass/global/base/_base-no-js.scss */
+.no-js .service-status-rainbow-board h2 {
+    display: block;
+}
+
+/* line 178, ../../sass/global/base/_base-no-js.scss */
+.no-js .service-status-links {
+    display: block;
+}
+
+/* line 180, ../../sass/global/base/_base-no-js.scss */
+.no-js .service-status-links ul {
+    list-style-type: none;
+}
+
+/* line 182, ../../sass/global/base/_base-no-js.scss */
+.no-js .service-status-links ul li {
+    float: left;
+    margin: 0px 12px 5px 0px;
+    font-size: 110%;
+}
+
+/* line 188, ../../sass/global/base/_base-no-js.scss */
+.no-js .service-status-links .mode-icon {
+    float: left;
+}
+
+/* line 191, ../../sass/global/base/_base-no-js.scss */
+.no-js .service-status-links .mode-name {
+    float: left;
+    margin: 4px;
+    margin-left: 0px;
+}
+
+/* line 197, ../../sass/global/base/_base-no-js.scss */
+.no-js .rainbow-board {
+    display: block;
+}
+
+/* line 200, ../../sass/global/base/_base-no-js.scss */
+.no-js .rainbow-board .info-dropdown {
+    display: table-row;
+}
+
+/* line 203, ../../sass/global/base/_base-no-js.scss */
+.no-js .rainbow-board .status-toggle span {
+    background-position: -40px -742px;
+}
+
+/* line 207, ../../sass/global/base/_base-no-js.scss */
+.no-js .bus-stop-recently-viewed, .no-js .bus-stop-favourites {
+    display: none;
+}
+
+/* line 212, ../../sass/global/base/_base-no-js.scss */
+.no-js .bus-stop-search-results .bus-stop .plain-button {
+    width: 100%;
+    border: none;
+}
+
+/* line 219, ../../sass/global/base/_base-no-js.scss */
+.no-js .image-gallery {
+    display: none;
+}
+
+/* line 223, ../../sass/global/base/_base-no-js.scss */
+.no-js .gallery-image img {
+    width: 100%;
+}
+
+/* line 226, ../../sass/global/base/_base-no-js.scss */
+.no-js .gallery-image .caption {
+    background-color: #eeeeee;
+    padding: 12px;
+    color: #6D6F75;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+}
+
+/* line 233, ../../sass/global/base/_base-no-js.scss */
+.no-js .gallery-image .first-line {
+    margin-bottom: 30px;
+}
+
+/* line 236, ../../sass/global/base/_base-no-js.scss */
+.no-js .gallery-image .title {
+    float: left;
+    font-weight: bold;
+    font-size: 110%;
+    width: 80%;
+}
+
+/* line 242, ../../sass/global/base/_base-no-js.scss */
+.no-js .gallery-image .counter {
+    float: right;
+    text-align: right;
+    width: 20%;
+}
+
+/* line 248, ../../sass/global/base/_base-no-js.scss */
+.no-js .video-gallery, .no-js .video-thumbs {
+    display: none;
+}
+
+/* line 252, ../../sass/global/base/_base-no-js.scss */
+.no-js .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+/* line 259, ../../sass/global/base/_base-no-js.scss */
+.no-js .video-container object, .no-js .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* line 268, ../../sass/global/base/_base-no-js.scss */
+.no-js .journey-planner-widget #more-journey-options {
+    display: none;
+}
+
+/* line 273, ../../sass/global/base/_base-no-js.scss */
+.no-js .horizontal-toggle-buttons input {
+    opacity: 1;
+}
+
+/* line 277, ../../sass/global/base/_base-no-js.scss */
+.no-js .date-link-container {
+    display: block;
+}
+
+/* line 280, ../../sass/global/base/_base-no-js.scss */
+.no-js .advance-month-container {
+    display: block;
+}
+
+/* line 282, ../../sass/global/base/_base-no-js.scss */
+.no-js .advance-month-container a {
+    padding: 0 6px;
+}
+
+/* line 286, ../../sass/global/base/_base-no-js.scss */
+.no-js .date-link {
+    float: left;
+    padding: 0 6px;
+}
+
+/* line 290, ../../sass/global/base/_base-no-js.scss */
+.no-js .map-wrapper {
+    display: none;
+}
+
+/* line 293, ../../sass/global/base/_base-no-js.scss */
+.no-js #routes-map {
+    display: none;
+}
+
+/* line 299, ../../sass/global/base/_base-no-js.scss */
+.grey-box input[type=text] {
+    margin-bottom: 10px;
+}
+
+/* line 304, ../../sass/global/base/_base-no-js.scss */
+.json-all-stops, .view-on-a-map {
+    display: none;
+}
+
+/* line 308, ../../sass/global/base/_base-no-js.scss */
+.no-script-map {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* line 313, ../../sass/global/base/_base-no-js.scss */
+.no-script-map img {
+    width: 100%;
+}
+
+/* line 318, ../../sass/global/base/_base-no-js.scss */
+.map-sliver {
+    display: none;
+}
+
+@media screen and (max-width: 580px) {
+    /* line 324, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras {
+        height: 110px;
+    }
+
+    /* line 326, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .search-tools {
+        display: block;
+    }
+
+    /* line 329, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .texts {
+        width: 63px;
+    }
+
+    /* line 332, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .texts .search {
+        display: none;
+    }
+
+    /* line 335, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .texts img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 580px) {
+    /* line 347, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .search-tools {
+        width: 150px;
+        left: auto;
+        right: 0;
+        top: 0;
+        display: block;
+    }
+
+    /* line 354, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .texts {
+        width: 210px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /* line 365, ../../sass/global/base/_base-no-js.scss */
+    .no-js .extras .plan-journey, .no-js .extras .status-update, .no-js .extras .maps, .no-js .extras .fares-and-payments {
+        float: left;
+        width: 21%;
+        margin-right: 2%;
+        display: block;
+    }
+
+    /* line 374, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .search-tools {
+        width: auto;
+        position: static;
+    }
+
+    /* line 378, ../../sass/global/base/_base-no-js.scss */
+    .no-js .top-row-extras .texts {
+        width: auto;
+        position: static;
+    }
+}
+
+/* elements - no-js */
+/* modules - no-js */
+/**************************************************
+List ToDropdown
+
+* Author: J Boyle 
+* Created: 12/07/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/Service+Status+Pages
+
+**************************************************/
+/* line 10, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js .greater-london-authority-li {
+    display: none;
+}
+
+/* line 13, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list {
+    margin-left: 0;
+}
+
+/* line 15, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list li {
+    position: relative;
+    -webkit-transition: background-color 0.3s 1s ease;
+    -moz-transition: background-color 0.3s 1s ease;
+    -o-transition: background-color 0.3s 1s ease;
+    -ms-transition: background-color 0.3s 1s ease;
+    transition: background-color 0.3s 1s ease;
+}
+
+/* line 18, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list li:hover, .no-js ul#gla-list li:focus {
+    background: #15171b;
+    text-decoration: none;
+}
+
+/* line 22, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list li:after {
+    content: '';
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    margin-top: -16px;
+    background-position: -64px -2112px;
+}
+
+/* line 33, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list li.MOL-logo-dropdown {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* line 36, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list li.MOL-logo-dropdown:hover {
+    background: none;
+}
+
+/* line 39, ../../sass/modules/M013-list-to-dropdown/_list-to-dropdown-no-js.scss */
+.no-js ul#gla-list li.MOL-logo-dropdown:after {
+    display: none;
+}
+
+/**************************************************
+	M028 - live boards
+
+* Author: Adrian Osmond
+* Created: 05/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M028-live-boards
+
+**************************************************/
+/* line 12, ../../sass/modules/M028-live-boards/_live-boards-no-js.scss */
+.no-js .live-board .live-board-link {
+    display: none;
+}
+
+/**************************************************
+	A6 Nested Vertical (side navigation)
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A6+-+Nested+vertical
+
+**************************************************/
+/* line 10, ../../sass/modules/M032-expandable-list/_expandable-list-no-js.scss */
+.expandable-list * {
+    display: block !important;
+}
+
+/**************************************************
+	M035-bus-options
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M035-bus-options
+
+**************************************************/
+/* line 10, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option {
+    color: #2d3039;
+}
+
+/* line 12, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option:hover, .no-js .bus-option:focus {
+    background-color: #fff;
+}
+
+/* line 15, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option .bus-option-route-name {
+    cursor: auto;
+}
+
+/* line 18, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option:not([data-line-name]) {
+    display: none;
+}
+
+/* line 21, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option.active {
+    background-color: #fff;
+    color: #2d3039;
+}
+
+/* line 24, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option.active:after {
+    content: none;
+}
+
+/* line 30, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-option.warning:hover .bus-option-route-name, .no-js .bus-option.warning:focus .bus-option-route-name {
+    background-color: #faf5e1;
+}
+
+/* line 36, ../../sass/modules/M035-bus-options/_bus-options-no-js.scss */
+.no-js .bus-options.filter .bus-option.active {
+    border-color: #cccccc;
+}
+
+/**************************************************
+	M042-list-loader
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M042-list-loader
+**************************************************/
+/* line 8, ../../sass/modules/M042-list-loader/_list-loader-no-js.scss */
+.no-js .list-loader {
+    background: #eeeeee !important;
+}
+
+/* line 10, ../../sass/modules/M042-list-loader/_list-loader-no-js.scss */
+.no-js .list-loader .list-loader-wrapper {
+    width: 100% !important;
+    padding-right: 0px !important;
+}
+
+/* line 14, ../../sass/modules/M042-list-loader/_list-loader-no-js.scss */
+.no-js .list-loader .list-loader-results {
+    display: none !important;
+}
+
+/* line 17, ../../sass/modules/M042-list-loader/_list-loader-no-js.scss */
+.no-js .list-loader .list-loader-result {
+    display: block !important;
+}
+
+/* line 20, ../../sass/modules/M042-list-loader/_list-loader-no-js.scss */
+.no-js .list-loader .bus-list.groups {
+    margin-left: 1px;
+    margin-top: 1px;
+}
+
+/* line 24, ../../sass/modules/M042-list-loader/_list-loader-no-js.scss */
+.no-js .list-loader .bus-list.groups > li {
+    width: 20% !important;
+    background: #fff;
+    border: 1px solid #cccccc;
+    float: left;
+    margin-left: -1px;
+    margin-top: -1px;
+}
+
+/**************************************************
+	M044-platform-select
+* Author: Alex Faunt
+* Created: 30/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M044-platform-select
+**************************************************/
+/* line 9, ../../sass/modules/M044-platform-select/_platform-select-no-js.scss */
+.platform-select {
+    display: none;
+}
+
+/**************************************************
+	M063-timing-ribbon
+* Author: Andrew Spencer
+* Created: 17/10/2013
+* Pattern library URL: 
+**************************************************/
+/* line 8, ../../sass/modules/M063-timing-ribbon/_timing-ribbon-no-js.scss */
+.no-js .TDM-box {
+    display: none;
+}
+
+/* line 12, ../../sass/modules/M063-timing-ribbon/_timing-ribbon-no-js.scss */
+.no-js .TDM-table {
+    display: block;
+}
+
+/* line 16, ../../sass/modules/M063-timing-ribbon/_timing-ribbon-no-js.scss */
+.no-js .narrative th {
+    font-weight: bold;
+}
+
+/**************************************************
+	M063-timing-ribbon
+* Author: Andrew Spencer
+* Created: 17/10/2013
+* Pattern library URL: 
+**************************************************/
+/* line 8, ../../sass/modules/M063-timing-ribbon/_timing-ribbon-no-js.scss */
+.no-js .TDM-box {
+    display: none;
+}
+
+/* line 12, ../../sass/modules/M063-timing-ribbon/_timing-ribbon-no-js.scss */
+.no-js .TDM-table {
+    display: block;
+}
+
+/* line 16, ../../sass/modules/M063-timing-ribbon/_timing-ribbon-no-js.scss */
+.no-js .narrative th {
+    font-weight: bold;
+}
+
+/* line 2, ../../sass/modules/M067-search-results/_search-results-no-js.scss */
+.no-js .search-title {
+    display: block;
+    white-space: normal;
+    position: relative;
+    padding-top: 5px;
+}
+
+/* Specific - no-js */
+/* line 1, ../../sass/specific/status-updates/_status-updates-no-js.scss */
+.road-disruptions-container.small-medium {
+    display: block;
+    min-width: 62.396%;
+}
+
+/* line 5, ../../sass/specific/status-updates/_status-updates-no-js.scss */
+.road-disruptions .vertical-button-container {
+    display: none;
+}
+
+/* line 8, ../../sass/specific/status-updates/_status-updates-no-js.scss */
+.road-map-container.small-medium {
+    display: none;
+}
+
+/* line 12, ../../sass/specific/status-updates/_status-updates-no-js.scss */
+.aside.service-status-rainbow-board {
+    margin-top: 10px;
+}
+
+/* line 16, ../../sass/specific/status-updates/_status-updates-no-js.scss */
+.favourite-and-recent {
+    display: none;
+}

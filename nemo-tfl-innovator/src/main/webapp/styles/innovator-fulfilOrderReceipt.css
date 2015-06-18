@@ -1,0 +1,27 @@
+@media
+print
+{
+body {
+	margin: 1.5cm;
+	font-size: 10pt;
+}
+
+.wrapper {
+	min-height: 100%;
+}
+
+.footer,.push {
+	height: 30px;
+	position: absolute;
+	bottom: 150;
+	left: 75;
+}
+
+.receiptFont {
+	font-size: 10pt;
+}
+
+}
+@page {
+	margin: 0;
+}

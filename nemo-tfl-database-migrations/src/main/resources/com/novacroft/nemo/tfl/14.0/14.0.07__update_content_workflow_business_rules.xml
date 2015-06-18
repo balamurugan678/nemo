@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.07">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   content_installer.install('rule_breach_description_existing_match_found_for_another_payment_with_the_same_oyster_card_number_refund_amount_and_date', 'Potential duplicate payment for Oyster Card Number');
+				end;
+			]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,26 @@
+/**************************************************
+	M083-Broadcast Comms
+* Author: John Boyle
+* Re-Created: 15/01/2013
+* Pattern library URL:  
+**************************************************/
+
+/**************************************************
+	M083-Broadcast Comms
+* Author: John Boyle
+* Re-Created: 15/01/2013
+* Pattern library URL:  
+**************************************************/
+.broadcast-comms {
+  .broadcast-text {
+    padding-left: 40px;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 15px;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(68, 2);
+    }
+  }
+}

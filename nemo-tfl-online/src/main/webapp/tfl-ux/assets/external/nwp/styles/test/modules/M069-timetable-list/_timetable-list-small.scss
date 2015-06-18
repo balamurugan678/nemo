@@ -1,0 +1,168 @@
+/**************************************************
+	M069 timetable list
+* Author: Alex Faunt
+* Created: 19/11/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M069-timetable-list
+**************************************************/
+.timetable-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+
+  > *:nth-child(odd) {
+    background-color: $subtler-grey;
+  }
+  > * {
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+  }
+
+  a {
+    display: block;
+    padding: 10px 32px 10px 10px;
+    position: relative;
+    min-height: 50px;
+    color: $dark-grey;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 1);
+      @extend .right-arrow;
+    }
+    &:after {
+      display: block;
+      visibility: hidden;
+      clear: both;
+      height: 0;
+      content: " ";
+      font-size: 0;
+    }
+  }
+
+  .period {
+    width: 105px;
+    padding: 5px 10px 5px 0;
+    vertical-align: middle;
+    margin: 0;
+    white-space: normal;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    border-right: 1px dotted $light-grey-border-colour;
+
+    + * {
+      padding: 5px 0 5px 115px;
+      display: block;
+      height: 100%;
+      vertical-align: middle;
+    }
+
+    .label {
+      width: 50px;
+      display: inline-block;
+      *display: inline;
+      *zoom: 1;
+    }
+    .time {
+      font-weight: bold;
+    }
+
+  }
+
+  .single-departure {
+    font-weight: bold;
+    > a {
+      line-height: 30px;
+    }
+  }
+
+  .time-group {
+    .times {
+      margin: 0;
+      list-style-type: none;
+    }
+  }
+
+  .specific-departure {
+    .route {
+      .terminates, .via {
+        display: block;
+        word-wrap: break-word;
+        white-space: normal;
+      }
+      .terminates {
+        @extend %new-johnson-bold;
+        font-size: 18px;
+      }
+      .via {
+        color: $light-grey-text;
+      }
+    }
+  }
+
+  .load-more {
+    background: #fff;
+    @include transition(background-color 0.3s);
+    display: none;
+
+    &:hover, &:focus {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+
+    a {
+      text-align: center;
+      min-height: 0px;
+
+      &:before {
+        display: none;
+      }
+
+      span {
+        position: relative;
+        color: $linkcolour;
+
+        &:before {
+          content: "";
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          border-style: solid;
+          border-color: $linkcolour transparent transparent;
+          border-width: 5px 6px;
+          margin-top: -2px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+
+  &.compact {
+    .compact-hidden {
+      display: none;
+
+      &.load-more {
+        display: block;
+      }
+    }
+  }
+
+}
+
+.timetable-list-wrapper {
+  @extend %loading;
+}
+
+.timetable-list-message {
+  margin: 20px 0;
+}

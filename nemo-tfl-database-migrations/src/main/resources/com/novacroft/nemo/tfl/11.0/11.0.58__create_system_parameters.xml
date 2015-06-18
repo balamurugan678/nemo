@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.58">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  system_parameter_installer.install('passwordResetTokenMaxAge', '30', 'The time period (in minutes) after which a password reset token will expire.');
+  system_parameter_installer.install('oysterCardLength', '9', 'Oyster card number length.');
+  system_parameter_installer.install('minimumAutoTopUpAmt', '1000', 'Minimum pay as you go amount when user select auto topup option.');
+  system_parameter_installer.install('productAvailableDays', '30', 'To display number of days in future in the start date drop down menu.');
+  system_parameter_installer.install('productStartAfterDays', '3', 'Ticket start date starts after 3 days from current date.');
+  system_parameter_installer.install('userProductStartAfterDays', '1', 'Ticket start date starts after 1 days from current date.');
+  system_parameter_installer.install('payAsYouGoCollectionDays', '7', 'User can activate pay as you go ticket with in 7 days at nominated station.');
+  system_parameter_installer.install('maximumAllowedTravelCards', '3', 'User can add maximum of 3 travel cards to shopping basket.');
+  system_parameter_installer.install('otherTravelCardSubstitutionTravelCardType', '7 Day', 'Substitution travel card type used to calculating ticket price when the user selects other travelcard type');
+  system_parameter_installer.install('otherTravelCardDailyDivideRate', '5', 'DailyDivideRate used to calculating ticket price for a day when the user selects other travelcard type');
+  system_parameter_installer.install('otherTravelCardMonthlyMultiplayRate', '3.84', 'MonthlyMultiplayRate used to calculating ticket price for month period when the user selects other travelcard type');
+  system_parameter_installer.install('otherTravelCardAnnualMultiplayRate', '40', 'AnnualMultiplayRate used to calculating ticket price for annual period when the user selects other travelcard type');
+  system_parameter_installer.install('otherTravelCardSubstitutionAnnualTravelCard', 'Annual', 'Selected other travel card ticket type is greater than 10 months 12 days, system reset to annual travel card');
+  system_parameter_installer.install('otherTravelCardSubstitutionAnnualTravelCardDurationInMonths', '12', 'Selected other travel card ticket type is greater than 10 months 12 days, we are using months duration to calculate ticket price');
+  system_parameter_installer.install('otherTravelcardAnnualAllowedDays', '365', 'User can select upto annual travel card length for other travel card type');
+  system_parameter_installer.install('otherTravelcardMaximumAllowedMonths', '10', 'User can get the other travel card ticket upto 10 months 12 days');
+  system_parameter_installer.install('otherTravelcardMaximumAllowedDays', '12', 'User can get the other travel card ticket upto 10 months 12 days');
+  system_parameter_installer.install('otherTravelcardMinimumAllowedMonths', '1', 'User can get the other travel card ticket minimum of 1 months 1 day');
+  system_parameter_installer.install('otherTravelcardMinimumAllowedDays', '1', 'User can get the other travel card ticket minimum of 1 months 1 day');
+  system_parameter_installer.install('jobCentrePlusDiscountRate', '0.3', 'Customer job centre plus discount rate');
+  system_parameter_installer.install('jobCentrePlusDiscountMaximumAllowedMonths', '3', 'Job centre plus discount maximum allowed months');
+  system_parameter_installer.install('jobCentrePlusDiscountMaximumAllowedDays', '0', 'Job centre plus discount maximum allowed months days');
+  system_parameter_installer.install('quickBuyWithinNumberOfDaysOfExpiry', '7', 'If travel card product expiry with in  7 days then display the product for quick buy');
+  system_parameter_installer.install('daily.capping.flag.89', '89', 'Daily capping flag value is 89');
+  system_parameter_installer.install('daily.capping.flag.121', '121', 'Daily capping flag value is 121');
+  system_parameter_installer.install('tfr.discounts', '89', 'TFR discount value is 89');
+  system_parameter_installer.install('adhoc.automated.refund', '32775', 'ADHOC automated refund value is 32775');
+  system_parameter_installer.install('adhoc.oyster.helpline.refund', '32778', 'ADHOC oyster automated refund value is 32778');
+  system_parameter_installer.install('adhoc.oyster.helpline.replacement', '32779', 'ADHOC oyster helpline replacement value is 32779');
+  system_parameter_installer.install('journey.history.pdf.location', '/home/tfl/journeyhistory/', 'Journey History PDF location');
+  system_parameter_installer.install('journey.history.pdf.config', '/home/tfl/journeyhistory/fop-config.xml', 'Journey History PDF config');
+  system_parameter_installer.install('journey.history.pdf.xml', '/home/tfl/journeyhistory/jhTransformerPdfFormat.xsl', 'Journey History PDF XML');
+  system_parameter_installer.install('defaultCountryCode', 'GB', 'ISO country code to use as a default.');
+  system_parameter_installer.install('ghostEmailAddressStart', 'ghostemail+', 'Start of ghost email address.');
+  system_parameter_installer.install('ghostEmailAddressEnd', '@novacroft.com', 'End of ghost email address.');
+  system_parameter_installer.install('paymentGatewayCurrency', 'GBP', 'Value to use for currency field in the payment gateway API calls');
+  system_parameter_installer.install('paymentGatewayLocale', 'en', 'Value to use for locale field in the payment gateway API calls');
+  system_parameter_installer.install('journey.history.recent.days', '7', 'Value to use for recent days');
+  system_parameter_installer.install('journey.history.default.days', '3', 'Value to use for default days');
+  system_parameter_installer.install('oyster.services.online.timeout', '30000', 'Value (in milli-seconds) to use for oyster service timeout for online access');
+  system_parameter_installer.install('oyster.services.batch.timeout', '60000', 'Value (in milli-seconds) to use for oyster service timeout for batch access');
+  system_parameter_installer.install('oysterCardChecksumLength', '2', 'Oyster card checksum length.');
+  system_parameter_installer.install('oysterCardFullLength', '12', 'Oyster card number full length including leading 0 and checksum characters.');
+  system_parameter_installer.install('hotlistFileLocation', 'C:/TestFolder', 'location of the generated hotlisted cards file.');
+  system_parameter_installer.install('hotlistFileExtension', '.mht', 'the file type of the generated hotlisted card file.');
+  system_parameter_installer.install('savedPaymentCardMaxNumber', '5', 'The maximum number of payment cards a user may save.');
+  system_parameter_installer.install('anonymousEmailAddressStart', 'anonymousEmail', 'Start of anonymous email address.');
+  system_parameter_installer.install('anonymousEmailAddressEnd', '@novacroft.com', 'End of anonymous email address.');
+  system_parameter_installer.install('workflowRefundsQuantityPerPeriodCeiling', '4', 'Threshold value (X) for refund claims number > X in Y days');
+  system_parameter_installer.install('workflowRefundsQuantityPerPeriodDays', '5', 'Threshold value (Y) for refund claims number > X in Y days');
+  system_parameter_installer.install('workflowRefundsPerHourlyPeriodCeilingPeriod', '3', 'Threshold value (X) for user creates x refunds by scenario in Y hours');
+  system_parameter_installer.install('workflowRefundsPerHourlyPeriodCeilingHours', '6', 'Threshold value (Y) for user creates x refunds by scenario in Y hours');
+  system_parameter_installer.install('workflowRefundTimeWindowLowerValue', '07:50', 'business rule (X) for a refund before X time OR after X time (format HH:MM)');
+  system_parameter_installer.install('workflowRefundTimeWindowUpperValue', '20:20', 'business rule (X) for a refund before X time OR after X time (format HH:MM)');
+  system_parameter_installer.install('workflowRefundLowChequeValueThreshold', '500', 'business rule value in pence for which cheque refund will be flagged for review');
+  system_parameter_installer.install('workflowRefundsByScenarioCeiling', '3', 'business rule (X) for maximum amount of refunds of type (X) scenario in (Y) hours');
+  system_parameter_installer.install('workflowRefundsByScenarioCeilingHours', '24', 'business rule (Y) for maximum amount of refunds of type (X) scenario in (Y) hours');
+  system_parameter_installer.install('oyster_goodwill_no_approvalreqd_lower_limit', '0', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('oyster_goodwill_no_approvalreqd_upper_limit', '1500', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('oyster_goodwill_firststageapproval_upper_limit', '10000', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('oyster_otherrefunds_no_approvalreqd_lower_limit', '0', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('oyster_otherrefunds_no_approvalreqd_upper_limit', '12500', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('oyster_otherrefunds_firststageapproval_upper_limit', '100000', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('lu_goodwill_no_approvalreqd_lower_limit', '0', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('lu_goodwill_no_approvalreqd_upper_limit', '2000', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('lu_goodwill_firststageapproval_upper_limit', '15000', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('ccs_goodwill_no_approvalreqd_lower_limit', '0', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('ccs_goodwill_no_approvalreqd_upper_limit', '5000', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('ccs_goodwill_firststageapproval_upper_limit', '15000', 'refund value approval limits (in pence)');
+  system_parameter_installer.install('goodwill.anonymous.refund.upper.limit', '5000', 'anonymous goodwill refund value upper limit (in pence)');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

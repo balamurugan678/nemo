@@ -1,0 +1,30 @@
+.homepage-style {
+  .collapsed + .widget-content {
+    display: block;
+  }
+  .widget-heading {
+    background: transparent;
+    padding: 0;
+    cursor: auto;
+    border-bottom: 0;
+    &.primary {
+      background: transparent;
+      padding: 0;
+      border-bottom: 0;
+    }
+    &.collapsed {
+      margin-bottom: 6px;
+    }
+    .section-style {
+      @extend %section-style;
+    }
+    .controls {
+      display: none;
+    }
+  }
+}
+
+.homepage-top-links {
+  margin-bottom: 20px;
+}
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.1.2">
+        <addColumn tableName="externaluser" schemaName="${schemaName}">
+            <column name="salt" type="varchar2(32)" remarks="Password SALT"/>
+            <column name="role" type="varchar2(50)" remarks="Role of External User"/>
+        </addColumn>
+        <renameColumn columnDataType="varchar2(128)" tableName="externaluser" newColumnName="PASSWORD" oldColumnName="password"
+                      schemaName="${schemaName}"/>
+        <!-- password is w3b53rv1c3s#$ for tfl-user -->
+        <update tableName="externaluser" schemaName="${schemaName}">
+            <column name="salt" type="varchar2(32)" value="NYWlfc7v3-m4?^Z`ZtOa,ra|k^-.{Obt"/>
+            <column name="role" type="varchar2(50)" value="ROLE_USER"/>
+            <column name="PASSWORD" type="varchar2(128)" value="tWgtfS3Au7n9hmj4eHm/18NP4j1rd+moFP5ac7aUY5c="/>
+            <where>USERNAME='tfl-user'</where>
+        </update>
+        <!-- password is ExternalUserTest for ExternalUserTest -->
+        <update tableName="externaluser" schemaName="${schemaName}">
+            <column name="salt" type="varchar2(32)" value="NYWlfc7v3-m4?^Z`ZtOa,ra|k^-.{Obt"/>
+            <column name="role" type="varchar2(50)" value="ROLE_USER"/>
+            <column name="PASSWORD" type="varchar2(128)" value="S/WfLonP3gcd3PlGzFn8iVtpYvzPtUhDtCA8M+EJrbM="/>
+            <where>USERNAME='ExternalUserTest'</where>
+        </update>
+    </changeSet>
+</databaseChangeLog>

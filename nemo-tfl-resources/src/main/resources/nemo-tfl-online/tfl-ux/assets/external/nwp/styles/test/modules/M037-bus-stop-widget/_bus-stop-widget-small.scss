@@ -1,0 +1,96 @@
+/**************************************************
+BusStopRecentlyViewed and BusStopFavourites MODULEs
+* Author: Steven Swinbank
+* Created: 14/03/2013
+* Modified by: Steven Swinbank, Alex Faunt
+* Modified date: 17/07/2013, 18/09/2013
+* Pattern library URL: http://
+**************************************************/
+
+.bus-stops {
+  .bus-stop {
+    position: relative;
+    border-bottom: 1px solid $light-grey-border-colour;
+    background-color: #fff;
+    &:first-child {
+      border-top: 1px solid $light-grey-border-colour;
+    }
+    .content {
+      background-color: transparent;
+      border-bottom: 0;
+      .accordion.basic & {
+        margin: 0;
+        border-bottom-width: 0;
+        &.expanded {
+          border: 0;
+          .always-visible {
+            border-bottom: 1px solid $light-grey-border-colour;
+          }
+          .start-hidden {
+            border-left: 1px solid $light-grey-border-colour;
+            border-right: 1px solid $light-grey-border-colour;
+          }
+        }
+      }
+    }
+    &.disrupted {
+      background-color: $disruption-colour;
+      .always-visible {
+        background-color: $disruption-colour;
+        &:hover, &:focus {
+          @include darken-hover-and-focus($disruption-colour, 5%);
+        }
+      }
+    }
+  }
+  .always-visible {
+    display: block;
+    text-decoration: none;
+    background-color: #fff;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 0;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(23, 1);
+    }
+  }
+  .expanded {
+    .always-visible {
+      &:after {
+        @include svg-icon-position-only(24, 1);
+      }
+    }
+  }
+  .side-bar {
+    position: absolute;
+    left: 0;
+    width: 35px;
+    top: 5px;
+    min-height: 35px;
+  }
+  .title-row {
+    @extend %new-johnson-bold;
+    padding: 10px 32px 2px 45px;
+    min-height: 35px;
+    color: $dark-grey;
+  }
+  .stop-headline {
+    padding: 0px 32px 10px 45px;
+    min-height: 32px;
+    color: $dark-grey;
+  }
+}
+
+//for bus mode page
+.favourite-and-recent {
+  [data-set='widget'] & {
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,18 @@
+/**************************************************
+	M035-bus-options
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M035-bus-options
+
+**************************************************/
+
+.bus-option {
+  min-width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  .i {
+    @include transform(scale(1));
+  }
+} 

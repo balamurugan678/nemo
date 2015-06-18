@@ -1,0 +1,39 @@
+/* line 26, all/_placeholders.scss */
+.aside {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 29.928%;
+}
+
+/* line 38, all/_placeholders.scss */
+.main {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 62.396%;
+}
+
+/* line 1, large/_navigation-large.scss */
+#sidenav-container {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* line 6, large/_navigation-large.scss */
+#sidenav-heading {
+    padding: 10px;
+}
+
+/* line 11, large/_navigation-large.scss */
+.sidenav-item a {
+    padding: 0 2.54% 15px;
+}
+
+/* line 9, large/_global-large.scss */
+.large, .medium-large, .container.large, .container.medium-large {
+    display: block;
+}
+
+/* line 13, large/_global-large.scss */
+.small, .medium, .small-medium, .container.small, .container.medium, .container.small-medium {
+    display: none;
+}

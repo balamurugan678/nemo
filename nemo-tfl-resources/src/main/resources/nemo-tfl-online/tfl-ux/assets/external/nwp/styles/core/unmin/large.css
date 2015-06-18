@@ -1,0 +1,1382 @@
+/* utility */
+/* line 88, ../../sass/utility/_placeholders.scss */
+.aside, .main-and-aside.one-row .aside,
+.main-and-aside-large-upwards .aside, .equal-weight > div {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 29.928%;
+}
+
+/* line 100, ../../sass/utility/_placeholders.scss */
+.main, .main-and-aside.one-row .main,
+.main-and-aside-large-upwards .main, #more-journey-options {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 62.396%;
+}
+
+/* line 112, ../../sass/utility/_placeholders.scss */
+.section-overview {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 94.864%;
+}
+
+/* line 252, ../../sass/utility/_placeholders.scss */
+.map-switcher, .list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result.expanded .bus-list li:nth-child(-n+10), .map-sliver {
+    position: relative;
+}
+
+/* line 254, ../../sass/utility/_placeholders.scss */
+.map-switcher::after, .list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result.expanded .bus-list li:nth-child(-n+10)::after, .map-sliver::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    opacity: 0.1;
+    background-color: #000;
+    z-index: 10;
+}
+
+/* glabal - large */
+/* line 1, ../../sass/global/base/_base-large.scss */
+.small {
+    display: none;
+}
+
+/* line 2, ../../sass/global/base/_base-large.scss */
+.small-medium {
+    display: none;
+}
+
+/* line 3, ../../sass/global/base/_base-large.scss */
+.medium {
+    display: none;
+}
+
+/* line 4, ../../sass/global/base/_base-large.scss */
+.medium-large {
+    display: block;
+}
+
+/* line 5, ../../sass/global/base/_base-large.scss */
+.large {
+    display: block;
+}
+
+/* line 8, ../../sass/global/base/_base-large.scss */
+.section-landing-container h1 {
+    font-size: 50px;
+}
+
+/* line 12, ../../sass/global/base/_base-large.scss */
+.section-landing-container .heading-logo {
+    top: 5px;
+}
+
+/* line 17, ../../sass/global/base/_base-large.scss */
+.spot-grid-background {
+    min-height: 430px;
+}
+
+/* line 3, ../../sass/global/layout/_layout-large.scss */
+.main .sub-main {
+    margin-left: 4.07077%;
+    width: 47.96461%;
+}
+
+/* line 13, ../../sass/global/layout/_layout-large.scss */
+.aside .module-grid > div {
+    float: none;
+    width: 100%;
+}
+
+/* line 16, ../../sass/global/layout/_layout-large.scss */
+.aside .module-grid > div:nth-child(2n) {
+    margin-left: 0;
+}
+
+/* line 19, ../../sass/global/layout/_layout-large.scss */
+.aside .module-grid > div:nth-child(2n+1) {
+    margin-right: 0;
+}
+
+/* line 31, ../../sass/global/layout/_layout-large.scss */
+.main-and-aside.one-row .main .sub-main,
+.main-and-aside-large-upwards .main .sub-main {
+    margin-left: 4.07077%;
+    width: 47.96461%;
+    float: left;
+}
+
+/* line 34, ../../sass/global/layout/_layout-large.scss */
+.main-and-aside.one-row .main .sub-main:first-child,
+.main-and-aside-large-upwards .main .sub-main:first-child {
+    margin-left: 0;
+}
+
+/* line 46, ../../sass/global/layout/_layout-large.scss */
+.main-and-aside-large-upwards .aside:first-child {
+    margin-left: 0;
+}
+
+/* line 58, ../../sass/global/layout/_layout-large.scss */
+.section-overview {
+    margin-bottom: 10px;
+}
+
+/* line 60, ../../sass/global/layout/_layout-large.scss */
+.section-overview > div {
+    float: left;
+}
+
+/* line 62, ../../sass/global/layout/_layout-large.scss */
+.section-overview > div.main {
+    margin-left: 2.67752%;
+    width: 65.77416%;
+}
+
+/* line 65, ../../sass/global/layout/_layout-large.scss */
+.section-overview > div.aside {
+    margin-left: 2.67752%;
+    width: 31.54832%;
+}
+
+/* line 68, ../../sass/global/layout/_layout-large.scss */
+.section-overview > div:nth-child(2) {
+    margin-left: 0;
+}
+
+/* line 72, ../../sass/global/layout/_layout-large.scss */
+.section-overview.full-width {
+    float: none;
+    margin-bottom: 10px;
+}
+
+/* line 80, ../../sass/global/layout/_layout-large.scss */
+.section-image-container ~ .r .no-full-width-intro {
+    margin-top: 200px;
+}
+
+/* line 86, ../../sass/global/layout/_layout-large.scss */
+#open-fullscreen-stage {
+    top: 10px;
+    margin-top: 0;
+    height: 41px;
+}
+
+/* line 90, ../../sass/global/layout/_layout-large.scss */
+.no-disruptions-on-map #open-fullscreen-stage {
+    display: none;
+}
+
+/* line 96, ../../sass/global/layout/_layout-large.scss */
+.active-map #zoom-in-fullscreen-stage {
+    display: block;
+}
+
+/* line 102, ../../sass/global/layout/_layout-large.scss */
+.active-map #zoom-out-fullscreen-stage {
+    display: block;
+}
+
+/* elements - large */
+/* line 5, ../../sass/elements/E001-images/_images-large.scss */
+.aside .image-box.left-float, .aside .image-box.right-float {
+    float: none;
+    width: auto;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+/* line 17, ../../sass/elements/E001-images/_images-large.scss */
+.main-and-aside .main .image-box.left-float, .main-and-aside .main .image-box.right-float {
+    width: 50%;
+}
+
+/* line 21, ../../sass/elements/E001-images/_images-large.scss */
+.main-and-aside .main .image-box.left-float {
+    margin-right: 20px;
+    float: left;
+}
+
+/* line 26, ../../sass/elements/E001-images/_images-large.scss */
+.main-and-aside .main .image-box.right-float {
+    margin-left: 20px;
+    float: right;
+}
+
+/* modules - large */
+/**************************************************
+	A1 Primary Navigation / M004 Primary Navigation
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C1+-+Accordion &
+                       \Google Drive\NWP\Front-end\Pattern library\Modules\M004-primary-navigation
+
+**************************************************/
+/* line 12, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.collapsible-menu .plan-journey, .collapsible-menu .status-update, .collapsible-menu .maps, .collapsible-menu .fares-and-payments, .collapsible-menu li.more {
+    display: block;
+}
+
+/* line 18, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row .more {
+    display: none;
+}
+
+/* line 21, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row.show-search {
+    border-bottom: 3px solid #121315;
+}
+
+/* line 27, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav .plan-journey, .extra-nav .status-update, .extra-nav .maps, .extra-nav .fares-and-payments {
+    display: none;
+}
+
+/* line 33, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav .menu-sub-section {
+    float: left;
+    margin: 0 2%;
+    width: 21%;
+}
+
+/* line 37, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav .menu-sub-section li {
+    float: left;
+    margin: 0 1%;
+    width: 98%;
+}
+
+/* line 42, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav .menu-sub-section.getting-around {
+    width: 46%;
+}
+
+/* line 44, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav .menu-sub-section.getting-around li {
+    width: 48%;
+}
+
+/* line 50, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav ul.extras {
+    width: 96%;
+}
+
+/* line 52, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.extra-nav ul.extras li {
+    width: 98%;
+}
+
+/* line 60, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.show-search .top-row-extras {
+    height: 55px;
+}
+
+/* line 62, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.show-search .top-row-extras .search-tools {
+    background: #2d3039;
+}
+
+/* line 68, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .more {
+    position: static;
+}
+
+/* line 72, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras {
+    float: right;
+    width: 15%;
+}
+
+/* line 75, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .search-tools {
+    padding-top: 7px;
+}
+
+/* line 78, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .search-tools a.remove-content:hover {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+/* line 83, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .search-tools input[type='text'] {
+    padding-right: 33px;
+    margin: 0;
+}
+
+/* line 88, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .texts {
+    position: static;
+    width: auto;
+}
+
+/* line 91, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .texts .search {
+    display: none;
+}
+
+/* line 95, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras input[type="text"] {
+    width: 120px;
+    margin: 9px 1px 12px 5px;
+}
+
+/* line 99, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras #search-button {
+    margin-top: 5px;
+    right: 3.54%;
+}
+
+/* line 103, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .search-tools {
+    display: block;
+    position: static;
+    top: 0;
+    width: auto;
+}
+
+/* line 109, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.top-row-extras .login {
+    border-right: 0;
+}
+
+/* line 114, ../../sass/modules/M004-primary-navigation/_primary-navigation-large.scss */
+.sidenav {
+    margin-top: 0;
+}
+
+/**************************************************
+	B8 Social media share widget
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/B8+-+Social+media+share
+
+**************************************************/
+/* line 10, ../../sass/modules/M012-share-widget/_share-widget-large.scss */
+.share-widget-wrapper {
+    display: inline-block;
+    float: right;
+    margin-top: -65px;
+}
+
+/* line 2, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-wrapper .widget-heading {
+    cursor: default;
+    padding-right: 10px;
+}
+
+/* line 6, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-wrapper .controls {
+    display: none;
+}
+
+/* line 10, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-wrapper .expandable-box .content {
+    margin-left: 0;
+    border-bottom: 1px solid #cccccc;
+}
+
+/* line 14, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-wrapper .expandable-box .start-hidden {
+    display: block;
+}
+
+/* line 20, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-wrapper.info-widget .widget-heading {
+    cursor: pointer;
+}
+
+/* line 26, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-content {
+    border-top: 1px solid #cccccc;
+}
+
+/* line 29, ../../sass/modules/M018-widget/_widget-large.scss */
+.widget-content ~ .widget-content {
+    border-top: 0px none;
+}
+
+/**************************************************
+	M025 - map switcher
+
+* Author: Alex Faunt
+* Created: 27/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M024-map-switcher
+
+**************************************************/
+/* line 13, ../../sass/modules/M024-map-switcher/_map-switcher-large.scss */
+.map-switcher {
+    height: 310px;
+    margin-bottom: 20px;
+}
+
+/* line 18, ../../sass/modules/M024-map-switcher/_map-switcher-large.scss */
+.map-switcher .map-switcher-container {
+    padding: 10px 0 0 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    width: 60px;
+    height: 60px;
+    border: 1px solid;
+    border-color: #cccccc transparent transparent #cccccc;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 1;
+}
+
+/* line 32, ../../sass/modules/M024-map-switcher/_map-switcher-large.scss */
+.map-switcher .map-switcher-container + .map-switcher-container {
+    padding: 10px 0 0 10px;
+}
+
+/* line 36, ../../sass/modules/M024-map-switcher/_map-switcher-large.scss */
+.map-switcher .map-switcher-container .map-switcher-inner {
+    border: 1px solid #cccccc;
+}
+
+/* line 40, ../../sass/modules/M024-map-switcher/_map-switcher-large.scss */
+.map-switcher .map-switcher-container.selected {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+    z-index: 1;
+    cursor: default;
+}
+
+/* line 50, ../../sass/modules/M024-map-switcher/_map-switcher-large.scss */
+.map-switcher .trans-out {
+    opacity: 0;
+}
+
+/**************************************************
+	A6 Nested Vertical (side navigation)
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A6+-+Nested+vertical
+
+**************************************************/
+/* line 10, ../../sass/modules/M032-expandable-list/_expandable-list-large.scss */
+.expandable-list {
+    margin: 0 0 20px;
+}
+
+/**************************************************
+	M033-headline
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M033-headline
+
+**************************************************/
+/* line 12, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container h1 {
+    font-size: 50px;
+}
+
+/* line 15, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.with-tag h1 {
+    padding-top: 12px;
+    padding-bottom: 4px;
+}
+
+/* line 19, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.content-page {
+    padding-top: 4px;
+}
+
+/* line 21, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.content-page h1 {
+    padding-bottom: 4px;
+    padding-top: 0;
+    font-size: 50px;
+}
+
+/* line 27, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container[class*="mode-"] {
+    padding-right: 70px;
+}
+
+/* line 30, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container[class*="mode-"]:after {
+    width: 60px;
+    height: 50px;
+}
+
+/* line 36, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.mode-cable-car {
+    padding-top: 23px;
+    padding-right: 171px;
+}
+
+/* line 40, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.mode-cable-car:after {
+    width: 161px;
+    height: 68px;
+}
+
+/* line 46, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.mode-cable-car .headline-info {
+    padding-right: 171px;
+}
+
+/* line 50, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.mode-cycle:after {
+    height: 50px;
+    width: 50px;
+}
+
+/* line 54, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.nearby-page {
+    padding-right: 60px;
+    position: relative;
+}
+
+/* line 58, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container.nearby-page:after {
+    width: 50px;
+    height: 50px;
+}
+
+/* line 64, ../../sass/modules/M033-headline/_headline-large.scss */
+.headline-container .headline-info {
+    font-size: 20px;
+    padding-right: 70px;
+}
+
+/* line 69, ../../sass/modules/M033-headline/_headline-large.scss */
+.with-favourite .headline-container {
+    padding-right: 172px;
+}
+
+/* line 72, ../../sass/modules/M033-headline/_headline-large.scss */
+.with-favourite .headline-container[class*="mode-"] {
+    padding-right: 242px;
+}
+
+/* line 75, ../../sass/modules/M033-headline/_headline-large.scss */
+.with-favourite .headline-container[class*="mode-"] .favourite {
+    right: 70px;
+}
+
+/* line 79, ../../sass/modules/M033-headline/_headline-large.scss */
+.with-favourite .headline-container.mode-cable-car {
+    padding-right: 344px;
+}
+
+/* line 82, ../../sass/modules/M033-headline/_headline-large.scss */
+.with-favourite .headline-container.mode-cable-car .favourite {
+    right: 172px;
+}
+
+/**************************************************
+	M035-bus-options
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M035-bus-options
+
+**************************************************/
+/* line 10, ../../sass/modules/M035-bus-options/_bus-options-large.scss */
+.bus-option {
+    min-width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+}
+
+/* line 15, ../../sass/modules/M035-bus-options/_bus-options-large.scss */
+.bus-option .i {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+/**************************************************
+	M041-tube-station-select
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M041-tube-station-select
+**************************************************/
+/* line 8, ../../sass/modules/M041-tube-station-select/_tube-station-select-large.scss */
+.tube-station-select-list {
+    margin-left: -20px;
+}
+
+/* line 10, ../../sass/modules/M041-tube-station-select/_tube-station-select-large.scss */
+.tube-station-select-list .tube-station-select {
+    width: 50%;
+    float: left;
+    padding-left: 20px;
+}
+
+/**************************************************
+	M042-list-loader
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M042-list-loader
+**************************************************/
+/* line 10, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-wrapper {
+    width: 35%;
+}
+
+/* line 13, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results {
+    width: 65%;
+    max-width: 692px;
+}
+
+/* line 18, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results .routes-list {
+    margin-top: 1px;
+}
+
+/* line 20, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results .routes-list > li {
+    border-top: 1px solid #cccccc;
+    float: left;
+    width: 49%;
+    margin-top: -1px;
+}
+
+/* line 25, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results .routes-list > li:nth-child(even) {
+    margin-left: 2%;
+}
+
+/* line 27, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results .routes-list > li:nth-child(even):after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* line 33, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results .routes-list > li:nth-child(odd) {
+    clear: both;
+}
+
+/* line 38, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader .list-loader-results .routes-list.full-width {
+    width: 100%;
+    padding: 0;
+}
+
+/* line 43, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.flexbox .list-loader .list-loader-results .routes-list {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+/* line 56, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.flexbox .list-loader .list-loader-results .routes-list .route {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+/* line 61, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.flexbox .list-loader .list-loader-results .routes-list .route > a {
+    width: 100%;
+}
+
+/* line 68, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.no-flexbox .list-loader .list-loader-results .routes-list .river > a {
+    min-height: 85px;
+}
+
+/* line 78, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.bus-list > li {
+    width: 10%;
+}
+
+/* line 83, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.bus-list.groups > li {
+    width: 25%;
+}
+
+/* line 92, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option {
+    padding: 0;
+}
+
+/* line 94, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option > .list-loader-link > a {
+    border-top: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    border-left: 0px none;
+}
+
+/* line 101, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option:first-child {
+    padding-left: 10px;
+}
+
+/* line 103, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option:first-child > .list-loader-link > a {
+    border-left: 1px solid #cccccc;
+}
+
+/* line 108, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option.end-of-row {
+    padding-right: 10px;
+}
+
+/* line 112, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option.expanded, .list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option.prev {
+    padding-bottom: 10px;
+}
+
+/* line 116, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option.expanded ~ .list-loader-option {
+    padding-bottom: 10px;
+}
+
+/* line 119, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option.expanded ~ .end-of-row ~ .list-loader-option, .list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-option.expanded.end-of-row ~ .list-loader-option {
+    padding-bottom: 0;
+}
+
+/* line 126, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result + .list-loader-option {
+    padding-left: 10px;
+}
+
+/* line 128, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result + .list-loader-option > .list-loader-link > a {
+    border-left: 1px solid #cccccc;
+}
+
+/* line 134, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result.expanded ~ .list-loader-option {
+    padding-top: 10px;
+}
+
+/* line 138, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result.expanded ~ .end-of-row ~ .list-loader-option {
+    padding-top: 0;
+}
+
+/* line 143, ../../sass/modules/M042-list-loader/_list-loader-large.scss */
+.list-loader-results > .large > .list-loader-result .bus-list.groups > li.list-loader-result.expanded .bus-list li:nth-child(-n+10):after {
+    opacity: 0.1;
+}
+
+/**************************************************
+	M045-disambiguation
+
+* Author: 
+* Created: 
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M045-disambiguation
+
+**************************************************/
+/* line 10, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.disambiguation-wrapper {
+    position: relative;
+    background: #fff;
+    min-height: 600px;
+}
+
+/* line 16, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.disambiguation-form {
+    background: transparent;
+}
+
+/* line 20, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.r .disambiguation-form {
+    margin-left: 2.54%;
+    margin-right: 2.54%;
+}
+
+/* line 25, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.disambiguation-box {
+    width: 33.3%;
+    margin: 0;
+    background-color: #fff;
+    padding: 10px;
+    min-height: 675px;
+    position: relative;
+}
+
+/* line 34, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.disambiguation-map-outer-wrapper {
+    padding: 10px;
+    margin-left: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 33.3%;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* line 37, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.disambiguation-map-outer-wrapper:last-child {
+    margin-right: 0;
+}
+
+/* line 50, ../../sass/modules/M045-disambiguation/_disambiguation-large.scss */
+.disambiguation-map-outer-wrapper .disambiguation-map.map-sliver {
+    height: 100%;
+}
+
+/**************************************************
+RAINBOW BOARD
+* Author: Rodrigo Lopes
+* Created: 19/02/2013
+* Modified by:
+* Modified date:
+* Pattern library URL: http://
+**************************************************/
+/* line 12, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black {
+    background: #000;
+    z-index: 0;
+    position: relative;
+}
+
+/* line 16, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black:after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    z-index: -1;
+}
+
+/* line 28, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tr {
+    position: relative;
+    opacity: 0.9;
+}
+
+/* line 32, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tr:first-child {
+    border-top: 0;
+}
+
+/* line 35, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tr.selected {
+    opacity: 1;
+}
+
+/* line 40, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tr.selected + .info-dropdown {
+    opacity: 1;
+    border-top: 0;
+}
+
+/* line 46, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tbody tr:first-child.selected {
+    border-top: 0;
+}
+
+/* line 50, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tbody ~ tbody tr:first-child {
+    border-top: 1px solid #3A3A3A;
+}
+
+/* line 53, ../../sass/modules/M048-rainbow-board/_rainbow-board-large.scss */
+.rainbow-board.fade-to-black tbody ~ tbody tr:first-child.selected {
+    border-top: 1px solid #cacaca;
+}
+
+/**************************************************
+	D5 Related links (internal/external)
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/D5+-+Related+Links
+
+**************************************************/
+/* line 10, ../../sass/modules/M049-related-links/_related-links-large.scss */
+.related-links {
+    width: auto;
+    margin-right: 0;
+    float: none;
+}
+
+/* line 1, ../../sass/modules/M053-heading-dropdowns/_heading-dropdowns-large.scss */
+.heading-dropdowns-wrap {
+    position: relative;
+    /*.heading-dropdown {
+        &:last-child {
+            margin-top: 0;
+        }
+    }*/
+}
+
+/* line 3, ../../sass/modules/M053-heading-dropdowns/_heading-dropdowns-large.scss */
+.heading-dropdowns-wrap h1 {
+    width: 45%;
+    float: left;
+    margin-top: 15px;
+}
+
+/* line 9, ../../sass/modules/M053-heading-dropdowns/_heading-dropdowns-large.scss */
+.heading-dropdowns-wrap .dropdowns-wrap {
+    float: left;
+    padding-top: 15px;
+    width: 55%;
+    border-top: 0;
+}
+
+/* line 2, ../../sass/modules/M054-teaser/_teaser-large.scss */
+.content-area {
+    width: 48%;
+    right: 0;
+}
+
+/* line 5, ../../sass/modules/M054-teaser/_teaser-large.scss */
+.content-area.no-caption {
+    width: 100%;
+}
+
+/* line 11, ../../sass/modules/M054-teaser/_teaser-large.scss */
+.tertiary-teaser img {
+    display: block;
+}
+
+/* Specific - large */
+/* line 7, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+#save-journey-planner-preferences {
+    left: -3.3%;
+    width: 106.6%;
+    padding: 15px 3.4%;
+}
+
+/* line 13, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport {
+    position: relative;
+}
+
+/* line 16, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport .select-deselect-option {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* line 21, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport ul {
+    border: none;
+}
+
+/* line 23, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport ul li:first-child, .checkbox-list.modes-of-transport ul li:nth-child(2) {
+    border-top: 1px solid #cccccc;
+}
+
+/* line 27, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport li {
+    float: left;
+    width: 48.5%;
+    border: 1px solid #cccccc;
+    border-top: none;
+}
+
+/* line 32, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport li.odd {
+    margin-right: 3%;
+}
+
+/* line 35, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport li.odd.coach {
+    border-bottom: 1px solid #cccccc;
+}
+
+/* line 39, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport li.last {
+    border-bottom: 1px solid #cccccc;
+}
+
+/* line 42, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport li.focus {
+    border: 1px dashed #2070b0;
+    margin-top: -1px;
+    margin-left: 0;
+}
+
+/* line 46, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.checkbox-list.modes-of-transport li.focus:nth-child(1), .checkbox-list.modes-of-transport li.focus:nth-child(2) {
+    margin-top: 0;
+    border-top: 1px dashed #2070b0;
+}
+
+/* line 54, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.route-type {
+    width: 48.5%;
+}
+
+/* line 58, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.accessibility-options {
+    width: 60%;
+}
+
+/* line 64, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .auto-expand .always-visible {
+    width: 33%;
+}
+
+/* line 67, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .auto-expand .start-hidden {
+    width: 67%;
+}
+
+/* line 75, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.showing-full-details .journey-planner-results .summary-results {
+    width: 31.3236%;
+}
+
+/* line 79, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.showing-full-details .journey-planner-results .auto-expand .always-visible {
+    width: 100%;
+}
+
+/* line 86, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.full-results-container {
+    width: 63.5964%;
+}
+
+/* line 94, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li {
+    width: 32%;
+    margin: 0;
+}
+
+/* line 95, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li:nth-child(3) {
+    border-top: 1px solid #cccccc;
+}
+
+/* line 100, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li.odd {
+    margin: 0;
+}
+
+/* line 103, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li:nth-child(3n) {
+    margin-left: 2%;
+}
+
+/* line 106, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li:nth-child(3n+1) {
+    margin-right: 2%;
+}
+
+/* line 109, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li:nth-child(7) {
+    border-bottom: 1px solid #cccccc;
+}
+
+/* line 112, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li.focus {
+    margin-top: -1px;
+    border: 1px dashed #2070b0;
+}
+
+/* line 115, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li.focus:nth-child(3n) {
+    margin-left: 2%;
+}
+
+/* line 118, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .checkbox-list.modes-of-transport li.focus:nth-child(3) {
+    margin-top: 0;
+}
+
+/* line 124, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.journey-planner-results .update-buttons {
+    width: 25%;
+}
+
+/* line 130, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.accessibility-details .accessibility-group {
+    float: left;
+}
+
+/* line 133, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.accessibility-details .sub-heading {
+    float: left;
+    min-width: 175px;
+}
+
+/* line 139, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+.leg-map {
+    height: 350px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* line 145, ../../sass/specific/journey-planner/_journey-planner-large.scss */
+#jp-hero .expanded.main-and-aside {
+    height: 768px;
+}
+
+/* line 1, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-placeholder {
+    background-image: url("../../../static/1/images/placeholder/tube_dt.jpg");
+    height: 400px;
+    width: 100%;
+}
+
+/* line 6, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-placeholder.bus {
+    background-image: url("../../../static/1/images/placeholder/bus-dt.jpg");
+}
+
+/* line 9, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-placeholder.cable-car {
+    background-image: url("../../../static/1/images/placeholder/emirates_dt.jpg");
+}
+
+/* line 12, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-placeholder.tram {
+    background-image: url("../../../static/1/images/placeholder/tram_dt.jpg");
+}
+
+/* line 15, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-placeholder.river-bus {
+    background-image: url("../../../static/1/images/placeholder/river_dt.jpg");
+}
+
+/* line 18, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-placeholder.national-rail {
+    background-image: url("../../../static/1/images/placeholder/rail_dt.jpg");
+}
+
+/* line 23, ../../sass/specific/status-updates/_status-updates-large.scss */
+.service-status-rainbow-board {
+    margin-top: 0;
+}
+
+/* line 27, ../../sass/specific/status-updates/_status-updates-large.scss */
+.map-sliver {
+    height: 500px;
+}
+
+/* line 29, ../../sass/specific/status-updates/_status-updates-large.scss */
+.stage-active .map-sliver {
+    height: 100%;
+    border: 0;
+}
+
+/* line 36, ../../sass/specific/status-updates/_status-updates-large.scss */
+.corridor-selected .corridor-details, .nearby-selected .corridor-details {
+    display: none;
+}
+
+/* line 42, ../../sass/specific/status-updates/_status-updates-large.scss */
+.road-disruption .severity {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding-left: 10px;
+}
+
+/* line 48, ../../sass/specific/status-updates/_status-updates-large.scss */
+.road-disruption .severity .tag {
+    display: none;
+}
+
+/* line 54, ../../sass/specific/status-updates/_status-updates-large.scss */
+.road-disruption .disruption-info:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* line 59, ../../sass/specific/status-updates/_status-updates-large.scss */
+.road-disruption .disruption-info .updated {
+    float: right;
+}
+
+/* line 62, ../../sass/specific/status-updates/_status-updates-large.scss */
+.road-disruption .disruption-info .vertical-button-container {
+    float: left;
+    width: 48.73%;
+    margin-bottom: 0;
+}
+
+/* line 67, ../../sass/specific/status-updates/_status-updates-large.scss */
+.road-disruption .disruption-info .vertical-button-container:last-child, .road-disruption .disruption-info .vertical-button-container.last {
+    margin-left: 2.54%;
+}
+
+/* line 74, ../../sass/specific/status-updates/_status-updates-large.scss */
+.large-status-information {
+    margin-top: 15px;
+    border: solid 1px #a8a8a8;
+}
+
+/* line 77, ../../sass/specific/status-updates/_status-updates-large.scss */
+.large-status-information .line-text {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/* line 82, ../../sass/specific/status-updates/_status-updates-large.scss */
+.disruption-type {
+    padding: 10px 20px;
+    width: 24%;
+    color: #1a5a92;
+    vertical-align: middle;
+}
+
+/* line 89, ../../sass/specific/status-updates/_status-updates-large.scss */
+.disruption-message {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+/* line 92, ../../sass/specific/status-updates/_status-updates-large.scss */
+.disruption-message .buttons-wrapper {
+    display: none;
+}
+
+/* line 97, ../../sass/specific/status-updates/_status-updates-large.scss */
+.status-map-wrapper button {
+    display: block;
+}
+
+/* line 100, ../../sass/specific/status-updates/_status-updates-large.scss */
+.sliver-overlay {
+    display: none;
+}
+
+/* line 1, ../../sass/specific/stops/_stops-large.scss */
+.stops-placeholder {
+    height: 288px;
+    width: 100%;
+}
+
+/* line 4, ../../sass/specific/stops/_stops-large.scss */
+.stops-placeholder.station {
+    background-image: url("../../../static/1/images/placeholder/station-street.jpg");
+}
+
+/* line 7, ../../sass/specific/stops/_stops-large.scss */
+.stops-placeholder.station-street-view {
+    display: block;
+    background-image: url("../../../static/1/images/placeholder/station-street-view.jpg");
+}
+
+/* line 11, ../../sass/specific/stops/_stops-large.scss */
+.stops-placeholder.mode {
+    background-image: url("../../../static/1/images/placeholder/emirates_dt.jpg");
+}
+
+/* line 14, ../../sass/specific/stops/_stops-large.scss */
+.stops-placeholder.pier {
+    background-image: url("../../../static/1/images/placeholder/tram_dt.jpg");
+}
+
+/* line 20, ../../sass/specific/stops/_stops-large.scss */
+.ssp-map-wrapper #map {
+    height: 400px;
+}
+
+/*
+.station-street-view{
+	position: relative;
+	height: 310px;
+	overflow:hidden;
+
+	> img{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		// image attributes 320x380
+	}
+
+}
+*/
+/* line 2, ../../sass/specific/landing/_landing-large.scss */
+.SSP-landing .SSP-search-wrapper {
+    width: 35%;
+    padding-right: 20px;
+}
+
+/* line 1, ../../sass/specific/nearby/_nearby-large.scss */
+.nearby-results-list-container {
+    padding-top: 0;
+}
+
+/* line 5, ../../sass/specific/nearby/_nearby-large.scss */
+.nearby-map {
+    height: 400px;
+}
+
+/* line 1, ../../sass/specific/disambiguation/_disambiguation-large.scss */
+.disambiguation-results-list-container {
+    padding-top: 0;
+}
+
+/* line 1, ../../sass/specific/maps/_maps-large.scss */
+.map-sliver {
+    border: 1px solid #cccccc;
+}
+
+/* line 4, ../../sass/specific/maps/_maps-large.scss */
+.map-sliver.loading {
+    border-bottom-width: 1px;
+}
+
+/* line 7, ../../sass/specific/maps/_maps-large.scss */
+.map-sliver.loading:after {
+    opacity: 1;
+}
+
+/* line 13, ../../sass/specific/maps/_maps-large.scss */
+body.active-map {
+    overflow: scroll;
+}
+
+/* line 15, ../../sass/specific/maps/_maps-large.scss */
+body.active-map #container {
+    display: block;
+}
+
+/* line 20, ../../sass/specific/maps/_maps-large.scss */
+body.stage-active {
+    overflow: hidden;
+}
+
+/* line 22, ../../sass/specific/maps/_maps-large.scss */
+body.stage-active #container {
+    display: none;
+}

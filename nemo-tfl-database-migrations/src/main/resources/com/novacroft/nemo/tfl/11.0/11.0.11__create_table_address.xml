@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.11">
+
+        <createTable tableName="address" schemaName="${schemaName}" tablespace="${tableTablespace}" remarks="Address">
+            <column name="id" type="number(38)" remarks="Surrogate primary key - generated from ADDRESS_SEQ sequence">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="address_pk"/>
+            </column>
+            <column name="createduserid" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createddatetime" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modifieduserid" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="modifieddatetime" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="name" type="varchar2(50)" remarks="Address nick name"/>
+            <column name="housenamenumber" type="varchar2(50)" remarks=""/>
+            <column name="street" type="varchar2(50)" remarks="House name and/or number"/>
+            <column name="town" type="varchar2(50)" remarks="Town"/>
+            <column name="county" type="varchar2(50)" remarks="County (not used?)"/>
+            <column name="country" type="varchar2(50)" remarks="Country (ISO code?)"/>
+            <column name="postcode" type="varchar2(10)" remarks="Postcode"/>
+        </createTable>
+
+        <createIndex indexName="address_idx1" schemaName="${schemaName}" tableName="address" tablespace="${indexTablespace}"
+                     unique="false">
+            <column name="postcode"/>
+            <column name="housenamenumber"/>
+        </createIndex>
+
+        <createSequence schemaName="${schemaName}" sequenceName="address_seq"/>
+
+        <createTable tableName="address_aud" schemaName="${schemaName}" tablespace="${tableTablespace}" remarks="Address audit">
+            <column name="rev" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createduserid" type="varchar2(64)"/>
+            <column name="createddatetime" type="date"/>
+            <column name="modifieduserid" type="varchar2(64)"/>
+            <column name="modifieddatetime" type="date"/>
+            <column name="name" type="varchar2(50)"/>
+            <column name="housenamenumber" type="varchar2(50)"/>
+            <column name="street" type="varchar2(50)"/>
+            <column name="town" type="varchar2(50)"/>
+            <column name="county" type="varchar2(50)"/>
+            <column name="country" type="varchar2(50)"/>
+            <column name="postcode" type="varchar2(10)"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,51 @@
+.popup, .popup-banner {
+  background: #00857C;
+  position: fixed;
+  z-index: 2000;
+  color: #FFF;
+}
+
+.popup {
+  width: 280px;
+  bottom: 0;
+  right: 15px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  .popup-title {
+    cursor: pointer;
+  }
+}
+
+.popup-title-icon {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -16px;
+}
+
+.popup-title {
+  padding: 18px 40px 10px 10px;
+  position: relative;
+}
+
+.popup-content {
+  padding: 10px;
+}
+
+.popup-banner {
+  top: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px 40px 10px 10px;
+  .popup-title-icon {
+    right: 10px;
+  }
+}
+
+.popup-link {
+  color: #fff;
+  margin-left: 5px;
+  text-decoration: underline;
+}

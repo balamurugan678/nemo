@@ -1,0 +1,56 @@
+/**************************************************
+	M021 - icon-list
+
+* Author: Alex Faunt
+* Created: 09/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M021-icon-list
+
+**************************************************/
+
+.icon-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  > li {
+    width: 100%;
+    padding: 0px 10px 0px 60px;
+    line-height: 50px;
+    height: 50px;
+    position: relative;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 14px;
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      display: block;
+    }
+    &:before {
+      width: 50px;
+      height: 50px;
+      left: 0;
+      top: 0;
+      background-color: $darker-subtle-grey;
+    }
+    > .i {
+      top: 9px;
+      left: 9px;
+      position: absolute;
+    }
+  }
+
+  .lifts-icon {
+    @extend .down-lift;
+  }
+
+  .escalators-icon {
+    @extend .down-escalator;
+  }
+
+  .payphones-icon {
+    @extend .phone-icon;
+  }
+
+}

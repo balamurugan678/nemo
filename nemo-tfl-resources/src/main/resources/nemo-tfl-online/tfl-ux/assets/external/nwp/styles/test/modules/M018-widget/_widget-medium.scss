@@ -1,0 +1,43 @@
+.widget-wrapper {
+  &.homepage-style {
+    margin-bottom: 20px;
+    .start-hidden {
+      display: block;
+    }
+    .content {
+      background: transparent;
+      margin-left: 0;
+    }
+    .widget-content {
+      border: 1px solid $light-grey-border-colour;
+    }
+  }
+  .basic-journey-options {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  &.info-widget {
+    .expandable-box {
+      .controls {
+        display: block;
+      }
+
+      .start-hidden {
+        display: none;
+      }
+
+      .expanded {
+        .start-hidden {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.widget-heading.primary {
+  &:before {
+    display: none;
+  }
+}
+

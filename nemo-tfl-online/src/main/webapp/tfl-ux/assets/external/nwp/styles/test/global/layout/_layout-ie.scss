@@ -1,0 +1,18 @@
+.lt-ie8 {
+  .module-grid {
+    > div {
+      width: 47%;
+      &:first-child {
+        margin-right: 5%;
+      }
+    }
+  }
+  .aside {
+    .module-grid {
+      > div {
+        width: 100%;
+      }
+    }
+  }
+
+}

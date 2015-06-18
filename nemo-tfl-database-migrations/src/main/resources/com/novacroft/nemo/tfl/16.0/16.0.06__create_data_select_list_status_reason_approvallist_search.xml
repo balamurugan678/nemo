@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.06">
+      <sql splitStatements="false">
+            <![CDATA[
+		begin
+		
+		   select_list_installer.install_list('ApprovalListStatus', 'Approval List Status');
+		   select_list_installer.install_option('ApprovalListStatus', 'Approved', 10);
+		   select_list_installer.install_option('ApprovalListStatus', 'Rejected', 20);
+		   select_list_installer.install_option('ApprovalListStatus', 'Pending', 30);
+		   
+		   content_installer.install('ApprovalListStatus.Approved.option', 'Approved');
+		   content_installer.install('ApprovalListStatus.Rejected.option', 'Rejected');
+		   content_installer.install('ApprovalListStatus.Pending.option', 'Pending');
+		   content_installer.install('ApprovalList.status.label', 'Approval Status');
+		   
+		   select_list_installer.install_list('RefundApprovalReason', 'Refund Approval Reason');
+		   select_list_installer.install_option('RefundApprovalReason', 'Maximum Value Limit', 10);
+		   select_list_installer.install_option('RefundApprovalReason', 'Amendable field changed from default values', 20);
+		   select_list_installer.install_option('RefundApprovalReason', 'This Oyster Card has been hotlisted or hidden', 30);
+		   select_list_installer.install_option('RefundApprovalReason', 'Existing match found for another payment with the same details', 40);
+		   select_list_installer.install_option('RefundApprovalReason', 'Customer Account has exceeded claim ceiling', 50);
+		   select_list_installer.install_option('RefundApprovalReason', 'Address has exceeded claim ceiling', 60);
+		   select_list_installer.install_option('RefundApprovalReason', 'Account Number has exceeded claim ceiling', 70);
+		   select_list_installer.install_option('RefundApprovalReason', 'Low payment threshold for cheque payment', 80);
+		   select_list_installer.install_option('RefundApprovalReason', 'Refund occurred outside normal working hours', 90);
+		   select_list_installer.install_option('RefundApprovalReason', 'Alternative Address', 100);
+
+		   
+		   content_installer.install('RefundApprovalReason.Maximum Value Limit.option', 'Maximum Value Limit');
+		   content_installer.install('RefundApprovalReason.Amendable field changed from default values.option', 'Amendable field changed from default values');
+		   content_installer.install('RefundApprovalReason.This Oyster Card has been hotlisted or hidden.option', 'This Oyster Card has been hotlisted or hidden');
+		   content_installer.install('RefundApprovalReason.Existing match found for another payment with the same details.option', 'Existing match found for another payment with the same details');
+		   content_installer.install('RefundApprovalReason.Customer Account has exceeded claim ceiling.option', 'Customer Account has exceeded claim ceiling');
+		   content_installer.install('RefundApprovalReason.Address has exceeded claim ceiling.option', 'Address has exceeded claim ceiling');
+		   content_installer.install('RefundApprovalReason.Account Number has exceeded claim ceiling.option', 'Account Number has exceeded claim ceiling');
+		   content_installer.install('RefundApprovalReason.Low payment threshold for cheque payment.option', 'Low payment threshold for cheque payment');
+		   content_installer.install('RefundApprovalReason.Refund occurred outside normal working hours.option', 'Refund occurred outside normal working hours');
+		   content_installer.install('RefundApprovalReason.Alternative Address.option', 'Alternative Address');
+			        
+		end;
+]]>
+        </sql>
+        
+        
+    </changeSet>
+</databaseChangeLog>

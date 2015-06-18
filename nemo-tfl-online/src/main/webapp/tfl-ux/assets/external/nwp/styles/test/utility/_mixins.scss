@@ -1,0 +1,717 @@
+@mixin linear-gradient($pos, $G1, $G2: false, $G3: false,
+$G4: false, $G5: false, $G6: false,
+$G7: false, $G8: false, $G9: false, $fallback: false) {
+  // Detect what type of value exists in $pos
+  $pos-type: type-of(nth($pos, 1));
+
+  // If $pos is missing from mixin, reassign vars and add default position
+  @if ($pos-type == color) or (nth($pos, 1) == "transparent") {
+    $G9: $G8;
+    $G8: $G7;
+    $G7: $G6;
+    $G6: $G5;
+    $G5: $G4;
+    $G4: $G3;
+    $G3: $G2;
+    $G2: $G1;
+    $G1: $pos;
+    $pos: top; // Default position
+  }
+
+  $full: compact($G1, $G2, $G3, $G4, $G5, $G6, $G7, $G8, $G9);
+
+  // Set $G1 as the default fallback color
+  $fallback-color: nth($G1, 1);
+
+  // If $fallback is a color use that color as the fallback color
+  @if (type-of($fallback) == color) or ($fallback == "transparent") {
+    $fallback-color: $fallback;
+  }
+
+  background-color: $fallback-color;
+  background-image: -webkit-linear-gradient($pos, $full); // Safari 5.1+, Chrome
+  background-image: -moz-linear-gradient($pos, $full);
+  background-image: -ms-linear-gradient($pos, $full);
+  background-image: -o-linear-gradient($pos, $full);
+  background-image: unquote("linear-gradient(#{$pos}, #{$full})");
+}
+
+@mixin tooltip {
+  background: #333;
+  background: rgba(0, 0, 0, .8);
+  top: -5px;
+  color: #fff;
+  content: attr(data-title);
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+}
+
+@mixin box-shadow($shadow-1, $shadow-2: false, $shadow-3: false,
+$shadow-4: false, $shadow-5: false, $shadow-6: false,
+$shadow-7: false, $shadow-8: false, $shadow-9: false) {
+
+  $full: compact($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9);
+
+  -webkit-box-shadow: $full;
+  box-shadow: $full
+}
+
+@mixin gradient-on-image($gradient, $image) {
+  background-image: unquote("-webkit-#{$gradient}, #{$image}");
+  background-image: unquote("-moz-#{$gradient}, #{$image}");
+  background-image: unquote("-ms-#{$gradient}, #{$image}");
+  background-image: unquote("-o-#{$gradient}, #{$image}");
+  background-image: $gradient, $image;
+}
+
+@function compact($v1, $v2, $v3, $v4, $v5, $v6, $v7, $v8, $v9) {
+  $full: $v1;
+
+  @if ($v2) {
+    $full: join($full, unquote(", #{$v2}"));
+  }
+
+  @if ($v3) {
+    $full: join($full, unquote(", #{$v3}"));
+  }
+
+  @if ($v4) {
+    $full: join($full, unquote(", #{$v4}"));
+  }
+
+  @if ($v5) {
+    $full: join($full, unquote(", #{$v5}"));
+  }
+
+  @if ($v6) {
+    $full: join($full, unquote(", #{$v6}"));
+  }
+
+  @if ($v7) {
+    $full: join($full, unquote(", #{$v7}"));
+  }
+
+  @if ($v8) {
+    $full: join($full, unquote(", #{$v8}"));
+  }
+
+  @if ($v9) {
+    $full: join($full, unquote(", #{$v9}"));
+  }
+
+  @return $full;
+}
+
+@mixin clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin cl($columns: 1) {
+  @include c-settings;
+  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+}
+
+@mixin c-settings {
+  float: left;
+  margin: 0 0 0 $gridGutterWidth;
+}
+
+@mixin c($columns: 1) {
+  @include c-settings;
+  width: ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+}
+
+@function cWidth($columns) {
+  @return ($gridColumnWidth * $columns) + ($gridGutterWidth * ($columns - 1));
+}
+
+@mixin nested($columns, $containerColumns) {
+  margin-left: $gridGutterWidth / cWidth($containerColumns) * 100%;
+  width: cWidth($columns) / cWidth($containerColumns) * 100%;
+}
+
+@function makeCMSFriendlyPath($path) {
+  @return $path;
+}
+
+$default-sprite-height: 32px;
+$default-sprite-width: 32px;
+@mixin svg-icon($row, $col, $img-width: $default-sprite-width, $img-height: $default-sprite-height,
+$x-offset: 0px, $y-offset: 0px, $display: block,
+$sprite-width: $default-sprite-width, $sprite-height: $default-sprite-height,
+$sprite-file: 'vsprite', $num-rows: $num-sprite-rows, $num-columns: 3,
+$force-auto-height: false, $force-auto-width: false) {
+  $map-height: $sprite-height * $num-rows;
+  $map-width: $sprite-width * $num-columns;
+  $png-file: '/static/'+$version+'/images/' + $sprite-file + '.png';
+  $cms-file: '/static/'+$version+'/images/' + $sprite-file + '.png';
+  $svg-file: '/static/'+$version+'/images/' + $sprite-file + '_x2.png';
+
+  //@if ($sprite-file != 'vsprite') {
+  //when android 2.3 is no longer in common usage, this block can be removed
+  //.nosvg & {
+  //    background-image: url($png-file)
+  //}
+  //&.small-icon{
+  //    @include svg-icon-scaled($row, $col, $img-width: 20px, $img-height: 20px, $display: $display)
+  //}
+  .body-cms-preview & {
+    background-image: url($cms-file);
+  }
+  background-image: url($svg-file);
+  background-image: url($png-file) \9;
+  //}
+  background-size: $map-width $map-height;
+  background-position: (-1 * $sprite-width * ($col - 1) + $x-offset) (-1 * $sprite-height * ($row - 1) + $y-offset);
+  @if ($force-auto-height == false) {
+    height: $img-height;
+  } @else {
+    height: auto;
+  }
+  @if ($force-auto-width == false) {
+    width: $img-width;
+  } @else {
+    width: auto;
+  }
+  display: $display;
+}
+
+@mixin svg-icon-position-only($row, $col, $x-offset: 0px, $y-offset: 0px, $img-width: $default-sprite-width, $img-height: $default-sprite-height) {
+  background-position: (-1 * $img-width * ($col - 1) + $x-offset) (-1 * $img-height * ($row - 1) + $y-offset);
+}
+
+@mixin svg-icon-scaled($row, $col, $img-width, $img-height, $display: block,
+$sprite-width: $default-sprite-width, $sprite-height: $default-sprite-height,
+$sprite-file: 'vsprite', $num-rows: $num-sprite-rows, $num-columns: 3) {
+  //when android 2.3 is no longer in common usage, this block can be removed
+  @if ($sprite-file != 'vsprite') {
+    $png-file: '/static/'+$version+'/images/' + $sprite-file + '.png';
+    $cms-file: '/static/'+$version+'/images/' + $sprite-file + '.png';
+    $svg-file: '/static/'+$version+'/images/' + $sprite-file + '_x2.png';
+    //.nosvg & {
+    //    background-image: url($png-file);
+    //}
+    .body-cms-preview & {
+      background-image: url($cms-file);
+    }
+    background-image: url($svg-file);
+    background-image: url($png-file) \9;
+  }
+  background-size: ($img-width * $num-columns) ($img-height * $num-rows);
+  background-position: (-1 * $img-width * ($col - 1)) (-1 * $img-height * ($row - 1));
+  height: $img-height;
+  width: $img-width;
+  display: $display;
+}
+
+@mixin transition($property: all, $duration: 1s, $timingFunction: ease) {
+  -webkit-transition: $property $duration $timingFunction;
+  -moz-transition: $property $duration $timingFunction;
+  -o-transition: $property $duration $timingFunction;
+  -ms-transition: $property $duration $timingFunction;
+  transition: $property $duration $timingFunction;
+}
+
+@mixin lighten-hover-and-focus($from-colour: #000, $by-percentage: 10%) {
+  background-color: lighten($from-colour, $by-percentage);
+  @extend %no-transition;
+}
+
+@mixin darken-hover-and-focus($from-colour: #fff, $by-percentage: 10%) {
+  background-color: darken($from-colour, $by-percentage);
+  @extend %no-transition;
+}
+
+@mixin custom-colour-hover-and-focus($colour) {
+  background-color: $colour;
+  @extend %no-transition;
+}
+
+@mixin service-colours() {
+  &.emirates {
+    background: $emirates-colour;
+  }
+  &.bakerloo {
+    background: $bakerloo-line-colour;
+  }
+  &.central {
+    background: $central-line-colour;
+  }
+  &.circle {
+    background: $circle-line-colour;
+  }
+  &.district {
+    background: $district-line-colour;
+  }
+  &.hammersmith, &.hammersmith-city {
+    background: $hammersmith-line-colour;
+  }
+  &.jubilee {
+    background: $jubilee-line-colour;
+  }
+  &.metropolitan {
+    background: $metropolitan-line-colour;
+  }
+  &.northern {
+    background: $northern-line-colour;
+  }
+  &.piccadilly {
+    background: $piccadilly-line-colour;
+  }
+  &.victoria {
+    background: $victoria-line-colour;
+  }
+  &.waterloo {
+    background: $waterloo-line-colour;
+  }
+  &.overground {
+    background: $overground-colour;
+  }
+  &.dlr, &.docklands, &.docklands-light-railway {
+    background: $dlr-colour;
+  }
+  //tram colours
+  &.tram {
+    background: $tram-colour;
+  }
+  &.tramlink1 {
+    background: $tram-route-one-colour;
+  }
+  &.tramlink2 {
+    background: $tram-route-two-colour;
+  }
+  &.tramlink3 {
+    background: $tram-route-three-colour;
+  }
+  &.tramlink4 {
+    background: $tram-route-four-colour;
+  }
+  //roads colours
+  &.roads-a316 {
+    background: $roads-a316;
+  }
+  &.roads-a41 {
+    background: $roads-a41;
+  }
+  &.roads-a40 {
+    background: $roads-a40;
+  }
+  &.roads-a23 {
+    background: $roads-a23;
+  }
+  &.roads-a21 {
+    background: $roads-a21;
+  }
+  &.roads-a3 {
+    background: $roads-a3;
+  }
+  &.roads-a2 {
+    background: $roads-a2;
+  }
+  &.roads-a1 {
+    background: $roads-a1;
+  }
+  &.roads-a205, &.roads-south-circular-a205 {
+    background: $roads-a205;
+  }
+  &.roads-a406, &.roads-north-circular-a406 {
+    background: $roads-a406;
+  }
+  &.roads-a24 {
+    background: $roads-a24;
+  }
+  &.roads-a13 {
+    background: $roads-a13;
+  }
+  &.roads-a12 {
+    background: $roads-a12;
+  }
+  &.roads-a10 {
+    background: $roads-a10;
+  }
+  &.roads-a4 {
+    background: $roads-a4;
+  }
+  &.roads-a20 {
+    background: $roads-a20;
+  }
+  &.roads-central-london,
+  &.roads-central-london-red-routes,
+  &.roads-inner-ring,
+  &.roads-southern-river-route,
+  &.roads-bishopsgate-cross-route,
+  &.roads-city-route,
+  &.roads-farringdon-cross-route,
+  &.roads-western-cross-route {
+    background: $roads-central-london;
+  }
+  &.roads-blackwall-tunnel {
+    background: $roads-blackwall-tunnel;
+  }
+  //rivers colours
+  &.rb1 {
+    background: $rivers-rb1;
+  }
+  &.rb2 {
+    background: $rivers-rb2;
+  }
+  &.rb3 {
+    background: $rivers-rb3;
+  }
+  &.rb4 {
+    background: $rivers-rb4;
+  }
+  &.rb5 {
+    background: $rivers-rb5;
+  }
+  &.rb6 {
+    background: $rivers-rb6;
+  }
+  &.city-cruises {
+    background: $rivers-city-cruises;
+  }
+  &.westminster-greenwich {
+    background: $rivers-westminster-greenwich;
+  }
+  &.westminster-st-katherines-circular {
+    background: $rivers-westminster-st-katherines-circular;
+  }
+  &.westminster-passenger-services-association,
+  &.wetsminster-passenger-services-association, {
+    background: $rivers-westminster-passenger-services-association;
+  }
+  &.woolwich-free-ferry {
+    background: $rivers-woolwich-free-ferry;
+  }
+
+  // national rail
+
+  &.arriva-trains-wales {
+    background: $arriva-trains-wales;
+  }
+  &.c2c {
+    background: $c2c;
+  }
+  &.chiltern-railways {
+    background: $chiltern-railways;
+  }
+  &.east-coast {
+    background: $east-coast;
+  }
+  &.east-midlands-trains {
+    background: $east-midlands-trains;
+  }
+  &.first-capital-connect {
+    background: $first-capital-connect;
+  }
+  &.first-great-western {
+    background: $first-great-western;
+  }
+  &.first-hull-trains {
+    background: $first-hull-trains;
+  }
+  &.first-transpennine-express {
+    background: $first-transpennine-express;
+  }
+  &.gatwick-express {
+    background: $gatwick-express;
+  }
+  &.grand-central {
+    background: $grand-central;
+  }
+  &.greater-anglia {
+    background: $greater-anglia;
+  }
+  &.heathrow-connect {
+    background: $heathrow-connect;
+  }
+  &.heathrow-express {
+    background: $heathrow-express;
+  }
+  &.island-line {
+    background: $island-line;
+  }
+  &.merseyrail {
+    background: $merseyrail;
+  }
+  &.northern-rail {
+    background: $northern-rail;
+  }
+  &.scotrail {
+    background: $scotrail;
+  }
+  &.southeastern {
+    background: $southeastern;
+  }
+  &.southern {
+    background: $southern;
+  }
+  &.south-west-trains {
+    background: $south-west-trains;
+  }
+  &.cross-country {
+    background: $cross-country;
+  }
+  &.eurostar {
+    background: $eurostar;
+  }
+  &.london-midland {
+    background: $london-midland;
+  }
+  &.stanstead-express {
+    background: $stanstead-express;
+  }
+  &.virgin-trains {
+    background: $virgin-trains;
+  }
+
+}
+
+@mixin service-colours-darken($factor: 5%) {
+  &.emirates {
+    background: darken($emirates-colour, $factor);
+  }
+  &.bakerloo {
+    background: darken($bakerloo-line-colour, $factor);
+  }
+  &.central {
+    background: darken($central-line-colour, $factor);
+  }
+  &.circle {
+    background: darken($circle-line-colour, $factor);
+  }
+  &.district {
+    background: darken($district-line-colour, $factor);
+  }
+  &.hammersmith, &.hammersmith-city {
+    background: darken($hammersmith-line-colour, $factor);
+  }
+  &.jubilee {
+    background: darken($jubilee-line-colour, $factor);
+  }
+  &.metropolitan {
+    background: darken($metropolitan-line-colour, $factor);
+  }
+  &.northern {
+    background: darken($northern-line-colour, $factor);
+  }
+  &.piccadilly {
+    background: darken($piccadilly-line-colour, $factor);
+  }
+  &.victoria {
+    background: darken($victoria-line-colour, $factor);
+  }
+  &.waterloo {
+    background: darken($waterloo-line-colour, $factor);
+  }
+  &.overground {
+    background: darken($overground-colour, $factor);
+  }
+  &.dlr, &.docklands, &.docklands-light-railway {
+    background: darken($dlr-colour, $factor);
+  }
+  //tram colours
+  &.tram {
+    background: darken($tram-colour, $factor);
+  }
+  &.tramlink1 {
+    background: darken($tram-route-one-colour, $factor);
+  }
+  &.tramlink2 {
+    background: darken($tram-route-two-colour, $factor);
+  }
+  &.tramlink3 {
+    background: darken($tram-route-three-colour, $factor);
+  }
+  &.tramlink4 {
+    background: darken($tram-route-four-colour, $factor);
+  }
+  //roads colours
+  &.roads-a316 {
+    background: darken($roads-a316, $factor);
+  }
+  &.roads-a41 {
+    background: darken($roads-a41, $factor);
+  }
+  &.roads-a40 {
+    background: darken($roads-a40, $factor);
+  }
+  &.roads-a23 {
+    background: darken($roads-a23, $factor);
+  }
+  &.roads-a21 {
+    background: darken($roads-a21, $factor);
+  }
+  &.roads-a3 {
+    background: darken($roads-a3, $factor);
+  }
+  &.roads-a2 {
+    background: darken($roads-a2, $factor);
+  }
+  &.roads-a1 {
+    background: darken($roads-a1, $factor);
+  }
+  &.roads-a205, &.roads-south-circular-a205 {
+    background: darken($roads-a205, $factor);
+  }
+  &.roads-a406, &.roads-north-circular-a406 {
+    background: darken($roads-a406, $factor);
+  }
+  &.roads-a24 {
+    background: darken($roads-a24, $factor);
+  }
+  &.roads-a13 {
+    background: darken($roads-a13, $factor);
+  }
+  &.roads-a12 {
+    background: darken($roads-a12, $factor);
+  }
+  &.roads-a10 {
+    background: darken($roads-a10, $factor);
+  }
+  &.roads-a4 {
+    background: darken($roads-a4, $factor);
+  }
+  &.roads-a20 {
+    background: darken($roads-a20, $factor);
+  }
+  &.roads-central-london,
+  &.roads-central-london-red-routes,
+  &.roads-inner-ring,
+  &.roads-southern-river-route,
+  &.roads-bishopsgate-cross-route,
+  &.roads-city-route,
+  &.roads-farringdon-cross-route,
+  &.roads-western-cross-route {
+    background: darken($roads-central-london, $factor);
+  }
+  &.roads-blackwall-tunnel {
+    background: darken($roads-blackwall-tunnel, $factor);
+  }
+  //rivers colours
+  &.rb1 {
+    background: darken($rivers-rb1, $factor);
+  }
+  &.rb2 {
+    background: darken($rivers-rb2, $factor);
+  }
+  &.rb3 {
+    background: darken($rivers-rb3, $factor);
+  }
+  &.rb4 {
+    background: darken($rivers-rb4, $factor);
+  }
+  &.rb5 {
+    background: darken($rivers-rb5, $factor);
+  }
+  &.rb6 {
+    background: darken($rivers-rb6, $factor);
+  }
+  &.city-cruises {
+    background: darken($rivers-city-cruises, $factor);
+  }
+  &.westminster-greenwich {
+    background: darken($rivers-westminster-greenwich, $factor);
+  }
+  &.westminster-st-katherines-circular {
+    background: darken($rivers-westminster-st-katherines-circular, $factor);
+  }
+  &.westminster-passenger-services-association,
+  &.wetsminster-passenger-services-association, {
+    background: darken($rivers-westminster-passenger-services-association, $factor);
+  }
+  &.woolwich-free-ferry {
+    background: darken($rivers-woolwich-free-ferry, $factor);
+  }
+
+  // national rail
+
+  &.arriva-trains-wales {
+    background: darken($arriva-trains-wales, $factor);
+  }
+  &.c2c {
+    background: darken($c2c, $factor);
+  }
+  &.chiltern-railways {
+    background: darken($chiltern-railways, $factor);
+  }
+  &.east-coast {
+    background: darken($east-coast, $factor);
+  }
+  &.east-midlands-trains {
+    background: darken($east-midlands-trains, $factor);
+  }
+  &.first-capital-connect {
+    background: darken($first-capital-connect, $factor);
+  }
+  &.first-great-western {
+    background: darken($first-great-western, $factor);
+  }
+  &.first-hull-trains {
+    background: darken($first-hull-trains, $factor);
+  }
+  &.first-transpennine-express {
+    background: darken($first-transpennine-express, $factor);
+  }
+  &.gatwick-express {
+    background: darken($gatwick-express, $factor);
+  }
+  &.grand-central {
+    background: darken($grand-central, $factor);
+  }
+  &.greater-anglia {
+    background: darken($greater-anglia, $factor);
+  }
+  &.heathrow-connect {
+    background: darken($heathrow-connect, $factor);
+  }
+  &.heathrow-express {
+    background: darken($heathrow-express, $factor);
+  }
+  &.island-line {
+    background: darken($island-line, $factor);
+  }
+  &.merseyrail {
+    background: darken($merseyrail, $factor);
+  }
+  &.northern-rail {
+    background: darken($northern-rail, $factor);
+  }
+  &.scotrail {
+    background: darken($scotrail, $factor);
+  }
+  &.southeastern {
+    background: darken($southeastern, $factor);
+  }
+  &.southern {
+    background: darken($southern, $factor);
+  }
+  &.south-west-trains {
+    background: darken($south-west-trains, $factor);
+  }
+
+  &.cross-country {
+    background: darken($cross-country, $factor);
+  }
+  &.eurostar {
+    background: darken($eurostar, $factor);
+  }
+  &.london-midland {
+    background: darken($london-midland, $factor);
+  }
+  &.stanstead-express {
+    background: darken($stanstead-express, $factor);
+  }
+  &.virgin-trains {
+    background: darken($virgin-trains, $factor);
+  }
+
+}

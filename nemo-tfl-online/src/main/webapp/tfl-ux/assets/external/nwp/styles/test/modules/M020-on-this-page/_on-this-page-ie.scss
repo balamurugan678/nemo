@@ -1,0 +1,29 @@
+/**************************************************
+	M020 - on this page
+
+* Author: Alex Faunt
+* Created: 22/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M020-on-this-page
+
+**************************************************/
+.lt-ie8 {
+  ul.on-this-page-list {
+    width: 48%;
+    padding-left: 2%;
+    &:first-child {
+      padding-left: 0;
+      padding-right: 2%;
+    }
+    a {
+      padding-left: 15px;
+    }
+    + div.clearfix {
+      clear: both;
+    }
+    > li > a {
+      *display: inline;
+      *zoom: 1;
+
+    }
+  }
+}

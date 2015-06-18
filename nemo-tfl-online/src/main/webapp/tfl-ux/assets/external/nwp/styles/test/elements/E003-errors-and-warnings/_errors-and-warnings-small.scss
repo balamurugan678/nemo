@@ -1,0 +1,32 @@
+.disruption-message {
+  display: block;
+  position: relative;
+  background-color: $disruption-colour;
+  padding: 10px 10px 10px 40px;
+  margin-bottom: 10px;
+  &.with-link {
+    padding: 0;
+  }
+  .link-message {
+    display: block;
+    padding: 10px 40px;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      text-decoration: none;
+      @include darken-hover-and-focus($disruption-colour, 5%);
+      @include transition(none);
+    }
+  }
+  .disruption-icon, .right-arrow {
+    position: absolute;
+    display: block;
+    top: 50%;
+    margin-top: -16px;
+  }
+  .disruption-icon {
+    left: 4px;
+  }
+  .right-arrow {
+    right: 0;
+  }
+}

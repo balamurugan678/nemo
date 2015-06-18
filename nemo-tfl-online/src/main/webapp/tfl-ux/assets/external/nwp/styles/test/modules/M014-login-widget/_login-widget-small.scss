@@ -1,0 +1,35 @@
+/**************************************************
+Login Widget
+
+* Author: John Boyle
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/B7+-+Login
+
+**************************************************/
+.login-widget {
+  background: #fff;
+  padding: 10px;
+  position: relative;
+  border: solid 1px $lighter-grey-border-colour;
+  border-bottom: 3px solid $light-grey-border-colour;
+  margin-bottom: 20px;
+  .primary-button {
+    margin-bottom: 10px;
+  }
+  p {
+    margin: 0;
+  }
+  h3 {
+    background-color: $darker-subtle-grey;
+    margin: -10px -10px 10px -10px;
+    padding: 10px;
+    .section-overview & {
+      background-color: transparent;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+  }
+  .section-overview & {
+    margin-bottom: 0;
+  }
+}

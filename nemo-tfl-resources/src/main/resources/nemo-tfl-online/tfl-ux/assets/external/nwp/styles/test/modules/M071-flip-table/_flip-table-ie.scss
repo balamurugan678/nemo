@@ -1,0 +1,35 @@
+/**************************************************
+	M071 flip table
+* Author: Adrian Osmond
+* Created: 20/11/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M071-flip-table
+**************************************************/
+
+.lt-ie10:not(.lt-ie9) {
+  .flip-table {
+    &.flipped {
+      display: block;
+      table-layout: fixed;
+      tbody, tr, td {
+        float: left;
+        width: 100%;
+      }
+      td {
+        text-align: left;
+        padding: 5px 10px;
+        box-sizing: border-box;
+        &:before {
+          display: inline;
+          width: auto;
+          padding: 0;
+        }
+        .cell {
+          display: inline;
+          border-left: 0;
+          width: auto;
+          padding: 0 0 0 10px;
+        }
+      }
+    }
+  }
+}

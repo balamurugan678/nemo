@@ -1,0 +1,124 @@
+/**************************************************
+TABS
+* Author: Rodrigo Lopes
+* Created: 19/02/2013
+* Pattern library URL: //Google Drive\NWP\Front-end\Pattern library\Modules\M011-tabs
+**************************************************/
+.tabs-style-1, .tabs-style-2 {
+  $padding-left: 10px;
+  list-style-type: none;
+  @include clearfix;
+  margin-left: 0;
+
+  &.no-margin {
+    margin: 0;
+  }
+  &.pull-up {
+    margin-bottom: -10px;
+    position: relative;
+    z-index: 10;
+  }
+  > li {
+    float: left;
+    margin-right: 2px;
+    border: 1px solid $primary-blue;
+    background-color: $primary-blue;
+    @extend %new-johnson;
+    cursor: pointer;
+
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include darken-hover-and-focus($primary-blue, 10%);
+      a, span {
+        text-decoration: none;
+      }
+    }
+
+    > a, > span {
+      display: block;
+      padding: 8px $padding-left;
+      color: #fff;
+      float: left;
+      &:active, &:visited {
+        color: #fff;
+      }
+
+      &.icon-solo {
+        padding: 4px 7px;
+      }
+      &.search-icon {
+        margin-top: 3px;
+        margin-right: -13px;
+      }
+    }
+    &.selected {
+      position: relative;
+      cursor: default;
+
+    }
+  }
+}
+
+.tabs-style-1 {
+  > li {
+    &.selected {
+      $background-color: #FFF;
+      $border-width: 13px;
+      background-color: $background-color;
+      border-color: $light-grey-border-colour;
+      > a, > span {
+        color: $primary-blue;
+        &:hover, &:focus, &:active {
+          background-color: $background-color;
+        }
+      }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 0;
+      }
+      &:before {
+        margin-left: $border-width * -1;
+        border: $border-width solid;
+        border-color: $light-grey-border-colour transparent transparent;
+      }
+      &:after {
+        margin-left: $border-width * -1 + 1;
+        border: $border-width - 1 solid;
+        border-color: $background-color transparent transparent;
+      }
+    }
+  }
+}
+
+.tabs-style-2 {
+  > li {
+    &.selected {
+      $background-color: $dark-grey;
+      $border-width: 13px;
+      background-color: $background-color;
+      border-color: $dark-grey; //change;
+      &:hover, &:focus, &:active {
+        background-color: $background-color;
+      }
+      > a, > span {
+        color: #fff;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        margin-left: $border-width * -1 + 1;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border: $border-width - 1 solid;
+        border-color: $background-color transparent transparent;
+        z-index: 1;
+      }
+    }
+  }
+}

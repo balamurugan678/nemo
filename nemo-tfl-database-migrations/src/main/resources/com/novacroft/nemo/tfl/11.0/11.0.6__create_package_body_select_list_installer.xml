@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.6">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+create or replace package body select_list_installer
+as
+
+  l_user_id varchar2(64) := 'Installer';
+  l_error_prefix varchar2(16) := 'Error: ';
+  l_error_code_message_separator varchar2(16) := '; ';
+  l_list_id number;
+  l_option_id number;
+
+  cursor c_list(p_list_name varchar)
+  is
+    select l.id
+    from   selectlist l
+    where  l.name = p_list_name;
+
+  cursor c_option(p_list_id number, p_option_value varchar)
+  is
+    select o.id
+    from   selectlistoption o
+    where  o.selectlistid = p_list_id
+    and    o.value = p_option_value;
+
+  procedure install_list
+  (p_list_name varchar
+  ,p_list_description varchar)
+  is
+
+  begin
+
+    open c_list(p_list_name);
+    fetch c_list into l_list_id;
+    if c_list%notfound
+    then
+
+      insert into selectlist
+      (id, createduserid, createddatetime, name, description)
+      values
+      (selectlist_seq.nextval, l_user_id, sysdate, p_list_name, p_list_description);
+
+    else
+
+      update selectlist
+      set    description = p_list_description
+      ,      modifieduserid = l_user_id
+      ,      modifieddatetime = sysdate
+      where  id = l_list_id;
+
+    end if;
+    close c_list;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end install_list;
+
+  procedure install_option
+  (p_list_name varchar
+  ,p_option_value varchar
+  ,p_option_display_order number)
+  is
+
+  begin
+
+    open c_list(p_list_name);
+    fetch c_list into l_list_id;
+    if c_list%notfound
+    then
+      raise no_data_found;
+    end if;
+    close c_list;
+
+    open c_option(l_list_id, p_option_value);
+    fetch c_option into l_option_id;
+    if c_option%notfound
+    then
+
+      insert into selectlistoption
+      (id, createduserid, createddatetime, selectlistid, value, displayorder)
+      values
+      (selectlistoption_seq.nextval, l_user_id, sysdate, l_list_id, p_option_value, p_option_display_order);
+
+    else
+
+      update selectlistoption
+      set    displayorder = p_option_display_order
+      ,      modifieduserid = l_user_id
+      ,      modifieddatetime = sysdate
+      where  id = l_option_id;
+
+    end if;
+    close c_option;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end install_option;
+
+  procedure un_install_list
+  (p_list_name varchar)
+  is
+
+  begin
+
+    open c_list(p_list_name);
+    fetch c_list into l_list_id;
+    if c_list%notfound
+    then
+      raise no_data_found;
+    end if;
+    close c_list;
+
+    delete from selectlistoption
+    where  selectlistid = l_list_id;
+
+    delete from selectlist
+    where  id = l_list_id;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end un_install_list;
+
+  procedure un_install_option
+  (p_list_name varchar
+  ,p_option_value varchar)
+  is
+
+  begin
+
+    open c_list(p_list_name);
+    fetch c_list into l_list_id;
+    if c_list%notfound
+    then
+      raise no_data_found;
+    end if;
+    close c_list;
+
+    delete from selectlistoption o
+    where  o.selectlistid = l_list_id
+    and    o.value = p_option_value;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end un_install_option;
+
+end select_list_installer;
+            ]]>
+        </createProcedure>
+        <rollback>
+            drop package body select_list_installer;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
+
+

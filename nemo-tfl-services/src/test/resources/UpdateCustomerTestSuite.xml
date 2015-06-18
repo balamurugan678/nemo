@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="REST Project 1" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="soapui-setings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost</con:endpoint></con:endpoints><con:resource name="Customer" path="/nemo-tfl-services/customer/112006"><con:settings/><con:parameters/><con:method name="UpdateCustomer" method="PUT"><con:settings/><con:parameters/><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>401 400</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cus="http://localhost/nemo-tfl-services/customer">cus:Response</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType xsi:nil="true"/><con:status>0</con:status><con:params/><con:element>data</con:element></con:representation></con:method></con:resource></con:interface><con:testSuite name="UpdateCustomer"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpdateCustomer" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="UpdateCustomer - Successful"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Successful" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 2,
+"title" : "Mr",
+"firstName" : "William",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "18",
+"street" : "Rugger Lane",
+"town" : "Twickers",
+"county" : "Kent",
+"country" : "England",
+"postcode" : "CT21 5AB",
+"homePhone" : "01876 654765",
+"mobilePhone" : "024336754764",
+"emailAddress" : "willy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors == null</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - External User ID not Specified"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - External User ID not Specified" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : "",
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_ID_NOT_POPULATED"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "id.notPopulated.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - Title Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Title Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_TITLE"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - First Name Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - First Name Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_FIRST_NAME"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - Last Name Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Last Name Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer/112006</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_FIRST_NAME"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - House name or number Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - House name or number Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "",
+"street" : "Twickers Street",
+"town" : "RIchmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer/112006</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_HOUSE_NAME_NUMBER"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - Street Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Street Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer/112006</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_STREET"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - Town Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Town Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer/112006</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_TOWN"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - Country Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Country Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "",
+"postcode" : "TW1 4AA",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer/112006</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_FIRST_NAME"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="UpdateCustomer - Post Code Empty"><con:settings/><con:config service="http://localhost" resourcePath="/nemo-tfl-services/customer/112006" methodName="UpdateCustomer" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="UpdateCustomer - Post Code Empty" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost</con:endpoint><con:request>{
+"id" : 1,
+"title" : "Mr",
+"firstName" : "Billy",
+"initials" : "B",
+"lastName" : "Beaumont",
+"houseNameNumber" : "8",
+"street" : "Twickers Street",
+"town" : "Richmond",
+"county" : "Middlesex",
+"country" : "England",
+"postcode" : "",
+"homePhone" : "01234567890",
+"mobilePhone" : "01234567890",
+"emailAddress" : "billy.beaumont@rugby.com"
+}</con:request><con:originalUri>http://localhost/nemo-tfl-services/customer/112006</con:originalUri><con:assertion type="GroovyScriptAssertion" name="Script Assertion - Errors Not Null"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors != null</scriptText></con:configuration></con:assertion><con:assertion type="GroovyScriptAssertion" name="Script Assertion - FIELD_FIRST_NAME"><con:configuration><scriptText>import groovy.json.JsonSlurper 
+def response = messageExchange.response.responseContent
+def slurper = new JsonSlurper()
+def json = slurper.parseText response
+
+assert json.errors.errors[0].field == "mandatoryFieldEmpty.error"</scriptText></con:configuration></con:assertion><con:credentials><con:username>tfl-user</con:username><con:password>w3b53rv1c3s#$</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/><con:parameterOrder/></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

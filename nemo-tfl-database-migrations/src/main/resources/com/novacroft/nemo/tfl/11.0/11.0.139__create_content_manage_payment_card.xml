@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.139">
+        <sql splitStatements="false">
+            <![CDATA[
+BEGIN
+  ${schemaName}.content_installer.install('ManagePaymentCard.title', 'Manage Payment Cards');
+  ${schemaName}.content_installer.install('ManagePaymentCard.breadcrumb.link', 'Manage Payment Cards');
+  ${schemaName}.content_installer.install('ManagePaymentCard.breadcrumb.url', 'ManagePaymentCard.htm');
+  ${schemaName}.content_installer.install('ManagePaymentCard.breadcrumb.tip', 'Manage Payment Cards');
+  ${schemaName}.content_installer.install('ManagePaymentCard.link', 'Manage Payment Cards');
+  ${schemaName}.content_installer.install('ManagePaymentCard.url', 'ManagePaymentCard.htm');
+  ${schemaName}.content_installer.install('ManagePaymentCard.tip', 'Manage Payment Cards');
+  ${schemaName}.content_installer.install('PaymentCard.obfuscatedPrimaryAccountNumber.label', 'Card Number');
+  ${schemaName}.content_installer.install('PaymentCard.firstName.label', 'Card Holder First Name');
+  ${schemaName}.content_installer.install('PaymentCard.lastName.label', 'Card Holder Last Name');
+  ${schemaName}.content_installer.install('PaymentCard.expiryDate.label', 'Card Expiry Date');
+  ${schemaName}.content_installer.install('PaymentCard.address.label', 'Card Address');
+  ${schemaName}.content_installer.install('PaymentCard.nickName.label', 'Nick Name');
+  ${schemaName}.content_installer.install('PaymentCard.inUse.label', 'In Use?');
+  ${schemaName}.content_installer.install('PaymentCard.inUse.tip',
+                                          'This payment card is currently used for Oyster card auto top ups.');
+  ${schemaName}.content_installer.install('PaymentCard.deleteFlag.label', 'Delete?');
+  ${schemaName}.content_installer.install('PaymentCard.edit.label', 'Edit');
+  ${schemaName}.content_installer.install('deletePaymentCardInUse.error', 'Payment card is in use and must not be deleted.');
+  ${schemaName}.content_installer.install('noChangesToSave.error', 'No changes to save.');
+  ${schemaName}.content_installer.install('paymentGateway.unavailable.error',
+                                          'The payment service is not currently available.  Please try again later.');
+  ${schemaName}.content_installer.install('EditPaymentCard.title', 'Edit Payment Card');
+  ${schemaName}.content_installer.install('EditPaymentCard.breadcrumb.link', 'Edit Payment Card');
+  ${schemaName}.content_installer.install('EditPaymentCard.breadcrumb.url', 'EditPaymentCard.htm');
+  ${schemaName}.content_installer.install('EditPaymentCard.breadcrumb.tip', 'Edit Payment Card');
+  ${schemaName}.content_installer.install('EditPaymentCard.link', 'Edit Payment Card');
+  ${schemaName}.content_installer.install('EditPaymentCard.url', 'EditPaymentCard.htm');
+  ${schemaName}.content_installer.install('EditPaymentCard.tip', 'Edit Payment Card');
+  ${schemaName}.content_installer.install('PaymentCard.fullName.label', 'Card Holder Name');
+  ${schemaName}.content_installer.install('PaymentCard.heading', 'Payment Card');
+  ${schemaName}.content_installer.install('noPaymentCardRecordsFound.text', 'You have not saved any payment cards.');
+  ${schemaName}.content_installer.install('paymentCardInUse.text',
+                                          'This payment card is linked to an Oyster card for auto top ups.');
+  ${schemaName}.content_installer.install('deleteLinkedPaymentCardNotAllowed.error',
+                                          'This payment card cannot be deleted because it is linked to an Oyster card for auto top ups.');
+  ${schemaName}.content_installer.install('paymentCardExpired.text', 'This card has expired.');
+  ${schemaName}.content_installer.install('EditPaymentCard.delete.button.tip', 'Delete this payment card');
+  ${schemaName}.content_installer.install('EditPaymentCard.delete.button.label', 'Delete');
+END;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,43 @@
+/**************************************************
+	M020 - on this page
+
+* Author: Alex Faunt
+* Created: 22/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M020-on-this-page
+
+**************************************************/
+
+ul.on-this-page-list {
+  list-style-type: none;
+  margin: 0;
+
+  + .on-this-page-list {
+    margin-bottom: 20px;
+  }
+
+  > li {
+    border-bottom: 1px solid $lighter-grey-border-colour;
+    padding: 9px 15px 9px 0px;
+
+    > a {
+      position: relative;
+      min-height: 15px;
+      padding-left: 24px;
+      line-height: 21px;
+      display: inline-block;
+
+      &:after {
+        content: "";
+        display: block;
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 5px;
+        top: 8px;
+        border-style: solid;
+        border-width: 6px 5px;
+        border-color: $linkcolour transparent transparent;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="14.0.13" >
+	<sql splitStatements="false">
+            <![CDATA[
+BEGIN
+   content_installer.install('TopUpTicket.heading', 'Top up and buy tickets');
+   content_installer.install('manageAutoTopUp.button.label', 'Update Auto top-up');
+END;
+]]>
+        </sql>
+	</changeSet>
+</databaseChangeLog>

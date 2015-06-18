@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.13" context="nemo_development">
+         <insert schemaName="${schemaName}" tableName="FATU_CASE">
+            <column name="ID" valueNumeric="1"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="MODIFIEDUSERID" value="null"/>
+            <column name="MODIFIEDDATETIME" value="null"/>
+            <column name="CASEREFERENCENUMBER" valueNumeric="1"/>
+            <column name="CASESTATUS" value="Open"/>
+            <column name="CASEPROGRESSIONSTATUS" value="Unsettled"/>
+            <column name="FAILEDAUTOTOPUPAMOUNT" valueNumeric="2000"/>
+            <column name="CARDNUMBER" valueNumeric="030000000515"/>
+            <column name="RESETTLEMENTENDDATE" value="null"/>
+            <column name="CASENOTE" value="Customer not liable with Failed AutoTopUp"/>
+            <column name="CUSTOMERID" valueNumeric="5001"/>
+            <column name="CARDID" valueNumeric="5001"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        <insert schemaName="${schemaName}" tableName="FATU_PAYMENTDETAIL">
+            <column name="ID" valueNumeric="1"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="MODIFIEDUSERID" value="null"/>
+            <column name="MODIFIEDDATETIME" value="null"/>
+            <column name="ACTORS" value="nemo-business@novacroft.com"/>
+            <column name="CUSTOMERID" valueNumeric="5001"/>
+            <column name="FATUCASEID" valueNumeric="1"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        <insert schemaName="${schemaName}" tableName="FATU_HISTORY">
+           <column name="ID" valueNumeric="1"/>
+           <column name="CREATEDUSERID" value="Installer"/>
+           <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+           <column name="MODIFIEDUSERID" value="null"/>
+           <column name="MODIFIEDDATETIME" value="null"/>
+           <column name="HOTLISTDATE" valueComputed="SYSDATE"/>
+           <column name="REFUNDDATE" valueComputed="SYSDATE"/>
+           <column name="AUTOTOPUPDATE" valueComputed="SYSDATE"/>
+           <column name="RESETTLEMENTATTEMPTDATE" valueComputed="SYSDATE"/>
+           <column name="CASENOTE" value="Customer not liable with Failed AutoTopUp"/>
+           <column name="ACTOR" value="nemo-business1@novacroft.com"/>
+           <column name="CASESTATUS" value="Closed"/>
+           <column name="AUTOTOPUPAMOUNT" valueNumeric="2000"/>
+           <column name="CUSTOMERID" valueNumeric="5001"/>
+           <column name="FATUCASEID" valueNumeric="1"/>
+           <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+           
+           <column name="ID" valueNumeric="2"/>
+           <column name="CREATEDUSERID" value="Installer"/>
+           <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+           <column name="MODIFIEDUSERID" value="null"/>
+           <column name="MODIFIEDDATETIME" value="null"/>
+           <column name="HOTLISTDATE" valueComputed="SYSDATE"/>
+           <column name="REFUNDDATE" valueComputed="SYSDATE"/>
+           <column name="AUTOTOPUPDATE" valueComputed="SYSDATE"/>
+           <column name="RESETTLEMENTATTEMPTDATE" valueComputed="SYSDATE"/>
+           <column name="CASENOTE" value="Customer liable with Failed AutoTopUp"/>
+           <column name="ACTOR" value="nemo-business2@novacroft.com"/>
+           <column name="CASESTATUS" value="Open"/>
+           <column name="AUTOTOPUPAMOUNT" valueNumeric="3500"/>
+           <column name="CUSTOMERID" valueNumeric="5001"/>
+           <column name="FATUCASEID" valueNumeric="1"/>
+           <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+       </insert>
+    </changeSet>
+</databaseChangeLog>

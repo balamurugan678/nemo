@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>content.js Unit Tests</title>
+    <link rel="stylesheet" href="../resources/qunit-1.12.0.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../resources/qunit-1.12.0.js"></script>
+<script src="../../main/webapp/scripts/jquery.min.js"></script>
+<script src="../../main/webapp/scripts/jquery-ui.js"></script>
+<script src="../../main/webapp/scripts/goodwill.js"></script>
+
+<div id="addGoodwillSection"></div>
+<div id="loadingGoodwillSection"></div>
+<div id="goodwillAccordian"></div>
+<select id="selectGoodwillReason">
+    <option value="1">One</option>
+    <option value="2" selected="selected">Two</option>
+    <option value="3">Three</option>
+</select>
+<div id="goodwillOtherText">
+	<input type="text" value="Goodwill Other Text"></input>
+</div>
+
+<script>
+    $(document).ready(function () {
+        
+        module("initialisegoodwillsection");
+        test("should initialise goodwill section", function () {
+            initialisegoodwillsection();
+            ok(!$('#addGoodwillSection').is(':visible'));
+            ok(!$('#loadingGoodwillSection').is(':visible'));
+            ok($('#goodwillAccordian').is(':visible'));
+        });
+        
+        module("showGoodwillVerificationMessage");
+        test("should show goodwill verification dialog", function () {
+        	var extraValidationMessage = "Test Message";
+        	var pleaseSelectLabel = "Please Select...";
+        	showGoodwillVerificationMessage(extraValidationMessage);
+        	ok($( "#goodwillVerificationDialog" ).dialog( "isOpen" ));
+        });
+        test("should not show goodwill verification dialog", function () {
+        	var extraValidationMessage = null;
+        	var pleaseSelectLabel = "Please Select...";
+        	showGoodwillVerificationMessage(extraValidationMessage);
+        	ok(!$( "#goodwillVerificationDialog" ).length);
+        });
+        
+        module("showGoodwillVerificationDialog");
+        test("should show goodwill verification dialog", function () {
+        	var pageUrl = "TestUrl";
+        	showGoodwillVerificationDialog(pageUrl);
+        	ok($( "#goodwillVerificationDialog" ).dialog( "isOpen" ));
+        });
+        
+        module("showGoodwillReasonText");
+        test("should show goodwill reason text in hidden div", function () {
+        	var extraValidationMessage = "Test Message";
+        	showGoodwillReasonText(extraValidationMessage);
+        	ok($( "#goodwillReasonMessageDiv" ).dialog( "isOpen" ));
+        });
+        
+        module("showOrHideGoodwillOtherText");
+        test("should hide goodwill other text in shown div", function () {
+        	showOrHideGoodwillOtherText("Other");
+        	ok($('#goodwillOtherText').is(':visible'));
+        });
+        
+        module("showOrHideGoodwillOtherText");
+        test("should show goodwill other text in hidden div", function () {
+        	showOrHideGoodwillOtherText("Not Other");
+        	ok(!$('#goodwillOtherText').is(':visible'));
+        });
+
+    });
+</script>
+</body>
+</html>

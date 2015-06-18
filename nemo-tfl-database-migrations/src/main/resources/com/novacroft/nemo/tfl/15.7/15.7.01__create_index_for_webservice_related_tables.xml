@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.7.01">
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="CUSTOMER" indexName="CUSTOMER_IDX8" unique="true">
+	        <column name="EXTERNALID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="CUSTOMERORDER" indexName="CUSTOMERORDER_IDX2" unique="true">
+	        <column name="EXTERNALID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="CART" indexName="CART_IDX1" unique="true">
+	        <column name="EXTERNALID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="ITEM" indexName="ITEM_IDX1" unique="true">
+	        <column name="EXTERNALID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="ITEM" indexName="ITEM_IDX2" unique="false">
+	        <column name="CARTID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="ITEM" indexName="ITEM_IDX3" unique="false">
+	        <column name="CUSTOMERORDERID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="ITEM" indexName="ITEM_IDX4" unique="true">
+	        <column name="RELATEDITEMID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="SETTLEMENT" indexName="SETTLEMENT_IDX4" unique="true">
+	        <column name="EXTERNALID"/>
+	    </createIndex>
+	    <createIndex schemaName="${schemaName}" tablespace="${indexTablespace}" tableName="CARD" indexName="CARD_IDX3" unique="true">
+	        <column name="EXTERNALID"/>
+	    </createIndex>
+    </changeSet>
+</databaseChangeLog>

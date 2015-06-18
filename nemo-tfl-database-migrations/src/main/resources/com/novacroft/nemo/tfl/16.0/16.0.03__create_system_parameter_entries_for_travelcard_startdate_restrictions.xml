@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.03">
+     <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   system_parameter_installer.install('maximumHourOfDayBeforeDenyingNextDayTravelStart', '23', 'Hour of the day before user can select travel date as tomorrow.');
+  				   system_parameter_installer.install('maximumMinutesBeforeDenyingNextDayTravelStart', '30', 'Minute of the day before user can select travel date as tomorrow.');
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,100 @@
+/**************************************************
+Key Improvements
+
+* Author: John Boyle
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C21+-+Key+improvements+box
+
+**************************************************/
+
+.key-improvements {
+  background: url('/static/' +$version+ '/images/key-improvements-tile.png') 0 0;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: $subtler-grey;
+  .key-improvements-title {
+    display: block;
+    width: 100%;
+    padding: 7px;
+    font-size: 13pt;
+    &.line-text {
+      font-weight: normal;
+      text-shadow: none;
+    }
+    &.transport-mode {
+      background: $darker-subtle-grey;
+      color: #000;
+      position: relative;
+      padding-right: 40px;
+      &:after {
+        @extend %standard-sprite;
+        content: "";
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+      }
+      &.bus {
+        &:after {
+          @include svg-icon-position-only(11, 1);
+        }
+      }
+      &.tube {
+        &:after {
+          @include svg-icon-position-only(34, 1);
+        }
+      }
+      &.cable-car {
+        &:after {
+          @include svg-icon-position-only(16, 1);
+        }
+      }
+      &.tram {
+        &:after {
+          @include svg-icon-position-only(36, 2);
+        }
+      }
+      &.dlr, &.docklands, &.docklands-light-railway {
+        &:after {
+          @include svg-icon-position-only(35, 1);
+        }
+      }
+      &.river {
+        &:after {
+          @include svg-icon-position-only(13, 1);
+        }
+      }
+      &.overground {
+        &:after {
+          @include svg-icon-position-only(34, 3);
+        }
+      }
+      &.coach {
+        &:after {
+          @include svg-icon-position-only(36, 1);
+        }
+      }
+      &.cycling {
+        &:after {
+          @include svg-icon-position-only(10, 1);
+        }
+      }
+      &.walking {
+        &:after {
+          @include svg-icon-position-only(9, 1);
+        }
+      }
+    }
+  }
+  .key-improvements-content {
+    padding: 10px 5px;
+    background: white;
+    ul {
+      margin-bottom: 0;
+      li {
+        margin-bottom: 2px;
+      }
+    }
+  }
+}

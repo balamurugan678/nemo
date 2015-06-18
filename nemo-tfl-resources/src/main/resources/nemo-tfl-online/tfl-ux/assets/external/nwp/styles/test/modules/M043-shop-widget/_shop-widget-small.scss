@@ -1,0 +1,82 @@
+/**************************************************
+	M043-shop-widget
+* Author: Andrew Spencer
+* Created: 27/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M043-Tfl-Shop
+**************************************************/
+
+.shop-widget {
+  background: $subtle-grey;
+  border-bottom: 3px solid $light-grey-border-colour;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .shop-header {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+
+  ul {
+    margin-left: 0px;
+    margin-bottom: 0px;
+    li {
+      list-style: none;
+      margin-bottom: 10px;
+      clear: both;
+
+      .shop-item {
+        position: relative;
+        display: block;
+        height: 97px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .shop-item-image {
+          height: 97px;
+          width: 97px;
+          float: left;
+          overflow: hidden;
+
+          > img {
+            height: 100%;
+          }
+        }
+
+        .shop-item-description {
+          top: 50%;
+          margin-left: 120px;
+          color: black;
+          text-decoration: none;
+          .item-price {
+            margin-top: 5px;
+            color: black;
+          }
+        }
+
+        &:after {
+          content: "";
+          @extend %standard-sprite;
+          @include svg-icon(21, 1);
+          position: absolute;
+          right: 0;
+          top: 35px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      a, a:hover, a:visited, a:active {
+
+        &:focus, &:hover {
+          text-decoration: none;
+          @include custom-colour-hover-and-focus($jp-subtle-blue);
+        }
+      }
+
+    }
+  }
+
+}

@@ -1,0 +1,1 @@
+This is the Elements folder, it contains styling for small elements, for example buttons, or icons. Things in here should only include components for which the mark up is never going to change. They do not correlate to Partial Views, the code is just reused throughout.

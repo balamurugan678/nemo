@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.33">
+        <sql splitStatements="false">
+            <![CDATA[
+BEGIN
+   content_installer.install('VerifySecurityQuestion.title', 'Oyster online - Transport for London - Register card');
+   content_installer.install('VerifySecurityQuestion.verifySecurityQuestion.heading', 'Verify Security Question');
+   content_installer.install('VerifySecurityQuestion.breadcrumb.link', 'Verify Security Question');
+   content_installer.install('SecurityQuestion.breadcrumb.link', 'Security Question');
+   content_installer.install('VerifySecurityQuestion.cardRegistration.heading', 'Card Registration');
+   content_installer.install('VerifySecurityQuestion.info.text', 'Please enter security question and answer choosen while registering the card. ');
+END;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

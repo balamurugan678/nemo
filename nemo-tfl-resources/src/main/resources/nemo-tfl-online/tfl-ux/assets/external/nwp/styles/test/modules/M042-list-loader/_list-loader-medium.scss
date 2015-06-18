@@ -1,0 +1,305 @@
+/**************************************************
+	M042-list-loader
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M042-list-loader
+**************************************************/
+
+.list-loader {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .list-loader-wrapper {
+    width: 50%;
+    padding-right: 20px;
+    float: left;
+  }
+
+  .list-loader-options {
+    border-bottom: 0px none;
+
+    > .list-loader-option {
+
+      > .list-loader-link {
+        > a {
+          padding: 10px 32px 6px 10px;
+          &.with-icon {
+            padding-left: 42px;
+          }
+
+          &:after {
+
+            @extend %standard-sprite;
+            @include svg-icon-position-only(21, 1);
+            right: 0px;
+            left: auto;
+            margin-top: -16px;
+            border: none 0px;
+
+          }
+        }
+      }
+
+      &.expanded {
+        position: relative;
+        &:after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          margin-top: -9px;
+          border-width: 9px;
+          border-style: solid;
+          border-color: transparent transparent transparent $darker-subtle-grey;
+          left: 100%;
+        }
+
+        &:first-child {
+          > .list-loader-link {
+            padding-top: 10px;
+          }
+          &:after {
+            margin-top: -4px;
+          }
+        }
+        > .list-loader-link {
+          padding: 0;
+
+          > a {
+            background: #fff;
+            color: $dark-grey;
+            border-color: $light-grey-border-colour;
+            font-weight: bold;
+
+            &:hover, &:focus {
+              @include custom-colour-hover-and-focus($jp-subtle-blue);
+            }
+
+            &:after {
+              @include svg-icon-position-only(19, 1);
+              margin-top: -16px;
+            }
+          }
+        }
+
+        + .list-loader-option > .list-loader-link {
+          padding: 0;
+
+          > a {
+            border-top: 0px;
+          }
+        }
+        + .list-loader-option:last-child {
+          > .list-loader-link {
+            padding-bottom: 10px;
+          }
+        }
+        + .list-loader-option.last {
+          > .list-loader-link {
+            padding-bottom: 10px;
+          }
+        }
+        .list-loader-result {
+          display: none;
+        }
+      }
+    }
+  }
+  .list-loader-results {
+    width: 50%;
+    float: left;
+
+    &.hidden {
+      display: none;
+    }
+
+    .list-loader-result {
+      display: block;
+      padding: 0;
+    }
+
+    h4.medium-large {
+      padding: 10px;
+      margin: 0;
+      background: $jp-light-subtle-blue;
+    }
+    .routes-list-wrapper {
+      padding: 10px 10px 20px;
+      background: $jp-light-subtle-blue;
+    }
+    .routes-list {
+      background: $jp-light-subtle-blue;
+      margin: 0;
+      width: 100%;
+    }
+
+    .bus-list {
+      > li {
+        > a {
+          border-bottom: 1px solid $light-grey-border-colour;
+          border-top: 1px solid $light-grey-border-colour;
+          border-right: 1px solid $light-grey-border-colour;
+          font-weight: 1em;
+        }
+
+      }
+
+      &.groups {
+        width: auto;
+
+        &:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        > li {
+
+          &.list-loader-option {
+            padding-left: 10px;
+            .list-loader-link > a {
+              border-left: 1px solid $light-grey-border-colour;
+            }
+            + .list-loader-option {
+              padding-right: 10px;
+              padding-left: 0px;
+              .list-loader-link > a {
+                border-left: 0px none;
+              }
+            }
+          }
+
+          > a {
+            background-color: #fff;
+          }
+
+          &.list-loader-result {
+            display: none;
+
+            &.expanded {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .list-loader-option {
+      background-color: $jp-light-subtle-blue;
+
+      &.expanded, &.prev {
+        position: relative;
+        z-index: 0;
+        padding-top: 0px;
+        padding-bottom: 10px;
+        > .list-loader-link {
+          padding: 0;
+        }
+      }
+    }
+
+    .list-loader-option.expanded {
+      + .list-loader-option {
+        padding-top: 0px;
+        padding-bottom: 10px;
+        > .list-loader-link {
+          padding: 0;
+        }
+      }
+    }
+
+    .list-loader-link {
+      background-color: $jp-light-subtle-blue;
+      > a {
+        border-top: 1px solid $light-grey-border-colour;
+        border-left: 0px none;
+      }
+    }
+    .bus-list {
+      .list-loader-result.expanded {
+        padding-left: 10px;
+        padding-right: 10px;
+        z-index: 4;
+        width: 100%;
+
+        > .bus-list {
+          margin-bottom: 1px;
+          li:nth-child(-n+5) {
+            @extend %top-drop-shadow;
+            &:after {
+              opacity: 0.1;
+            }
+          }
+        }
+
+        + .list-loader-option {
+          padding-top: 10px;
+          position: relative;
+          z-index: 0;
+
+          + .list-loader-option {
+            padding-top: 10px;
+          }
+        }
+        + .list-loader-result {
+          + .list-loader-option {
+            padding-top: 10px;
+            position: relative;
+            z-index: 0;
+
+            + .list-loader-option {
+              padding-top: 10px;
+            }
+          }
+
+        }
+
+      }
+    }
+  }
+
+  .list-loader-link > a.with-icon {
+    > [class*=icon] {
+      right: auto;
+      left: 5px;
+    }
+  }
+  .expanded .list-loader-link > a.with-icon {
+    .tube-icon {
+      @include svg-icon-position-only(34, 1);
+    }
+    .bus-icon {
+      @include svg-icon-position-only(11, 1);
+    }
+    .tram-icon {
+
+    }
+    .river-icon {
+      @include svg-icon-position-only(13, 1);
+    }
+  }
+
+}
+
+.bus-list.groups > li {
+  &.bottom-bar {
+    background-color: $jp-light-subtle-blue;
+    height: 10px;
+    width: 100%;
+  }
+
+  &.list-loader-result.expanded {
+    ~ .bottom-bar {
+      display: none;
+    }
+    ~ .list-loader-option ~ .bottom-bar {
+      display: block;
+    }
+  }
+}
+
+.bus-list {
+  border-left: 0px none;
+}
+

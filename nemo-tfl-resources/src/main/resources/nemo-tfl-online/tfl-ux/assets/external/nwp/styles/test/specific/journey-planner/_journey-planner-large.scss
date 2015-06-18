@@ -1,0 +1,144 @@
+
+#more-journey-options {
+  @extend %c8;
+}
+
+#save-journey-planner-preferences {
+  left: -3.3%;
+  width: 106.6%;
+  padding: 15px 3.4%;
+}
+
+.checkbox-list.modes-of-transport {
+  position: relative;
+
+  .select-deselect-option {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  ul {
+    border: none;
+    li:first-child, li:nth-child(2) {
+      border-top: 1px solid $light-grey-border-colour;
+    }
+  }
+  li {
+    float: left;
+    width: 48.5%;
+    border: 1px solid $light-grey-border-colour;
+    border-top: none;
+    &.odd {
+      margin-right: 3%;
+      //margin-left: 0;
+      &.coach {
+        border-bottom: 1px solid $light-grey-border-colour;
+      }
+    }
+    &.last {
+      border-bottom: 1px solid $light-grey-border-colour;
+    }
+    &.focus {
+      border: 1px dashed $linkcolour;
+      margin-top: -1px;
+      margin-left: 0;
+      &:nth-child(1), &:nth-child(2) {
+        margin-top: 0;
+        border-top: 1px dashed $linkcolour;
+      }
+    }
+  }
+}
+
+.route-type {
+  width: 48.5%;
+}
+
+.accessibility-options {
+  width: 60%;
+}
+
+.journey-planner-results {
+  .auto-expand {
+    .always-visible {
+      width: 33%;
+    }
+    .start-hidden {
+      width: 67%;
+    }
+  }
+}
+
+.showing-full-details {
+  .journey-planner-results {
+    .summary-results {
+      width: 33*(100%-(2*$gridGutterWidth))/100;
+    }
+    .auto-expand {
+      .always-visible {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.full-results-container {
+  width: 67*(100%-(2*$gridGutterWidth))/100;
+}
+
+.journey-planner-results {
+  .checkbox-list.modes-of-transport {
+    li {
+      &:nth-child(3) {
+        border-top: 1px solid $light-grey-border-colour;
+      }
+      width: 32%;
+      margin: 0;
+      &.odd {
+        margin: 0;
+      }
+      &:nth-child(3n) {
+        margin-left: 2%;
+      }
+      &:nth-child(3n+1) {
+        margin-right: 2%;
+      }
+      &:nth-child(7) {
+        border-bottom: 1px solid $light-grey-border-colour;
+      }
+      &.focus {
+        margin-top: -1px;
+        border: 1px dashed $linkcolour;
+        &:nth-child(3n) {
+          margin-left: 2%;
+        }
+        &:nth-child(3) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .update-buttons {
+    width: 25%;
+  }
+}
+
+.accessibility-details {
+  .accessibility-group {
+    float: left;
+  }
+  .sub-heading {
+    float: left;
+    min-width: 175px;
+  }
+}
+
+.leg-map {
+  height: 350px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#jp-hero .expanded.main-and-aside {
+  height: 768px;
+}

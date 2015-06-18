@@ -1,0 +1,38 @@
+/**************************************************
+	M045-image-list
+* Author: John Boyle
+* Created: 03/10/2013
+* Pattern library URL:
+**************************************************/
+
+ul.image-list {
+  width: 100%;
+  margin-left: 0;
+  li {
+    position: absolute;
+    width: 100%;
+    &.image-list-title {
+      background: $darker-subtle-grey;
+      padding: 10px;
+      list-style: none;
+      position: relative;
+    }
+    &.image-item {
+      position: relative;
+      list-style: none;
+      padding: 15px 2px;
+      border-bottom: solid 1px $lighter-grey-border-colour;
+      min-height: 190px;
+      .image-item-text {
+        padding-left: 50%;
+      }
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      margin-top: -77px;
+      margin-left: -120px;
+    }
+  }
+}

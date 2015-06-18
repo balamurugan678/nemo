@@ -1,0 +1,261 @@
+/* line 50, all/_placeholders.scss */
+.main, .aside {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 94.864%;
+}
+
+/* line 2, medium/_forms-medium.scss */
+.form-tooltip {
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    width: 200px;
+}
+
+/* line 7, medium/_forms-medium.scss */
+.form-tooltip:before,
+.form-tooltip .before {
+    top: 10px;
+    left: -7.07107px;
+    border-top: 0;
+    border-bottom: 1px solid #CCD1E5;
+    border-left: 1px solid #CCD1E5;
+}
+
+/* line 1, medium/_global-medium.scss */
+.csc-col {
+    float: left;
+    width: 48%;
+    margin-left: 4%;
+}
+
+/* line 5, medium/_global-medium.scss */
+.csc-col:first-child {
+    margin-left: 0;
+}
+
+/* line 12, medium/_global-medium.scss */
+.headline-container.plain h1 {
+    font-size: 36px;
+}
+
+/* line 14, medium/_global-medium.scss */
+.headline-container.plain h1.signing {
+    font-size: 50px;
+}
+
+/* line 21, medium/_global-medium.scss */
+h1 {
+    line-height: 120%;
+    font-size: 50px;
+}
+
+/* line 34, medium/_global-medium.scss */
+.medium, .small-medium, .medium-large, .container.medium, .container.small-medium, .container.medium-large {
+    display: block;
+}
+
+/* line 38, medium/_global-medium.scss */
+.large, .small, .container.large, .container.small {
+    display: none;
+}
+
+/* line 42, medium/_global-medium.scss */
+.form-with-tooltips {
+    width: 50%;
+}
+
+/* line 47, medium/_global-medium.scss */
+.csc-toggle-content-small-only .csc-toggle-content-start-hidden {
+    display: block;
+}
+
+/* line 50, medium/_global-medium.scss */
+.csc-toggle-content-small-only .csc-toggle-controls {
+    display: none;
+}
+
+/* line 1, medium/_my-cards-medium.scss */
+.csc-card-link {
+    padding-right: 0;
+}
+
+/* line 5, medium/_my-cards-medium.scss */
+.csc-card-details {
+    margin-bottom: 0;
+}
+
+/* line 7, medium/_my-cards-medium.scss */
+.csc-card-details .right-arrow {
+    right: 0;
+}
+
+/* line 12, medium/_my-cards-medium.scss */
+.csc-card-status {
+    position: absolute;
+    top: 10px;
+    right: 32px;
+    width: 40%;
+}
+
+/* line 1, medium/_travel-statement-medium.scss */
+.search-filter {
+    position: relative;
+}
+
+/* line 4, medium/_travel-statement-medium.scss */
+.filter-wrapper {
+    width: 47.5%;
+}
+
+/* line 8, medium/_travel-statement-medium.scss */
+.csc-time-period-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding-top: 0;
+    border-top: 0;
+}
+
+/* line 14, medium/_travel-statement-medium.scss */
+.csc-time-period-wrapper .vertically-centred {
+    margin-top: -16px;
+}
+
+/* line 19, medium/_travel-statement-medium.scss */
+.csc-journey-div .csc-from-and-to {
+    padding-right: 150px;
+}
+
+/* line 23, medium/_travel-statement-medium.scss */
+.csc-journey-div .csc-price-and-icons {
+    display: inline;
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* line 30, medium/_travel-statement-medium.scss */
+.csc-journey-div .download-box {
+    width: 47.5%;
+    float: left;
+    margin-bottom: 0;
+}
+
+/* line 34, medium/_travel-statement-medium.scss */
+.csc-journey-div .download-box:last-child {
+    margin-left: 5%;
+}
+
+/* line 2, medium/_dashboard-medium.scss */
+.csc-dashboard-cards .csc-card-link {
+    padding-right: 10px;
+}
+
+/* line 6, medium/_dashboard-medium.scss */
+.csc-dashboard-cards .csc-card-details {
+    margin-bottom: 10px;
+}
+
+/* line 8, medium/_dashboard-medium.scss */
+.csc-dashboard-cards .csc-card-details .right-arrow {
+    right: -10px;
+}
+
+/* line 13, medium/_dashboard-medium.scss */
+.csc-dashboard-cards .csc-card-status {
+    right: auto;
+    width: auto;
+    top: auto;
+    position: relative;
+}
+
+/* line 21, medium/_dashboard-medium.scss */
+.headline-container.with-dashboard-icons {
+    padding-right: 290px;
+    position: relative;
+}
+
+/* line 24, medium/_dashboard-medium.scss */
+.headline-container.with-dashboard-icons .csc-notification-icons {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+/* line 33, medium/_dashboard-medium.scss */
+.with-dashboard-icons.one-icon {
+    padding-right: 70px;
+}
+
+/* line 36, medium/_dashboard-medium.scss */
+.with-dashboard-icons.two-icons {
+    padding-right: 130px;
+}
+
+/* line 39, medium/_dashboard-medium.scss */
+.with-dashboard-icons.three-icons {
+    padding-right: 180px;
+}
+
+/* line 42, medium/_dashboard-medium.scss */
+.with-dashboard-icons.four-icons {
+    padding-right: 230px;
+}
+
+/* line 49, medium/_dashboard-medium.scss */
+.csc-section .csc-section-heading {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom-width: 1px;
+}
+
+/* line 1, medium/_journey-view-medium.scss */
+.csc-journey-from-to {
+    padding: 5px 5px 5px 120px;
+}
+
+/* line 5, medium/_journey-view-medium.scss */
+.csc-journey-from-to-line {
+    padding: 10px 10px 0 75px;
+}
+
+.csc-toggle-content-always-visible {
+    cursor: default;
+}
+
+.collapsed-summary {
+    display: none;
+}
+
+.expanded.todays-travel .todays-travel-statement.show,
+.todays-travel-statement.show {
+    display: none;
+}
+
+.show-statement.todays-travel .todays-travel-statement.show {
+    display: block;
+}
+
+#intraday-show .icon {
+    display: none;
+}
+
+#intraday-show.display-as-button .icon {
+    display: block;
+}
+
+.no-js #intraday-show.display-as-button .icon {
+    display: none;
+}
+
+#intraday-show.display-as-button {
+    cursor: pointer;
+}
+
+.no-js #intraday-show.display-as-button {
+    cursor: default;
+}

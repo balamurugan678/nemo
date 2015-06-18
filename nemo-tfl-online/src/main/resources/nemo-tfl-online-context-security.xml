@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/security"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <http disable-url-rewriting="true" use-expressions="true" entry-point-ref="singleSignOnAuthenticationEntryPoint">
+        <intercept-url pattern="/fonts/**" access="permitAll"/>
+        <intercept-url pattern="/images" access="permitAll"/>
+        <intercept-url pattern="/scripts" access="permitAll"/>
+        <intercept-url pattern="/styles/images" access="permitAll"/>
+        <intercept-url pattern="/tfl-ux/assets/external/nwp/styles/test/elements/E005-placeholders" access="permitAll"/>
+        <intercept-url pattern="/tfl-header-footer" access="permitAll"/>
+
+		<intercept-url pattern="/AutoLogin.htm" access="permitAll"/>
+        <intercept-url pattern="/Login.htm" access="permitAll"/>
+        <intercept-url pattern="/OysterHome.htm" access="permitAll"/>
+        <intercept-url pattern="/OpenAccount.htm" access="permitAll"/>
+        <intercept-url pattern="/OrderOysterCard.htm" access="permitAll"/>
+        <intercept-url pattern="/Basket.htm" access="permitAll"/>
+        <intercept-url pattern="/PayAsYouGo.htm" access="permitAll"/>
+        <intercept-url pattern="/BusPass.htm" access="permitAll"/>
+        <intercept-url pattern="/TravelCard.htm" access="permitAll"/>
+        <intercept-url pattern="/TopUpTicket.htm" access="permitAll" />
+        <intercept-url pattern="/Cart.htm" access="permitAll"/>
+        <intercept-url pattern="/AccountDetails.htm" access="permitAll"/>
+        <intercept-url pattern="/findAddress/ajax.htm"  access="permitAll"/>
+        <intercept-url pattern="/UnexpectedError.htm" access="permitAll"/>
+        <intercept-url pattern="/RequestResetPassword.htm" access="permitAll"/>
+        <intercept-url pattern="/ResetPassword.htm" access="permitAll"/>
+        <intercept-url pattern="/CheckoutTermsAndConditions.htm" access="permitAll"/>
+        <intercept-url pattern="/workflow.htm" access="permitAll"/>
+        <intercept-url pattern="/ContentForJavaScript.htm" access="permitAll"/>
+        
+        <intercept-url pattern="/SingleSignOut.htm" access="permitAll" />
+
+        <intercept-url pattern="/tfl-ux/assets/external/nwp/styles/test/elements/E005-placeholders"
+                       access="hasRole('ROLE_USER')"/>
+
+        <form-login login-page="/OysterHome.htm"/>
+
+        <logout delete-cookies="JSESSIONID"/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider ref="authenticationProvider"/>
+    </authentication-manager>
+
+    <beans:bean name="passwordEncoder" class="com.novacroft.nemo.tfl.common.security.TflPasswordEncoder"/>
+
+    <beans:bean name="userDetailsService" class="com.novacroft.nemo.tfl.common.security.TflUserDetailsService">
+        <beans:property name="dataService" ref="customerDataService"/>
+    </beans:bean>
+
+    <beans:bean name="authenticationProvider" class="com.novacroft.nemo.tfl.common.security.TflAuthenticationProvider">
+        <beans:property name="passwordEncoder" ref="passwordEncoder"/>
+        <beans:property name="userDetailsService" ref="userDetailsService"/>
+    </beans:bean>
+    
+    <beans:bean name="singleSignOnAuthenticationEntryPoint" class="com.novacroft.nemo.tfl.common.security.SingleSignOnAuthenticationEntryPoint">
+    	<beans:property name="loginFormUrl" value="/OysterHome.htm" />
+    </beans:bean>
+
+</beans:beans>

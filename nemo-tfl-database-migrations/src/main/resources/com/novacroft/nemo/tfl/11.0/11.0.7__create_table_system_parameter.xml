@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.7">
+
+        <createTable tableName="systemparameter" schemaName="${schemaName}" tablespace="${tableTablespace}"
+                     remarks="System parameter">
+            <column name="id" type="number(38)" remarks="Surrogate primary key - generated from SYSTEMPARAMETER_SEQ sequence">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="systemparameter_pk"/>
+            </column>
+            <column name="createduserid" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createddatetime" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modifieduserid" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="modifieddatetime" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="code" type="varchar2(64)" remarks="Code to reference the parameter by">
+                <constraints nullable="false" unique="true" uniqueConstraintName="systemparameter_uk1"/>
+            </column>
+            <column name="value" type="varchar2(1024)" remarks="Parameter value">
+                <constraints nullable="false"/>
+            </column>
+            <column name="purpose" type="varchar2(256)" remarks="Description of what the parameter controls">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+
+        <createSequence schemaName="${schemaName}" sequenceName="systemparameter_seq"/>
+
+        <createTable tableName="systemparameter_aud" schemaName="${schemaName}" tablespace="${tableTablespace}"
+                     remarks="System parameter audit">
+            <column name="rev" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="revtype" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="id" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createduserid" type="varchar2(64)"/>
+            <column name="createddatetime" type="date"/>
+            <column name="modifieduserid" type="varchar2(64)"/>
+            <column name="modifieddatetime" type="date"/>
+            <column name="code" type="varchar2(64)"/>
+            <column name="value" type="varchar2(1024)"/>
+            <column name="purpose" type="varchar2(256)"/>
+        </createTable>
+
+    </changeSet>
+</databaseChangeLog>

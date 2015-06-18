@@ -1,0 +1,12 @@
+<%@include file="/WEB-INF/jspf/pageCommon.jspf" %>
+
+    <form:form action="<%= PageUrl.SECURITY_QUESTION %>" commandName="<%= PageCommand.SECURITY_QUESTION %>"
+               cssClass="form-with-tooltips">
+        <div class="box borderless">
+            <to:head2 id="cardRegistration"/>
+            <to:paragraph id="info"/>
+            <%@include file="/shopping/commonSecurityQuestion.jspf"%>
+            <hr>
+            
+        </div>
+    </form:form>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.185">
+        <sql splitStatements="false">
+            <![CDATA[
+-- Run encoding on current customers
+DECLARE
+  CURSOR cu_customers IS
+    SELECT
+      id,
+      firstname,
+      lastname
+    FROM customer;
+  firstname VARCHAR2(100);
+  lastname  VARCHAR2(100);
+BEGIN
+  FOR cu_c IN cu_customers LOOP
+    INSERT INTO metaphoneencoding (
+      ID, CREATEDUSERID, CREATEDDATETIME, CUSTOMERID, FIRSTNAME, LASTNAME
+    ) VALUES (
+      metaphoneencoding_seq.nextval, 'Installer', sysdate, cu_c.id, metaphone(cu_c.firstname), metaphone(cu_c.lastname)
+    );
+  END LOOP;
+  COMMIT;
+  EXCEPTION WHEN OTHERS THEN ROLLBACK;
+END;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.32">
+        <sql splitStatements="false">
+            <![CDATA[
+				BEGIN
+				   content_installer.install('sourceCardIneligibleTransferProduct.text', 'Your source card {0} is not eligible for the Transfer Product. Below you can see a list of the reasons. Please click on the Go Back button to view the other options available');
+				END;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

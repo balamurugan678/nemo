@@ -1,0 +1,343 @@
+/**************************************************
+	M040-select-bus
+
+* Author: Alex Faunt
+* Created: 08/01/2014
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M080-rainbow-list
+
+**************************************************/
+.rainbow-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  @include clearfix();
+
+  border-bottom: 1px solid $light-grey-border-colour;
+
+  .rainbow-list-item {
+    border-top: 1px solid $light-grey-border-colour;
+    position: relative;
+
+    &.expanded {
+      position: relative;
+      z-index: 3;
+      border-top: 1px solid $link-border-colour;
+      border-bottom: 1px solid $link-border-colour;
+
+      &:last-child {
+        margin-bottom: -1px;
+      }
+
+      + .rainbow-list-item {
+        border-top: 0px none;
+      }
+      .rainbow-list-content {
+        display: block;
+      }
+
+      .controls {
+        @extend .minus-icon-blue;
+      }
+    }
+
+    &.link-only {
+      .rainbow-list-link {
+        &:hover, &:focus {
+          .service-name {
+            @include darken-hover-and-focus($darker-subtle-grey, 5%);
+            @include service-colours-darken(5%);
+
+          }
+          .disruption-summary {
+            @include custom-colour-hover-and-focus($jp-subtle-blue);
+          }
+        }
+      }
+      .controls {
+        @extend .right-arrow;
+      }
+    }
+    &.disrupted {
+      .rainbow-list-link {
+        &:hover, &:focus {
+          .service-name {
+            @include darken-hover-and-focus($darker-subtle-grey, 5%);
+            @include service-colours-darken(5%);
+          }
+          .disruption-summary {
+            @include darken-hover-and-focus($disruption-colour, 5%);
+          }
+        }
+      }
+      .disruption-summary {
+        background: $disruption-colour;
+      }
+    }
+  }
+
+  .rainbow-list-link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    @include clearfix();
+  }
+
+  .tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 10px;
+    z-index: 10;
+    display: block;
+
+    + .service-name {
+      padding-left: 20px;
+      background: $darker-subtle-grey;
+      color: $dark-grey;
+    }
+
+    &.default {
+      background: $link-border-colour;
+    }
+  }
+
+  .service-name {
+    padding: 10px;
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    @include transition(background 0.3s);
+    @extend .line-text;
+    @extend %new-johnson;
+    font-weight: normal;
+    text-shadow: none;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: inherit;
+      background: inherit;
+      z-index: 0;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.default {
+      background: $darker-subtle-grey;
+      color: $dark-grey;
+    }
+  }
+
+  .disruption-summary {
+    padding: 10px 38px 10px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+    @include transition(background 0.3s);
+    background: #fff;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      width: inherit;
+      background: inherit;
+      z-index: 0;
+    }
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -16px;
+    display: block;
+    @extend .plus-icon-blue;
+  }
+
+  .rainbow-list-content {
+    color: $dark-grey;
+    display: none;
+    background-color: $disruption-colour;
+    padding-bottom: 30px;
+    position: relative;
+
+    .close-message {
+      position: absolute;
+      right: 10px;
+      bottom: 9px;
+    }
+
+    .section {
+      padding: 12px 10px;
+      margin: 0;
+      border-top: 1px dotted $light-grey-border-colour;
+      position: relative;
+
+      > :first-child {
+        margin-top: 0;
+      }
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.interactive {
+    .disrupted .rainbow-list-link {
+      cursor: pointer;
+      &:hover, &:focus {
+        .service-name {
+          @include darken-hover-and-focus($darker-subtle-grey, 5%);
+          @include service-colours-darken(5%);
+        }
+        .disruption-summary {
+          @include darken-hover-and-focus($disruption-colour, 5%);
+        }
+      }
+    }
+  }
+
+  &.monochrome {
+    .service-name {
+      background: $darker-subtle-grey;
+      color: $dark-grey;
+    }
+    .rainbow-list-item:nth-child(even) {
+      .service-name {
+        background: $subtler-grey;
+      }
+    }
+
+  }
+
+}
+
+// mini board
+
+.rainbow-list-wrapper {
+  margin-bottom: 20px;
+  display: none;
+
+  .good-service-link {
+    border-bottom: 1px solid $light-grey-border-colour;
+    position: relative;
+    display: block;
+    min-height: 40px;
+    @include transition(background 0.3s);
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 0;
+      @extend .right-arrow;
+    }
+
+    .rainbow {
+      width: 50%;
+      display: inline-block;
+      vertical-align: middle;
+
+      > span {
+        display: block;
+        height: 10px;
+        border-top: 1px solid $light-grey-border-colour;
+
+        &:first-child {
+          border-top: 0px none;
+        }
+
+        &.default {
+          background: $darker-subtle-grey;
+        }
+      }
+    }
+
+    .good-service-message {
+      display: inline-block;
+      width: 50%;
+      vertical-align: middle;
+      padding: 10px 32px 10px 10px;
+      color: $dark-grey;
+    }
+
+    &:hover, &:focus {
+      @include custom-colour-hover-and-focus($jp-subtle-blue);
+    }
+  }
+
+  &.width-30 {
+    .service-name {
+      width: 30%;
+    }
+
+    .disruption-summary {
+      width: 70%;
+    }
+  }
+  &.width-40 {
+    .service-name {
+      width: 40%;
+    }
+
+    .disruption-summary {
+      width: 60%;
+    }
+  }
+
+  .rainbow-list-item {
+    opacity: 1;
+    //@include transition(opacity 0.3s linear);
+  }
+
+  &.fade-to-black {
+    .rainbow-list {
+      background-color: #000;
+    }
+    .rainbow-list-item {
+      opacity: 0.9;
+      &.expanded {
+        opacity: 1;
+      }
+    }
+  }
+
+}
+
+.widget-content .rainbow-list {
+  border-bottom: 0px none;
+
+  .rainbow-list-item:first-child {
+    border-top: 0px none;
+  }
+}
+
+.no-js .rainbow-list {
+  .expandable .rainbow-list-content {
+    display: block;
+  }
+}
+
+.board-wrapper .rainbow-list-wrapper {
+  border-top: 1px solid $light-grey-border-colour;
+
+  .rainbow-list-item:first-child {
+    border-top: 0px none;
+  }
+}

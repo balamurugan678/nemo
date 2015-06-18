@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <ctx:property-placeholder location="classpath:nemo-tfl-common.properties, classpath:nemo-mock-single-sign-on.properties"
+                              ignore-unresolvable="true"/>
+
+    <bean id="applicationProperties"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:nemo-tfl-common.properties</value>
+                <value>classpath:nemo-mock-single-sign-on.properties</value>
+            </list>
+        </property>
+    </bean>
+
+
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_single_sign_on.domain"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_single_sign_on.controller"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_single_sign_on.converter"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_single_sign_on.data_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_single_sign_on.service"/>
+
+    <bean id="tilesViewResolver"
+          class="com.novacroft.nemo.common.support.CachingUrlTilesViewResolver"/>
+
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/config/layouts.xml</value>
+                <value>/WEB-INF/tiles/config/pages.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="nemoUserContext" class="com.novacroft.nemo.common.support.NemoUserContextImpl">
+        <property name="userName" value="mock-single-sign-on"/>
+    </bean>
+
+    <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jacksonMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+
+</beans>

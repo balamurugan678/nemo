@@ -1,0 +1,17 @@
+.nearby-results-list-container {
+  padding-top: 10px;
+  background-color: #fff;
+  .showing-map-panel & {
+    padding-top: 0;
+  }
+  .map-panel {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+.active-map .map-wrapper {
+  position: relative;
+}

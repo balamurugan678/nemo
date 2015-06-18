@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="Home" extends="tfl-main-layout">
+        <put-attribute name="pageTitle" value="TfL Batch: Home"/>
+        <put-attribute name="main" value="/WEB-INF/jsp/home.jsp"/>
+    </definition>
+
+    <definition name="LaunchJob" extends="tfl-main-layout">
+        <put-attribute name="pageTitle" value="TfL Batch: Launch Job"/>
+        <put-attribute name="main" value="/WEB-INF/jsp/launchJob.jsp"/>
+    </definition>
+
+</tiles-definitions>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.2.01">
+    <sql splitStatements="false">
+            <![CDATA[
+begin
+   content_installer.install('TravelCardDurations.7 Day.option', '7 Day Travelcard');
+   content_installer.install('TravelCardDurations.Monthly.option', 'Month Travelcard');
+   content_installer.install('TravelCardDurations.3 Month.option', '3 Month Travelcard');
+   content_installer.install('TravelCardDurations.6 Month.option', '6 Month Travelcard');
+   content_installer.install('TravelCardDurations.Annual.option', 'Annual Travelcard');
+   content_installer.install('TravelCardDurations.Other.option', 'Odd Period Travelcard');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

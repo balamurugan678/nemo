@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.2">
+        <addColumn schemaName="${schemaName}" tableName="CARD_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CONTACT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SETTLEMENT_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SHIPPINGMETHOD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SETTLEMENT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SELECTLISTOPTION">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="METAPHONEENCODING">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ADDRESS">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CUSTOMER">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="WEBACCOUNT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="WEBACCOUNT_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CARD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CUSTOMER_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="AGENTWEBACCOUNTACCESS_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="EMAILS">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="AUTOTOPUP">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="WORKQUEUE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="JOBLOG">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="JOBLOG_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ZONEIDDESCRIPTION">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="BACKDATEDREFUNDREASON">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="COUNTRY">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="COUNTRY_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="FILEEXPORTLOG">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CLAIMLIMITTHRESHOLD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="RANDOMAPPROVALSAMPLE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="REFUNDSCENARIOHOTLISTTYPE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="EXTERNALUSER">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="PAYASYOUGO">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="PTTIDLOOKUP">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_OYSTERCARDPREPAYTICKET">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_OYSTERCARDPREPAYVALUE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_OYSTERCARDPPTPENDING">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_OYSTERCARDPPVPENDING">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SERVICECALLLOG">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="HOTLISTREASON">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="GOODWILLREASON">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CARDREFUNDABLEDEPOSIT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="PAYMENTCARD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="PAYMENTCARD_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CARDPREFERENCES">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="PRODUCT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CALLTYPE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CALL">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="JCP_INVESTIGATION">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="JCP_INVESTIGATION_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_CUBIC_CARD_RESPONSE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_OYSTERCARD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ADMINISTRATIONFEE">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ADDRESS_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CUSTOMERPREFERENCES">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SYSTEMPARAMETER_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CUSTOMERPREFERENCES_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CONTACT_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ALTERNATIVEZONEMAPPING">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="APPLICATIONEVENT_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SYSTEMPARAMETER">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CONTENT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CALL_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="SELECTLIST">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CART">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CUSTOMERORDER_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CUSTOMERORDER">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CART_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ITEM">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ITEM_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="CART_ITEM_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="ORDER_ITEM_AUD">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="EVENT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="APPLICATIONEVENT">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="AGENTWEBACCOUNTACCESS">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <addColumn schemaName="${schemaName}" tableName="MOCK_OYSTERCARDHOTLISTREASONS">
+            <column name="EXTERNALID" type="NUMBER(38)"/>
+        </addColumn>
+        <createSequence sequenceName="EXTERNALID_SEQ" schemaName="${schemaName}"/>
+    </changeSet>
+</databaseChangeLog>

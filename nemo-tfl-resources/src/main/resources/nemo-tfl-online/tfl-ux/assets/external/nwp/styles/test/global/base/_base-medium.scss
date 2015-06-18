@@ -1,0 +1,92 @@
+.hero-headline, .headline {
+  font-size: 50px;
+  margin-left: 10px;
+}
+
+.section-landing-container {
+  border-bottom: 0;
+  h1 {
+    font-size: 35px;
+    //margin: -5px 0;
+  }
+  &.with-logo {
+    padding-right: 170px;
+  }
+  .heading-logo {
+    height: 50px;
+    max-width: 165px;
+    min-width: 60px;
+    > img {
+      height: 50px;
+    }
+  }
+}
+
+h1 {
+  line-height: 100%;
+  font-size: 50px;
+
+}
+
+.map-container {
+  padding: 5px;
+  border: 1px solid $light-grey-border-colour;
+  border-radius: 5px;
+  #map {
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.small {
+  display: none
+}
+
+.small-medium {
+  display: block
+}
+
+.medium {
+  display: block
+}
+
+.medium-large {
+  display: block
+}
+
+.large {
+  display: none
+}
+
+.floating-content-image {
+  height: auto;
+  width: 47.5%;
+  &.left {
+    margin-right: 5%;
+    float: left;
+  }
+  &.right {
+    float: right;
+    margin-left: 5%;
+  }
+}
+
+.spot-grid-background {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 10px;
+  //@include transition;
+  /*&:before {
+      content: " ";
+      display: block;
+      @extend %spot-grid;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+  }*/
+}

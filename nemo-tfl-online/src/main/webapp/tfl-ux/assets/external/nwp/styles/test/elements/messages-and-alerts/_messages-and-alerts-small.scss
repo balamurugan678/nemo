@@ -1,0 +1,11 @@
+.message-bar-style-1 {
+  background-color: #1F2025;
+  color: #fff;
+  padding: 6px 0;
+  font-size: 80%;
+  padding-right: 9px;
+  @include clearfix;
+  img {
+    float: right
+  }
+}

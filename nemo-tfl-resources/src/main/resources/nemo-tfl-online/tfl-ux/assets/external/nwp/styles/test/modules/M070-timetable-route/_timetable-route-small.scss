@@ -1,0 +1,120 @@
+/**************************************************
+	M070 timetable route
+* Author: Alex Faunt
+* Created: 19/11/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M070-timetable-route
+**************************************************/
+.timetable-route {
+  @extend .stop-list;
+
+  .lines {
+    width: 24px;
+    z-index: 2;
+
+    .stop {
+      left: auto;
+    }
+  }
+  a.stop-link {
+    padding-left: 90px;
+    padding-right: 30px;
+
+    .time {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      height: 20px;
+      margin-top: -10px;
+    }
+  }
+
+  > *:first-child .lines > span {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+    height: 50%;
+    @include box-sizing(content-box);
+    padding-top: 2px;
+
+    > .stop {
+      margin-top: 0;
+      top: 0;
+    }
+  }
+
+  > *:last-child .lines > span, > *.last-child .lines > span {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 50%;
+    @include box-sizing(content-box);
+    padding-bottom: 2px;
+
+    > .stop {
+      margin-top: 0;
+      top: 100%;
+      margin-top: -4px
+    }
+  }
+  .selected * {
+    font-weight: bold;
+
+    &.mode-icon {
+      font-weight: normal;
+    }
+  }
+
+  .interchanges {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 10px;
+    @include clearfix;
+
+    > span {
+      float: left;
+    }
+  }
+
+  @for $i from 1 through 5 {
+    .interchange-#{$i} {
+      .stop-link {
+        padding-right: 20px + $i * 32px;
+      }
+    }
+  }
+
+  &.stop-selector {
+    .stop-link {
+      padding-left: 65px;
+      padding-right: 32px;
+
+      &:after {
+        display: block;
+      }
+    }
+
+    .stop-name {
+      left: 14px;
+    }
+
+    .interchanges {
+      right: 32px;
+    }
+
+    @for $i from 1 through 5 {
+      .interchange-#{$i} {
+        .stop-link {
+          padding-right: 42px + $i * 32px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.timetable-route-title {
+  padding: 10px;
+  display: block;
+}

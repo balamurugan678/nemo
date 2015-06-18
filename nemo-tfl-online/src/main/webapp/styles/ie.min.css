@@ -1,0 +1,629 @@
+.lt-ie8 .mainnav {
+    margin-bottom: -4px;
+}
+
+.lt-ie8 .top-row .logo {
+    height: 43px;
+}
+
+.lt-ie8 .top-row .logo .main-roundel {
+    left: 30px;
+}
+
+.lt-ie8 .top-row .collapsible-menu {
+    margin-top: -21px;
+}
+
+.lt-ie8 .top-row-extras .login a {
+    height: 40px;
+    padding-bottom: 0;
+}
+
+.lt-ie8 .more .text {
+    font-family: "New Johnson";
+}
+
+.lt-ie9 .extra-nav {
+    width: 900px;
+    left: 50%;
+    margin-left: -450px;
+}
+
+.lt-ie9 .nosvg .top-row .logo .main-roundel, .lt-ie9.no-js .top-row .logo .main-roundel {
+    background-image: url("imageshomepage_sprite.png");
+    background-position: 0 -5px;
+    width: 48px;
+}
+
+.lt-ie9 .top-row-extras input[type='text'] {
+    margin-right: 22px;
+}
+
+.lt-ie9 #footer .info-for li {
+    width: 44%;
+}
+
+.lt-ie8 h1, .lt-ie8 h2, .lt-ie8 h3 {
+    line-height: 153.33%;
+}
+
+.lt-ie8 a.primary-button, .lt-ie8 a.secondary-button {
+    height: 24px;
+}
+
+.lt-ie8 li {
+    margin-left: 1em;
+    vertical-align: top;
+}
+
+.lt-ie8 .visually-hidden {
+    visibility: hidden;
+}
+
+.lt-ie8 .flat-button {
+    padding-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.lt-ie8 .flat-button img {
+    margin-top: 20px;
+}
+
+.lt-ie8 .icon-replacement-text {
+    display: block;
+}
+
+.lt-ie9 body {
+    min-width: 900px;
+}
+
+.lt-ie9 input[type='text'] {
+    padding-top: 8px;
+}
+
+.lt-ie9 .large-status-information {
+    border: solid 1px #A8A8A8;
+    display: block;
+    margin-top: 15px;
+}
+
+.lt-ie9 .large-status-information .line-text {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.lt-ie9 .large-status-information .disruption-type {
+    padding: 10px 20px;
+    vertical-align: middle;
+    width: 24%;
+    color: #1a5a92;
+}
+
+.lt-ie9 .large-status-information .disruption-message {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+.lt-ie8 input[type="text"] {
+    padding: 5px 0;
+    height: 26px;
+}
+
+.lt-ie8 .selector {
+    background: none;
+    border: none;
+}
+
+.lt-ie9.no-js .checkbox-list input[type='checkbox'], .lt-ie9.no-js .styled-checkbox input[type='checkbox'] {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+.lt-ie8 .journey-planner-promo {
+    background-color: #2d3039;
+}
+
+.lt-ie8 .jp-tab {
+    height: 20px;
+}
+
+.lt-ie8 #from {
+    width: 85%;
+}
+
+.lt-ie8 #plan-a-journey * {
+    *zoom: 1;
+}
+
+.lt-ie8 #more-journey-options {
+    margin-right: 0;
+    width: 60%;
+}
+
+.lt-ie8 .modes-of-transport.checkbox-list li {
+    width: 45%;
+}
+
+.lt-ie8 #save-journey-planner-preferences {
+    width: 100%;
+    left: -3.2%;
+}
+
+.lt-ie8 .hours-mins {
+    clear: both;
+}
+
+.lt-ie8 .journey-planner-results #plan-a-journey #From, .lt-ie8 .journey-planner-results #plan-a-journey #To, .lt-ie8 .journey-planner-results #plan-a-journey #Via {
+    padding: 0;
+}
+
+.lt-ie8 .journey-planner-results #plan-a-journey.editing {
+    *zoom: 1;
+    display: block;
+}
+
+.lt-ie8 .journey-planner-results input.primary-button {
+    width: 50%;
+}
+
+.lt-ie8 .journey-planner-results #more-journey-options {
+    width: 92%;
+}
+
+.lt-ie8 .auto-expand.expandable-box .always-visible {
+    width: 32%;
+}
+
+.lt-ie8 .auto-expand.expandable-box .start-hidden {
+    width: 65%;
+}
+
+.lt-ie8 .showing-full-details .summary-results {
+    width: 30%;
+}
+
+.lt-ie8 .showing-full-details .full-results-container {
+    width: 65%;
+    float: left;
+}
+
+.lt-ie8 .showing-full-details .auto-expand.expandable-box .always-visible {
+    width: 100%;
+}
+
+.lt-ie8 table.journey-steps .logo div {
+    padding: 0;
+}
+
+.lt-ie8 table.journey-steps thead {
+    visibility: hidden;
+}
+
+.lt-ie8 .time-and-mode > div {
+    left: 0;
+}
+
+.lt-ie8 .time-and-mode > div .centred {
+    margin-left: 0;
+}
+
+.lt-ie8 .time-and-mode > div .centred.walking-icon {
+    margin-left: 0;
+}
+
+.lt-ie8 .step-heading .time-and-mode {
+    left: 0;
+}
+
+.lt-ie8 .transfer .time-and-mode {
+    left: 0;
+}
+
+.lt-ie8 .travel-preferences {
+    clear: both;
+}
+
+.lt-ie8 .tabs-style-1 li {
+    height: 42px;
+    margin-left: 0;
+}
+
+.lt-ie8 .tabs-style-1 li .icon-left {
+    padding-left: 0 !important;
+}
+
+.lt-ie8 .disambiguation-box {
+    width: 29%;
+}
+
+.lt-ie8 .disambiguation-box .disambiguation-items {
+    margin-left: 0;
+    list-style: decimal inside none;
+}
+
+.lt-ie8 .disambiguation-box li {
+    margin-left: 0;
+    clear: both;
+}
+
+.lt-ie8 .disambiguation-box li .small-icon {
+    display: none;
+}
+
+.lt-ie8 .disambiguation-box li a {
+    padding-top: 0;
+}
+
+.lt-ie8 .disambiguation-box .map-markers {
+    display: none;
+}
+
+.lt-ie8 .disambiguation-box .place-name {
+    position: static;
+}
+
+.lt-ie9 .full-results-container {
+    float: left;
+}
+
+.lt-ie9 .journey-planner-results .half-width-buttons {
+    margin-right: 0;
+}
+
+.lt-ie9 .journey-planner-results .half-width-buttons a {
+    width: 20%;
+}
+
+.lt-ie9 .journey-planner-results .half-width-buttons a:first-child {
+    margin-right: 54%;
+}
+
+.lt-ie9 ul.journey-steps li.tube-icon, .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -1056px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.tube-icon, .nosvg .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.tube-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.tube-icon else, .lt-ie9 table.journey-steps .logo div.tube-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.tube-icon else, .lt-ie9 table.journey-steps .logo div.tube-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.national-rail-icon, .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -352px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.national-rail-icon, .nosvg .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.national-rail-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.national-rail-icon else, .lt-ie9 table.journey-steps .logo div.national-rail-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.national-rail-icon else, .lt-ie9 table.journey-steps .logo div.national-rail-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.public-bus-icon, .lt-ie9 table.journey-steps .logo div.public-bus-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -320px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.public-bus-icon, .nosvg .lt-ie9 table.journey-steps .logo div.public-bus-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.public-bus-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.public-bus-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.public-bus-icon else, .lt-ie9 table.journey-steps .logo div.public-bus-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.public-bus-icon else, .lt-ie9 table.journey-steps .logo div.public-bus-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.dlr-icon, .lt-ie9 table.journey-steps .logo div.dlr-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -1088px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.dlr-icon, .nosvg .lt-ie9 table.journey-steps .logo div.dlr-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.dlr-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.dlr-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.dlr-icon else, .lt-ie9 table.journey-steps .logo div.dlr-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.dlr-icon else, .lt-ie9 table.journey-steps .logo div.dlr-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.public-river-service-icon, .lt-ie9 table.journey-steps .logo div.public-river-service-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -64px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.public-river-service-icon, .nosvg .lt-ie9 table.journey-steps .logo div.public-river-service-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.public-river-service-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.public-river-service-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.public-river-service-icon else, .lt-ie9 table.journey-steps .logo div.public-river-service-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.public-river-service-icon else, .lt-ie9 table.journey-steps .logo div.public-river-service-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.tram-icon, .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: -32px -1120px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.tram-icon, .nosvg .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.tram-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.tram-icon else, .lt-ie9 table.journey-steps .logo div.tram-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.tram-icon else, .lt-ie9 table.journey-steps .logo div.tram-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.cable-car-icon, .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -480px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.cable-car-icon, .nosvg .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.cable-car-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.cable-car-icon else, .lt-ie9 table.journey-steps .logo div.cable-car-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.cable-car-icon else, .lt-ie9 table.journey-steps .logo div.cable-car-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.overground-icon, .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: -64px -1056px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.overground-icon, .nosvg .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.overground-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.overground-icon else, .lt-ie9 table.journey-steps .logo div.overground-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.overground-icon else, .lt-ie9 table.journey-steps .logo div.overground-icon else {
+    width: auto;
+}
+
+.lt-ie9 ul.journey-steps li.disruption-icon, .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("imagesvsprite.svg");
+    background-image: url("imagesvsprite.png")  \9;
+    background-size: 96px 1344px;
+    background-position: 0px -832px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+.nosvg .lt-ie9 ul.journey-steps li.disruption-icon, .nosvg .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.body-cms-preview .lt-ie9 ul.journey-steps li.disruption-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("imagesvsprite.png");
+}
+
+.lt-ie9 ul.journey-steps li.disruption-icon else, .lt-ie9 table.journey-steps .logo div.disruption-icon else {
+    height: auto;
+}
+
+.lt-ie9 ul.journey-steps li.disruption-icon else, .lt-ie9 table.journey-steps .logo div.disruption-icon else {
+    width: auto;
+}
+
+.lt-ie10 .from-and-to label.visually-hidden, .lt-ie10 .go-via label.visually-hidden {
+    overflow: visible;
+    clip: auto;
+    height: auto;
+    position: static;
+    width: auto;
+    margin: auto;
+    visibility: visible;
+}
+
+.lt-ie10 .journey-planner-results .go-via label {
+    margin-top: -30px;
+}
+
+.lt-ie10 .journey-planner-results .change-time-options {
+    margin-top: 18px;
+}
+
+.lt-ie10 .journey-planner-results .hours-mins {
+    margin-top: 33px;
+}
+
+.lt-ie8 .homepage-top-links .flat-button {
+    width: 32%;
+}
+
+.lt-ie8 .homepage-top-links .flat-button .text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+.lt-ie8 .navigation-style-1 li {
+    list-style: none;
+}
+
+.lt-ie9 .journey-planner-widget {
+    display: block;
+    background-color: transparent;
+}
+
+.lt-ie9 .homepage-style .content {
+    margin-left: 0;
+    background-color: transparent;
+}
+
+.lt-ie9 .homepage-style .content .always-visible {
+    margin-bottom: -9px;
+}
+
+.lt-ie9 .homepage-top-links :first-child .text {
+    margin-top: 45px;
+}
+
+.lt-ie8 .service-status-rainbow-board tr.visible {
+    display: block;
+}
+
+.lt-ie8 .module-grid > div {
+    width: 47%;
+}
+
+.lt-ie8 .aside .module-grid > div {
+    width: 100%;
+}
+
+.lt-ie8 .plain-button {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.lt-ie8 .breadcrumbs li {
+    margin-left: 2px;
+}
+
+.lt-ie8 .breadcrumbs li.home a {
+    width: 12px;
+}
+
+.lt-ie8 .news-teaser {
+    border-bottom: 0;
+}
+
+.lt-ie8 .news-teaser > a:hover {
+    border-bottom: 0;
+    margin-bottom: 6px;
+}
+
+.lt-ie8 .coming-soon-widget .coming-soon-icon {
+    padding: 0;
+    text-align: left;
+}
+
+.lt-ie8 .coming-soon-widget .coming-soon-icon p {
+    float: none;
+}
+
+.lt-ie9 .module-grid > div:first-child {
+    margin-right: 5%;
+}
+
+.lt-ie9 .section-overview {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.lt-ie9 .section-overview > div.main {
+    width: 60%;
+}
+
+.lt-ie9 .coming-soon-widget {
+    background-position: 50% 50%;
+}
+

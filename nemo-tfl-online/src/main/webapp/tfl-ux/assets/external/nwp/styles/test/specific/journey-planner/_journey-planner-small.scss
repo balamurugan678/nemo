@@ -1,0 +1,1693 @@
+
+.spot-grid-background {
+  background-color: $jp-blue;
+}
+
+.basic-journey-options {
+  background-color: $subtle-grey;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 0;
+  padding: 0 10px 10px;
+  @extend %transparent-grey-bottom-border;
+}
+
+.expanded .basic-journey-options {
+  margin-bottom: 0;
+}
+
+#plan-a-journey {
+  padding-top: 10px;
+  margin-top: 42px;
+
+}
+
+#jp-search-form.walking {
+  .time-options {
+    display: none;
+  }
+
+  .from-and-to.clearfix {
+    margin-bottom: 10px;
+  }
+
+  .time-options.clearfix {
+    display: none !important;
+  }
+
+}
+
+.journey-planner-results {
+  background-color: $jp-blue;
+  padding-bottom: 10px;
+  margin-bottom: -50px;
+  .basic-journey-options {
+    margin-bottom: 0;
+  }
+  .from-and-to, .time-options, .update-buttons, .toggle-options, .extra-options {
+    display: none;
+  }
+  .editing {
+    .from-and-to, .time-options, .update-buttons, .toggle-options, .extra-options {
+      display: block;
+    }
+    input.primary-button {
+      display: block;
+    }
+    .journey-result-summary {
+      display: none;
+    }
+  }
+
+  .travelpreferences-cycling, .travelpreferences-walking, .travelpreferences-publictransport {
+    display: none;
+  }
+  .publictransport .travelpreferences-publictransport, .cycling .travelpreferences-cycling, .walking .travelpreferences-walking {
+    display: inline;
+  }
+
+  .journey-result-summary {
+    .travel-preferences {
+      padding: 5px 0;
+      border-top: 1px dotted $light-grey-border-colour;
+      strong {
+        margin-left: 10px;
+      }
+      span {
+        margin-right: -10px;
+      }
+      .right-shadow {
+        display: none;
+      }
+    }
+    &.touch {
+      .travel-preferences {
+        overflow: hidden;
+        position: relative;
+        margin-bottom: -10px;
+        .scroller {
+          overflow-x: scroll;
+          > div {
+            white-space: nowrap;
+          }
+        }
+        .right-shadow, .left-shadow {
+          display: block;
+          position: absolute;
+          top: 0;
+          height: 28px;
+          width: 40px;
+        }
+        .left-shadow {
+          left: -40px;
+          @include linear-gradient(left, rgba(246, 246, 246, 1) 0%, rgba(246, 246, 246, 0) 100%, $fallback: transparent);
+        }
+        .right-shadow {
+          right: -40px;
+          @include linear-gradient(right, rgba(246, 246, 246, 1) 0%, rgba(246, 246, 246, 0) 100%, $fallback: transparent);
+        }
+      }
+    }
+  }
+  strong.disambiguating {
+    background-color: $information-message-colour;
+    display: inline-block;
+    padding: 5px 5px 5px 30px;
+    border: 1px solid $light-grey-border-colour;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      left: 0;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(27, 1);
+    }
+  }
+  .summary-row {
+    margin: 5px 0;
+    &:first-child {
+      margin: 0;
+    }
+    span.label {
+      float: left;
+      margin-right: -60px;
+    }
+    strong {
+      margin-left: 60px;
+      display: block;
+
+    }
+    .secondary-button {
+      width: 120px;
+      margin: 0 0 10px 60px;
+    }
+  }
+  .geolocation-box {
+    margin-bottom: 0;
+  }
+  input.primary-button {
+    display: none;
+  }
+  #From, #To, #Via {
+    float: left;
+    margin-left: 0;
+    cursor: pointer;
+    //margin-bottom: 5px;
+    color: $dark-grey;
+    height: 40px;
+    border: 1px solid $light-grey-border-colour;
+    @extend %shaded-input;
+    cursor: auto;
+    padding: 5px;
+    padding-right: 32px;
+    //margin-bottom: 5px;
+  }
+  .from-and-to {
+    margin-bottom: 10px;
+  }
+  .geolocation-box {
+    margin-bottom: 10px;
+  }
+  .time-options {
+    .time-defaults {
+      display: none;
+    }
+    .change-time-options {
+      display: block;
+    }
+  }
+  .cancel-button, input[type='submit'] {
+    width: 47.5%;
+    float: left;
+  }
+  .cancel-button {
+    margin-right: 5%;
+    //height: 44px;
+    //padding: 10px;
+  }
+
+}
+
+#more-journey-options {
+  display: none;
+  padding-top: 20px;
+  padding-left: $gridGutterWidth;
+  padding-right: $gridGutterWidth;
+  background-color: $jp-subtle-blue;
+  margin-bottom: 20px;
+
+  @extend %transparent-grey-bottom-border;
+  .update-buttons {
+    margin-top: 20px;
+  }
+  .walking-options {
+    float: left;
+  }
+}
+
+.modes-of-transport {
+  position: relative;
+  .select-deselect-option {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  li label {
+    text-indent: 50px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 10px;
+      @include svg-icon(34, 1);
+    }
+  }
+  //.tube {
+  //	&:before {
+  //@include svg-icon-position-only(34,1);
+  //background: url('/cdn/static/images/vsprite.png')\9;
+  //@extend .tube-icon;
+  //	}
+  //}
+  .national-rail {
+    &:before {
+      @include svg-icon-position-only(12, 1);
+      //@extend .train-icon;
+    }
+  }
+  .bus {
+    &:before {
+      @include svg-icon-position-only(11, 1);
+      //@extend .bus-icon;
+    }
+  }
+  .dlr, .docklands, .docklands-light-railway {
+    &:before {
+      @include svg-icon-position-only(35, 1);
+      //@extend .dlr-icon;
+    }
+  }
+  .river-bus {
+    &:before {
+      @include svg-icon-position-only(13, 1);
+      //@extend .ferry-icon;
+    }
+  }
+  .tram {
+    &:before {
+      @include svg-icon-position-only(36, 2);
+      //@extend .tram-icon;
+    }
+  }
+  .coach {
+    &:before {
+      @include svg-icon-position-only(36, 1);
+      //@extend .coach-icon;
+    }
+  }
+  .cable-car {
+    &:before {
+      @include svg-icon-position-only(16, 1);
+      //@extend .cablecar-icon;
+    }
+  }
+  .overground {
+    &:before {
+      @include svg-icon-position-only(34, 3);
+      //@extend .overground-icon;
+    }
+  }
+}
+
+.jp-mode-publictransport, .jp-mode-cycling, .jp-mode-walking {
+  display: none;
+}
+
+.publictransport .jp-mode-publictransport, .cycling .jp-mode-cycling, .walking .jp-mode-walking {
+  display: block;
+}
+
+.cycling #more-journey-options .update-buttons, .walking #more-journey-options .update-buttons {
+  @extend %visually-hidden;
+}
+
+.extra-options {
+  margin: 10px -10px;
+  background-color: #fff;
+  padding: 5px $gridGutterWidth 10px;
+  border-top: 1px solid $light-grey-border-colour;
+  border-bottom: 1px solid $light-grey-border-colour;
+  clear: both;
+}
+
+.toggle-options {
+  display: block;
+  &:after {
+    @extend %sprite-images;
+    @include svg-icon(22, 1, 28px, 20px, $display: inline-block);
+    content: "";
+  }
+  &.less-options {
+    &:after {
+      @include svg-icon-position-only(20, 1);
+    }
+  }
+}
+
+.expanded {
+  .go-via, .national-search, #more-journey-options {
+    display: block;
+  }
+
+}
+
+.geolocation-box {
+  margin-bottom: 10px;
+  margin-top: 3px;
+}
+
+.geolocation-map {
+  clear: left;
+}
+
+.image-container {
+  border: 1px solid $light-grey-border-colour;
+  padding: 5px;
+  background-color: #fff;
+}
+
+.showing-map {
+  .image-container {
+    display: block;
+    height: 200px;
+  }
+  .geolocation-box {
+    .remove-content-container {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.switch-button {
+  @extend %sprite-images;
+  @include svg-icon-scaled(3, 1, 28px, 28px);
+  position: relative;
+  top: -20px;
+  left: 50%;
+  margin: 15px 0 -24px -16px;
+}
+
+.walking-speed {
+  float: left;
+  margin-right: 20px;
+  .selector {
+    width: 120px;
+  }
+}
+
+.max-walking-time {
+  margin-bottom: 10px;
+  margin-right: 20px;
+  float: left;
+  min-width: 105px;
+  input {
+    margin-right: 3%;
+    width: 65px;
+  }
+  span {
+    vertical-align: middle;
+    width: 48.5%;
+  }
+}
+
+.hours-mins {
+  margin-bottom: -10px;
+}
+
+.time-options {
+  position: relative;
+  margin: 15px 0 0;
+  p {
+    float: left;
+    width: 110px;
+    margin-bottom: 0;
+  }
+  .selector {
+    float: left;
+    margin-right: 3%;
+  }
+  .date-of-departure {
+    width: 58.5%;
+  }
+  .hours {
+    width: 38.5%;
+    margin-right: 0;
+  }
+  .change-time-options {
+    display: none;
+  }
+  .time-defaults {
+    margin-right: 4px;
+  }
+  &.change-time {
+    .change-time-options {
+      display: block;
+    }
+    .time-defaults {
+      display: none;
+    }
+  }
+  .horizontal-toggle-buttons {
+    li {
+      width: 50%;
+    }
+  }
+  .change-departure-time {
+    &:after {
+      @extend %standard-sprite;
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      @include svg-icon-position-only(21, 1);
+    }
+  }
+}
+
+.go-via {
+  display: none;
+  margin-top: 10px;
+}
+
+.national-search {
+  float: left;
+  display: none;
+  margin: 15px $gridGutterWidth 0;
+}
+
+#save-journey-planner-preferences {
+  padding: 15px $gridGutterWidth 15px 2*$gridGutterWidth;
+  width: 100% + 2*$gridGutterWidth;
+  position: relative;
+  left: 0 - $gridGutterWidth;
+  background: #fff;
+  border-top: 1px dotted $light-grey-border-colour;
+  margin-top: 10px;
+}
+
+.breakpoint-Small .journey-form .r > :last-child {
+  margin-right: 0;
+}
+
+#recent-journeys {
+  background-color: #fff;
+  padding: 10px $gridGutterWidth;
+  clear: both;
+  margin-bottom: 20px;
+  @extend %transparent-grey-bottom-border;
+
+  h3 {
+    @extend %new-johnson-bold;
+    font-size: 20px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.journey-planner-promo {
+  display: none;
+}
+
+.journey-types {
+  margin-top: -52px;
+  position: absolute;
+  left: 0;
+  a .tabs-time {
+    display: none;
+    @include respond-to(medium-upwards) {
+      display: inline;
+    }
+  }
+}
+
+.field-validation-errors {
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.summary-results {
+  &.publictransport {
+    .walking-box, .cycling-box {
+      display: none
+    }
+  }
+  &.cycling {
+    .publictransport-box, .walking-box {
+      display: none
+    }
+  }
+  &.walking {
+    .publictransport-box, .cycling-box {
+      display: none
+    }
+  }
+  .always-visible {
+    .price-and-details {
+      display: none;
+    }
+  }
+  .start-hidden {
+    @include linear-gradient(#E5E6E7 0px, #FFF 25px, $fallback: #FFF);
+    padding-top: 20px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+  }
+  .text-only {
+    padding: 13px 15px;
+  }
+  .journey-summary {
+    border-bottom: 1px dotted $light-grey-border-colour;
+    h4 {
+      padding-left: 10px;
+    }
+  }
+  .time-box {
+    float: left;
+    padding: 10px 0;
+    width: 46px; //60
+    height: 40px;
+    text-align: center;
+    margin-left: 10px;
+    &:first-child {
+      margin-right: 7%;
+    }
+    .title {
+      display: block;
+      margin-bottom: 5px;
+      color: #53595F;
+      font-style: italic;
+      font-size: 14px;
+      line-height: 100%;
+    }
+    .time {
+      font-size: 24px;
+      line-height: 100%;
+    }
+  }
+  .journey-time {
+    float: right;
+    padding: 15px 10px;
+    line-height: 100%;
+  }
+  .extra-info-box {
+    padding: 10px;
+    .frequency, .price {
+      float: right;
+    }
+    .frequency {
+      margin-bottom: 5px;
+    }
+  }
+  .price-and-details {
+    .show-detailed-results {
+      margin: 10px 10px 0 0;
+    }
+  }
+  .journey-price {
+    float: left;
+    clear: both;
+    padding: 10px;
+  }
+  .primary-button {
+    float: right;
+    margin: 10px 10px 0 0;
+    width: 130px;
+  }
+  .disrupted {
+    p {
+      padding: 5px 0px;
+    }
+  }
+}
+
+.journey-details-ajax {
+  //.loader {
+  p {
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.search-options {
+  padding: 15px 5px 5px;
+  .change-journey-options {
+    float: right;
+    margin-top: -10px;
+  }
+  table {
+    width: 100%;
+  }
+  th {
+    padding: 3px 10px 3px 0;
+    text-align: left;
+  }
+  td {
+    padding: 3px 0;
+    font-weight: bold;
+  }
+}
+
+.static-map img {
+  width: 100%;
+  height: auto
+}
+
+.journey-results {
+  #full-width-content & {
+    margin-bottom: 0;
+  }
+  .auto-expand {
+    margin-bottom: 10px;
+  }
+  .summary-results {
+    margin: 0 $gridGutterWidth;
+  }
+}
+
+ul.journey-steps {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  height: 100%;
+
+  padding-left: 5px;
+  li {
+    float: left;
+    margin: 10px 2px;
+    position: relative;
+    list-style-type: none;
+
+    span {
+      position: absolute;
+      top: 5px;
+      left: 40px;
+      font-weight: bold;
+      font-size: 15px;
+
+      &.disruption {
+        @extend %sprite-images;
+        @include svg-icon-scaled(27, 1, 22px, 22px);
+        height: 22px;
+        width: 24px;
+        z-index: 2;
+        top: 9px;
+        left: 12px;
+        position: absolute;
+      }
+    }
+    &.disruption {
+      background-color: $disruption-colour;
+    }
+    &.footpath-icon {
+      @extend %visually-hidden;
+    }
+  }
+  .tube-icon {
+    position: relative;
+    span {
+      display: block;
+      height: 3px;
+      width: 24px;
+      left: 4px;
+      position: absolute;
+      top: auto;
+      &:first-child {
+        bottom: 0;
+      }
+      &:nth-child(2) {
+        bottom: 3px;
+      }
+      &:nth-child(3) {
+        bottom: 6px;
+      }
+      &:nth-child(4) {
+        bottom: 9px;
+      }
+    }
+  }
+}
+
+table.journey-steps {
+  thead {
+    @extend %visually-hidden;
+  }
+  tr:nth-child(odd) {
+    background: transparent;
+  }
+  td {
+    vertical-align: top;
+  }
+  td.disrupted {
+    padding: 0 5px;
+    background-color: $disruption-colour;
+  }
+  //    tr.disrupted {
+  //        background-color: $disruption-colour;
+  //    }
+  .time {
+    display: none;
+    padding-bottom: 4px;
+    width: 54px;
+    &.wide {
+      width: 96px;
+    }
+  }
+  .logo {
+    padding: 2px 5px;
+    text-align: center;
+    width: 35px;
+    div {
+      margin: -3px auto;
+      padding-bottom: 4px;
+    }
+  }
+  .description {
+    padding-bottom: 4px;
+  }
+}
+
+.logo.centred {
+  margin-top: -16px;
+  margin-left: -16px;
+}
+
+.half-width-buttons {
+  margin-bottom: 10px;
+  .earlier {
+    margin-right: 3%;
+    padding-left: 16px;
+    &:before {
+      content: "";
+      @extend %sprite-images;
+      @include svg-icon(19, 1, 28px, 22px, $display: inline-block);
+      margin-top: -5px;
+      margin-left: -28px;
+    }
+  }
+  .later {
+    margin-left: 3%;
+    padding-right: 16px;
+    &:after {
+      content: "";
+      @extend %sprite-images;
+      @include svg-icon(21, 1, 28px, 22px, $display: inline-block);
+      margin-top: -5px;
+      margin-right: -28px;
+    }
+  }
+  a {
+    float: left;
+    width: 47%;
+    span {
+      margin: -5px 0 0 0;
+    }
+
+  }
+}
+
+#alternatives {
+  margin-left: 0;
+  padding: 20px $gridGutterWidth;
+  background: #FFF;
+}
+
+.journey-details {
+  display: none;
+}
+
+.selected {
+  .journey-details {
+    display: block;
+  }
+  table.journey-steps {
+    display: none;
+  }
+}
+
+.access-information {
+  margin-left: 70px;
+  padding-bottom: 10px;
+  > a {
+    float: left;
+    position: relative;
+  }
+  @include clearfix;
+
+}
+
+.tooltip-container {
+  overflow: hidden;
+  &:hover, &:focus {
+    overflow: visible;
+    .tooltip {
+      visibility: visible;
+    }
+  }
+}
+
+.tooltip {
+  display: block;
+  position: absolute;
+  background-color: $dark-grey;
+  color: #fff;
+  visibility: hidden;
+  padding: 2px 5px;
+  top: 40px;
+  z-index: 1;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  &:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent $dark-grey transparent;
+  }
+  &.right {
+    right: 0;
+    &:before {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.journey-detail-step {
+  .start-location, .end-location {
+    @extend %new-johnson;
+    font-size: 20px;
+    margin-left: 60px;
+    .journey-planner-results & {
+      padding: 10px 0 0 10px;
+    }
+    .stop-link {
+      padding: 20px 30px 20px 10px;
+    }
+  }
+  &.terminus {
+    .time-and-mode {
+      > div {
+        height: 22px;
+        margin-top: -11px;
+      }
+    }
+  }
+  .step-heading {
+    position: relative;
+    background: $subtle-grey;
+    min-height: 65px;
+    margin: 0 -10px;
+    padding: 0 10px;
+
+  }
+  .step-summary {
+    display: none;
+  }
+  .time-and-mode {
+    position: absolute;
+    height: 100%;
+    background: #fff;
+    border-top: 1px solid $light-grey-border-colour;
+    border-left: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+    @extend %transparent-grey-bottom-border;
+    float: left;
+    width: 60px;
+    text-align: center;
+    > div {
+      height: 52px;
+      width: 60px;
+      top: 50%;
+      margin-top: -26px;
+      position: absolute;
+    }
+
+  }
+  .centred {
+    margin-left: 12px;
+    &.footpaths-icon, &.walking-icon {
+      margin-left: 16px;
+    }
+  }
+  h2 {
+    padding: 5px 0 0;
+    margin-left: 70px;
+    line-height: 120%;
+  }
+  .details {
+    position: relative;
+    p, .view-on-a-map-parent {
+      margin-bottom: 0px;
+      padding-bottom: 10px;
+      &.description {
+        padding-top: 10px;
+        &.disrupted {
+          background-color: $disruption-colour;
+        }
+      }
+      &.duration {
+        padding-top: 10px;
+        padding-bottom: 0px;
+      }
+    }
+  }
+  .instructions {
+    padding-left: 70px;
+  }
+  .text-instructions-list .stop-link {
+    padding-left: 85px;
+    &:after {
+      @extend %standard-sprite;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 53px;
+      margin-top: -16px;
+      margin-right: -6px;
+    }
+    &.sign-right:after {
+      @include svg-icon-position-only(74, 1);
+    }
+    &.sign-left:after {
+      @include svg-icon-position-only(73, 3);
+    }
+    &.sign-straight:after {
+      @include svg-icon-position-only(73, 2);
+    }
+  }
+  .json-all-stops, .view-on-a-map, .text-instructions-link {
+    padding-left: 34px;
+    position: relative;
+    left: -11px;
+    &:after {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(22, 1);
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      margin-top: -16px;
+      margin-right: -6px;
+    }
+    &.hide:after {
+      @include svg-icon-position-only(20, 1);
+    }
+  }
+  .view-on-a-map.show-all {
+    &:after {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(20, 1);
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -16px;
+      margin-right: -6px;
+    }
+  }
+
+}
+
+.all-stops {
+  margin-left: -62px;
+  li:first-child:before {
+    top: 0%;
+  }
+  li:last-child::before {
+    bottom: 0%;
+  }
+}
+
+.route-name {
+  @extend %new-johnson-bold;
+  font-size: 24px;
+}
+
+.route-heading {
+  .step-heading {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+  .stop-name {
+    left: 32px;
+    &.hail-and-ride {
+      left: 40px;
+    }
+  }
+  .stop {
+    left: 32px;
+  }
+  .all-stops {
+    margin-left: -70px;
+  }
+  .stop-link {
+    padding-left: 72px;
+  }
+  .mode-icon {
+    float: right;
+    margin-top: -5px;
+    position: relative;
+  }
+  .stop-list .lines {
+    width: 60px;
+    .stop {
+      z-index: 2;
+    }
+  }
+
+  .stops-wrapper {
+    margin-top: 5px;
+    .mode-icon, .tube-lines {
+      float: left;
+    }
+  }
+}
+
+.bus-branch {
+  position: relative;
+  background-color: $bus-colour;
+  &:before {
+    content: "";
+    position: absolute;
+    margin-top: -2px;
+    left: -18px;
+    width: 40px;
+    height: 40px;
+    background-image: url('/static/' +$version+ '/images/bus-route_sprite_x2.png');
+    background-image: url('/static/' +$version+ '/images/bus-route_sprite.png') \9;
+    background-size: 80px 120px;
+  }
+}
+
+.lines {
+  .bus-split {
+    height: 30%;
+    background-color: $bus-colour;
+    top: -9px;
+    &:before {
+      background-position: 0 -40px;
+      top: 100%;
+    }
+  }
+
+  .bus-merge-start {
+    &:before {
+      background-position: -40px 0;
+      top: 0;
+      margin-top: -28px;
+    }
+    top: 50%;
+    height: 50%;
+  }
+
+  .bus-merge {
+    &:before {
+      background-position: 0 0;
+      top: 0;
+      margin-top: -20px;
+    }
+    top: 50%;
+    height: 50%;
+  }
+
+  .bus-loop-start {
+    &:before {
+      background-position: -40px -40px;
+      top: 50%;
+      margin-top: -20px;
+      left: 50%;
+      margin-left: -10px;
+    }
+  }
+
+  .bus-loop-end {
+    &:before {
+      background-position: -40px -80px;
+      top: 0;
+      margin-top: -20px;
+      left: 50%;
+      margin-left: -10px;
+    }
+    top: 50%;
+    height: 50%;
+  }
+
+  .stop {
+    &.interchange {
+      height: 20px;
+      border: 3px solid #000;
+      background-color: #fff;
+    }
+    &.step-free-to-platform, &.step-free-to-train {
+      height: 32px;
+      background-color: transparent;
+    }
+  }
+  .dlr, .docklands, .docklands-light-railway {
+    .stop.interchange {
+      border: 3px solid #000;
+    }
+  }
+  .overground .stop.interchange {
+    border: 3px solid #000;
+  }
+
+  .interchange {
+    display: block;
+    width: 20px;
+    border-radius: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+
+  .interchange, .step-free-to-platform, .step-free-to-train {
+    display: block;
+    left: 50%;
+    top: 50%;
+  }
+
+  .step-free-to-platform, .step-free-to-train {
+    display: block;
+    margin-left: -16px;
+    margin-top: -16px;
+    @extend %standard-sprite;
+  }
+
+  .step-free-to-platform {
+    @include svg-icon-position-only(32, 3);
+  }
+
+  .step-free-to-train {
+    @include svg-icon-position-only(32, 2);
+  }
+}
+
+.tube-lines {
+  float: right;
+  width: 26px;
+  height: 30px;
+  position: relative;
+  margin-top: -3px;
+  //Apologies for the hack. :not(.fake-selector) stops IE 8 and below from
+  //reading this code and applying the top: 50% style, as they don't understand
+  //transform translateY(-50%) so can't vertically centre the tube lines
+  :not(.fake-selector).tube-line-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 26px;
+    @include transform(translateY(-50%));
+  }
+  .tube-line {
+    margin-bottom: 1px;
+    height: 5px;
+    display: block;
+  }
+}
+
+.route-branch-information,
+.route-branch-heading {
+  background-color: $subtler-grey;
+}
+
+.route-branch-heading {
+  margin-top: 20px;
+  border-top: 1px solid $light-grey-border-colour;
+  border-bottom: 1px solid $light-grey-border-colour;
+  padding: 15px;
+}
+
+.route-branch-heading + li .step-heading {
+  margin-top: 10px;
+}
+
+.pattern-2 {
+  .lines {
+    height: 90%;
+    top: 5%;
+  }
+}
+
+.start-location .stop-link {
+  padding-left: 0;
+}
+
+.time-and-mode {
+  .stop-name {
+    left: 50%;
+    margin-left: -15px;
+  }
+  .route-name {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -16px;
+    text-align: center;
+  }
+  &.with-stop {
+    .route-name {
+      top: auto;
+      margin-top: 0;
+      bottom: -10px;
+    }
+  }
+}
+
+.stop {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  margin-top: -2px;
+  width: 5px;
+  height: 4px;
+}
+
+.lines {
+  position: absolute;
+  width: 60px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  overflow: hidden;
+  z-index: 3;
+  span {
+    display: inline-block;
+    height: 100%;
+  }
+  .stop {
+    height: 4px;
+    background-color: inherit;
+    border-right: inherit;
+  }
+  .footpaths, .footpath, .walking {
+    margin-left: 3px;
+    border-left: 3px dashed $dark-grey;
+  }
+  .cycle, .cycle-easy, .cycle-moderate, .cycle-hard {
+    margin-left: 3px;
+    border-left: 3px dashed $cycle-line-colour;
+  }
+  .train, .national-rail {
+    border-right: 1px solid $rail-colour;
+    border-left: 1px solid $rail-colour;
+    background: #fff;
+    .stop {
+      border-top: 1px solid $rail-colour;
+      border-bottom: 1px solid $rail-colour;
+    }
+  }
+  .bus, .bus, .replacement-bus {
+    background: $bus-colour;
+  }
+  .hail-and-ride {
+    margin-left: 4px;
+    border-left: 4px dashed $bus-colour;
+  }
+  .overground {
+    border-right: 1px solid $overground-colour;
+    border-left: 1px solid $overground-colour;
+    background: #fff;
+    .stop {
+      border-top: 1px solid $overground-colour;
+      border-bottom: 1px solid $overground-colour;
+    }
+  }
+  .coach {
+    border-right: 1px solid $coach-colour;
+    border-left: 1px solid $coach-colour;
+    background: #fff;
+    .stop {
+      border-top: 1px solid $coach-colour;
+      border-bottom: 1px solid $coach-colour;
+    }
+  }
+  .river, .river-bus {
+    border-right: 1px solid $river-colour;
+    border-left: 1px solid $river-colour;
+    background: #fff;
+    .stop {
+      border-top: 1px solid $river-colour;
+      border-bottom: 1px solid $river-colour;
+    }
+  }
+  .dlr, .docklands, .docklands-light-railway {
+    border-right: 1px solid $dlr-colour;
+    border-left: 1px solid $dlr-colour;
+    background: #fff;
+    .stop {
+      border-top: 1px solid $dlr-colour;
+      border-bottom: 1px solid $dlr-colour;
+    }
+  }
+  .tram {
+    border-right: 1px solid $tram-colour;
+    border-left: 1px solid $tram-colour;
+    background: #fff;
+    .stop {
+      border-top: 1px solid $tram-colour;
+      border-bottom: 1px solid $tram-colour;
+    }
+  }
+  .cablecar, .cable-car {
+    position: relative;
+    width: 2px;
+    background: $cable-car-colour;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      background: $cable-car-colour;
+      width: 2px;
+      height: 100%;
+      top: 0;
+    }
+    &:before {
+      left: -4px;
+    }
+    &:after {
+      right: -4px;
+    }
+  }
+  &.lines2 {
+    span {
+      &:first-child .stop {
+        width: 7px;
+        left: 18px;
+        z-index: 2;
+      }
+      &:last-child .stop {
+        width: 6px;
+        z-index: 0;
+      }
+    }
+  }
+  &.lines3 {
+    span {
+      &:first-child .stop {
+        width: 7px;
+        left: 16px;
+        z-index: 2;
+      }
+      &:nth-child(2) .stop {
+        left: 20px;
+        width: 7px;
+        z-index: 1;
+      }
+      &:last-child .stop {
+        width: 8px;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+.journey-time {
+  font-weight: bold;
+  font-size: 30px;
+  .time-units {
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 2px;
+  }
+}
+
+.full-results-container {
+  margin: 0 0 10px $gridGutterWidth;
+  background: #fff;
+  .start-hidden {
+    padding: 10px;
+  }
+  table.journey-steps {
+    display: none;
+  }
+  .journey-details {
+    display: block;
+  }
+}
+
+.disruption-messages {
+  .line-status, .line-disruption {
+    background-color: $disruption-colour;
+    .message-toggle {
+      display: block;
+      padding: 10px 10px 10px 45px;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        left: 5px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(27, 1);
+      }
+    }
+  }
+  .line-information {
+    .message-toggle {
+      padding-left: 34px;
+      left: -11px;
+      position: relative;
+      &:after {
+        left: 4px;
+        margin-top: -16px;
+        margin-right: -6px;
+      }
+    }
+  }
+  .message-toggle {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 5px;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(22, 1);
+    }
+  }
+  .expanded {
+    .message-toggle {
+      &:after {
+        @include svg-icon-position-only(20, 1);
+      }
+    }
+  }
+  .content {
+    margin-left: 0;
+    background-color: transparent;
+  }
+  .start-hidden {
+    background-image: none;
+    border: 0;
+    background-color: transparent;
+  }
+}
+
+.journey-detail-step {
+  .content {
+    .line-status-heading {
+      padding: 5px 10px 6px 50px;
+    }
+  }
+}
+
+.replan-route {
+  text-align: center;
+  padding-top: 10px;
+  background-color: $jp-blue;
+}
+
+.replan-from-current-location {
+  background-color: #fff;
+  display: block;
+  padding: 16px 0 20px;
+  @extend %transparent-grey-bottom-border;
+  &:before {
+    @extend %sprite-images;
+    @include svg-icon(4, 1, $display: inline-block, $y-offset: 4);
+    content: "";
+    vertical-align: middle;
+  }
+}
+
+.showing-full-details {
+  .summary-results {
+    .auto-expand {
+      display: none;
+    }
+  }
+  .show-detailed-results {
+    display: none;
+  }
+}
+
+.leg-map {
+  height: 100%;
+}
+
+.accessibility-details {
+  background: $darker-subtle-grey;
+  padding: 10px;
+  .heading {
+    margin-bottom: 10px;
+  }
+  .details-pane {
+    display: none;
+  }
+  .icon {
+    float: left;
+    min-width: 32px;
+    margin-right: 10px;
+  }
+  p {
+    clear: both;
+    margin: 5px 0;
+  }
+  .sub-heading {
+    clear: both;
+    font-weight: bold;
+  }
+  &.expanded {
+    .details-pane {
+      display: block;
+    }
+    .heading {
+      padding-bottom: 10px;
+      border-bottom: 1px dotted $light-grey-border-colour;
+    }
+    .show-hide-links {
+      .hide-link {
+        display: inline;
+      }
+      .show-link {
+        display: none;
+      }
+    }
+  }
+  .show-hide-links {
+    text-align: center;
+    border-top: 1px dotted $light-grey-border-colour;
+    margin-top: 5px;
+    padding-top: 5px;
+    .hide-link {
+      display: none;
+      position: relative;
+      margin-left: -32px;
+      &:after {
+        content: "";
+        position: absolute;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(20, 1);
+        top: -6px;
+        right: -32px;
+      }
+    }
+    .show-link {
+      position: relative;
+      margin-left: -32px;
+      &:after {
+        content: "";
+        position: absolute;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(22, 1);
+        top: -6px;
+        right: -32px;
+      }
+    }
+  }
+  .walking & {
+    display: none;
+  }
+  .cycling & {
+    display: none;
+  }
+}
+
+[data-current-location='true'] {
+  &:after {
+    content: "Current location";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    width: 120px;
+    height: 19px;
+    padding: 5px 5px 5px 30px;
+    border: 1px solid darken($jp-subtle-blue, 10%);
+    background-color: $jp-subtle-blue;
+    z-index: 98;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 99;
+    @include svg-icon(1, 2);
+  }
+  .tt-query {
+    //this makes the cursor appear after the current location box
+    word-spacing: 25px;
+  }
+}
+
+.journey-planner-widget {
+  .journey-types {
+    display: none;
+  }
+  &.start-hidden.widget-content {
+    padding: 0;
+    //margin-top: 6px;
+  }
+  #plan-a-journey {
+    margin-top: 0;
+  }
+  .expanded & {
+    #more-journey-options, .go-via, .national-search {
+      display: none;
+    }
+    .toggle-options.more-options {
+      display: block;
+    }
+    .basic-journey-options {
+      border-bottom: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.journey-planner-results .journey-results .expandable-box {
+  border-bottom: 0px none;
+
+  .expanded > .start-hidden {
+    border-top: 0;
+  }
+
+  .content {
+    border-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  &.line-information, &.line-disruption, &.line-status {
+    .content {
+      background-color: transparent;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  .controls {
+    @extend %main-gradient;
+    position: absolute;
+    top: 16px;
+    left: -20px;
+    width: 20px;
+    height: 100%;
+    border: 1px solid $main-gradient-border-colour;
+    text-decoration: none;
+    &:before {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(23, 2);
+      content: "";
+      top: 50%;
+      position: absolute;
+      margin-top: -16px;
+      left: -7px;
+    }
+  }
+
+  .expanded {
+    .controls:before {
+      @include svg-icon-position-only(24, 2);
+    }
+  }
+}
+
+.jp-print-button {
+  margin-top: 10px;
+  .print-button {
+    max-width: 200px;
+    float: right;
+  }
+}

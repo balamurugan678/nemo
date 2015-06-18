@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.7.01">
+    	<createTable tableName="mock_oystercardpending" schemaName="${schemaName}" tablespace="${tableTablespace}">
+			<column name="id" type="number(38)">
+                <constraints nullable="false"/>
+            </column>
+			<column name="createduserid" type="varchar2(64)" remarks="Who created the record"/>
+            <column name="createddatetime" type="date" remarks="When (date and time) the record was created"/>
+            <column name="modifieduserid" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="modifieddatetime" type="date" remarks="When (date and time) the record was last modified"/>
+			
+			<column name="PRESTIGEID" type="varchar2(64)" remarks="Oyster card number">
+                <constraints nullable="false"/>
+            </column>
+			<column name="REQUESTSEQUENCENUMBER" type="NUMBER"/>
+			<column name="REALTIMEFLAG" type="VARCHAR2(1)"/>
+			<column name="PREPAYVALUE" type="NUMBER"/>
+			<column name="PRODUCTCODE" type="NUMBER"/>
+			<column name="PRODUCTPRICE" type="NUMBER"/>
+			<column name="STARTDATE" type="date"/>
+			<column name="EXPIRYDATE" type="date"/>
+			<column name="CURRENCY" type="NUMBER"/>
+			<column name="PICKUPLOCATION" type="NUMBER"/>
+			<column name="EXTERNALID" type="NUMBER(38,0)"/>
+		</createTable>
+		
+		<createSequence schemaName="${schemaName}" sequenceName="mock_oystercardpending_seq" incrementBy="1" startValue="1"/>
+    </changeSet>
+</databaseChangeLog>

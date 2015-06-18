@@ -1,0 +1,1267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.24">
+    
+        <addColumn tableName="country" schemaName="${schemaName}">
+            <column name="IsoNumericCode" type="varchar2(3)" remarks="ISO Three-digit Numeric Code"/>
+        </addColumn>
+        
+        <addColumn tableName="country_AUD" schemaName="${schemaName}">
+            <column name="IsoNumericCode" type="varchar2(3)" remarks="ISO Three-digit Numeric Code"/>
+        </addColumn>
+        
+        <update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="004"/>
+        	<where>code='AF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="248"/>
+        	<where>code='AX'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="008"/>
+        	<where>code='AL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="012"/>
+        	<where>code='DZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="016"/>
+        	<where>code='AS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="020"/>
+        	<where>code='AD'</where>
+    	</update>
+    
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="024"/>
+        	<where>code='AO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="660"/>
+        	<where>code='AI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="010"/>
+        	<where>code='AQ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="028"/>
+        	<where>code='AG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="032"/>
+        	<where>code='AR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="051"/>
+        	<where>code='AM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="530"/>
+        	<where>code='AN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="533"/>
+        	<where>code='AW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="036"/>
+        	<where>code='AU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="040"/>
+        	<where>code='AT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="031"/>
+        	<where>code='AZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="044"/>
+        	<where>code='BS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="048"/>
+        	<where>code='BH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="050"/>
+        	<where>code='BD'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="052"/>
+        	<where>code='BB'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="112"/>
+        	<where>code='BY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="056"/>
+        	<where>code='BE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="084"/>
+        	<where>code='BZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="204"/>
+        	<where>code='BJ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="060"/>
+        	<where>code='BM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="064"/>
+        	<where>code='BT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="068"/>
+        	<where>code='BO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="535"/>
+        	<where>code='BQ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="070"/>
+        	<where>code='BA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="072"/>
+        	<where>code='BW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="074"/>
+        	<where>code='BV'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="076"/>
+        	<where>code='BR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="086"/>
+        	<where>code='IO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="096"/>
+        	<where>code='BN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="100"/>
+        	<where>code='BG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="854"/>
+        	<where>code='BF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="108"/>
+        	<where>code='BI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="116"/>
+        	<where>code='KH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="120"/>
+        	<where>code='CM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="124"/>
+        	<where>code='CA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="132"/>
+        	<where>code='CV'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="136"/>
+        	<where>code='KY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="140"/>
+        	<where>code='CF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="148"/>
+        	<where>code='TD'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="152"/>
+        	<where>code='CL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="156"/>
+        	<where>code='CN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="162"/>
+        	<where>code='CX'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="166"/>
+        	<where>code='CC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="170"/>
+        	<where>code='CO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="174"/>
+        	<where>code='KM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="178"/>
+        	<where>code='CG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="180"/>
+        	<where>code='CD'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="184"/>
+        	<where>code='CK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="188"/>
+        	<where>code='CR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="384"/>
+        	<where>code='CI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="191"/>
+        	<where>code='HR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="192"/>
+        	<where>code='CU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="531"/>
+        	<where>code='CW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="196"/>
+        	<where>code='CY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="203"/>
+        	<where>code='CZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="208"/>
+        	<where>code='DK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="262"/>
+        	<where>code='DJ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="212"/>
+        	<where>code='DM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="214"/>
+        	<where>code='DO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="218"/>
+        	<where>code='EC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="818"/>
+        	<where>code='EG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="222"/>
+        	<where>code='SV'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="226"/>
+        	<where>code='GQ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="232"/>
+        	<where>code='ER'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="233"/>
+        	<where>code='EE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="231"/>
+        	<where>code='ET'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="238"/>
+        	<where>code='FK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="234"/>
+        	<where>code='FO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="242"/>
+        	<where>code='FJ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="246"/>
+        	<where>code='FI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="250"/>
+        	<where>code='FR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="254"/>
+        	<where>code='GF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="258"/>
+        	<where>code='PF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="260"/>
+        	<where>code='TF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="266"/>
+        	<where>code='GA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="270"/>
+        	<where>code='GM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="268"/>
+        	<where>code='GE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="276"/>
+        	<where>code='DE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="288"/>
+        	<where>code='GH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="292"/>
+        	<where>code='GI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="300"/>
+        	<where>code='GR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="304"/>
+        	<where>code='GL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="308"/>
+        	<where>code='GD'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="312"/>
+        	<where>code='GP'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="316"/>
+        	<where>code='GU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="320"/>
+        	<where>code='GT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="831"/>
+        	<where>code='GG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="324"/>
+        	<where>code='GN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="624"/>
+        	<where>code='GW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="328"/>
+        	<where>code='GY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="332"/>
+        	<where>code='HT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="334"/>
+        	<where>code='HM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="336"/>
+        	<where>code='VA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="340"/>
+        	<where>code='HN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="344"/>
+        	<where>code='HK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="348"/>
+        	<where>code='HU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="352"/>
+        	<where>code='IS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="356"/>
+        	<where>code='IN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="360"/>
+        	<where>code='ID'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="364"/>
+        	<where>code='IR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="368"/>
+        	<where>code='IQ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="372"/>
+        	<where>code='IE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="833"/>
+        	<where>code='IM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="376"/>
+        	<where>code='IL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="380"/>
+        	<where>code='IT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="388"/>
+        	<where>code='JM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="392"/>
+        	<where>code='JP'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="832"/>
+        	<where>code='JE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="400"/>
+        	<where>code='JO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="398"/>
+        	<where>code='KZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="404"/>
+        	<where>code='KE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="296"/>
+        	<where>code='KI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="408"/>
+        	<where>code='KP'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="410"/>
+        	<where>code='KR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="414"/>
+        	<where>code='KW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="417"/>
+        	<where>code='KG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="418"/>
+        	<where>code='LA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="428"/>
+        	<where>code='LV'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="422"/>
+        	<where>code='LB'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="426"/>
+        	<where>code='LS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="430"/>
+        	<where>code='LR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="434"/>
+        	<where>code='LY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="438"/>
+        	<where>code='LI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="440"/>
+        	<where>code='LT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="442"/>
+        	<where>code='LU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="446"/>
+        	<where>code='MO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="807"/>
+        	<where>code='MK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="450"/>
+        	<where>code='MG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="454"/>
+        	<where>code='MW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="458"/>
+        	<where>code='MY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="462"/>
+        	<where>code='MV'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="466"/>
+        	<where>code='ML'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="470"/>
+        	<where>code='MT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="584"/>
+        	<where>code='MH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="474"/>
+        	<where>code='MQ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="478"/>
+        	<where>code='MR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="480"/>
+        	<where>code='MU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="175"/>
+        	<where>code='YT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="484"/>
+        	<where>code='MX'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="583"/>
+        	<where>code='FM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="498"/>
+        	<where>code='MD'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="492"/>
+        	<where>code='MC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="496"/>
+        	<where>code='MN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="499"/>
+        	<where>code='ME'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="500"/>
+        	<where>code='MS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="504"/>
+        	<where>code='MA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="508"/>
+        	<where>code='MZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="104"/>
+        	<where>code='MM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="516"/>
+        	<where>code='NA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="520"/>
+        	<where>code='NR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="524"/>
+        	<where>code='NP'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="528"/>
+        	<where>code='NL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="540"/>
+        	<where>code='NC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="554"/>
+        	<where>code='NZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="558"/>
+        	<where>code='NI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="562"/>
+        	<where>code='NE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="566"/>
+        	<where>code='NG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="570"/>
+        	<where>code='NU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="574"/>
+        	<where>code='NF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="580"/>
+        	<where>code='MP'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="578"/>
+        	<where>code='NO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="512"/>
+        	<where>code='OM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="586"/>
+        	<where>code='PK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="585"/>
+        	<where>code='PW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="275"/>
+        	<where>code='PS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="591"/>
+        	<where>code='PA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="598"/>
+        	<where>code='PG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="600"/>
+        	<where>code='PY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="604"/>
+        	<where>code='PE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="608"/>
+        	<where>code='PH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="612"/>
+        	<where>code='PN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="616"/>
+        	<where>code='PL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="620"/>
+        	<where>code='PT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="630"/>
+        	<where>code='PR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="634"/>
+        	<where>code='QA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="638"/>
+        	<where>code='RE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="642"/>
+        	<where>code='RO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="643"/>
+        	<where>code='RU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="646"/>
+        	<where>code='RW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="652"/>
+        	<where>code='BL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="654"/>
+        	<where>code='SH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="659"/>
+        	<where>code='KN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="662"/>
+        	<where>code='LC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="663"/>
+        	<where>code='MF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="666"/>
+        	<where>code='PM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="670"/>
+        	<where>code='VC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="882"/>
+        	<where>code='WS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="674"/>
+        	<where>code='SM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="678"/>
+        	<where>code='ST'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="682"/>
+        	<where>code='SA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="686"/>
+        	<where>code='SN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="688"/>
+        	<where>code='RS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="690"/>
+        	<where>code='SC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="694"/>
+        	<where>code='SL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="702"/>
+        	<where>code='SG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="534"/>
+        	<where>code='SX'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="703"/>
+        	<where>code='SK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="705"/>
+        	<where>code='SI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="090"/>
+        	<where>code='SB'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="706"/>
+        	<where>code='SO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="710"/>
+        	<where>code='ZA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="239"/>
+        	<where>code='GS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="728"/>
+        	<where>code='SS'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="724"/>
+        	<where>code='ES'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="144"/>
+        	<where>code='LK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="729"/>
+        	<where>code='SD'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="740"/>
+        	<where>code='SR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="744"/>
+        	<where>code='SJ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="748"/>
+        	<where>code='SZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="752"/>
+        	<where>code='SE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="756"/>
+        	<where>code='CH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="760"/>
+        	<where>code='SY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="158"/>
+        	<where>code='TW'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="762"/>
+        	<where>code='TJ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="834"/>
+        	<where>code='TZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="764"/>
+        	<where>code='TH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="626"/>
+        	<where>code='TL'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="768"/>
+        	<where>code='TG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="772"/>
+        	<where>code='TK'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="776"/>
+        	<where>code='TO'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="780"/>
+        	<where>code='TT'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="788"/>
+        	<where>code='TN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="792"/>
+        	<where>code='TR'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="795"/>
+        	<where>code='TM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="796"/>
+        	<where>code='TC'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="798"/>
+        	<where>code='TV'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="800"/>
+        	<where>code='UG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="804"/>
+        	<where>code='UA'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="784"/>
+        	<where>code='AE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="826"/>
+        	<where>code='GB'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="840"/>
+        	<where>code='US'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="581"/>
+        	<where>code='UM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="858"/>
+        	<where>code='UY'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="860"/>
+        	<where>code='UZ'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="548"/>
+        	<where>code='VU'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="862"/>
+        	<where>code='VE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="704"/>
+        	<where>code='VN'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="092"/>
+        	<where>code='VG'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="850"/>
+        	<where>code='VI'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="876"/>
+        	<where>code='WF'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="732"/>
+        	<where>code='EH'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="887"/>
+        	<where>code='YE'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="894"/>
+        	<where>code='ZM'</where>
+    	</update>
+    	
+    	<update tableName="country" schemaName="${schemaName}">
+        	<column name="IsoNumericCode" type="varchar2(3)" value="716"/>
+        	<where>code='ZW'</where>
+    	</update>
+    	
+    </changeSet>
+</databaseChangeLog>

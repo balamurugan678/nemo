@@ -1,0 +1,199 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.6.2 on 16-05-2014@04:05  by Creative*/
+.main, .aside {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 94.864%;
+}
+
+.form-tooltip {
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.form-tooltip:before {
+    top: 10px;
+    left: -7.07107px;
+    border-top: 0;
+    border-bottom: 1px solid #CCD1E5;
+    border-left: 1px solid #CCD1E5;
+}
+
+.csc-col {
+    float: left;
+    width: 48%;
+    margin-left: 4%;
+}
+
+.csc-col:first-child {
+    margin-left: 0;
+}
+
+.headline-container.plain h1 {
+    font-size: 36px;
+}
+
+.headline-container.plain h1.signing {
+    font-size: 50px;
+}
+
+h1 {
+    line-height: 120%;
+    font-size: 50px;
+}
+
+h1 span {
+    line-height: 120%;
+}
+
+.medium, .small-medium, .medium-large {
+    display: block;
+}
+
+.large, .small {
+    display: none;
+}
+
+.form-with-tooltips {
+    width: 50%;
+}
+
+.csc-toggle-content-small-only .csc-toggle-content-start-hidden {
+    display: block;
+}
+
+.csc-toggle-content-small-only .csc-toggle-controls {
+    display: none;
+}
+
+.csc-card-link {
+    padding-right: 0;
+}
+
+.csc-card-details {
+    margin-bottom: 0;
+}
+
+.csc-card-details .right-arrow {
+    right: 0;
+}
+
+.csc-card-status {
+    position: absolute;
+    top: 10px;
+    right: 32px;
+    width: 40%;
+}
+
+.csc-card-status.warning {
+    border: none;
+}
+
+.search-filter {
+    position: relative;
+}
+
+.filter-wrapper {
+    width: 47.5%;
+}
+
+.csc-time-period-wrapper {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding-top: 0;
+    border-top: 0;
+}
+
+.csc-time-period-wrapper .vertically-centred {
+    margin-top: -16px;
+}
+
+.csc-from-and-to {
+    padding-right: 150px;
+}
+
+.csc-price-and-icons {
+    display: inline;
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+.download-box {
+    width: 47.5%;
+    float: left;
+    margin-bottom: 0;
+}
+
+.download-box:last-child {
+    margin-left: 5%;
+}
+
+.csc-dashboard-cards .csc-card-link {
+    padding-right: 10px;
+}
+
+.csc-dashboard-cards .csc-card-details {
+    margin-bottom: 10px;
+}
+
+.csc-dashboard-cards .csc-card-details .right-arrow {
+    right: -10px;
+}
+
+.csc-dashboard-cards .csc-card-status {
+    right: auto;
+    width: auto;
+    top: auto;
+    position: relative;
+}
+
+.headline-container.with-dashboard-icons {
+    padding-right: 290px;
+    position: relative;
+}
+
+.headline-container.with-dashboard-icons .csc-notification-icons {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.with-dashboard-icons.one-icon {
+    padding-right: 70px;
+}
+
+.with-dashboard-icons.two-icons {
+    padding-right: 130px;
+}
+
+.with-dashboard-icons.three-icons {
+    padding-right: 180px;
+}
+
+.with-dashboard-icons.four-icons {
+    padding-right: 230px;
+}
+
+.csc-section .csc-section-heading {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom-width: 1px;
+}
+
+.csc-toggle-content-small-only .csc-toggle-content-always-visible {
+    cursor: auto;
+}
+
+.csc-journey-from-to {
+    padding: 5px 5px 5px 120px;
+}
+
+.csc-journey-from-to-line {
+    padding: 10px 10px 0 75px;
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.02">
+        <sql splitStatements="false">
+            <![CDATA[
+				BEGIN
+				   content_installer.install('viewOysterCard.changeSecurityQuestion.url', 'ChangeSecurityQuestion.htm');
+				   content_installer.install('viewOysterCard.changeSecurityQuestion.link', 'Change Card Security Question');
+				   content_installer.install('viewOysterCard.changeSecurityQuestion.tip', 'Change the security question for this card');
+				   content_installer.install('changeSecurityQuestion.oysterText.text', 'Oyster');
+				   content_installer.install('cardSecurityQuestionSuccessUpdate.oysterText.text', 'Oyster');
+				   content_installer.install('CardSecurityQuestionSuccessUpdate.backToOyesterCard.button.tip', 'Back to View Oyster Card');
+				   content_installer.install('CardSecurityQuestionSuccessUpdate.backToOyesterCard.button.label', '<  Back to View Oyster Card');
+				   content_installer.install('securityQuestionCmd.securityAnswer.invalid.pattern.error', 'Answers to your mother''s maiden name or memorable place must contain only letters, spaces or hyphens');
+				   content_installer.install('securityQuestionCmd.confirmSecurityAnswer.invalid.pattern.error', 'Answers to your mother''s maiden name or memorable place must contain only letters, spaces or hyphens');
+				   content_installer.install('securityQuestionCmd.securityAnswer.invalidInputFieldMinimumLength.error', 'Answers to your mother''s maiden name or memorable place must be at least 2 characters long');
+				   content_installer.install('securityQuestionCmd.confirmSecurityAnswer.invalidInputFieldMinimumLength.error', 'Answers to your mother''s maiden name or memorable place must be at least 2 characters long');
+				END;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

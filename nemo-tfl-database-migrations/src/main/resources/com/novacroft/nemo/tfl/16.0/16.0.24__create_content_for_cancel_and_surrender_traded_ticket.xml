@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.24">
+		<sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('CancelAndSurrender.tradedTicketPassengerType.label', 'Traded ticket passenger type');
+				  content_installer.install('CancelAndSurrender.tradedTicketDiscountType.label', 'Traded ticket discount type');
+				end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

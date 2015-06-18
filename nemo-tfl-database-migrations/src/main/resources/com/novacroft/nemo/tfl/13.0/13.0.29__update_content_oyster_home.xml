@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.29">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('oysterHome.upper.text', '<p>Oyster and contactless payment cards are plastic smartcards used for quick and easy payments; you can use them instead of paper tickets to pay for travel.</p><p>If you use an Oyster card, you either have to add tickets or credit to pay as you go before you travel. If you use contactless payment cards you can pay as you go and pay for all your travel in a single transaction at the end of the day.</p><p>Oyster and contactless payment cards are the cheapest way to pay for single fares.</p>');
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

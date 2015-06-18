@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.10">
+		<sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('queueStatus.heading', 'Current fulfilment queue status');		
+				  content_installer.install('queueChoose.heading', 'Please choose a fulfilment queue and click process.');	
+				  content_installer.install('queuePending.label', 'Fulfilment Pending');	
+				  content_installer.install('goldCardPending.label','Gold Card Pending');
+				  content_installer.install('payasyougoPending.label', 'Pay As You Go Pending Fulfilment');
+				  content_installer.install('autotopupOrderPending.label', 'Auto top-up Order Pending Fulfilment');
+				  content_installer.install('replacementCardPending.label', 'Replacement Card Pending');
+				  content_installer.install('autotopupReplacementOrderPending.label', 'Auto top-up Replacement Order Pending Fulfilment');
+				  content_installer.install('queueProcess.button.label', 'Process');
+				end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

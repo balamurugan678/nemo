@@ -1,0 +1,821 @@
+/* utility */
+/* glabal - ie */
+/* line 3, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 h1, .lt-ie8 h2, .lt-ie8 h3 {
+    line-height: 153.33%;
+}
+
+/* line 6, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 a.primary-button, .lt-ie8 a.secondary-button {
+    height: 24px;
+}
+
+/* line 9, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 li {
+    margin-left: 1em;
+    vertical-align: top;
+}
+
+/* line 13, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .visually-hidden {
+    visibility: hidden;
+}
+
+/* line 16, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .flat-button {
+    padding-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+/* line 20, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .flat-button img {
+    margin-top: 20px;
+}
+
+/* line 24, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .icon-replacement-text {
+    display: block;
+}
+
+/* line 27, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .plain-button {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* line 31, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .section-overview {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* line 35, ../../sass/global/base/_base-ie.scss */
+.lt-ie8 .tabs-style-1 {
+    overflow: hidden;
+}
+
+/* line 42, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 body {
+    min-width: 900px;
+}
+
+/* line 45, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 input[type='text'] {
+    padding-top: 8px;
+}
+
+/* line 49, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 .large-status-information {
+    border: solid 1px #A8A8A8;
+    display: block;
+    margin-top: 15px;
+}
+
+/* line 55, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 .large-status-information .line-text {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+/* line 60, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 .large-status-information .disruption-type {
+    padding: 10px 20px;
+    vertical-align: middle;
+    width: 24%;
+    color: #1a5a92;
+}
+
+/* line 68, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 .large-status-information .disruption-message {
+    padding: 10px 20px;
+    vertical-align: middle;
+}
+
+/* line 75, ../../sass/global/base/_base-ie.scss */
+.lt-ie9 .section-overview > div.main {
+    width: 60%;
+}
+
+/* line 3, ../../sass/global/layout/_layout-ie.scss */
+.lt-ie8 .module-grid > div {
+    width: 47%;
+}
+
+/* line 5, ../../sass/global/layout/_layout-ie.scss */
+.lt-ie8 .module-grid > div:first-child {
+    margin-right: 5%;
+}
+
+/* line 12, ../../sass/global/layout/_layout-ie.scss */
+.lt-ie8 .aside .module-grid > div {
+    width: 100%;
+}
+
+/**************************************************
+	B2 Form
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/B2+-+Form
+
+**************************************************/
+/* line 11, ../../sass/global/forms/_forms-ie.scss */
+.lt-ie8 input[type="text"] {
+    padding: 5px 0;
+    height: 26px;
+}
+
+/* line 15, ../../sass/global/forms/_forms-ie.scss */
+.lt-ie8 .selector {
+    background: none;
+    border: none;
+}
+
+/* line 23, ../../sass/global/forms/_forms-ie.scss */
+.lt-ie9.no-js .checkbox-list input[type='checkbox'], .lt-ie9.no-js .styled-checkbox input[type='checkbox'] {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+/* elements - ie */
+/* modules - ie */
+/* line 3, ../../sass/modules/M003-follow-social/_follow-social-ie.scss */
+.lt-ie8 .social-text p {
+    padding-left: 0;
+}
+
+/**************************************************
+	A1 Primary Navigation / M004 Primary Navigation
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C1+-+Accordion &
+                       \Google Drive\NWP\Front-end\Pattern library\Modules\M004-primary-navigation
+
+**************************************************/
+/* line 13, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie8 .mainnav {
+    margin-bottom: -4px;
+}
+
+/* line 17, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie8 .top-row .logo {
+    height: 43px;
+}
+
+/* line 19, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie8 .top-row .logo .main-roundel {
+    left: 30px;
+}
+
+/* line 23, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie8 .top-row .collapsible-menu {
+    margin-top: -21px;
+}
+
+/* line 29, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie8 .top-row-extras .login a {
+    height: 40px;
+    padding-bottom: 0;
+}
+
+/* line 36, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie8 .more .text {
+    font-family: "New Johnson";
+}
+
+/* line 46, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie9 .extra-nav {
+    width: 900px;
+    left: 50%;
+    margin-left: -450px;
+}
+
+/* line 53, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie9 .top-row .logo .main-roundel {
+    background-image: url("../../../static/1/images/homepage_sprite.png");
+    background-position: 0 -5px;
+    width: 48px;
+}
+
+/* line 62, ../../sass/modules/M004-primary-navigation/_primary-navigation-ie.scss */
+.lt-ie9 .top-row-extras input[type='text'] {
+    margin-right: 22px;
+}
+
+/* line 4, ../../sass/modules/M005-footer/_footer-ie.scss */
+.lt-ie9 #footer .info-for li {
+    width: 44%;
+}
+
+/**************************************************
+	A2 Breadcrumbs
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A2+-+Breadcrumbs
+
+**************************************************/
+/* line 12, ../../sass/modules/M008-breadcrumb/_breadcrumb-ie.scss */
+.lt-ie8 .breadcrumbs li {
+    margin-left: 2px;
+}
+
+/* line 14, ../../sass/modules/M008-breadcrumb/_breadcrumb-ie.scss */
+.lt-ie8 .breadcrumbs li.home a {
+    width: 12px;
+}
+
+/* line 23, ../../sass/modules/M008-breadcrumb/_breadcrumb-ie.scss */
+.lt-ie9 .breadcrumbs a:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAfCAYAAADXwvzvAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQzg4Q0Y2NUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQzg4Q0Y2NkU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDODhDRjYzRTZFQTExRTI5ODU5QzExM0REQUEwOUJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDODhDRjY0RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Gvx++QAAAVxJREFUeNqU1EtqwzAQAFBJFnQXaoEP0Cv0Fi00EEj2TdNLlbbkAM2qpb1GT1CyDfizsLNx8KczQQZbkTWywJaEPZpnfcyzLGsZY6s4jndQsyiKPqBaMqIIvLVt+w4BCttpml5Bn3kFcs5n8PIW203TbIqiOHoF6uA5ZEViXJblM1zOQK6/kWlyDgPcwPdmQohPpdQD9N0Zp5LFBcGTPKCOkL+BfG+ShXW0IfnRRhajs0aQrVQbOQiCnzAM7zqycK5Vj1zX9VOfLKgd0iMf+mQn1UUmM9rIRyhegViqqrrVzYOU8lX6BOExy/P8V59XBf21V0acTdy7epAXoF+TGXEW4VrjRoBsi+7vQG0ABs+/INtcE/8wG7mOBvGtC8IiJxAXPsfKJO5xLcnTYSHOzHfkVOLYz4okWqk+xAuqQVyOEQfUKcQB1SBuqaAzFQ4n1mciNpIkOfls/H8BBgBmJFBsyjnddAAAAABJRU5ErkJggg==);
+}
+
+/* line 27, ../../sass/modules/M008-breadcrumb/_breadcrumb-ie.scss */
+.lt-ie9 .breadcrumbs .last-breadcrumb:after {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAfCAYAAAAx6zerAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoxQzg4Q0Y2OUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoxQzg4Q0Y2QUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDODhDRjY3RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDODhDRjY4RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VFCc4QAAAN1JREFUeNqMlEEKwyAQRUfpuotCDtAr9CBdtQcoPVfpBbLrQXoQwYW6EULsCAmo1ZkZSCLy9D/UqKy1CQDuxpgZmNL5lVJ6TdN0EsFKqSMOeIvgbcAVZ7+JYIlOBXM6uu2gdHSvc6TThUc6euTX09HUUrU6JNzqaG7XSh21HSRgdBwOOrMzlzoiONeyLBcRjLOCc+4rgr33YV3XJwvHGPPzwKbhNgVCCB9szuw67/HsppTx3BGt4km4jR/CvfjRD9uN78Kj+D+Yim+vLzK+grn4vQ54e+YvGb/XT4ABAKjsoFLl0Z5JAAAAAElFTkSuQmCC);
+    width: 11px;
+    right: -11px;
+}
+
+/**************************************************
+	M020 - on this page
+
+* Author: Alex Faunt
+* Created: 22/08/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M020-on-this-page
+
+**************************************************/
+/* line 10, ../../sass/modules/M020-on-this-page/_on-this-page-ie.scss */
+.lt-ie8 ul.on-this-page-list {
+    width: 48%;
+    padding-left: 2%;
+}
+
+/* line 13, ../../sass/modules/M020-on-this-page/_on-this-page-ie.scss */
+.lt-ie8 ul.on-this-page-list:first-child {
+    padding-left: 0;
+    padding-right: 2%;
+}
+
+/* line 17, ../../sass/modules/M020-on-this-page/_on-this-page-ie.scss */
+.lt-ie8 ul.on-this-page-list a {
+    padding-left: 15px;
+}
+
+/* line 20, ../../sass/modules/M020-on-this-page/_on-this-page-ie.scss */
+.lt-ie8 ul.on-this-page-list + div.clearfix {
+    clear: both;
+}
+
+/* line 23, ../../sass/modules/M020-on-this-page/_on-this-page-ie.scss */
+.lt-ie8 ul.on-this-page-list > li > a {
+    *display: inline;
+    *zoom: 1;
+}
+
+/**************************************************
+	C1 Accordion
+
+* Author: Steven Swinbank
+* Created: 23/04/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C22+-+Video+gallery
+
+**************************************************/
+/*** Navigation ***/
+/* line 15, ../../sass/modules/M030-video-gallery/_video-gallery-ie.scss */
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    height: 32px;
+    width: 32px;
+    background-color: #fff;
+}
+
+/* line 21, ../../sass/modules/M030-video-gallery/_video-gallery-ie.scss */
+.nbs-flexisel-nav-left {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -576px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .nbs-flexisel-nav-left {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 25, ../../sass/modules/M030-video-gallery/_video-gallery-ie.scss */
+.nbs-flexisel-nav-right {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -640px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .nbs-flexisel-nav-right {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/**************************************************
+RAINBOW BOARD
+* Author: Rodrigo Lopes
+* Created: 19/02/2013
+* Modified by:
+* Modified date:
+* Pattern library URL: http://
+**************************************************/
+/* line 13, ../../sass/modules/M048-rainbow-board/_rainbow-board-ie.scss */
+.lt-ie8 .rainbow-board .selected + .info-dropdown {
+    display: block;
+}
+
+/* line 20, ../../sass/modules/M048-rainbow-board/_rainbow-board-ie.scss */
+.lt-ie8 .board-wrapper.lines-status .no-disruption {
+    display: block;
+}
+
+/* line 25, ../../sass/modules/M048-rainbow-board/_rainbow-board-ie.scss */
+.lt-ie8 .board-wrapper .rainbow-board .collapsed-lines {
+    display: block;
+}
+
+/* line 2, ../../sass/modules/M054-teaser/_teaser-ie.scss */
+.lt-ie8 .news-teaser {
+    border-bottom: 0;
+}
+
+/* line 4, ../../sass/modules/M054-teaser/_teaser-ie.scss */
+.lt-ie8 .news-teaser > a:hover {
+    border-bottom: 0;
+    margin-bottom: 6px;
+}
+
+/* line 5, ../../sass/modules/M058-coming-soon/_coming-soon-ie.scss */
+.lt-ie8 .coming-soon-widget .coming-soon-icon {
+    padding: 0;
+    text-align: left;
+}
+
+/* line 8, ../../sass/modules/M058-coming-soon/_coming-soon-ie.scss */
+.lt-ie8 .coming-soon-widget .coming-soon-icon p {
+    float: none;
+}
+
+/* line 15, ../../sass/modules/M058-coming-soon/_coming-soon-ie.scss */
+.lt-ie9 .coming-soon-widget {
+    background-position: 50% 50%;
+}
+
+/**************************************************
+	M071 flip table
+* Author: Adrian Osmond
+* Created: 20/11/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M071-flip-table
+**************************************************/
+/* line 11, ../../sass/modules/M071-flip-table/_flip-table-ie.scss */
+.lt-ie10:not(.lt-ie9) .flip-table.flipped {
+    display: block;
+    table-layout: fixed;
+}
+
+/* line 14, ../../sass/modules/M071-flip-table/_flip-table-ie.scss */
+.lt-ie10:not(.lt-ie9) .flip-table.flipped tbody, .lt-ie10:not(.lt-ie9) .flip-table.flipped tr, .lt-ie10:not(.lt-ie9) .flip-table.flipped td {
+    float: left;
+    width: 100%;
+}
+
+/* line 18, ../../sass/modules/M071-flip-table/_flip-table-ie.scss */
+.lt-ie10:not(.lt-ie9) .flip-table.flipped td {
+    text-align: left;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+/* line 22, ../../sass/modules/M071-flip-table/_flip-table-ie.scss */
+.lt-ie10:not(.lt-ie9) .flip-table.flipped td:before {
+    display: inline;
+    width: auto;
+    padding: 0;
+}
+
+/* line 27, ../../sass/modules/M071-flip-table/_flip-table-ie.scss */
+.lt-ie10:not(.lt-ie9) .flip-table.flipped td .cell {
+    display: inline;
+    border-left: 0;
+    width: auto;
+    padding: 0 0 0 10px;
+}
+
+/**************************************************
+	M078-advert-tile
+* Author: Alex Faunt
+* Re-Created: 17/12/2013
+* Pattern library URL:  
+**************************************************/
+/* line 10, ../../sass/modules/M078-advert-tile/_advert-tile-ie.scss */
+.advert-tile .caption {
+    background-color: #2d3039;
+}
+
+/* Specific - ie */
+/* line 4, ../../sass/specific/homepage/_homepage-ie.scss */
+.lt-ie8 .homepage-top-links .flat-button {
+    width: 32%;
+}
+
+/* line 6, ../../sass/specific/homepage/_homepage-ie.scss */
+.lt-ie8 .homepage-top-links .flat-button .text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+}
+
+/* line 19, ../../sass/specific/homepage/_homepage-ie.scss */
+.lt-ie9 .homepage-style .content {
+    margin-left: 0;
+    background-color: transparent;
+}
+
+/* line 22, ../../sass/specific/homepage/_homepage-ie.scss */
+.lt-ie9 .homepage-style .content .always-visible {
+    margin-bottom: -9px;
+}
+
+/* line 29, ../../sass/specific/homepage/_homepage-ie.scss */
+.lt-ie9 .homepage-top-links :first-child .text {
+    margin-top: 45px;
+}
+
+/* line 2, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .journey-planner-promo {
+    background-color: #2d3039;
+}
+
+/* line 5, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .jp-tab {
+    height: 20px;
+}
+
+/* line 8, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 #from {
+    width: 85%;
+}
+
+/* line 11, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 #plan-a-journey * {
+    *zoom: 1;
+}
+
+/* line 14, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 #more-journey-options {
+    margin-right: 0;
+    width: 60%;
+}
+
+/* line 18, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .modes-of-transport.checkbox-list li {
+    width: 45%;
+}
+
+/* line 21, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .modes-of-transport li label {
+    text-indent: 7px;
+}
+
+/* line 25, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 #save-journey-planner-preferences {
+    width: 100%;
+    left: -3.2%;
+}
+
+/* line 29, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .hours-mins {
+    clear: both;
+}
+
+/* line 34, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .journey-planner-results #plan-a-journey #From, .lt-ie8 .journey-planner-results #plan-a-journey #To, .lt-ie8 .journey-planner-results #plan-a-journey #Via {
+    padding: 0;
+}
+
+/* line 37, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .journey-planner-results #plan-a-journey.editing {
+    *zoom: 1;
+    display: block;
+}
+
+/* line 42, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .journey-planner-results input.primary-button {
+    width: 50%;
+}
+
+/* line 45, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .journey-planner-results #more-journey-options {
+    width: 92%;
+}
+
+/* line 50, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .auto-expand.expandable-box .always-visible {
+    width: 32%;
+}
+
+/* line 53, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .auto-expand.expandable-box .start-hidden {
+    width: 65%;
+}
+
+/* line 58, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .showing-full-details .summary-results {
+    width: 30%;
+}
+
+/* line 61, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .showing-full-details .full-results-container {
+    width: 65%;
+    float: left;
+}
+
+/* line 66, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .showing-full-details .auto-expand.expandable-box .always-visible {
+    width: 100%;
+}
+
+/* line 72, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 table.journey-steps .logo div {
+    padding: 0;
+}
+
+/* line 75, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 table.journey-steps thead {
+    visibility: hidden;
+}
+
+/* line 80, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .time-and-mode > div {
+    left: 0;
+}
+
+/* line 82, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .time-and-mode > div .centred {
+    margin-left: 0;
+}
+
+/* line 84, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .time-and-mode > div .centred.walking-icon {
+    margin-left: 0;
+}
+
+/* line 91, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .step-heading .time-and-mode {
+    left: 0;
+}
+
+/* line 96, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .transfer .time-and-mode {
+    left: 0;
+}
+
+/* line 100, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .travel-preferences {
+    clear: both;
+}
+
+/* line 104, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .tabs-style-2 li {
+    height: 42px;
+    margin-left: 0;
+}
+
+/* line 107, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie8 .tabs-style-2 li .icon-left {
+    padding-left: 0 !important;
+}
+
+/* line 116, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 .full-results-container {
+    float: left;
+}
+
+/* line 120, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 .journey-planner-results .half-width-buttons {
+    margin-right: 0;
+}
+
+/* line 122, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 .journey-planner-results .half-width-buttons a {
+    width: 20%;
+}
+
+/* line 124, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 .journey-planner-results .half-width-buttons a:first-child {
+    margin-right: 54%;
+}
+
+/* line 131, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.tube-icon, .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -1056px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.tube-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.tube-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 134, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.national-rail-icon, .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -352px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.national-rail-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.national-rail-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 137, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.bus-icon, .lt-ie9 table.journey-steps .logo div.bus-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -320px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.bus-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.bus-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 140, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.dlr-icon, .lt-ie9 ul.journey-steps li .docklands-icon, .lt-ie9 ul.journey-steps li .docklands-light-railway-icon, .lt-ie9 table.journey-steps .logo div.dlr-icon, .lt-ie9 table.journey-steps .logo div .docklands-icon, .lt-ie9 table.journey-steps .logo div .docklands-light-railway-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -1088px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.dlr-icon, .body-cms-preview .lt-ie9 ul.journey-steps li .docklands-icon, .body-cms-preview .lt-ie9 ul.journey-steps li .docklands-light-railway-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.dlr-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div .docklands-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div .docklands-light-railway-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 143, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.river-bus-icon, .lt-ie9 table.journey-steps .logo div.river-bus-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -64px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.river-bus-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.river-bus-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 146, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.tram-icon, .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: -32px -1120px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.tram-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.tram-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 149, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.cable-car-icon, .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -480px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.cable-car-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.cable-car-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 152, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.overground-icon, .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: -64px -1056px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.overground-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.overground-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 155, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 ul.journey-steps li.disruption-icon, .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("../../../static/1/images/vsprite_x2.png");
+    background-image: url("../../../static/1/images/vsprite.png") \9;
+    background-size: 96px 2560px;
+    background-position: 0px -832px;
+    height: 32px;
+    width: 32px;
+    display: block;
+}
+
+/* line 154, ../../sass/utility/_mixins.scss */
+.body-cms-preview .lt-ie9 ul.journey-steps li.disruption-icon, .body-cms-preview .lt-ie9 table.journey-steps .logo div.disruption-icon {
+    background-image: url("../../../static/1/images/vsprite.png");
+}
+
+/* line 159, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie9 .journey-planner-widget {
+    display: block;
+    background-color: transparent;
+}
+
+/* line 167, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .from-and-to label.visually-hidden, .lt-ie10 .go-via label.visually-hidden {
+    overflow: visible;
+    clip: auto;
+    height: auto;
+    position: static;
+    width: auto;
+    margin: auto;
+    visibility: visible;
+}
+
+/* line 180, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .journey-planner-results .go-via label {
+    margin-top: -30px;
+}
+
+/* line 184, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .journey-planner-results .change-time-options {
+    margin-top: 18px;
+}
+
+/* line 187, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .journey-planner-results .hours-mins {
+    margin-top: 33px;
+}
+
+/* line 192, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .lines span {
+    max-width: 4px;
+}
+
+/* line 195, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .lines .interchange {
+    max-width: 20px;
+}
+
+/* line 199, ../../sass/specific/journey-planner/_journey-planner-ie.scss */
+.lt-ie10 .lines .hail-and-ride {
+    margin-left: 0;
+}
+
+/* line 4, ../../sass/specific/status-updates/_status-updates-ie.scss */
+.lt-ie8 .service-status-rainbow-board tr.visible {
+    display: block;
+}
+
+/* line 11, ../../sass/specific/status-updates/_status-updates-ie.scss */
+.lt-ie9 #tubemap {
+    display: none;
+}

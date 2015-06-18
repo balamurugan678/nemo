@@ -1,0 +1,50 @@
+/**************************************************
+	M040-select-bus
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M040-select-bus
+
+**************************************************/
+
+.select-bus {
+  .towards-link {
+    position: relative;
+    padding: 15px 42px 10px 52px;
+    min-height: 50px;
+    border-top: 1px solid $light-grey-border-colour;
+    background-color: $darker-subtle-grey;
+    display: block;
+    text-decoration: none;
+    color: $dark-grey;
+
+    &:after {
+      content: "";
+      position: absolute;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 1);
+      top: 50%;
+      margin-top: -16px;
+      right: 0px;
+    }
+
+    .circle-icon {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      margin-top: -16px;
+    }
+    &:hover, &:focus {
+      @include darken-hover-and-focus($darker-subtle-grey, 5%);
+    }
+  }
+  .bus-options {
+    margin: 10px 0 20px 10px;
+  }
+}
+
+.select-bus-list {
+  background: #fff;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+}

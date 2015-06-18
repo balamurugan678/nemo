@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.9">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+create or replace package system_parameter_installer
+as
+
+  procedure install
+  (p_code varchar
+  ,p_value varchar
+  ,p_purpose varchar);
+
+  procedure un_install
+  (p_code varchar);
+
+end system_parameter_installer;
+            ]]>
+        </createProcedure>
+        <rollback>
+            drop package system_parameter_installer;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>
+

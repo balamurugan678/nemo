@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+       profile="nemo-tfl-common-dao-test">
+
+    <!-- Environment specific configuration -->
+    <ctx:property-placeholder location="classpath:nemo-tfl-common-test.properties"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${test.jdbc.driverClassName}"/>
+        <property name="url" value="${test.jdbc.url}"/>
+        <property name="username" value="${test.jdbc.username}"/>
+        <property name="password" value="${test.jdbc.password}"/>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="packagesToScan">
+            <list>
+                <value>com.novacroft.nemo.tfl.common.domain</value>
+                <value>com.novacroft.nemo.common.domain</value>
+            </list>
+        </property>
+        <property name="mappingResources">
+            <list>
+                <value>WebAccount.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">true</prop>
+                <prop key="dialect">org.hibernate.dialect.Oracle10gDialect</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="orderDAO" class="com.novacroft.nemo.tfl.common.data_access.OrderDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="webAccountDAO" class="com.novacroft.nemo.tfl.common.data_access.WebAccountDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="paymentCardDAO" class="com.novacroft.nemo.tfl.common.data_access.PaymentCardDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="cartDAO" class="com.novacroft.nemo.tfl.common.data_access.CartDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="customerDAO" class="com.novacroft.nemo.tfl.common.data_access.CustomerDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="cardDAO" class="com.novacroft.nemo.tfl.common.data_access.CardDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+</beans>

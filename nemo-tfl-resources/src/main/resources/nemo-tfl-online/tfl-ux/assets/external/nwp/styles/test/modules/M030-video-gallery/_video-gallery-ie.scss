@@ -1,0 +1,27 @@
+/**************************************************
+	C1 Accordion
+
+* Author: Steven Swinbank
+* Created: 23/04/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C22+-+Video+gallery
+
+**************************************************/
+
+//Galleria plugin styling for Video Gallery
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+  height: 32px;
+  width: 32px;
+  background-color: #fff;
+}
+
+.nbs-flexisel-nav-left {
+  @include svg-icon(19, 1);
+}
+
+.nbs-flexisel-nav-right {
+  @include svg-icon(21, 1);
+}

@@ -1,0 +1,231 @@
+.aside, .main-and-aside.one-row .aside, .main-and-aside-large-upwards .aside, .equal-weight > div {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 29.928%
+}
+
+.main, .main-and-aside.one-row .main, .main-and-aside-large-upwards .main {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 62.396%
+}
+
+.section-overview {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 94.864%
+}
+
+.small {
+    display: none
+}
+
+.small-medium {
+    display: none
+}
+
+.medium {
+    display: none
+}
+
+.medium-large {
+    display: block
+}
+
+.large {
+    display: block
+}
+
+.section-landing-container h1 {
+    font-size: 50px
+}
+
+.section-landing-container .heading-logo {
+    top: 5px
+}
+
+.spot-grid-background {
+    min-height: 430px
+}
+
+.main .sub-main {
+    margin-left: 4.07077%;
+    width: 47.96461%
+}
+
+.aside .module-grid > div {
+    float: none;
+    width: 100%
+}
+
+.aside .module-grid > div:nth-child(2n) {
+    margin-left: 0
+}
+
+.main-and-aside.one-row .main .sub-main, .main-and-aside-large-upwards .main .sub-main {
+    margin-left: 4.07077%;
+    width: 47.96461%;
+    float: left
+}
+
+.main-and-aside.one-row .main .sub-main:first-child, .main-and-aside-large-upwards .main .sub-main:first-child {
+    margin-left: 0
+}
+
+.main-and-aside-large-upwards .aside:first-child {
+    margin-left: 0
+}
+
+.section-overview > div {
+    float: left
+}
+
+.section-overview > div.main {
+    margin-left: 2.67752%;
+    width: 65.77416%
+}
+
+.section-overview > div.aside {
+    margin-left: 2.67752%;
+    width: 31.54832%
+}
+
+.section-overview > div:nth-child(2) {
+    margin-left: 0
+}
+
+.section-overview.full-width {
+    float: none;
+    margin-bottom: 10px
+}
+
+.section-image-container ~ .r .no-full-width-intro {
+    margin-top: 200px
+}
+
+#open-fullscreen-stage {
+    top: 10px;
+    margin-top: 0;
+    height: 41px
+}
+
+.no-disruptions-on-map #open-fullscreen-stage {
+    display: none
+}
+
+.active-map #zoom-in-fullscreen-stage {
+    display: block
+}
+
+.active-map #zoom-out-fullscreen-stage {
+    display: block
+}
+
+.collapsible-menu .plan-journey, .collapsible-menu .status-update, .collapsible-menu .maps, .collapsible-menu .fares-and-payments, .collapsible-menu li.more {
+    display: block
+}
+
+.top-row .more {
+    display: none
+}
+
+.top-row.show-search {
+    border-bottom: 3px solid #121315
+}
+
+.extra-nav .plan-journey, .extra-nav .status-update, .extra-nav .maps, .extra-nav .fares-and-payments {
+    display: none
+}
+
+.extra-nav .menu-sub-section {
+    float: left;
+    margin: 0 2%;
+    width: 21%
+}
+
+.extra-nav .menu-sub-section li {
+    float: left;
+    margin: 0 1%;
+    width: 98%
+}
+
+.extra-nav .menu-sub-section.getting-around {
+    width: 46%
+}
+
+.extra-nav .menu-sub-section.getting-around li {
+    width: 48%
+}
+
+.extra-nav ul.extras {
+    width: 96%
+}
+
+.extra-nav ul.extras li {
+    width: 98%
+}
+
+.show-search .top-row-extras {
+    height: 55px
+}
+
+.show-search .top-row-extras .search-tools {
+    background: #2d3039
+}
+
+.top-row-extras .more {
+    position: static
+}
+
+.top-row-extras {
+    float: right;
+    width: 15%
+}
+
+.top-row-extras .search-tools {
+    padding-top: 7px
+}
+
+.top-row-extras .search-tools a.remove-content:hover {
+    background-color: #fff;
+    border-bottom: none
+}
+
+.top-row-extras .search-tools input[type='text'] {
+    padding-right: 33px;
+    margin: 0
+}
+
+.top-row-extras .texts {
+    position: static;
+    width: auto
+}
+
+.top-row-extras .texts .search {
+    display: none
+}
+
+.top-row-extras input[type="text"] {
+    width: 120px;
+    margin: 9px 1px 12px 5px
+}
+
+.top-row-extras #search-button {
+    margin-top: 5px;
+    right: 3.54%
+}
+
+.top-row-extras .search-tools {
+    display: block;
+    position: static;
+    top: 0;
+    width: auto
+}
+
+.top-row-extras .login {
+    border-right: 0
+}
+
+.sidenav {
+    margin-top: 0
+}

@@ -1,0 +1,175 @@
+<GetHistoryResponse xmlns="http://tempuri.org/">
+    <GetHistoryResult xmlns:a="http://schemas.datacontract.org/2004/07/OOWebServiceWCF"
+                      xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <a:journeys>
+            <a:Journey>
+                <a:addedsvbalance>0</a:addedsvbalance>
+                <a:agentno i:nil="true"/>
+                <a:autocompletionflag>78</a:autocompletionflag>
+                <a:bestvalueactualfare i:nil="true"/>
+                <a:bestvaluecappingscheme i:nil="true"/>
+                <a:busoffpeakruntot>0</a:busoffpeakruntot>
+                <a:buspeakruntot>0</a:buspeakruntot>
+                <a:carddiscountid>31</a:carddiscountid>
+                <a:cardpassengertypeid>0</a:cardpassengertypeid>
+                <a:cardtype i:nil="true"/>
+                <a:chargedesc>TFL</a:chargedesc>
+                <a:concessionnarrative>Adult</a:concessionnarrative>
+                <a:dailycappingflag>78</a:dailycappingflag>
+                <a:discountedfare>0</a:discountedfare>
+                <a:discountnarrative>No Discount/na</a:discountnarrative>
+                <a:exdatetime>2013-12-02T12:52:00</a:exdatetime>
+                <a:exlocation>507</a:exlocation>
+                <a:innerzone>1</a:innerzone>
+                <a:journeyid>621000</a:journeyid>
+                <a:modeoftravel i:nil="true"/>
+                <a:narrative_dd i:nil="true"/>
+                <a:offpeakcap>Y</a:offpeakcap>
+                <a:osi>N</a:osi>
+                <a:outerzone>4</a:outerzone>
+                <a:paygused>78</a:paygused>
+                <a:paymentmethodcode>-1</a:paymentmethodcode>
+                <a:peakcap>N</a:peakcap>
+                <a:peakfare>N</a:peakfare>
+                <a:prestigeid>108055752</a:prestigeid>
+                <a:productcode>40</a:productcode>
+                <a:productexpirydate>2013-12-10T00:00:00</a:productexpirydate>
+                <a:productstartdate>2013-11-11T00:00:00</a:productstartdate>
+                <a:producttimevaliditycode>2</a:producttimevaliditycode>
+                <a:productzonalvaliditycode>314</a:productzonalvaliditycode>
+                <a:pttid>500</a:pttid>
+                <a:railoffpeakmax_outzone>4</a:railoffpeakmax_outzone>
+                <a:railoffpeakmin_innzone>1</a:railoffpeakmin_innzone>
+                <a:railoffpeakruntot>0</a:railoffpeakruntot>
+                <a:railpeakmax_outzone i:nil="true"/>
+                <a:railpeakmin_innzone i:nil="true"/>
+                <a:railpeakruntot>0</a:railpeakruntot>
+                <a:routeid i:nil="true"/>
+                <a:runningtotal>0</a:runningtotal>
+                <a:suppresscode>0</a:suppresscode>
+                <a:svbalance>635</a:svbalance>
+                <a:taps>
+                    <a:Tap>
+                        <a:addedsvbalance>0</a:addedsvbalance>
+                        <a:agentno i:nil="true"/>
+                        <a:innerzone i:nil="true"/>
+                        <a:journeyid_dd>621000</a:journeyid_dd>
+                        <a:narrative_dd>Z0104 - 1-2 months</a:narrative_dd>
+                        <a:nlc>582</a:nlc>
+                        <a:outerzone i:nil="true"/>
+                        <a:paymentmethodcode>-1</a:paymentmethodcode>
+                        <a:rollovernumber>0</a:rollovernumber>
+                        <a:routeid>U</a:routeid>
+                        <a:sequenceno>6210</a:sequenceno>
+                        <a:suppresscode>0</a:suppresscode>
+                        <a:svbalance>635</a:svbalance>
+                        <a:synthetictap>false</a:synthetictap>
+                        <a:transactiontime>2013-12-02T12:11:00</a:transactiontime>
+                        <a:transactiontype>61</a:transactiontype>
+                    </a:Tap>
+                    <a:Tap>
+                        <a:addedsvbalance>0</a:addedsvbalance>
+                        <a:agentno i:nil="true"/>
+                        <a:innerzone>1</a:innerzone>
+                        <a:journeyid_dd>621000</a:journeyid_dd>
+                        <a:narrative_dd>Z0104 - 1-2 months</a:narrative_dd>
+                        <a:nlc>507</a:nlc>
+                        <a:outerzone>4</a:outerzone>
+                        <a:paymentmethodcode>-1</a:paymentmethodcode>
+                        <a:rollovernumber>0</a:rollovernumber>
+                        <a:routeid>U</a:routeid>
+                        <a:sequenceno>6220</a:sequenceno>
+                        <a:suppresscode>0</a:suppresscode>
+                        <a:svbalance>635</a:svbalance>
+                        <a:synthetictap>false</a:synthetictap>
+                        <a:transactiontime>2013-12-02T12:52:00</a:transactiontime>
+                        <a:transactiontype>62</a:transactiontype>
+                    </a:Tap>
+                </a:taps>
+                <a:tfrdiscountsappliedflag>78</a:tfrdiscountsappliedflag>
+                <a:trafficdate>2013-12-02T00:00:00</a:trafficdate>
+                <a:travelcardused>89</a:travelcardused>
+                <a:traveltype i:nil="true"/>
+                <a:txndatetime>2013-12-02T12:11:00</a:txndatetime>
+                <a:txnlocation>582</a:txnlocation>
+                <a:validtickettonCMS i:nil="true"/>
+                <a:zonalindicator>0</a:zonalindicator>
+            </a:Journey>
+            <a:Journey>
+                <a:addedsvbalance>0</a:addedsvbalance>
+                <a:agentno i:nil="true"/>
+                <a:autocompletionflag>78</a:autocompletionflag>
+                <a:bestvalueactualfare i:nil="true"/>
+                <a:bestvaluecappingscheme i:nil="true"/>
+                <a:busoffpeakruntot>0</a:busoffpeakruntot>
+                <a:buspeakruntot>0</a:buspeakruntot>
+                <a:carddiscountid>31</a:carddiscountid>
+                <a:cardpassengertypeid>0</a:cardpassengertypeid>
+                <a:cardtype i:nil="true"/>
+                <a:chargedesc i:nil="true"/>
+                <a:concessionnarrative>Adult</a:concessionnarrative>
+                <a:dailycappingflag>78</a:dailycappingflag>
+                <a:discountedfare>0</a:discountedfare>
+                <a:discountnarrative>No Discount/na</a:discountnarrative>
+                <a:exdatetime i:nil="true"/>
+                <a:exlocation>-1</a:exlocation>
+                <a:innerzone i:nil="true"/>
+                <a:journeyid>623000</a:journeyid>
+                <a:modeoftravel i:nil="true"/>
+                <a:narrative_dd i:nil="true"/>
+                <a:offpeakcap>Y</a:offpeakcap>
+                <a:osi>N</a:osi>
+                <a:outerzone i:nil="true"/>
+                <a:paygused>78</a:paygused>
+                <a:paymentmethodcode>-1</a:paymentmethodcode>
+                <a:peakcap>N</a:peakcap>
+                <a:peakfare>N</a:peakfare>
+                <a:prestigeid>108055752</a:prestigeid>
+                <a:productcode>40</a:productcode>
+                <a:productexpirydate>2013-12-10T00:00:00</a:productexpirydate>
+                <a:productstartdate>2013-11-11T00:00:00</a:productstartdate>
+                <a:producttimevaliditycode>2</a:producttimevaliditycode>
+                <a:productzonalvaliditycode>314</a:productzonalvaliditycode>
+                <a:pttid>12</a:pttid>
+                <a:railoffpeakmax_outzone i:nil="true"/>
+                <a:railoffpeakmin_innzone i:nil="true"/>
+                <a:railoffpeakruntot>0</a:railoffpeakruntot>
+                <a:railpeakmax_outzone i:nil="true"/>
+                <a:railpeakmin_innzone i:nil="true"/>
+                <a:railpeakruntot>0</a:railpeakruntot>
+                <a:routeid>56</a:routeid>
+                <a:runningtotal>0</a:runningtotal>
+                <a:suppresscode>0</a:suppresscode>
+                <a:svbalance>635</a:svbalance>
+                <a:taps>
+                    <a:Tap>
+                        <a:addedsvbalance>0</a:addedsvbalance>
+                        <a:agentno i:nil="true"/>
+                        <a:innerzone i:nil="true"/>
+                        <a:journeyid_dd>623000</a:journeyid_dd>
+                        <a:narrative_dd>Z0104 - 1-2 months</a:narrative_dd>
+                        <a:nlc>0</a:nlc>
+                        <a:outerzone i:nil="true"/>
+                        <a:paymentmethodcode>-1</a:paymentmethodcode>
+                        <a:rollovernumber>0</a:rollovernumber>
+                        <a:routeid>56</a:routeid>
+                        <a:sequenceno>6230</a:sequenceno>
+                        <a:suppresscode>100</a:suppresscode>
+                        <a:svbalance>635</a:svbalance>
+                        <a:synthetictap>false</a:synthetictap>
+                        <a:transactiontime>2013-12-02T15:24:00</a:transactiontime>
+                        <a:transactiontype>12</a:transactiontype>
+                    </a:Tap>
+                </a:taps>
+                <a:tfrdiscountsappliedflag>78</a:tfrdiscountsappliedflag>
+                <a:trafficdate>2013-12-02T00:00:00</a:trafficdate>
+                <a:travelcardused>89</a:travelcardused>
+                <a:traveltype i:nil="true"/>
+                <a:txndatetime>2013-12-02T15:24:00</a:txndatetime>
+                <a:txnlocation>-1</a:txnlocation>
+                <a:validtickettonCMS i:nil="true"/>
+                <a:zonalindicator>0</a:zonalindicator>
+            </a:Journey>
+        </a:journeys>
+    </GetHistoryResult>
+</GetHistoryResponse>

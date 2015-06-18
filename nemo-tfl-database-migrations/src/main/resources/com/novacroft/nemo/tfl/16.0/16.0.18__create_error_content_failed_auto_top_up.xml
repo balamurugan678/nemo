@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.18">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('ticketType.oystercard.with.failedAutoTopUpcase.amended.error', 'This Oystercard is associated with Failed AutoTopUp. Please resettle the outstanding ATU amount.');
+				  content_installer.install('TopUpTicket.topupTicketBadDept.label', '[Bad Debt - Outstanding ATU payment]');
+				  content_installer.install('TopUpTicket.tflcontact.message', 'TfL Customer Services Contact Customer Services for all ticket enquiries including 
+				  							Oyster and contactless payment, travel information queries and journey planning on all methods of transport including roads. 
+				 							We can also help with lost property and complaints. Search common questions or contact us online. Phone: 0343 222 1234');
+				  content_installer.install('ResettleFailedAutoTopUp.resettlementPeriod.morethan.systemLimit.error', 'Resettlement Period should not be exceeded more than 90 days');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

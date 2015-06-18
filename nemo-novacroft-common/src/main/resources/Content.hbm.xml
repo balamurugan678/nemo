@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.novacroft.nemo.common.domain">
+    <class name="Content" table="content">
+        <id column="id" name="id">
+            <generator class="sequence">
+                <param name="sequence">content_seq</param>
+            </generator>
+        </id>
+        <property name="code" type="java.lang.String" column="code"/>
+        <property name="locale" type="java.lang.String" column="locale"/>
+        <property name="content" type="java.lang.String" column="content"/>
+        <property name="createdUserId" type="java.lang.String" column="createduserid"/>
+        <property name="createdDateTime" type="timestamp" column="createddatetime"/>
+        <property name="modifiedUserId" type="java.lang.String" column="modifieduserid"/>
+        <property name="modifiedDateTime" type="timestamp" column="modifieddatetime"/>
+    </class>
+</hibernate-mapping>

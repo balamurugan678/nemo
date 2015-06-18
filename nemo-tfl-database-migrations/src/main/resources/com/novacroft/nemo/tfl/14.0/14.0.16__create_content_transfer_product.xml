@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="14.0.16">
+		<sql splitStatements="false">
+            <![CDATA[
+begin
+
+  content_installer.install('transferProduct.tip', 'Transfer Product');
+  content_installer.install('transferProduct.url', 'TransferProduct.htm');
+  content_installer.install('transferProduct.link', 'Transfer Product');
+  content_installer.install('transferProduct.title', 'Transfer Product');
+  content_installer.install('transferProduct.breadcrumb.url', 'TransferProduct.htm');
+  content_installer.install('transferProduct.breadcrumb.link', 'Transfer Product');
+  content_installer.install('transferProduct.breadcrumb.tip', 'Transfer Product');
+end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

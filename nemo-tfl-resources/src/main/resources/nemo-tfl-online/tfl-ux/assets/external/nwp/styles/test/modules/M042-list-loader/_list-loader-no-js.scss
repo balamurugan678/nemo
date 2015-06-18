@@ -1,0 +1,34 @@
+/**************************************************
+	M042-list-loader
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M042-list-loader
+**************************************************/
+.no-js {
+  .list-loader {
+    background: $darker-subtle-grey !important;
+    .list-loader-wrapper {
+      width: 100% !important;
+      padding-right: 0px !important;
+    }
+    .list-loader-results {
+      display: none !important;
+    }
+    .list-loader-result {
+      display: block !important;
+    }
+    .bus-list.groups {
+      margin-left: 1px;
+      margin-top: 1px;
+    }
+    .bus-list.groups > li {
+      width: 20% !important;
+      background: #fff;
+      border: 1px solid $light-grey-border-colour;
+      float: left;
+      margin-left: -1px;
+      margin-top: -1px;
+    }
+  }
+}
+

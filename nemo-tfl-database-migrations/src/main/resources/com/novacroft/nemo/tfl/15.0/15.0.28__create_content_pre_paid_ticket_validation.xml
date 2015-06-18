@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.28">
+        <sql splitStatements="false">
+            <![CDATA[
+				BEGIN
+				   content_installer.install('duplicateAdhocCodeFileField.error', 'Duplicate data found for adhoc-code {0} and adhoc-code {1}');
+				   content_installer.install('prepaidTickeAdhocCodeEmpty.error', 'Invalid adhoc code');
+				   content_installer.install('prepaidTicketPriceInvalid.error', 'Invalid price');
+				   content_installer.install('prepaidTickeInvalidToDuration.error', 'Invalid start duration');
+				   content_installer.install('prepaidTickeInvalidFromDuration.error', 'Invalid end duration');
+				   content_installer.install('prepaidTickeInvalidEndZone.error', 'Invalid end zone');
+				   content_installer.install('prepaidTickeInvalidStartZone.error', 'Invalid start zone');
+				   content_installer.install('prepaidTicketEffectiveDateInvalid.error', 'Invalid effective date for adhoc-code {0}');
+				   
+				END;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

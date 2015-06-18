@@ -1,0 +1,21 @@
+.heading-dropdowns-wrap {
+  position: relative;
+  h1 {
+    width: 45%;
+    float: left;
+    margin-top: 15px;
+  }
+
+  .dropdowns-wrap {
+    float: left;
+    padding-top: 15px;
+    width: 55%;
+    border-top: 0;
+  }
+
+  /*.heading-dropdown {
+      &:last-child {
+          margin-top: 0;
+      }
+  }*/
+}

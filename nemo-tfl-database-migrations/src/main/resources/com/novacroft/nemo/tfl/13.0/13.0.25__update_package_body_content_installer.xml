@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.3">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+create or replace package body content_installer
+as
+
+  l_user_id varchar2(64) := 'Installer';
+  l_uk_locale varchar2(32) := 'en_GB';
+  l_error_prefix varchar2(16) := 'Error: ';
+  l_error_code_message_separator varchar2(16) := '; ';
+
+  procedure install
+  (p_code varchar
+  ,p_locale varchar
+  ,p_content varchar)
+  is
+
+    l_id number;
+
+    cursor c_content(p_code varchar, p_locale varchar)
+    is
+      select id
+      from   content
+      where  code = p_code
+      and    locale = p_locale;
+
+  begin
+
+    open c_content(p_code, p_locale);
+    fetch c_content into l_id;
+    if c_content%notfound
+    then
+
+      insert into content
+      (id, createduserid, createddatetime, code, locale, content, externalid)
+      values
+      (content_seq.nextval, l_user_id, SYSDATE, p_code, p_locale, p_content, externalid_seq.nextval);
+
+    else
+
+      update content
+      set    content = p_content
+      ,      modifieduserid = l_user_id
+      ,      modifieddatetime = sysdate
+      where  id = l_id;
+
+    end if;
+    close c_content;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end install;
+
+  procedure install
+  (p_code varchar
+  ,p_content varchar)
+  is
+
+    -- managed content installer, with UK locale
+
+  begin
+
+    content_installer.install(p_code, l_uk_locale, p_content);
+
+  exception when others
+  then
+    rollback;
+    raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end install;
+
+  procedure un_install
+  (p_code varchar
+  ,p_locale varchar)
+  is
+
+  begin
+
+    delete from content
+    where  code = p_code
+    and    locale = p_locale;
+
+  end un_install;
+
+  procedure un_install
+  (p_code varchar)
+  is
+
+  begin
+
+    content_installer.un_install(p_code, l_uk_locale);
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end un_install;
+
+end content_installer;
+            ]]>
+        </createProcedure>
+        <rollback>
+            drop package body content_installer;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.162">
+        <sql splitStatements="false">
+            <![CDATA[
+BEGIN
+
+  ${schemaName}.content_installer.install('myAccount.notifications.url', '#');
+  ${schemaName}.content_installer.install('myAccount.notifications.link', 'Notifications');
+
+  ${schemaName}.content_installer.install('myAccount.oysterCards.url', '#');
+  ${schemaName}.content_installer.install('myAccount.oysterCards.link', 'Oyster Cards');
+
+  ${schemaName}.content_installer.install('myAccount.travelStatements.url', '#');
+  ${schemaName}.content_installer.install('myAccount.travelStatements.link', 'Travel statements');
+
+  ${schemaName}.content_installer.install('myAccount.preferences.url', '#');
+  ${schemaName}.content_installer.install('myAccount.preferences.link', 'Preferences');
+
+  ${schemaName}.content_installer.install('myAccount.contactLessPaymentCards.url', '#');
+  ${schemaName}.content_installer.install('myAccount.contactLessPaymentCards.link', 'Contactless payment Cards');
+
+  ${schemaName}.content_installer.install('myAccount.travelAlerts.url', '#');
+  ${schemaName}.content_installer.install('myAccount.travelAlerts.link', 'Travel alerts');
+
+  ${schemaName}.content_installer.install('myAccount.myFavourites.url', '#');
+  ${schemaName}.content_installer.install('myAccount.myFavourites.link', 'My favourites');
+
+END;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

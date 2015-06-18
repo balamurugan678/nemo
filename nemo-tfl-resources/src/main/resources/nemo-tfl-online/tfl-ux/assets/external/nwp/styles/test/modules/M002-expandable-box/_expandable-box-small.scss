@@ -1,0 +1,57 @@
+/**************************************************
+	M002 Expandable-box
+
+* Author: 
+* Created: 
+* Pattern library URL: \\Google Drive\NWP\Front-end\Pattern library\Modules\M001-accordion
+
+**************************************************/
+
+.expandable-box {
+
+  .content {
+    //margin-left: 20px;
+    background: #fff;
+    border-bottom: 3px solid $light-grey-border-colour;
+  }
+  .always-visible {
+    position: relative;
+    cursor: pointer;
+  }
+  .accordion-heading {
+    padding: 10px 40px 10px 10px;
+    border-top: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+    border-left: 1px solid $light-grey-border-colour;
+    border-bottom: 1px solid $light-grey-border-colour;
+  }
+  .controls {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 4px;
+    text-decoration: none;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(58, 2);
+  }
+  .start-hidden {
+    display: none;
+    padding: 10px;
+    border-left: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+  }
+  .expanded {
+    border-bottom: 1px solid $light-grey-border-colour;
+    .controls {
+      @include svg-icon-position-only(58, 3);
+    }
+    > .start-hidden {
+      display: block;
+      border-top: 1px solid $light-grey-border-colour;
+    }
+  }
+}

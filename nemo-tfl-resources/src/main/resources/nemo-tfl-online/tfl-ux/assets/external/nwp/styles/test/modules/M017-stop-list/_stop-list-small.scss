@@ -1,0 +1,102 @@
+/**************************************************
+STOP LIST
+* Author: Adrian Osmond
+* Created: 21/08/2013
+* Pattern library URL: //Google Drive\NWP\Front-end\Pattern library\Modules\M017-stop-list
+**************************************************/
+
+.stop-list {
+  margin-left: 0;
+  list-style: none outside none;
+  li {
+    position: relative;
+    &:not(.route-branch-heading):not(.route-branch-information):nth-child(odd) {
+      background-color: $subtler-grey;
+    }
+    &:hover {
+      z-index: 2;
+    }
+  }
+  .stop-link {
+    display: block;
+    padding: 10px 30px 10px 60px;
+    color: $dark-grey;
+  }
+  a.stop-link {
+    &:after {
+      content: "";
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 1);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+    }
+    &.no-arrow:after {
+      display: none;
+    }
+    @include transition(background-color 0.3s);
+    &:focus, &:hover {
+      text-decoration: none;
+      //@include darken-hover-and-focus(#fff, 5%);
+      &:not(.no-arrow) {
+        @include custom-colour-hover-and-focus($jp-subtle-blue);
+      }
+      &.no-arrow {
+        cursor: default;
+      }
+    }
+  }
+  .lines {
+    width: 44px;
+  }
+  .stop-name {
+    left: 28px;
+    top: 50%;
+    margin-top: -16px;
+    width: 32px;
+    position: absolute;
+    height: 30px;
+    &.mode-icon {
+      float: none;
+      margin-top: -16px;
+      position: absolute;
+    }
+    &.hail-and-ride {
+      border: 4px solid $bus-colour;
+      background-color: transparent;
+      width: 25px;
+      height: 25px;
+      margin-top: -12px;
+    }
+  }
+  .time-and-mode {
+    z-index: 2;
+    .stop-name {
+      top: auto;
+      margin-top: 0;
+    }
+  }
+
+  .with-continuation {
+    margin-bottom: 35px;
+    background-color: #fff;
+    &:before {
+      content: "";
+      position: absolute;
+      margin-top: -2px;
+      left: -18px;
+      width: 40px;
+      height: 40px;
+      background-image: url('/static/' +$version+ '/images/bus-route_sprite_x2.png');
+      background-image: url('/static/' +$version+ '/images/bus-route_sprite.png') \9;
+      background-size: 80px 120px;
+      background-position: 0 -80px;
+      top: -8px;
+      left: 10px;
+    }
+  }
+  .route-branch-information.bus-split {
+    min-height: 60px;
+  }
+}

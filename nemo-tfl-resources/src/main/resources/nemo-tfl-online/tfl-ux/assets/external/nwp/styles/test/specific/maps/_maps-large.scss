@@ -1,0 +1,25 @@
+.map-sliver {
+  border: 1px solid $light-grey-border-colour;
+  @extend %top-drop-shadow;
+  &.loading {
+    border-bottom-width: 1px;
+    //opacity change negates the change brought on by top-drop-shadow above
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+
+body.active-map {
+  overflow: scroll;
+  #container {
+    display: block;
+  }
+}
+
+body.stage-active {
+  overflow: hidden;
+  #container {
+    display: none;
+  }
+}

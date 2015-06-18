@@ -1,0 +1,36 @@
+/**************************************************
+	M010 Fact-box
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/D1+-+Fact+box
+						//Google Drive\NWP\Front-end\Pattern library\Modules\M010-fact-box
+
+**************************************************/
+
+.fact-box {
+  background-color: $darker-subtle-grey;
+  margin-bottom: 10px;
+  padding: 15px 10px;
+  position: relative;
+  h3 {
+    margin-bottom: 10px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 45px;
+    background-image: url('/static/' +$version+ '/images/fact.png');
+    background-size: 30px 45px;
+    top: -5px;
+    right: 30px;
+
+    .lt-ie9 & {
+      background-image: url('/static/' +$version+ '/images/fact-ie.png');
+    }
+  }
+}

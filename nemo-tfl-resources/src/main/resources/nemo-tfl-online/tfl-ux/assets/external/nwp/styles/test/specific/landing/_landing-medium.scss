@@ -1,0 +1,41 @@
+.landing-page-teaser {
+  .news-teaser {
+    border-bottom: 0;
+    a {
+      position: relative;
+      .text-link {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        background-color: $dark-grey;
+        background-color: $semi-transparent-dark-grey;
+        *background-color: $dark-grey;
+        @include transition(background-color 0.3s);
+        &.sit-top {
+          top: 25px;
+          bottom: auto;
+        }
+        &.sit-bottom {
+          bottom: 25px;
+          top: auto;
+        }
+      }
+      &:hover, &:focus {
+        .text-link {
+          @include custom-colour-hover-and-focus($dark-grey);
+        }
+      }
+    }
+  }
+}
+
+.landing-page {
+  border-bottom: 1px solid $light-grey-border-colour;
+}
+
+.SSP-landing {
+  .SSP-search-wrapper {
+    width: 50%;
+    padding-right: 20px;
+  }
+}

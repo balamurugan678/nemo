@@ -1,0 +1,122 @@
+/** css content specific to Detica Changes */
+.form-with-tooltips-width {
+	width: 70%;
+}
+
+.radiobutton-list li.ticked .radiobutton-list li.ticked label:after {
+	background-image: url("../tfl-ux/assets/oyster/Sprite_V3_x2.png");
+	/* //background-image: url("../assets/oyster/Sprite_V3.png") \9; */
+	background-size: 96px 2624px;
+	background-position: -4px -1156px;
+}
+
+.styled-checkbox.ticked label:after {
+	display: none;
+}
+
+table tr:nth-child(odd) {
+	background-color: transparent;
+}
+
+a.transparent-bgcolor {
+	background-color: transparent;
+}
+
+a.zero-margin-bottom {
+	margin-bottom: 0;
+}
+
+table.orderHistory-table tr {
+	background-color: transparent !important;
+}
+
+table.orderHistory-table thead th {
+	border-bottom: none;
+	display: none;
+}
+
+.orderHistoryMessageContainer {
+	padding: 0em;
+	padding-bottom: 1em;
+}
+
+button.link-button {
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	border: none;
+}
+
+.no-border-bottom {
+	border-bottom: 0;
+}
+
+.left-aligned {
+	text-align: left;
+}
+
+.shoppingcart .right-aligned {
+	text-align: right;
+}
+
+.right-aligned {
+	text-align: right;
+}
+
+.button-container-width {
+	float: left;
+	width: 28.5%;
+}
+
+.normal-font {
+	font-weight: normal;
+}
+
+.bold-font-aligned {
+	font-weight: bold;
+	line-height: 125%;
+}
+
+.color-black {
+	color: black !important;
+}
+
+.oyster-image-icon-display {
+	background-image: url("../images/oyster.gif");
+	height: auto;
+	width: auto;
+	position: relative;
+	display: inline-block;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-none {
+	float: none;
+}
+
+.buttonDiv {
+	width: 150px; 
+	height: 20px; 
+	margin: 10px 0 0 0;
+}
+
+.oysterCardNumber {
+	font-size: 30px;
+}
+
+.content {
+	
+}
+
+.failedAutoTopUp-warning-message {
+	margin: 0;
+	color: red;
+}
+

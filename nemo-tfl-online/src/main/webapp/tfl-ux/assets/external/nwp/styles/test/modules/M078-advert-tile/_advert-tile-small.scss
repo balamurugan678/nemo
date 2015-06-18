@@ -1,0 +1,165 @@
+/**************************************************
+	M078-advert-tile
+* Author: Alex Faunt
+* Re-Created: 17/12/2013
+* Pattern library URL:  
+**************************************************/
+.advert-tile {
+  margin: 0 auto 20px;
+  overflow: hidden;
+
+  height: 274px;
+  width: 300px;
+
+  @media (max-width: 332px) {
+    display: none;
+  }
+  .aside & {
+    @media (min-width: 580px) and (max-width: 667px) {
+      display: none;
+    }
+    @media (min-width: 900px) and (max-width: 1020px) {
+      display: none;
+    }
+  }
+
+  .main-and-aside.one-row .main & {
+    @media (min-width: 580px) and (max-width: 667px) {
+      display: none;
+    }
+    @media (min-width: 900px) and (max-width: 1020px) {
+      display: none;
+    }
+
+  }
+
+  .main-and-aside.one-row .main .content-area & {
+    display: block;
+  }
+
+  .advert-link {
+    display: block;
+    position: relative;
+    padding-bottom: 24px;
+    text-decoration: none;
+
+    &:focus, &:hover {
+      .caption {
+        @include custom-colour-hover-and-focus($dark-grey);
+        @include transition(background-color 0s);
+
+      }
+    }
+    .no-caption & {
+      height: 100%;
+    }
+  }
+
+  .advert-block-link {
+    display: block;
+  }
+
+  .advert-imagery {
+    width: 100%;
+    height: auto;
+  }
+
+  .disclaimer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 24px;
+    color: #fff;
+    background-color: #000;
+    font-weight: bold;
+    line-height: 26px;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 0 10px;
+  }
+
+  .caption {
+    color: #fff;
+    background-color: $semi-transparent-dark-grey;
+    text-decoration: none;
+    padding: 14px 32px 14px 10px;
+    max-height: 82px;
+    position: absolute;
+    bottom: 24px;
+    right: 0;
+    left: 0;
+    @include transition(background-color 0.3s);
+
+    &:after {
+      content: "";
+      position: absolute;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(67, 3);
+      top: 50%;
+      margin-top: -16px;
+      right: 0;
+    }
+
+    h3 {
+      line-height: 130%;
+      margin-bottom: 6px;
+      // word-wrap: break-word;
+      // word-break: break-all;
+      font-size: 16px;
+    }
+
+    p {
+      margin-bottom: 0;
+      // word-wrap: break-word;
+      // word-break: break-all;
+      font-size: 12px;
+    }
+  }
+
+  &.hero-style {
+    height: auto;
+    width: auto;
+    display: block;
+
+    .caption {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      max-height: inherit;
+    }
+  }
+
+  &.unsponsored-style {
+
+    height: auto;
+    width: auto;
+
+    .advert-link {
+      background-color: $subtler-grey;
+      padding-top: 10px;
+      text-align: center;
+    }
+
+    .advert-content {
+      max-width: 300px;
+      display: inline-block;
+      *display: block;
+      *zoom: 1;
+      max-height: 250px;
+      overflow: hidden;
+    }
+
+    .disclaimer {
+      color: $dark-grey;
+      background-color: transparent;
+      text-align: center;
+    }
+  }
+
+  &.two-column {
+    @extend .hero-style;
+  }
+
+} 

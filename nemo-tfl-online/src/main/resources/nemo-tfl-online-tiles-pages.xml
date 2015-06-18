@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="CustomerHome" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/customerHome.jsp"/>
+    </definition>
+    
+    <definition name="SecurityQuestion" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/securityQuestion.jsp"/>
+    </definition>
+    
+    <definition name="VerifySecurityQuestion" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/verifySecurityQuestion.jsp"/>
+    </definition>
+
+    <definition name="Checkout" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/checkout.jsp"/>
+    </definition>
+
+    <definition name="AddExistingCardToAccount" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/addExistingCardToAccount.jsp"/>
+    </definition>
+
+    <definition name="Content" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/content.jsp"/>
+    </definition>
+
+    <definition name="OpenAccount" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/openAccount.jsp"/>
+    </definition>
+
+    <definition name="OpenAccountExist" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/openAccountExist.jsp"/>
+    </definition>
+
+    <definition name="AccountDetails" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/accountDetails.jsp"/>
+    </definition>
+
+    <definition name="Dashboard" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/dashboard.jsp"/>
+    </definition>
+
+    <definition name="OysterHome" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/oysterHome.jsp"/>
+    </definition>
+
+    <definition name="IncompleteJourney" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/incompleteJourney.jsp"/>
+    </definition>
+
+    <definition name="Basket" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/basket.jsp"/>
+    </definition>
+
+    <definition name="PayAsYouGo" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/payAsYouGo.jsp"/>
+    </definition>
+
+    <definition name="BusPass" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/busPass.jsp"/>
+    </definition>
+
+    <definition name="TravelCard" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/travelCard.jsp"/>
+    </definition>
+
+    <definition name="Cart" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/cart.jsp"/>
+    </definition>
+
+    <definition name="ChangePersonalDetails" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/changePersonalDetails.jsp"/>
+    </definition>
+
+    <definition name="ChangeCardPreferences" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/changeCardPreferences.jsp"/>
+    </definition>
+    
+    <definition name="ChangeSecurityQuestion" extends="tfl-main-layout-with-my-account">
+       <put-attribute name="main" value="/WEB-INF/jsp/changeSecurityQuestion.jsp"/> 
+     </definition>
+
+ 	<definition name="CardSecurityQuestionSuccessUpdate" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/CardSecurityQuestionSuccessUpdate.jsp"/>
+    </definition>
+
+    <definition name="Confirmation" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/confirmation.jsp"/>
+    </definition>
+
+    <definition name="JourneyHistory" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/journeyHistory.jsp"/>
+    </definition>
+
+    <definition name="JourneyHistoryItem" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/journeyHistoryItem.jsp"/>
+    </definition>
+
+    <definition name="CheckoutTermsAndConditions" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/checkoutTermsAndConditions.jsp"/>
+    </definition>
+
+    <definition name="UnexpectedError" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/unexpectedError.jsp"/>
+    </definition>
+
+    <definition name="EnterPaymentCardDetails" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/enterPaymentCardDetails.jsp"/>
+    </definition>
+
+    <definition name="ChoosePaymentCard" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/choosePaymentCard.jsp"/>
+    </definition>
+
+    <definition name="PaymentAccepted" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/paymentAccepted.jsp"/>
+    </definition>
+
+    <definition name="PaymentCancelled" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/paymentCancelled.jsp"/>
+    </definition>
+
+    <definition name="PaymentIncomplete" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/paymentIncomplete.jsp"/>
+    </definition>
+
+    <definition name="TopUpTicket" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/topUpTicket.jsp"/>
+    </definition>
+
+    <definition name="UserCart" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/userCart.jsp"/>
+    </definition>
+
+    <definition name="CollectPurchase" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/collectPurchase.jsp"/>
+    </definition>
+
+    <definition name="AutoTopUpPurchase" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/autoTopUpPurchase.jsp"/>
+    </definition>
+
+    <definition name="WorkFlow" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workFlow.jsp"/>
+    </definition>
+
+    <definition name="WebAccountCreditStatement" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/webAccountCreditStatement.jsp"/>
+    </definition>
+
+    <definition name="ViewOrderHistory" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewOrderHistory.jsp"/>
+    </definition>
+
+    <definition name="ViewOrderDetails" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewOrderDetails.jsp"/>
+    </definition>
+
+    <definition name="ViewCards" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewCards.jsp"/>
+    </definition>
+
+    <definition name="ManageAutoTopUp" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageAutoTopUp.jsp"/>
+    </definition>
+
+    <definition name="activateChangesToAutoTopUp" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/activateChangesToAutoTopUp.jsp"/>
+    </definition>
+
+    <definition name="autoTopUpConfirmation" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/autoTopUpConfirmation.jsp"/>
+    </definition>
+
+    <definition name="QuickBuy" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/quickBuy.jsp"/>
+    </definition>
+
+    <definition name="ManagePaymentCard" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/managePaymentCard.jsp"/>
+    </definition>
+
+    <definition name="EditPaymentCard" extends="tfl-main-layout-with-my-account">
+    <put-attribute name="main" value="/WEB-INF/jsp/editPaymentCard.jsp"/>
+    </definition>
+
+    <definition name="ConfirmExistingPaymentCardPayment" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/confirmExistingPaymentCardPayment.jsp"/>
+    </definition>
+
+    <definition name="ViewRefunds" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewRefunds.jsp"/>
+    </definition>
+
+    <definition name="ViewRefundDetails" extends="tfl-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewRefundDetails.jsp"/>
+    </definition>
+
+    <definition name="LostOrStolenCard" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/lostOrStolenCard.jsp"/>
+    </definition>
+
+    <definition name="ViewOysterCard" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewOysterCard.jsp"/>
+    </definition>
+    
+    <definition name="LostCardRefundSummary" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/lostRefundSummary.jsp"/>
+    </definition>
+    
+    <definition name="LostCardRefundConfirmation" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/lostRefundConfimation.jsp"/>
+    </definition>
+    
+    <definition name="ConfirmLostCardRefund" extends="tfl-main-layout-with-my-account">
+        <put-attribute name="main" value="/WEB-INF/jsp/confirmLostRefund.jsp"/>
+    </definition>
+    
+    <definition name="CompleteJourney" extends="tfl-main-layout"> 
+        <put-attribute name="main" value="/WEB-INF/jsp/completeJourneyDetails.jsp"/>
+    </definition>
+
+	<definition name="TransferProduct" extends="tfl-main-layout-with-my-account"> 
+        <put-attribute name="main" value="/WEB-INF/jsp/transferProduct.jsp"/>
+    </definition>
+
+	<definition name="TransferSummary" extends="tfl-main-layout"> 
+        <put-attribute name="main" value="/WEB-INF/jsp/transferSummary.jsp"/>
+    </definition>
+
+	<definition name="AutoTopUpConfirmationOnPaymentCardChange" extends="tfl-main-layout"> 
+        <put-attribute name="main" value="/WEB-INF/jsp/autoTopUpConfirmationOnPaymentCardChange.jsp"/>
+    </definition>
+
+	<definition name="ResettleFailedAutoTopUp" extends="tfl-main-layout-with-my-account"> 
+        <put-attribute name="main" value="/WEB-INF/jsp/resettleFailedAutoTopUp.jsp"/>
+    </definition>
+
+	<definition name="ViewAutoTopUpHistory" extends="tfl-main-layout-with-my-account"> 
+        <put-attribute name="main" value="/WEB-INF/jsp/viewAutoTopUpHistory.jsp"/>
+    </definition>
+</tiles-definitions>

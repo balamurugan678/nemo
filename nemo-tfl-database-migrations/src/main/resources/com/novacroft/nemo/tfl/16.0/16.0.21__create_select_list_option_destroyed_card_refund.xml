@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.21">
+      <sql splitStatements="false">
+            <![CDATA[
+		begin
+		
+		   select_list_installer.install_option('Refunds', 'DestroyedCardRefund', 50);
+		   
+		   content_installer.install('destroyedCardRefundCart.header', 'Destroyed Card Refund');
+		   content_installer.install('DestroyedCardRefund.option', 'Destroyed Card Refund');
+		   content_installer.install('DestroyedCardRefund.transfer.button.label', 'Transfer Product');
+		   content_installer.install('DestroyedCardRefund.payeeSortCode.label', 'Payee sort code');
+		   content_installer.install('DestroyedCardRefund.payeeAccountNumber.label', 'Payee account number');
+		end;
+]]>
+        </sql>
+        
+        <insert schemaName="${schemaName}" tableName="ADMINISTRATIONFEE">
+            <column name="ID" valueComputed="ADMINISTRATIONFEE_SEQ.NEXTVAL"/>
+            <column name="CREATEDUSERID" value="Installer"/>
+            <column name="CREATEDDATETIME" valueComputed="SYSDATE"/>
+            <column name="TYPE" value="administrationFeeDestroyedCardRefund"/>
+            <column name="PRICE" valueNumeric="0"/>
+            <column name="EXTERNALID" valueComputed="EXTERNALID_SEQ.NEXTVAL"/>
+        </insert>
+        
+    </changeSet>
+</databaseChangeLog>

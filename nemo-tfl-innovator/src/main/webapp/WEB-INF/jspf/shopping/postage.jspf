@@ -1,0 +1,6 @@
+<nemo-tfl:radioButtonList id="shippingType" path="shippingType"
+                                                  selectList="${cartShippingMethods}"
+                                                  mandatory="true" selectedValue="${cartCmd.shippingType}"/>
+                        <to:secondaryButton id="updateTotal" buttonType="submit"
+                                            targetAction="<%= PageParameterValue.UPDATE_TOTAL %>"
+                                            buttonCssClass="rightalignbutton"/>

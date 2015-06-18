@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.38">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   content_installer.install('cardPreferences.securityNotice.heading', 'Security Statement');
+				   content_installer.install('cardPreferences.securityNotice.text', '<p>By signing up for this service, you agree that Transport for London can send you regular journey history statements by email.  Please ensure that you keep your registered email address up to date.</p> <p>Once we have sent your journey history statement by email, it is your responsibility to keep it secure.  Please remember that anyone who can access the email account associated with your registered email address will be able to open and view your journey history statement.</p> <p>If you no longer wish to receive journey history statements by email you can cancel this service within your Oyster online account under the "My Preferences" menu option.</p>');
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

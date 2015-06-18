@@ -1,0 +1,320 @@
+
+#loader-window {
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+  height: 230px;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    width: 8px;
+    height: 123px;
+    background-position: -279px -66px;
+    background-repeat: no-repeat;
+    background-image: url('/static/' +$version+ '/images/loader_sprite.png');
+    @include transform(rotate(180deg));
+    z-index: 1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 70px;
+    width: 8px;
+    height: 123px;
+    background-position: -279px -66px;
+    background-repeat: no-repeat;
+    background-image: url('/static/' +$version+ '/images/loader_sprite.png');
+    @include transform(rotate(360deg));
+    z-index: 1;
+  }
+  &.error {
+    width: 440px;
+    height: 180px;
+    background: url('/static/' +$version+ '/images/error_main-01.png');
+  }
+}
+
+#loader-background {
+  position: absolute;
+  top: 6px;
+  left: 21px;
+  width: 267px;
+  height: 94px;
+  background-position: 0 -66px;
+  background-repeat: no-repeat;
+  background-image: url('/static/' +$version+ '/images/loader_sprite.png');
+  &.error {
+    display: none;
+  }
+}
+
+#loader-trees {
+  position: absolute;
+  top: 42px;
+  left: -338px;
+  width: 992px;
+  height: 992px;
+  .walking & {
+    @include animation(rotate 120s infinite linear);
+  }
+  .cycling & {
+    @include animation(rotate 90s infinite linear);
+  }
+  .publictransport & {
+    @include animation(rotate 60s infinite linear);
+  }
+}
+
+%segment {
+  position: absolute;
+  left: 50%;
+  background: url('/static/' +$version+ '/images/loader_sprite.png');
+  background-repeat: no-repeat;
+}
+
+.tree-segment {
+  @extend %segment;
+  width: 290px;
+  height: 66px;
+  margin-left: -145px;
+  @include transform-origin(50% 496px);
+  @for $i from 2 through 8 {
+    &:nth-child( #{$i} ) {
+      @include transform(rotate(#{(( $i - 1 ) * 45) }deg));
+    }
+  }
+}
+
+#loader-birds {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10px;
+  left: 110px;
+  background: url('/static/' +$version+ '/images/bird.gif');
+  .walking & {
+    @include animation(flybyreverse 20s infinite linear);
+  }
+  .cycling & {
+    @include animation(flyby 30s infinite linear);
+  }
+  .publictransport & {
+    @include animation(flyby 20s infinite linear);
+  }
+}
+
+#loader-transport-method {
+  position: absolute;
+  .publictransport & {
+    background-image: url('/static/' +$version+ '/images/bus.png');
+    width: 84px;
+    height: 40px;
+    top: 41px;
+    left: 110px;
+    @include animation(bounce 0.3s infinite linear);
+  }
+  .cycling & {
+    background-image: url('/static/' +$version+ '/images/cyclist.gif');
+    width: 46px;
+    height: 41px;
+    top: 43px;
+    left: 130px;
+  }
+  .walking & {
+    background-image: url('/static/' +$version+ '/images/walker.gif');
+    width: 25px;
+    height: 35px;
+    top: 49px;
+    left: 140px;
+  }
+}
+
+#loader-grass {
+  position: absolute;
+  top: 72px;
+  left: -310px;
+  width: 936px;
+  height: 934px;
+  .walking & {
+    @include animation(rotate 60s infinite linear);
+  }
+  .cycling & {
+    @include animation(rotate 45s infinite linear);
+  }
+  .publictransport & {
+    @include animation(rotate 30s infinite linear);
+  }
+}
+
+.grass-segment {
+  @extend %segment;
+  width: 160px;
+  height: 59px;
+  margin-left: -80px;
+  background-position: 0 -160px;
+  @include transform-origin(50% 466px);
+  @for $i from 2 through 18 {
+    &:nth-child( #{$i} ) {
+      @include transform(rotate(#{(( $i - 1 ) * 20) }deg));
+    }
+  }
+}
+
+#loader-message {
+  position: absolute;
+  font-family: Arial, serif;
+  top: 140px;
+  left: 100px;
+}
+
+//ERROR SCREEN
+
+#error-window {
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 180px;
+  background-color: #cfdee8;
+}
+
+#error-container {
+  width: 440px;
+  height: 100%;
+  background-image: url('/static/' +$version+ '/images/error_main-01.png');
+  position: relative;
+  left: 50%;
+  margin-left: -220px;
+}
+
+#digger-arm-2 {
+  position: absolute;
+  width: 13px;
+  height: 51px;
+  top: 0;
+  left: -10px;
+  @include transform-origin(10px 5px);
+  @include animation(extend-arm 8s infinite ease-in-out);
+  background: url('/static/' +$version+ '/images/arm1.png');
+}
+
+#digger-arm-1 {
+  position: relative;
+  width: 39px;
+  height: 46px;
+  top: 110px;
+  left: 317px;
+  @include transform-origin(36px 39px);
+  @include animation(dig-up 8s infinite ease-in-out);
+  background: url('/static/' +$version+ '/images/arm2.png');
+}
+
+#error-bus {
+  position: absolute;
+  width: 123px;
+  height: 61px;
+  top: 95px;
+  left: 105px;
+  @include animation(small-bounce 0.2s infinite linear);
+  background: url('/static/' +$version+ '/images/error_bus.png');
+}
+
+#error-clouds {
+  width: 1600px;
+  height: 1600px;
+  left: -593px;
+  top: 10px;
+  position: absolute;
+  @include animation(rotate 600s infinite linear);
+}
+
+.cloud-segment {
+  background-image: url('/static/' +$version+ '/images/cloud.png');
+  width: 635px;
+  height: 86px;
+  position: absolute;
+  left: 50%;
+  margin-left: -317px;
+  @include transform-origin(50% 800px);
+  @for $i from 2 through 6 {
+    &:nth-child( #{$i} ) {
+      @include transform(rotate(#{(( $i - 1 ) * 60) }deg));
+    }
+  }
+}
+
+@include keyframes(rotate) {
+  from {
+    @include transform(rotate(0deg));
+  }
+  to {
+    @include transform(rotate(-360deg));
+  }
+}
+
+@include keyframes(dig-up) {
+  0%, 70% {
+    @include transform(rotate(0deg));
+  }
+  30%, 50% {
+    @include transform(rotate(30deg));
+  }
+  85% {
+    @include transform(rotate(3deg));
+  }
+}
+
+@include keyframes(extend-arm) {
+  0%, 100% {
+    @include transform(rotate(-10deg));
+  }
+  50%, 60% {
+    @include transform(rotate(30deg));
+  }
+}
+
+@include keyframes(flyby) {
+  0% {
+    @include transform(translate(200px, 0px));
+  }
+  100% {
+    @include transform(translate(-300px, 0px));
+  }
+}
+
+@include keyframes(flybyreverse) {
+  0% {
+    @include transform(translate(-150px, 0px));
+  }
+  100% {
+    @include transform(translate(300px, 0px));
+  }
+}
+
+@include keyframes(bounce) {
+  0% {
+    @include transform(translate(0px, 1px));
+  }
+  50% {
+    @include transform(translate(0px, -1px));
+  }
+  100% {
+    @include transform(translate(0px, 1px));
+  }
+}
+
+@include keyframes(small-bounce) {
+  0% {
+    @include transform(translate(0px, 1px));
+  }
+  50% {
+    @include transform(translate(0px, 0px));
+  }
+  100% {
+    @include transform(translate(0px, 1px));
+  }
+}

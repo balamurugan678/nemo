@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib>
+    <short-name>nemo-tfl-taglib</short-name>
+    <display-name>nemo TfL JSP tag library</display-name>
+    <description>Novacroft TfL nemo JSP tag library</description>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <tag>
+        <name>breadcrumbs</name>
+        <display-name>Bread Crumbs</display-name>
+        <description>Render TfL Online bread pageNames</description>
+        <tag-class>com.novacroft.nemo.tfl.online.tag.BreadcrumbsTag</tag-class>
+        <attribute>
+            <name>pageNames</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>String array of the page names to show bread crumbs for</description>
+        </attribute>
+    </tag>
+    <tag>
+        <name>selectList</name>
+        <display-name>Select List</display-name>
+        <description>Render a select list</description>
+        <tag-class>com.novacroft.nemo.tfl.online.tag.SelectListTag</tag-class>
+        <attribute>
+            <name>id</name>
+            <type>java.lang.String</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>Select list element HTML ID</description>
+        </attribute>
+        <attribute>
+            <name>selectList</name>
+            <type>com.novacroft.nemo.common.transfer.SelectListDTO</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>SelectListDTO</description>
+        </attribute>
+        <attribute>
+            <name>path</name>
+            <type>com.novacroft.nemo.common.transfer.SelectListDTO</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>Model attribute to bind to</description>
+        </attribute>
+        <attribute>
+            <name>selectedValue</name>
+            <type>java.lang.String</type>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>Currently selected value</description>
+        </attribute>
+        <attribute>
+            <name>showPlaceholder</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a please select option is added to list</description>
+        </attribute>
+        <attribute>
+            <name>mandatory</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a mandatory indicator is shown</description>
+        </attribute>
+        <attribute>
+            <name>showHint</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a hint is shown after the list</description>
+        </attribute>
+        <attribute>
+            <name>useManagedContentForMeanings</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether meanings (displayed values) are content managed</description>
+        </attribute>
+        <attribute>
+            <name>size</name>
+            <type>java.lang.Integer</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Number of options to display</description>
+        </attribute>
+        <attribute>
+            <name>showLabel</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a label is added to list</description>
+        </attribute>
+    </tag>
+    <tag>
+        <name>address</name>
+        <display-name>Format address</display-name>
+        <description>Render a TfL formatted address</description>
+        <tag-class>com.novacroft.nemo.tfl.online.tag.AddressTag</tag-class>
+        <attribute>
+            <name>houseNameNumber</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>The name and/or the number of the house</description>
+        </attribute>
+        <attribute>
+            <name>street</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>The name and type of the street</description>
+        </attribute>
+        <attribute>
+            <name>town</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>The name of the town</description>
+        </attribute>
+        <attribute>
+            <name>postcode</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>The postcode</description>
+        </attribute>
+        <attribute>
+            <name>country</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>The name of the country</description>
+        </attribute>
+    </tag>
+    <tag>
+        <name>radioButtonList</name>
+        <display-name>Radio Button List</display-name>
+        <description>Render a radio button list</description>
+        <tag-class>com.novacroft.nemo.tfl.online.tag.RadioButtonListTag</tag-class>
+        <attribute>
+            <name>id</name>
+            <type>java.lang.String</type>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Select list element HTML ID</description>
+        </attribute>
+        <attribute>
+            <name>selectList</name>
+            <type>com.novacroft.nemo.common.transfer.SelectListDTO</type>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>SelectListDTO</description>
+        </attribute>
+        <attribute>
+            <name>path</name>
+            <type>com.novacroft.nemo.common.transfer.SelectListDTO</type>
+            <required>true</required>
+            <description>Model attribute to bind to</description>
+        </attribute>
+        <attribute>
+            <name>selectedValue</name>
+            <type>java.lang.String</type>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>Currently selected value</description>
+        </attribute>
+        <attribute>
+            <name>mandatory</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a mandatory indicator is shown</description>
+        </attribute>
+        <attribute>
+            <name>showHint</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a hint is shown after the list</description>
+        </attribute>
+        <attribute>
+            <name>useManagedContentForMeanings</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether meanings (displayed values) are content managed</description>
+        </attribute>
+        <attribute>
+            <name>showHeadingLabel</name>
+            <type>java.lang.Boolean</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Controls whether a heading label is added</description>
+        </attribute>
+        <attribute>
+            <name>fieldsetCssClass</name>
+            <type>java.lang.String</type>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+            <description>Class for the fieldset</description>
+        </attribute>
+        <attribute>
+			<name>disabled</name>
+			<type>java.lang.Boolean</type>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>Controls whether a Radiobutton List is disabled</description>
+		</attribute>
+    </tag>
+    <tag>
+        <name>poundSterlingFormat</name>
+        <display-name>Format Pound Sterling value</display-name>
+        <description>Format Pound Sterling (GBP) monetary value</description>
+        <tag-class>com.novacroft.nemo.tfl.online.tag.PoundSterlingFormatTag</tag-class>
+        <attribute>
+            <name>amount</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>The monetary amount to display</description>
+        </attribute>
+        <attribute>
+            <name>amountInPence</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>Flag to indicate that the amount is in pence. Defaults to true. Set to false for amounts in pounds and
+                pence.
+            </description>
+        </attribute>
+        <attribute>
+            <name>showPoundSign</name>
+            <required>false</required>
+            <rtexprvalue>true</rtexprvalue>
+            <description>Flag to indicate whether the pound sign should be shown. Defaults to true.</description>
+        </attribute>
+    </tag>
+</taglib>

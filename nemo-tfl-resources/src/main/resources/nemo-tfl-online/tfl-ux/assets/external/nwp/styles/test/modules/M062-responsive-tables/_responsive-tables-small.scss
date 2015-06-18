@@ -1,0 +1,44 @@
+.table-container {
+  position: relative;
+  margin-bottom: 20px;
+
+  &.hiding {
+    overflow-x: scroll;
+  }
+}
+
+.responsive-table-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hiding {
+  .responsive-table-shadow {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 15px;
+    display: block;
+    &.left-shadow {
+      @include linear-gradient(left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%, $fallback: "transparent");
+    }
+    &.right-shadow {
+      @include linear-gradient(right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%, $fallback: "transparent");
+      //background-color: red;
+    }
+  }
+}
+
+.responsive-table-shadow {
+  display: none;
+}
+
+.hiding-table {
+  position: absolute;
+  &.first-col {
+    left: 0;
+    tr:nth-child(even) {
+      background-color: #fff;
+    }
+  }
+}

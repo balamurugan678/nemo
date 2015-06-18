@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="Login" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/login.jsp"/>
+    </definition>
+    
+    <definition name="Register" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/register.jsp"/>
+    </definition>
+    
+    <definition name="Update" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/update.jsp"/>
+    </definition>
+    
+    <definition name="ResetPassword" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/resetPassword.jsp"/>
+    </definition>
+    
+    <definition name="Logout" extends="main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/logout.jsp"/>
+    </definition>
+
+</tiles-definitions>

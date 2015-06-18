@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.15">
+		<sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('FulfilOrder.orderSection.header', 'Order details');
+				  content_installer.install('FulfilOrder.orderNumber.label', 'Order number');
+				  content_installer.install('FulfilOrder.customer.header', 'Customer details');	
+				  content_installer.install('FulfilOrder.customerName.label', 'Name');
+				  content_installer.install('FulfilOrder.registeredCard.label', 'Register card on central system');	
+				  content_installer.install('FulfilOrder.cardSecurityQuestion.label', 'Card security question');
+				  content_installer.install('FulfilOrder.cardSecurityAnswer.label', 'Security answer');
+				  content_installer.install('FulfilOrder.ticketDetails.header', 'Ticket details');
+				  content_installer.install('FulfilOrder.cardDepositPrice.label', 'Card deposit');
+				  content_installer.install('FulfilOrder.productName.label', 'Product name');
+				  content_installer.install('FulfilOrder.shippingMethod.label', 'Delivery');
+				  content_installer.install('FulfilOrder.ticketPrice.label', 'Price');
+				  content_installer.install('FulfilOrder.oysterCardNumber.header', 'Oyster card number');
+				  content_installer.install('FulfilOrder.fulfiledOysterCardNumber.label', 'Oyster card number including check digits');
+				  content_installer.install('FulfilOrder.fulfilOrder.button.label', 'Fulfil order');
+				  content_installer.install('FulfilOrder.autoTopUpAmount.label', 'Auto Topup Amount');
+				  
+				end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

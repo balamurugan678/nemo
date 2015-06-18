@@ -1,0 +1,105 @@
+/**************************************************
+	C10 Document download
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C10+-+Document+download
+
+**************************************************/
+
+.document-download-wrap {
+  position: relative;
+  padding: 10px 40px 10px 10px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 1px $link-border-colour;
+  border-bottom: solid 4px $light-grey-border-colour;
+  background-color: #fff;
+  @include transition(background-color 0.3s);
+  &:hover, &:focus {
+    text-decoration: none;
+    @include custom-colour-hover-and-focus($jp-subtle-blue);
+  }
+  .document-download-text {
+    width: 100%;
+    p {
+      margin-bottom: 0;
+      color: #2070b6;
+    }
+  }
+  .document-download-attachment {
+    width: 100%;
+    p {
+      margin-bottom: 0;
+      color: #676767;
+    }
+  }
+  .document-download-icon {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    margin-top: -16px;
+  }
+  .download-doc {
+    @extend %sprite-images;
+    @include svg-icon(7, 3, 32px, 32px);
+  }
+  .download-image {
+    @extend %sprite-images;
+    @include svg-icon(4, 3, 32px, 32px);
+  }
+  .download-spread {
+    @extend %sprite-images;
+    @include svg-icon(6, 3, 32px, 32px);
+  }
+  .download-zip {
+    @extend %sprite-images;
+    @include svg-icon(5, 3, 32px, 32px);
+  }
+  .download-audio {
+    @extend %sprite-images;
+    @include svg-icon(5, 3, 32px, 32px);
+  }
+  &.downloading {
+    .document-download-icon {
+      @extend .throbber-blue-small;
+    }
+  }
+  &.with-image {
+    .document-download-text {
+      padding-left: 100px;
+    }
+    .document-download-attachment {
+      padding-left: 100px;
+    }
+    .document-download-image {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      overflow: hidden;
+      &.portrait {
+        height: 124px;
+        width: 88px;
+      }
+      &.landscape {
+        width: 88px;
+        height: 62px;
+      }
+    }
+  }
+  &.portrait-download-image {
+    min-height: 150px;
+  }
+  &.landscape-download-image {
+    min-height: 85px;
+    .document-download-text {
+      padding-left: 105px;
+    }
+    .document-download-attachment {
+      padding-left: 105px;
+    }
+  }
+}

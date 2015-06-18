@@ -1,0 +1,65 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.4.3 on 17-04-2014@03:04  by Creative*/
+h1 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  border: none;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+h4 {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.oo-heading.with-border {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 20px;
+}
+
+.activated-product {
+  border-top: none;
+}
+
+.csc-payment-row .csc-payment-from {
+  width: auto;
+  float: left;
+  line-height: 20px;
+}
+.csc-payment-row .arrow-and-to {
+  width: 50%;
+  float: left;
+  position: relative;
+  bottom: 5px;
+}
+.csc-payment-row .csc-row-subtitle {
+  clear: both;
+  line-height: 10px;
+}
+
+.link-boxes .link-box {
+  width: 50%;
+  float: left;
+}
+.link-boxes .link-box:last-child {
+  border-bottom-width: 0;
+  border-left-width: 0;
+}
+.link-boxes .link-box .icon {
+  right: 15px;
+}

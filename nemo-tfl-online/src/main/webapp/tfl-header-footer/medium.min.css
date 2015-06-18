@@ -1,0 +1,529 @@
+.section-overview {
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.section-overview {
+    border-bottom: 3px solid #ccc;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+}
+
+#footer .footer-links {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 29.928%
+}
+
+.main-and-aside.one-row .main, .main-and-aside.one-row .aside {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 46.162%
+}
+
+#footer h2.heading, #footer .info-for {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 62.396%
+}
+
+.for-dropdown .dropdown-button.gla-dropdown:after, .for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9
+}
+
+.body-cms-preview .for-dropdown .dropdown-button.gla-dropdown:after, .for-dropdown .body-cms-preview .dropdown-button.gla-dropdown:after {
+    background-image: url("vsprite.png")
+}
+
+.for-dropdown .dropdown-button.gla-dropdown:after, .for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after {
+    background-size: 96px 2400px;
+    height: 32px;
+    width: 32px
+}
+
+.hero-headline, .headline {
+    font-size: 50px
+}
+
+.section-landing-container {
+    border-bottom: 0
+}
+
+.section-landing-container h1 {
+    font-size: 35px
+}
+
+.section-landing-container.with-logo {
+    padding-right: 170px
+}
+
+.section-landing-container .heading-logo {
+    height: 50px;
+    max-width: 165px;
+    min-width: 60px
+}
+
+.section-landing-container .heading-logo > img {
+    height: 50px
+}
+
+h1 {
+    line-height: 100%;
+    font-size: 50px
+}
+
+.map-container {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px
+}
+
+.map-container #map {
+    width: 100%;
+    height: 300px
+}
+
+.small {
+    display: none
+}
+
+.small-medium {
+    display: block
+}
+
+.medium {
+    display: block
+}
+
+.medium-large {
+    display: block
+}
+
+.large {
+    display: none
+}
+
+.floating-content-image {
+    height: auto;
+    width: 47.5%
+}
+
+.floating-content-image.left {
+    margin-right: 5%;
+    float: left
+}
+
+.floating-content-image.right {
+    float: right;
+    margin-left: 5%
+}
+
+.spot-grid-background {
+    position: relative;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 10px
+}
+
+.main .primary-and-secondary .primary, .main .primary-and-secondary .secondary {
+    width: 45%;
+    float: left
+}
+
+.main .primary-and-secondary .primary {
+    margin-right: 2.5%
+}
+
+.main .primary-and-secondary .secondary {
+    margin-left: 2.5%
+}
+
+.main .primary-and-secondary hr {
+    display: none
+}
+
+.main .primary-only .primary-button, .main .primary-only .secondary-button {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.module-grid {
+    position: relative
+}
+
+.module-grid > div {
+    float: left;
+    width: 47.5%
+}
+
+.module-grid > div:nth-child(2n-1) {
+    margin-right: 5%
+}
+
+.module-grid > div .teaser {
+    min-height: 93px
+}
+
+#main-hero {
+    padding-top: 33px;
+    margin-bottom: 30px
+}
+
+.section-image-container ~ .r .section-overview {
+    margin-top: 200px
+}
+
+.section-image-container ~ .r .section-title .hero-headline {
+    padding: 5px 0;
+    background-color: #2d3039;
+    box-shadow: 10px 0 0 #2d3039, -10px 0 0 #2d3039;
+    color: #fff
+}
+
+.section-overview {
+    padding: 20px;
+    background: #eee
+}
+
+.section-overview > div.main {
+    margin-left: 2.67752%;
+    width: 48.66124%;
+    margin-left: 0
+}
+
+.section-overview > div.aside {
+    margin-left: 2.67752%;
+    width: 48.66124%
+}
+
+.section-overview > div.equal-width {
+    margin-left: 2.67752%;
+    width: 48.66124%
+}
+
+.main .section-overview {
+    margin: 0;
+    width: 100%
+}
+
+.section-image-container {
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    height: 400px;
+    margin-bottom: -400px;
+    top: 57px;
+    left: 0;
+    width: 100%
+}
+
+.two-column-divided .half-width {
+    width: 50%;
+    padding-right: 10px;
+    float: left
+}
+
+.two-column-divided .half-width + .half-width {
+    padding-left: 10px;
+    padding-right: 0;
+    border-left: 1px dotted #ccc
+}
+
+.two-column-divided .half-width > :last-child {
+    margin-bottom: 0
+}
+
+.top-row div.logo {
+    width: 155px
+}
+
+.top-row div.logo .tfl-name {
+    display: block
+}
+
+.top-row .more a {
+    padding-bottom: 13px
+}
+
+.top-row .more a.expanded {
+    padding-bottom: 16px
+}
+
+.top-row-extras .more {
+    display: none
+}
+
+.top-row-extras .texts {
+    border-left: 1px solid #1e2228
+}
+
+.extra-nav .menu-sub-section {
+    float: left;
+    margin: 0 2%;
+    width: 46%
+}
+
+.extra-nav .menu-sub-section.getting-around {
+    width: 96%
+}
+
+.extra-nav h2 {
+    margin-bottom: 10px
+}
+
+.extra-nav ul.extras {
+    width: 96%
+}
+
+.collapsible-menu .plan-journey, .collapsible-menu li.more {
+    display: block
+}
+
+.extra-nav .plan-journey {
+    display: none
+}
+
+@media screen and (min-width: 600px) {
+    .collapsible-menu .status-update {
+        display: block
+    }
+
+    .extra-nav .status-update {
+        display: none
+    }
+}
+
+@media screen and (min-width: 655px) {
+    .collapsible-menu .maps {
+        display: block
+    }
+
+    .extra-nav .maps {
+        display: none
+    }
+}
+
+@media screen and (min-width: 795px) {
+    .collapsible-menu .fares-and-payments {
+        display: block
+    }
+
+    .extra-nav .fares-and-payments {
+        display: none
+    }
+}
+
+#footer .footer-links {
+    padding: 20px 0 10px;
+    background: none;
+    margin-bottom: 0
+}
+
+#footer .footer-links li {
+    border-right: 1px solid #ccc
+}
+
+#footer .footer-links li.social, #footer .footer-links li.choose-language {
+    border-right: none
+}
+
+#footer a.info-for-link {
+    cursor: default
+}
+
+#footer a.info-for-link:focus h2.heading, #footer a.info-for-link:hover h2.heading {
+    background-color: transparent
+}
+
+#footer h2.heading {
+    margin: 20px 0 0 0;
+    padding: 7px 0 7px 5%;
+    border: none;
+    background: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: default
+}
+
+#footer h2.heading:before {
+    display: none
+}
+
+#footer .expanded h2.heading:before {
+    display: none
+}
+
+#footer .info-for {
+    padding: 0 0 10px;
+    margin-bottom: 0;
+    background: none
+}
+
+#footer .info-for li {
+    display: block;
+    float: left;
+    margin-left: 4.07077%;
+    width: 47.96461%;
+    padding: 7px 0;
+    border: none
+}
+
+#footer .info-for li:nth-child(2n) {
+    margin-left: 0
+}
+
+#footer .info-for li a {
+    display: inline;
+    padding: 0
+}
+
+#footer .info-for li a:after {
+    display: none
+}
+
+#footer .secondary-footer {
+    padding-top: 7px;
+    padding-bottom: 7px
+}
+
+#footer .secondary-footer ul li {
+    float: left;
+    margin: 0 1% 0 0
+}
+
+#footer .secondary-footer span {
+    margin-top: 11px;
+    float: right;
+    display: block
+}
+
+#footer .footer-MOL-logo {
+    float: right;
+    width: auto
+}
+
+.for-dropdown .links-list {
+    top: 36px;
+    position: absolute;
+    min-width: 100%;
+    right: 0px;
+    border-top: 1px solid #ccc;
+    margin-top: 5px
+}
+
+.for-dropdown .links-list#gla-list {
+    bottom: 45px;
+    top: auto;
+    border-top: 1px solid #484848
+}
+
+.for-dropdown .links-list#gla-list li.greater-london-authority-li {
+    display: block;
+    padding: 5px;
+    cursor: default;
+    padding-left: 10px;
+    border-bottom: 1px solid #484848
+}
+
+.for-dropdown .links-list#gla-list li.greater-london-authority-li:hover {
+    background-color: transparent
+}
+
+.for-dropdown .links-list#gla-list li.greater-london-authority-li img {
+    margin-bottom: 2px
+}
+
+.for-dropdown .links-list#gla-list li.greater-london-authority-li:after {
+    display: none
+}
+
+.for-dropdown .dropdown-button {
+    padding: 9px 30px 9px 7px;
+    border-bottom-width: 0;
+    padding-bottom: 10px;
+    margin-bottom: -3px;
+    position: relative;
+    z-index: 15
+}
+
+.for-dropdown .dropdown-button.gla-dropdown {
+    padding-bottom: 7px;
+    border-bottom: solid 1px #cacaca
+}
+
+.for-dropdown .dropdown-button.gla-dropdown:after {
+    background-position: -32px -672px
+}
+
+.for-dropdown .dropdown-button.dropdown-closed {
+    border-bottom-width: 1px;
+    padding-bottom: 7px;
+    margin-bottom: 0
+}
+
+.for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after {
+    background-position: -32px -608px
+}
+
+.r.no-overflow .links-list {
+    position: static;
+    margin-top: 0
+}
+
+.r.no-overflow .dropdown-closed + .links-list {
+    padding: 0;
+    border: 0;
+    height: 0
+}
+
+.no-js #footer ul.info-for {
+    width: 25%
+}
+
+.no-js #footer ul.info-for li {
+    float: none;
+    margin: 0;
+    margin-left: 10%;
+    width: auto
+}
+
+.no-js #footer .footer-MOL-logo {
+    margin-top: -30px;
+    float: left;
+    margin-left: 2.54%;
+    width: 25%
+}
+
+.no-js #footer .footer-MOL-logo ul#gla-list {
+    margin-left: 0;
+    width: 100%
+}
+
+.no-js #footer .footer-MOL-logo ul#gla-list li {
+    padding-right: 35px;
+    margin: 10px 0
+}
+
+.no-js #footer .footer-MOL-logo ul#gla-list li:hover {
+    background: none
+}
+
+.no-js #footer .footer-MOL-logo ul#gla-list li a {
+    padding-right: 30px;
+    display: inline
+}
+
+.message-bar-style-1 {
+    background-color: #1F2025;
+    color: #fff;
+    padding: 6px 0;
+    font-size: 80%;
+    padding-right: 9px;
+}
+
+.message-bar-style-1 img {
+    float: right;
+}

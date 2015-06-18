@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:sec="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+   http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <ctx:property-placeholder location="classpath:nemo-tfl-common.properties, classpath:nemo-mock-cubic.properties"
+                              ignore-unresolvable="true"/>
+
+    <bean id="applicationProperties"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:nemo-tfl-common.properties</value>
+                <value>classpath:nemo-mock-cubic.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_cubic"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.mock_cubic.domain.card"/>
+
+    <bean id="tilesViewResolver"
+          class="com.novacroft.nemo.common.support.CachingUrlTilesViewResolver"/>
+
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/config/layouts.xml</value>
+                <value>/WEB-INF/tiles/config/pages.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <sec:authentication-manager>
+        <sec:authentication-provider ref="authenticationProvider"/>
+    </sec:authentication-manager>
+
+    <bean name="passwordEncoder"
+          class="com.novacroft.nemo.tfl.common.security.TflPasswordEncoder"/>
+
+    <bean name="userDetailsService"
+          class="com.novacroft.nemo.tfl.common.security.TflUserDetailsService">
+        <property name="dataService" ref="customerDataService"/>
+    </bean>
+
+    <bean name="authenticationProvider"
+          class="com.novacroft.nemo.tfl.common.security.TflAuthenticationProvider">
+        <property name="passwordEncoder" ref="passwordEncoder"/>
+        <property name="userDetailsService" ref="userDetailsService"/>
+    </bean>
+
+    <bean id="nemoUserContext" class="com.novacroft.nemo.common.support.NemoUserContextImpl">
+        <property name="userName" value="mock-cubic"/>
+    </bean>
+
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="innovator-main-layout" template="/WEB-INF/tiles/resources/innovator-page.jsp">
+        <put-attribute name="title" value="Edit Application"/>
+        <put-attribute name="main" value="/WEB-INF/tiles/resources/default-main.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/resources/innovator-header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/resources/innovator-footer.jsp"/>
+    </definition>
+    
+    <definition name="innovator-search-layout" template="/WEB-INF/tiles/resources/search/innovator-search-page.jsp">
+        <put-attribute name="pagename" value="pagename not set"/>
+        <put-attribute name="main" value="/WEB-INF/tiles/resources/default-main.jsp"/>
+        <put-attribute name="header" value="/WEB-INF/tiles/resources/search/innovator-search-header.jsp"/>
+        <put-attribute name="footer" value="/WEB-INF/tiles/resources/search/innovator-search-footer.jsp"/>
+    </definition>
+
+</tiles-definitions>

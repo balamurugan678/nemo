@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>global.js Unit Tests</title>
+    <link rel="stylesheet" href="../resources/qunit-1.12.0.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../resources/qunit-1.12.0.js"></script>
+<script src="../../main/webapp/scripts/jquery.min.js"></script>
+<script src="../../main/webapp/scripts/global.js"></script>
+
+<script>
+    $(document).ready(function () {
+        module("isValidExpiryDate");
+        test("should return true with valid date", function () {
+            var testDate = '08-2013';
+            expect(1);
+            equal(true, isValidExpiryDate(testDate));
+        });
+        test("should return false with invalid month", function () {
+            var testDate = '99-2013';
+            expect(1);
+            equal(false, isValidExpiryDate(testDate));
+        });
+        test("should return false with invalid year", function () {
+            var testDate = '08-99';
+            expect(1);
+            equal(false, isValidExpiryDate(testDate));
+        });
+        test("should return false with rubbish", function () {
+            var testDate = '!"$#';
+            expect(1);
+            equal(false, isValidExpiryDate(testDate));
+        });
+        module("stripNonDigitsFromString");
+        test("should strip hyphens", function () {
+            var testValue = '1234-1234-1234-1234';
+            expect(1);
+            equal('1234123412341234', stripNonDigitsFromString(testValue));
+        });
+        test("should strip spaces", function () {
+            var testValue = '1234 1234 1234 1234';
+            expect(1);
+            equal('1234123412341234', stripNonDigitsFromString(testValue));
+        });
+        test("should strip nothing", function () {
+            var testValue = '1234123412341234';
+            expect(1);
+            equal('1234123412341234', stripNonDigitsFromString(testValue));
+        });
+        module("isValidLuhn");
+        test("should validate", function () {
+            var testValues = ['4111111111111111', '1000070000000001', '5576840000000002', '340000000000058', '374245455400001',
+                '7076302164850100035', '1003130000000018', '5573470000000209'];
+            expect(testValues.length);
+            for (var i = 0; i < testValues.length; i++) {
+                equal(true, isValidLuhn(testValues[i]));
+            }
+        });
+        test("should not validate", function () {
+            var testValue = '1234123412341234';
+            expect(1);
+            equal(false, isValidLuhn(testValue));
+        });
+        module("replaceSlashWithHyphenInString");
+        test("should replace slash", function () {
+            var testValue = '08/2013';
+            expect(1);
+            equal('08-2013', replaceSlashWithHyphenInString(testValue));
+        });
+        test("should not modify", function () {
+            var testValue = '08-2013';
+            expect(1);
+            equal('08-2013', replaceSlashWithHyphenInString(testValue));
+        });
+    });
+</script>
+</body>
+</html>

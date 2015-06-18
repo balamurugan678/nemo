@@ -1,0 +1,25 @@
+/**************************************************
+	M068 timetable options
+* Author: Alex Faunt
+* Created: 19/11/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M068-timetable-options
+**************************************************/
+.timetable-options {
+
+  .half-width {
+    width: 50%;
+    padding-right: 5px;
+    float: left;
+
+    + .half-width {
+      padding-left: 5px;
+      padding-right: 0;
+    }
+
+    .selector {
+      margin: 0;
+    }
+
+  }
+
+}

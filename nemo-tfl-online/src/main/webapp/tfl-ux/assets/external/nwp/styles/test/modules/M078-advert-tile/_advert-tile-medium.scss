@@ -1,0 +1,17 @@
+/**************************************************
+	M078-advert-tile
+* Author: Alex Faunt
+* Re-Created: 17/12/2013
+* Pattern library URL:  
+**************************************************/
+.advert-tile {
+  position: relative;
+  &.two-column {
+    .advert-link {
+      position: absolute;
+      right: 0;
+      bottom: 10%;
+      width: 40%;
+    }
+  }
+} 

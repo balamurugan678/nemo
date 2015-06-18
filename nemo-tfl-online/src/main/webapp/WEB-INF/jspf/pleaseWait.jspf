@@ -1,0 +1,3 @@
+<div id="pleaseWait">
+    <img src="images/pleaseWait.gif"> <spring:message code="${pageName}${pageName ne ' ' ? '.' : ''}pleaseWait.text"/>
+</div>

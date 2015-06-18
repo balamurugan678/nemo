@@ -1,0 +1,81 @@
+/**************************************************
+	M040-select-bus
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M040-select-bus
+
+**************************************************/
+.map-options-panel {
+  background-color: $semi-transparent-dark-grey;
+  color: #fff;
+  padding: 15px;
+  .map-options-panel-heading {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    @extend %new-johnson;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    .menu-icon-alt {
+      display: inline-block;
+      margin-left: -5px;
+    }
+    .close3-icon {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+      width: 32px;
+      cursor: pointer;
+    }
+  }
+  .map-panel-radio-with-image {
+    color: #fff;
+    position: relative;
+    float: left;
+    margin-right: 2px;
+    padding: 66px 35px 10px 6px;
+    width: 126px;
+    input {
+      opacity: 0;
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+    }
+    &:after {
+      content: none;
+    }
+    &.ticked {
+      background-color: $semi-transparent-dark-grey;
+      &:before {
+        content: "";
+        position: absolute;
+        bottom: 3px;
+        right: 3px;
+        @extend .tick-icon-alt;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .map-panel-radio-image {
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 120px;
+    height: 50px;
+
+  }
+  [for='coloured-disruptions'] {
+    .map-panel-radio-image {
+      background-image: url('/static/' +$version+ '/images/coloured-disruptions.jpg');
+    }
+  }
+  [for='grey-disruptions'] {
+    .map-panel-radio-image {
+      background-image: url('/static/' +$version+ '/images/grey-disruptions.jpg');
+    }
+  }
+}

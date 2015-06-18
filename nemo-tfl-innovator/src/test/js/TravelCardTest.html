@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>content.js Unit Tests</title>
+    <link rel="stylesheet" href="../resources/qunit-1.12.0.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../resources/qunit-1.12.0.js"></script>
+<script src="../../main/webapp/scripts/jquery.min.js"></script>
+<script src="../../main/webapp/scripts/jquery-ui.js"></script>
+<script src="../../main/webapp/scripts/showTravelCards.js"></script>
+
+<div id="addTravelCardsSection"></div>
+<div id="loadingTravelCardsSection"></div>
+<div id="travelcardAccordian"></div>
+
+<script>
+    $(document).ready(function () {
+        
+        module("initialiseTravelCardSection");
+        test("should initialise travelcard section", function () {
+            initialiseTravelCardSection();
+            ok(!$('#addTravelCardsSection').is(':visible'));
+            ok(!$('#loadingTravelCardsSection').is(':visible'));
+            ok($('#travelcardAccordian').is(':visible'));
+        });
+
+    });
+</script>
+</body>
+</html>

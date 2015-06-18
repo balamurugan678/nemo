@@ -1,0 +1,25 @@
+.icon {
+    background-image: url("../images/vsprite_x2.png");
+    background-image: url("../images/vsprite.png") \9;
+    background-size: 96px 1344px;
+    width: 32px;
+    height: 32px;
+    display: block;
+    background-position: -32px -544px;
+}
+
+.warning-icon {
+    background-position: 0px -832px;
+}
+
+.capped-icon {
+    background-position: -64px -480px;
+}
+
+.autocompleted-icon {
+    background-position: -64px -1312px;
+}
+
+.manually-corrected-icon {
+    background-position: -32px -544px;
+}

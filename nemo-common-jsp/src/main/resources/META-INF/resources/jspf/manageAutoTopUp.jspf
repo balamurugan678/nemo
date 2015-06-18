@@ -1,0 +1,22 @@
+<form:form commandName="<%=PageCommand.MANAGE_CARD%>">
+	<to:hidden id="cardId" />
+	<c:if test="${outstandingFee}">
+		<to:paragraph id="payOutstandingFailed" />
+		<to:primaryButton buttonType="submit" id="payOutstandingFailed" targetAction="<%=PageParameterValue.PAY_OUTSTANDING_FAILED%>"></to:primaryButton>
+	</c:if>
+	
+	<to:paragraph id="enabledDisabledAutoTopUp" paragraphCssClass="left bold" pre="${manageCardCmd.cardNumber} " text="${manageCardCmd.autoTopUpEnabled ? enabledText : disabledText }" />
+	
+	<nemo-tfl:radioButtonList id="autoTopUpState" path="autoTopUpState" selectList="${payAsYouGoAutoTopUpAmounts}" mandatory="true"
+		selectedValue="${manageCardCmd.autoTopUpState}" />
+	<form:errors path="autoTopUpState" cssClass="field-validation-error" />
+	
+	<nemo-tfl:selectList id="selectStation" path="stationId" selectList="${locations}" mandatory="true" selectedValue="${manageCardCmd.stationId}"
+		useManagedContentForMeanings="false" />
+	<form:errors path="stationId" cssClass="field-validation-error" />
+	
+	<to:primaryButton buttonType="submit" id="manageAutoTopUp" targetAction="<%=PageParameterValue.UPDATE_AUTO_TOP_UP%>"></to:primaryButton>
+</form:form>
+<script type="text/javascript" >
+  var message = '${message}';
+</script>

@@ -1,0 +1,48 @@
+/**************************************************
+	M033-headline
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M033-headline
+
+**************************************************/
+
+.headline-container {
+
+  h1 {
+    font-size: 35px;
+  }
+
+  &.with-tag h1 {
+    padding-top: 15px;
+  }
+
+  .with-favourite & {
+    padding-right: 148px;
+    padding-bottom: 0;
+    &:after {
+      bottom: 10px;
+    }
+
+    .favourite {
+      margin: 0 0 0 10px;
+      left: auto;
+    }
+
+    &[class*="mode-"] {
+      padding-right: 218px;
+
+      .favourite {
+        right: 46px;
+      }
+    }
+    &.mode-cable-car {
+      padding-right: 320px;
+
+      .favourite {
+        right: 148px;
+      }
+    }
+  }
+
+}

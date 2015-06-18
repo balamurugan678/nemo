@@ -1,0 +1,33 @@
+﻿<% if (isABusStop) { %>
+	<% if (showLargeBusStops) { %>
+		<div class="bus-pin-large<%= state === 'inactive' ? ' inactive' : ''%>">
+			<% if (number != null) { %>
+				<div class="number"><%= number %></div>
+				<div class="number-stalk"></div>
+			<% } %>
+			<div class="<%= largeBusStopCssClass %>"><%= busStopLetter %></div>                
+		</div>
+	<% } else { %>
+		<div class="bus-pin-small<%= state === 'inactive' ? ' inactive' : ''%>">
+			<% if (number != null) { %>
+				<div class="number"><%= number %></div>
+				<div class="number-stalk"></div>
+			<% } %>
+			<div class="bus-marker">
+			</div>                
+		</div>
+	<% } %>
+<% } else { %>
+	<div class="disambiguation-pin<%= state === 'inactive' ? ' inactive' : ''%>">
+		<% if (number != null) { %>
+		<div class="number"><%= number %></div>
+		<div class="number-stalk"></div>
+		<% } %>
+		<div class="modes">
+			<% for(var index = 0; index < modeNames.length; index++) { %>
+			<div class="mode mode-<%= modeNames[index] %>"></div>
+			<% } %>
+		</div>
+		<div class="label hidden"></div>
+	</div>
+<% } %>

@@ -1,0 +1,150 @@
+.lt-ie8 h1, .lt-ie8 h2, .lt-ie8 h3 {
+    line-height: 153.33%
+}
+
+.lt-ie8 a.primary-button, .lt-ie8 a.secondary-button {
+    height: 24px
+}
+
+.lt-ie8 li {
+    margin-left: 1em;
+    vertical-align: top
+}
+
+.lt-ie8 .visually-hidden {
+    visibility: hidden
+}
+
+.lt-ie8 .flat-button {
+    padding-top: 0;
+    margin-left: 0;
+    margin-bottom: 10px
+}
+
+.lt-ie8 .flat-button img {
+    margin-top: 20px
+}
+
+.lt-ie8 .icon-replacement-text {
+    display: block
+}
+
+.lt-ie8 .plain-button {
+    padding-right: 0;
+    padding-left: 0
+}
+
+.lt-ie8 .section-overview {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.lt-ie8 .tabs-style-1 {
+    overflow: hidden
+}
+
+.lt-ie9 body {
+    min-width: 900px
+}
+
+.lt-ie9 input[type='text'] {
+    padding-top: 8px
+}
+
+.lt-ie9 .large-status-information {
+    border: solid 1px #A8A8A8;
+    display: block;
+    margin-top: 15px
+}
+
+.lt-ie9 .large-status-information .line-text {
+    padding: 10px 20px;
+    vertical-align: middle
+}
+
+.lt-ie9 .large-status-information .disruption-type {
+    padding: 10px 20px;
+    vertical-align: middle;
+    width: 24%;
+    color: #1a5a92
+}
+
+.lt-ie9 .large-status-information .disruption-message {
+    padding: 10px 20px;
+    vertical-align: middle
+}
+
+.lt-ie9 .section-overview > div.main {
+    width: 60%
+}
+
+.lt-ie8 .module-grid > div {
+    width: 47%
+}
+
+.lt-ie8 .module-grid > div:first-child {
+    margin-right: 5%
+}
+
+.lt-ie8 .aside .module-grid > div {
+    width: 100%
+}
+
+.lt-ie8 input[type="text"] {
+    padding: 5px 0;
+    height: 26px
+}
+
+.lt-ie8 .selector {
+    background: none;
+    border: none
+}
+
+.lt-ie9.no-js .checkbox-list input[type='checkbox'], .lt-ie9.no-js .styled-checkbox input[type='checkbox'] {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"
+}
+
+.lt-ie8 .mainnav {
+    margin-bottom: -4px
+}
+
+.lt-ie8 .top-row .logo {
+    height: 43px
+}
+
+.lt-ie8 .top-row .logo .main-roundel {
+    left: 30px
+}
+
+.lt-ie8 .top-row .collapsible-menu {
+    margin-top: -21px
+}
+
+.lt-ie8 .top-row-extras .login a {
+    height: 40px;
+    padding-bottom: 0
+}
+
+.lt-ie8 .more .text {
+    font-family: "New Johnson"
+}
+
+.lt-ie9 .extra-nav {
+    width: 900px;
+    left: 50%;
+    margin-left: -450px
+}
+
+.lt-ie9 .top-row .logo .main-roundel {
+    background-image: url("/static/1/images/homepage_sprite.png");
+    background-position: 0 -5px;
+    width: 48px
+}
+
+.lt-ie9 .top-row-extras input[type='text'] {
+    margin-right: 22px
+}
+
+.lt-ie9 #footer .info-for li {
+    width: 44%
+}

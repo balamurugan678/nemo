@@ -1,0 +1,32 @@
+.full-fares-table {
+  .content {
+    border-left: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+  }
+
+}
+
+.fares-tabs {
+  .nearby-icon-white {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin: -16px 0 0;
+  }
+  .nearby-fares-tab {
+    a {
+      position: relative;
+      padding-left: 40px;
+      max-width: auto;
+    }
+  }
+  li {
+    width: auto;
+    max-width: 110px;
+    a {
+      min-height: 55px;
+      padding-top: 8px;
+    }
+  }
+}

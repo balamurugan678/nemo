@@ -1,0 +1,182 @@
+/**************************************************
+	C1 Accordion
+
+* Author: Steven Swinbank
+* Created: 23/04/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C22+-+Video+gallery
+
+**************************************************/
+
+//Galleria plugin styling for Video Gallery
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  padding: 5px;
+  background: #fff;
+  border: 1px solid $light-grey-border-colour;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video-gallery-wrapper {
+  .video-gallery {
+    padding-bottom: 15px;
+    background: $darker-subtle-grey;
+    .galleria-image-nav {
+      display: none;
+    }
+  }
+  .video-thumbs {
+    .video-thumb {
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+      &.selected {
+
+        .video-caption {
+          color: #000;
+          width: 100%;
+        }
+        span {
+          background: #ccc;
+          color: #000;
+        }
+      }
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+      &:first-child {
+        padding-left: 0;
+      }
+      .video-caption {
+        display: block;
+        padding: 10px 10px 10px 10px;
+        font-size: 10pt;
+        float: left;
+        @extend %new-johnson;
+        color: $linkcolour;
+      }
+      > a:after {
+        clear: both;
+        display: block;
+        content: "";
+      }
+    }
+  }
+  .nbs-flexisel-inner {
+    margin-bottom: 15px;
+  }
+}
+
+@include respond-to(medium-upwards) {
+  .video-thumbs {
+    .video-thumb {
+      max-width: 23.5%;
+      &:nth-child(4n+4) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.video-gallery-title {
+  padding: 5px 5px 5px 8px;
+  font-size: 14pt;
+  @extend %new-johnson;
+}
+
+//------------------Flexisel styling
+
+#flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
+  display: none;
+}
+
+.nbs-flexisel-container {
+  position: relative;
+  max-width: 100%;
+  *overflow: hidden;
+}
+
+.nbs-flexisel-ul {
+  position: relative;
+  width: 9999px;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: left;
+}
+
+.nbs-flexisel-inner {
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  background: $darker-subtle-grey;
+  border-top: none;
+}
+
+.nbs-flexisel-item {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  cursor: pointer;
+  position: relative;
+  line-height: 0px;
+}
+
+.nbs-flexisel-item img {
+  max-width: 32%;
+  //margin-right: 2%;
+  padding: 1px;
+  float: left;
+}
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.nbs-flexisel-nav-left {
+  left: 0;
+  &:after {
+    @include svg-icon(19, 1);
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    content: "";
+  }
+
+}
+
+.nbs-flexisel-nav-right {
+  right: 0;
+  &:after {
+    @include svg-icon(21, 1);
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    content: "";
+  }
+
+}

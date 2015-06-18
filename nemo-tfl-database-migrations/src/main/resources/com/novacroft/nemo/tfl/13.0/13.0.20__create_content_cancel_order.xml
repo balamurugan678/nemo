@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.20">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('cancelOrder.success', 'Order Successfully Cancelled');
+  content_installer.install('cancelOrder.awaitingRefundPayment', 'Awaiting Refund Payment in order to complete cancelling the order');
+  content_installer.install('cancelOrder.general.error', 'Unable to cancel order');
+  content_installer.install('cancelOrder.afterCutOffTime.error', 'Unable to cancel the order because it is ater the cut off time');
+  content_installer.install('cancelOrder.createOrUpdate.RefundOrder.error', 'Failed to create or update the refund order');
+  content_installer.install('cancelOrder.createOrUpdate.RefundSettlement.error', 'Failed to create or update the refund settlement/s');
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,46 @@
+/**************************************************
+List ToDropdown
+
+* Author: J Boyle 
+* Created: 12/07/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/Service+Status+Pages
+
+**************************************************/
+.no-js {
+  .greater-london-authority-li {
+    display: none;
+  }
+  ul#gla-list {
+    margin-left: 0;
+    li {
+      position: relative;
+      @include transition(background-color 0.3s);
+      &:hover, &:focus {
+        background: #15171b;
+        text-decoration: none;
+      }
+      &:after {
+        content: '';
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        right: 2px;
+        top: 50%;
+        margin-top: -16px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(67, 3);
+      }
+      &.MOL-logo-dropdown {
+        display: block;
+        margin-bottom: 10px;
+        &:hover {
+          background: none;
+        }
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+  }
+} 

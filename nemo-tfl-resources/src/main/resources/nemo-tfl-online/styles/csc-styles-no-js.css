@@ -1,0 +1,70 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.4.3 on 17-04-2014@03:04  by Creative*/
+.no-js .without-js {
+  display: block;
+}
+.no-js .checkbox-list label:after, .no-js .checkbox-list label:before, .no-js .styled-checkbox label:after, .no-js .styled-checkbox label:before, .no-js .radiobutton-list label:after, .no-js .radiobutton-list label:before {
+  display: none;
+}
+.no-js .checkbox-list input[type="checkbox"], .no-js .checkbox-list input[type="radio"], .no-js .styled-checkbox input[type="checkbox"], .no-js .styled-checkbox input[type="radio"], .no-js .radiobutton-list input[type="checkbox"], .no-js .radiobutton-list input[type="radio"] {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.no-js .selector span:before {
+  border: 0;
+  width: 0;
+  height: 0;
+}
+.no-js .selector select {
+  margin-top: 38px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.no-js .csc-toggle-content-start-hidden {
+  display: block;
+}
+.no-js .csc-toggle-content-start-hidden.override {
+  display: none;
+}
+.no-js [data-popup] {
+  display: none;
+}
+.no-js .csc-popup-content {
+  display: block;
+}
+.no-js .csc-no-js-filter-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding-top: 0;
+  border-top: 0;
+  margin-bottom: 0;
+}
+.no-js .csc-no-js-filter-button .vertically-centred {
+  margin-top: -16px;
+}
+.no-js .csc-no-js-filter-button .button {
+  margin-bottom: 0;
+}
+.no-js .form-tooltip-wrapper {
+  padding-right: 0;
+}
+.no-js .form-tooltip {
+  display: block;
+  visibility: visible;
+  position: relative;
+  margin-top: 10px;
+  top: 0;
+  left: 0;
+  margin-left: 0;
+  width: auto;
+}
+.no-js .form-tooltip:before {
+  left: auto;
+  top: -7.07107px;
+  border-bottom: 0;
+  border-top: 1px solid #CCD1E5;
+}
+.no-js .form-tooltip-icon {
+  display: none;
+}

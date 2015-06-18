@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.31">
+		<sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('CancelAndSurrender.cartItemCmd.backdatedOtherReason.label', 'Other Reason');
+				  content_installer.install('CancelAndSurrender.cartItemCmd.backdatedOtherReason.tip', 'Please provide details of back dated refund reason');
+				  content_installer.install('CancelAndSurrender.cartItemCmd.dateOfCanceAndSurrender.tip', 'Please select date card surrendered');
+				  content_installer.install('CancelAndSurrender.cartItemCmd.backdatedOtherReason.placeholder', 'back dated refund reason details');
+				  content_installer.install('CancelAndSurrender.cartItemCmd.dateOfCanceAndSurrender.placeholder', 'Card Surrendered Date');
+				  
+				end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

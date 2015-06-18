@@ -1,0 +1,5 @@
+This is the Global folder, it contains generic pieces of styling for wider groups of elements.
+
+For example, typography, forms, and layout.
+
+This will be imported first, and specific elements/modules overwrite this styling.

@@ -1,0 +1,75 @@
+/**************************************************
+	M027 - icon info
+
+* Author: Andrew Spencer
+* Created: 10/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M027-icon-info
+
+**************************************************/
+
+.icon-info {
+  //padding: 10px 15px;
+  position: relative;
+  margin: 10px 0px;
+
+  .icon-info-content {
+    //padding: 10px;
+    &:after {
+      content: '';
+      clear: both;
+      visibility: hidden;
+    }
+    .icon-info-image {
+      height: 50px;
+      width: 50px;
+      background-color: #0053A6;
+      position: relative;
+      display: inline-block;
+      margin-right: 20px;
+      float: left;
+      .icon {
+        display: block;
+        position: absolute;
+        margin: 10px;
+      }
+      .left-icon {
+        left: 0;
+        margin-left: -1px;
+        float: left;
+      }
+      .right-icon {
+        right: 0;
+        margin-right: -1px;
+        float: right;
+      }
+      .icon-info-corner {
+        right: 0;
+        top: 0;
+        position: absolute;
+      }
+      .icon-info-red-cross {
+        @include svg-icon(56, 2);
+      }
+      .icon-info-yellow-cross {
+        @include svg-icon(57, 1);
+      }
+      .icon-info-tick {
+        @include svg-icon(56, 3);
+      }
+      .icon-info-two-way {
+        @include svg-icon(56, 1);
+      }
+    }
+  }
+  .icon-info-message {
+    position: relative;
+    padding-top: 0.1em;
+    overflow: hidden;
+    p {
+      line-height: 1em;
+    }
+    h4 {
+      line-height: 0.8em;
+    }
+  }
+}

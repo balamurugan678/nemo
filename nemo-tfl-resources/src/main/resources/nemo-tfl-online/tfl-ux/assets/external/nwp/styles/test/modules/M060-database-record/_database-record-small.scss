@@ -1,0 +1,26 @@
+/**************************************************
+	C7 Database - Record
+
+* Author: 
+* Created: 
+* Pattern library URL: 
+
+**************************************************/
+
+.database-record {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px 5px;
+  border: 1px solid $light-grey-border-colour;
+  tr {
+    &:nth-child(2n) {
+      background-color: $subtle-grey;
+    }
+  }
+  th {
+    font-weight: bold;
+  }
+  th, td {
+    display: table-row;
+  }
+}

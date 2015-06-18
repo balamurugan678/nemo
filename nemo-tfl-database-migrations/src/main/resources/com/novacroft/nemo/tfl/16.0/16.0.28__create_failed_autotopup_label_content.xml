@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.28">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('resettleFailedAutoTopUpView.customer.header', 'Customer');				
+				  content_installer.install('resettleFailedAutoTopUpView.customerId.label', 'Customer Id');				
+				  content_installer.install('resettleFailedAutoTopUpView.failedAutoTopUpAmount.label', 'Failed AutoTopUp Amount');				
+				  content_installer.install('resettleFailedAutoTopUpView.customerNotLiableFlag', 'Customer Not Liable');
+				  content_installer.install('resettleFailedAutoTopUpView.failedAutoTopUpResettle.header', 'Failed AutoTopUp History');
+   				  content_installer.install('resettleFailedAutoTopUpView.caseId', 'Case Id');
+				  content_installer.install('resettleFailedAutoTopUpView.caseStatus', 'Case Status');
+				  content_installer.install('resettleFailedAutoTopUpView.atuAmount', 'ATU Amount');
+				  content_installer.install('resettleFailedAutoTopUpView.paymentAttempts', 'Payment Attempts');
+				  content_installer.install('resettleFailedAutoTopUpView.hotlistDate', 'Hotlist Date');
+				  content_installer.install('resettleFailedAutoTopUpView.refundDate', 'Refund Date');	
+				  content_installer.install('resettleFailedAutoTopUpView.resettlementDate', 'Resettlement Date');	
+				  content_installer.install('resettleFailedAutoTopUpView.actor', 'Actor');
+				  content_installer.install('resettleFailedAutoTopUpView.caseNote.header', 'Failed AutoTopUp Case-Note');
+				  content_installer.install('resettleFailedAutoTopUpView.caseNote', 'Case Note');
+				  content_installer.install('resettleFailedAutoTopUpView.Resettlement.header', 'Resettlement');
+				  content_installer.install('resettleFailedAutoTopUpView.resettlementPeriod.label', 'Resettlement Period');
+				  content_installer.install('resettleFailedAutoTopUpView.resettlementEndDate.label', 'Resettlement Date');
+				  content_installer.install('resettleFailedAutoTopUpView.resettlementAmount.label', 'Resettlement Amount');
+				  content_installer.install('resettleFailedAutoTopUpView.payment.header', 'Payment');
+				  content_installer.install('resettleFailedAutoTopUpView.update.button.label', 'Update');
+				  content_installer.install('resettleFailedAutoTopUpView.resettle.button.label', 'Resettle');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

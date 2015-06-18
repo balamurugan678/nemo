@@ -1,0 +1,23 @@
+/**************************************************
+	M066 cycle-hire-block
+* Author: Alex Faunt
+* Created: 25/10/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M066-cycle-hire-block
+**************************************************/
+
+.cycle-hire-block {
+  .docks.borderless {
+    border: 0px;
+    .dock {
+      border: 1px solid $light-grey-border-colour;
+      border-left: 0px;
+
+      &:first-child {
+        border-left: 1px solid $light-grey-border-colour;
+      }
+    }
+
+  }
+
+}
+

@@ -1,0 +1,391 @@
+.service-status-rainbow-board {
+  margin-top: 10px;
+  .field-validation-error {
+    margin-bottom: 10px;
+  }
+}
+
+.close-map-panel {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(26, 1);
+  float: right;
+  margin-top: -10px;
+}
+
+.status-map-wrapper {
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.lines-stations-tab {
+  margin-bottom: 10px;
+}
+
+#status-map {
+  opacity: 0.8;
+  .active-map & {
+    opacity: 1;
+  }
+}
+
+#tubemap {
+  background-color: $subtler-grey;
+  position: relative;
+  &.loading {
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      background-color: $dark-grey;
+    }
+    .throbber {
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -35px;
+      margin-left: -35px;
+      z-index: 11;
+    }
+  }
+  .throbber {
+    display: none;
+  }
+  .map-options-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1001;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    -ms-transition: -ms-transform 0.3s;
+    transition: transform 0.3s;
+    @include transform(translateX(100%));
+    .showing-map-panel & {
+      @include transform(translateX(0));
+    }
+  }
+  .active-map & {
+    background-color: transparent;
+  }
+}
+
+.no-disruptions-panel {
+  background-color: $dark-grey;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  height: 100px;
+  margin-left: -125px;
+  margin-top: -55px;
+  display: none;
+  .active-map &,
+  .stage-active & {
+    display: block;
+  }
+  &.future {
+    height: 80px;
+    margin-top: -40px;
+  }
+  .no-disruptions-panel-message {
+    @extend %new-johnson;
+    font-size: 18px;
+    color: #fff;
+  }
+  .close3-icon {
+    float: right;
+    width: 32px;
+    margin-top: -10px;
+    margin-right: -10px;
+    cursor: pointer;
+  }
+}
+
+.active-map {
+  .r > [data-set='status-map'] {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.corridor-selected {
+  .road-disruptions-wrapper {
+    display: none;
+  }
+}
+
+.nearby-disruptions-map-panel {
+  display: none;
+}
+
+.nearby-selected {
+  .nearby-disruptions-map-panel {
+    display: block;
+  }
+  .road-disruptions-container {
+    display: none;
+  }
+  .no-disruptions {
+    margin-bottom: 20px;
+  }
+
+}
+
+.rainbow-board.roads {
+  margin-top: 20px;
+}
+
+.nearby-roads-button {
+  .nearby-icon {
+    display: inline-block;
+    margin: -4px 3px -4px -3px;
+  }
+}
+
+.corridor-selected, .nearby-selected {
+  .corridor-details {
+    display: block;
+  }
+}
+
+//Rainbow board styles for status page only
+.service-status-rainbow-board {
+  h2 {
+    display: none;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  tr.visible {
+    display: table-row;
+  }
+  .disruption-message {
+    padding: 10px;
+    border-top: 1px dotted #CCCCCC;
+  }
+  .status-board-table {
+    [data-line-class], [data-station-class] {
+      cursor: pointer;
+    }
+  }
+
+  .vertical-button-container {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  //    &.under-map {
+  //        border-top: 3px solid $light-grey-border-colour;
+  //        padding-top: 20px;
+  //        background-color: #fff;
+  //        .active-map & {
+  //            border-top: 0;
+  //            padding-top: 10px;
+  //        }
+  //    }
+}
+
+.loading-disruptions {
+  display: none;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  @extend .throbber;
+  background-position: center;
+  width: auto;
+  background-repeat: no-repeat;
+}
+
+.road-disruptions {
+  margin-top: 20px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.road-disruption {
+  margin-bottom: 20px;
+  position: relative;
+  > div {
+    padding: 15px;
+  }
+
+  .location {
+    background: $subtle-grey;
+    min-height: 68px;
+    position: relative;
+    padding-left: 25px;
+    h3 {
+      margin-bottom: 0px;
+    }
+    h4 {
+      font-weight: normal;
+      margin-bottom: 0px;
+      line-height: 125%;
+    }
+
+  }
+  .tag {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+
+    &.default {
+      background-color: $link-border-colour;
+    }
+  }
+  .severity {
+    background: $disruption-colour;
+    position: relative;
+    padding: 10px 50px 10px 26px;
+
+    span {
+      display: block;
+      height: 20px;
+    }
+    .tag {
+      height: 100%;
+    }
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 4px;
+      @extend %standard-sprite;
+    }
+    &.Minimal:after {
+      @include svg-icon-position-only(44, 1);
+    }
+    &.Moderate:after {
+      @include svg-icon-position-only(44, 2);
+    }
+    &.Serious:after {
+      @include svg-icon-position-only(44, 3);
+    }
+    &.Severe:after {
+      @include svg-icon-position-only(45, 1);
+    }
+
+  }
+
+  .disruption-info {
+    border: 1px solid $lighter-grey-border-colour;
+    position: relative;
+    *zoom: 1;
+
+    .updated {
+      color: $subtle-grey2;
+      margin-bottom: 10px;
+      display: block;
+    }
+    strong {
+      display: block;
+    }
+    .affected-roads {
+      list-style: none;
+      font-size: 15px;
+      margin-bottom: 10px;
+      margin-left: 0;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .vertical-button-container {
+      margin: 0 0 10px;
+      position: relative;
+      *zoom: 1;
+
+      &:last-child, &.last {
+        margin: 0;
+      }
+    }
+  }
+
+  .map-panel-info & {
+    margin-bottom: 0;
+    .tag, .severity {
+      display: none;
+    }
+    .location {
+      background: transparent;
+      padding-left: 33px;
+      padding-top: 0;
+      min-height: 0;
+      margin-bottom: 10px;
+
+      h3 {
+        display: none;
+      }
+      .default + h3 {
+        display: block;
+        font-size: 15px;
+        font-weight: normal;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    }
+    .disruption-info {
+      background: #fff;
+      color: $dark-grey;
+
+      .vertical-button-container {
+        display: none;
+      }
+    }
+
+  }
+
+}
+
+#toggle-panel-status-map {
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+
+  .active-map.stage-active & {
+    top: 50px;
+    z-index: 1001;
+  }
+}
+
+.lines-stations-tab {
+  margin-bottom: 10px;
+}
+
+.jam-cam-wrapper {
+  background: #000;
+  padding: 10px;
+  img {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+
+    &.hidden {
+      display: none;
+    }
+  }
+  .field-validation-error {
+    margin: 20px;
+
+    &:before {
+      @include svg-icon-position-only(70, 2);
+    }
+  }
+}
+
+.roads-map-panel {
+  margin-bottom: 20px;
+}

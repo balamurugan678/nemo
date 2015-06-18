@@ -1,0 +1,170 @@
+/**************************************************
+	M006 Autocomplete
+
+* Author: 
+* Created: 
+* Pattern library URL: \\Google Drive\NWP\Front-end\Pattern library\Modules\M006-autocomplete
+
+**************************************************/
+
+.twitter-typeahead {
+  width: 100%;
+  .tt-dropdown-menu {
+    //ul
+    width: 100%;
+    border: 1px solid #dddddd;
+  }
+  .source-header {
+    display: block;
+    background: $subtler-grey;
+    padding: 6px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 100%;
+  }
+  .source-footer {
+    display: block;
+    border-top: 1px solid $lighter-grey-border-colour;
+    border-bottom: 1px solid $lighter-grey-border-colour;
+    height: 4px;
+    background: #fff;
+    &.collapsed {
+      border-top: 0;
+      border-bottom: 0;
+      margin: 0 6px;
+      height: 0px;
+    }
+  }
+  .recent-searches-on-off-footer {
+    display: block;
+    color: $dark-grey;
+    padding: 6px;
+    a {
+      text-decoration: none;
+    }
+    text-align: center;
+  }
+  .tt-suggestion {
+    //li and a
+    position: relative;
+    background-color: #ffffff;
+    clear: both;
+    padding: 0px 6px;
+    line-height: 2.5em;
+    color: $primary-blue;
+
+    &:after {
+      //grey-line border
+      height: 1px;
+      background: $lighter-grey-border-colour;
+      display: block;
+      content: "";
+      clear: both;
+      .direction {
+        vertical-align: middle;
+        color: $nav-divider-dark-grey;
+      }
+    }
+    &:first-child {
+      border-top: none;
+    }
+    &.tt-is-under-cursor {
+      background: $darker-subtle-grey;
+    }
+    &.tt-cursor {
+      background: $darker-subtle-grey;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+    .stop-name {
+      vertical-align: middle;
+      word-wrap: break-word;
+      display: block;
+      padding: 8px 0;
+    }
+    .mode-icons {
+      float: right;
+      max-width: 60%;
+    }
+    .mode-icon {
+      float: right;
+      margin-top: 2px;
+      span {
+        bottom: 5px;
+        height: 3px;
+        width: 24px;
+        right: 10px;
+        position: absolute;
+      }
+    }
+    .stop-name-container {
+      padding: 5px 0;
+      width: 80%;
+      .stop-name {
+      }
+    }
+    .stop-letter {
+      background: $bus-colour;
+      border-radius: 50%;
+      color: white;
+      float: left;
+      font-size: 12px;
+      //font-weight: bold;
+      //margin-left: 4px;
+      padding: 2px;
+      height: 22px;
+      width: 22px;
+      text-align: center;
+      position: absolute;
+      top: 8px;
+      right: 6px;
+      &.disrupted {
+        &:after {
+          @include svg-icon-scaled(27, 1, 22px, 22px);
+          content: "";
+          position: absolute;
+          top: 14px;
+          left: 11px;
+        }
+      }
+    }
+  }
+  [class*='recent-magic-searches'] + [class*='recent-magic-searches'] .source-header {
+    display: none;
+  }
+  .tt-dataset-recent-searches-footer-on, .tt-dataset-recent-searches-footer-off, .tt-dataset-geolocation {
+    .tt-suggestion {
+      //li and a
+      background-color: $subtler-grey;
+      &:after {
+        display: none;
+      }
+    }
+  }
+  .tt-dataset-recent-searches-footer-on, .tt-dataset-recent-searches-footer-off {
+    .source-footer {
+      height: 0;
+      border-top: 0;
+    }
+  }
+  .tt-dataset-geolocation {
+    .geolocation-link {
+      text-decoration: none;
+      vertical-align: middle;
+      padding-left: 14%;
+      .geolocation-icon {
+        position: absolute;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(1, 2);
+        left: 4%;
+        top: 50%;
+        margin-top: -16px;
+        -webkit-transform: rotate(0deg);
+      }
+      strong {
+        vertical-align: middle;
+      }
+    }
+  }
+
+}

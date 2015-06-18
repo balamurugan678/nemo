@@ -1,0 +1,113 @@
+<%@include file="/WEB-INF/jspf/pageCommon.jspf" %>
+<c:set var="autoTopUp" value="Auto Top-up" />
+<c:set var="payAsYouGoCredit" value="Pay as you go credit" />
+
+<div class="box borderless">
+    <to:head2 id="shoppingBasket"/>
+    <table class="shoppingCart" id="shoppingCart">
+        <thead>
+	        <tr>
+	            <th></th>
+	            <to:tableHeader id="item"/>
+	            <to:tableHeader id="startDate"/>
+	            <to:tableHeader id="endDate"/>
+	            <to:tableHeader id="reminderDate"/>
+	            <to:tableHeader id="price"/>
+	        </tr>
+        </thead>
+        <tbody>
+	        <c:if test="${cartCmd.cartItemList.size() > 0}">
+	            <c:forEach items="${cartCmd.cartItemList}" var="cartItem" varStatus="status">
+	                <c:choose>
+						<c:when test="${cartItem.item eq autoTopUp}">
+						   <tr class="cartItem">
+	                            <td></td>
+	                            <td>${cartItem.item}(<nemo-tfl:poundSterlingFormat amount="${cartItem.autoTopUpAmt}"/>)</td>
+	                            <td></td>
+	                            <td></td>
+	                            <td></td>
+	                            <td align="right" class="right-aligned">
+	                                <nemo-tfl:poundSterlingFormat amount="${cartItem.price}"/>
+	                            </td>
+	                                                            
+	                        </tr>
+						</c:when>
+						<c:otherwise>
+							<tr class="cartItem">
+							    <td><button class="removeItem" type="button" value="${status.index}">Remove</button></td>
+								<td class="bold">${cartItem.item}</td>
+								<td>${cartItem.startDate}</td>
+	     						<td>${cartItem.endDate}</td>
+								<td>${cartItem.emailReminder}</td>
+								<td align="right"><nemo-tfl:poundSterlingFormat amount="${cartItem.price}" />
+								</td>
+							</tr>
+						</c:otherwise>
+					</c:choose>
+	            </c:forEach>
+	            <c:if test="${not empty cartCmd.refundableDepositAmt}">
+		            <tr id="subTotalRow">
+		                   <td colspan="5" class="right-aligned">
+	                            <span class="bold" id="subTotalSpan"><to:label id="subTotal"/></span>
+	                         </td>
+	                         <td  id="subTotalAmountCell" align="right">
+	                            <nemo-tfl:poundSterlingFormat amount="${cartCmd.subTotalAmt}"/>
+	                          </td>
+	                </tr>
+		            <tr>
+		                <td colspan="5" align="left">
+		                   <span class="bold"><to:label id="refundableCardDeposit"/></span>
+	                    </td>
+	                    <td align="right" id="refundableDepositlAmountCell">
+	                        <nemo-tfl:poundSterlingFormat amount="${cartCmd.refundableDepositAmt}"/>
+	                    </td>
+	                </tr>
+		            <tr>
+		                <td colspan="6" align="left">
+		                    <nemo-tfl:radioButtonList id="shippingType" path="shippingType"
+		                                              selectList="${cartShippingMethods}"
+		                                              mandatory="true" selectedValue="${cartCmd.shippingType}"/>
+		                </td>
+		            </tr>
+		            <tr>
+		               <td colspan="6" align="right">
+		                   <to:secondaryButton id="updateTotal" buttonType="submit"
+	                                            targetAction="<%= PageParameterValue.UPDATE_TOTAL %>"
+	                                            buttonCssClass="right"/>
+		               </td>
+		            </tr>
+	            </c:if>
+	            <tr>
+	                <td colspan="3" align="right" class="bold"><to:label id="total"/></td>
+	                <td colspan="3" align="right" id="totalAmountCell">
+	                    <nemo-tfl:poundSterlingFormat amount="${cartCmd.totalAmt}"/>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td><to:secondaryButton id="emptyBasket" buttonType="submit"
+	                                        targetAction="<%= PageParameterValue.EMPTY_BASKET %>"
+	                                        buttonCssClass="warn-button button"/></td>
+	                <c:if test="${addMoreItems eq 'true'}">
+	                <td colspan="2"><to:secondaryButton id="addMoreItems" buttonType="submit"
+	                                                    targetAction="<%= PageParameterValue.ADD_MORE_ITEMS %>"/></td>
+	                </c:if> 
+	                <td colspan="2"></td>
+	                <td colspan="3"><to:primaryButton id="continue" buttonType="submit"
+	                                                  targetAction=""/></td>
+	            </tr>
+	        </c:if>
+	        <c:if test="${cartCmd.cartItemList.size() == 0}">
+	            <tr>
+	                <td colspan="6"><to:head3 id="noProducts"/></td>
+	            </tr>
+	            <c:if test="${addMoreItems eq 'true'}">
+	            <tr>
+	                <td colspan="6"><to:secondaryButton id="addMoreItems" buttonCssClass="rightalignbutton"
+	                                                    buttonType="submit"
+	                                                    targetAction="<%= PageParameterValue.ADD_MORE_ITEMS %>"/></td>
+	            </tr>
+	            </c:if>
+	        </c:if>
+        <tbody>
+    </table>
+</div>

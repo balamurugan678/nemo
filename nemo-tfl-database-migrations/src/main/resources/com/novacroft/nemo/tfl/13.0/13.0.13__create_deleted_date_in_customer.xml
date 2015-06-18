@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.13">
+        <addColumn tableName="customer" schemaName="${schemaName}">
+            <column name="deleteddatetime" type="date" remarks="Date customer was marked as deleted">
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer_AUD" schemaName="${schemaName}">
+            <column name="deleteddatetime" type="date" remarks="Date customer was marked as deleted">
+            </column>
+        </addColumn>
+
+    </changeSet>
+</databaseChangeLog>

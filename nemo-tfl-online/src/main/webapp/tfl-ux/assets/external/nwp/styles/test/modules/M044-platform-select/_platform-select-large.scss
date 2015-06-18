@@ -1,0 +1,18 @@
+/**************************************************
+	M044-platform-select
+* Author: Alex Faunt
+* Created: 30/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M044-platform-select
+**************************************************/
+
+.platform-select {
+  position: relative;
+  ul.routes-list {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+  }
+
+} 

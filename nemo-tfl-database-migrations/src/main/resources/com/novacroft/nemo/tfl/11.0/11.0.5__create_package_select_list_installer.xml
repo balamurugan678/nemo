@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.5">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+create or replace package select_list_installer
+as
+
+  procedure install_list
+  (p_list_name varchar
+  ,p_list_description varchar);
+
+  procedure install_option
+  (p_list_name varchar
+  ,p_option_value varchar
+  ,p_option_display_order number);
+
+  procedure un_install_list
+  (p_list_name varchar);
+
+  procedure un_install_option
+  (p_list_name varchar
+  ,p_option_value varchar);
+
+end select_list_installer;
+            ]]>
+        </createProcedure>
+        <rollback>
+            drop package select_list_installer;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

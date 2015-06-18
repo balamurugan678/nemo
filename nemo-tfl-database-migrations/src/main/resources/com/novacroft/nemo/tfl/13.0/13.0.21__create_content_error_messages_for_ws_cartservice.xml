@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.21">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('webservice.invalidParameterNull', 'Invalid null parameter.');
+  content_installer.install('webservice.delete.failedDueToException', 'Delete request not completed due to an exception.');
+  content_installer.install('webservice.record.lookup.failedDueToException', 'Record look up failed due to an exception.');
+  content_installer.install('webservice.checkout.start.failedDueToException', 'Checkout could not be started due to an exception.');
+  content_installer.install('webservice.checkout.complete.failedDueToException', 'Checkout could not be completed due to an exception.');
+  content_installer.install('webservice.checkout.paymentAuthorisationUpdate.failedDueToException', 'Checkout payment authorisation update could not be completed due to an exception.');
+
+  content_installer.install('webservice.cart.recordNotFound', 'Cart not found.');
+  content_installer.install('webservice.cart.recordNotFoundForCustomer', 'Cart for the specified customer not found.');
+
+  content_installer.install('webservice.customer.recordNotFound', 'Customer not found.');
+  content_installer.install('webservice.card.recordNotFound', 'Card not found.');
+
+  content_installer.install('webservice.record.lookup.notFound', 'Record not found.');
+
+
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

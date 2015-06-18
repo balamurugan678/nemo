@@ -1,0 +1,51 @@
+/**************************************************
+	M063-timing-ribbon
+* Author: Andrew Spencer
+* Created: 17/10/2013
+* Pattern library URL: 
+**************************************************/
+
+.chartedge-bottom {
+  .text-link {
+    position: absolute;
+    right: 40px;
+
+    &:before {
+      @include svg-icon(12, 3);
+      position: absolute;
+      top: -5px;
+      left: 80px;
+      content: ' ';
+    }
+  }
+}
+
+.TDM-bar {
+  position: absolute;
+  bottom: 0;
+  width: 102%;
+  background-color: #99CC33;
+  margin-left: -1px;
+}
+
+.TDM-column {
+  &:nth-child(even) {
+    &:before {
+      content: attr(data-content);
+    }
+    height: 110px;
+    top: 0px;
+    .hatch-box {
+      top: 10px;
+    }
+  }
+  .connected-hatch {
+  }
+  .follow-hatch {
+    left: -0px;
+  }
+  .middle-hatch {
+    left: -0px;
+  }
+}
+

@@ -1,0 +1,186 @@
+/**************************************************
+	M068 timetable options
+* Author: Alex Faunt
+* Created: 19/11/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M068-timetable-options
+**************************************************/
+.timetable-options {
+  background-color: $darker-subtle-grey;
+  border-bottom: 3px solid $light-grey-border-colour;
+  padding: 10px;
+
+  > * {
+    margin-bottom: 10px;
+  }
+  > p {
+    margin-bottom: 15px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  hr {
+    padding: 0;
+    margin: 0 -10px 10px;
+    border: 0 none;
+    border-top: 1px dotted $light-grey-border-colour;
+    height: 0;
+    background: transparent;
+  }
+
+  .select-from-to {
+    padding-right: 60px;
+    position: relative;
+
+    .edit {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  .edit {
+    width: auto;
+    min-width: 50px;
+
+    &.full-width {
+      display: block;
+
+      .i {
+        display: inline-block;
+        margin-top: -16px;
+        position: relative;
+        top: 4px;
+      }
+    }
+  }
+
+  .field {
+    padding-left: 50px;
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 0;
+
+    .label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: normal;
+    }
+
+    .extra {
+      font-weight: normal;
+    }
+  }
+
+  .select-time-range {
+    .half-width {
+      width: 50%;
+      padding-right: 5px;
+      float: left;
+
+      + .half-width {
+        padding-right: 0;
+        padding-left: 5px;
+      }
+
+      .selector {
+        margin: 0;
+      }
+    }
+
+    input[type=submit] {
+      display: none;
+
+      .no-js & {
+        display: block;
+        position: relative;
+        top: 10px;
+      }
+    }
+
+  }
+
+  .line-info {
+    padding-left: 70px;
+    position: relative;
+    min-height: 45px;
+
+    .route {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60px;
+      height: 45px;
+      text-align: center;
+      line-height: 45px;
+      color: #fff;
+      background-color: $bus-colour;
+      @extend %new-johnson-bold;
+      font-size: 30px;
+      padding-top: 2px;
+    }
+    .towards {
+      font-weight: bold;
+      *display: block;
+    }
+  }
+  .stop-info {
+    position: relative;
+    min-height: 40px;
+    padding-right: 60px;
+
+    .label {
+      line-height: 29px;
+      height: 29px;
+      float: left;
+      font-weight: bold;
+    }
+    .stop-name {
+      font-weight: bold;
+    }
+    .stop-letter {
+      background-color: $bus-colour;
+      color: #fff;
+      border-radius: 50%;
+      width: 29px;
+      text-align: center;
+      position: absolute;
+      height: 29px;
+      margin-left: 5px;
+      line-height: 29px;
+      float: left;
+    }
+    .edit {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+  }
+
+  .station-details & {
+    background-color: transparent;
+    border-bottom: none 0px;
+    padding: 0;
+
+    &:last-child {
+      margin-bottom: -10px;
+    }
+
+    .half-width {
+      padding: 0;
+      width: 100%;
+      float: none;
+    }
+
+    input[type=submit] {
+      display: none;
+
+      .no-js & {
+        display: block;
+      }
+    }
+  }
+}

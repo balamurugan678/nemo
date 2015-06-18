@@ -1,0 +1,141 @@
+/**************************************************
+	M035-bus-options
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M035-bus-options
+
+**************************************************/
+
+.bus-options {
+  list-style-type: none;
+  margin-left: 1px;
+
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .bus-option {
+    display: block;
+    float: left;
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+
+  .i {
+    font-size: 0;
+    line-height: 0;
+  }
+
+  &.filter {
+    .bus-option {
+      min-width: 50px;
+      height: 50px;
+      line-height: 48px;
+      font-size: 20px;
+      border-bottom: 3px solid $light-grey-border-colour;
+      margin-bottom: 7px;
+      .i {
+        @include transform(scale(1));
+      }
+
+      &.active {
+        border-color: $bus-colour;
+      }
+    }
+  }
+}
+
+.bus-option {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid $light-grey-border-colour;
+  color: $primary-blue;
+  font-size: 18px;
+  position: relative;
+  @extend %new-johnson;
+  background: #fff;
+
+  .bus-option-route-name {
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
+    padding: 0 5px;
+    cursor: pointer;
+    @include transition(none);
+    &:hover, &:focus {
+      @include darken-hover-and-focus(#fff, 5%);
+    }
+  }
+
+  .i {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    @include transform(scale(0.9));
+  }
+
+  &.night-bus {
+    background-color: $jp-subtle-blue;
+  }
+
+  &.warning {
+    background-color: $disruption-colour;
+    &:hover, &:focus {
+      .bus-option-route-name {
+        background-color: darken($disruption-colour, 5%);
+      }
+    }
+    .i {
+      @extend %standard-sprite;
+      @include svg-icon-position-only(43, 2);
+      bottom: -8px;
+      right: -7px;
+    }
+  }
+
+  &.non-stop .i {
+    @extend %standard-sprite;
+    @include svg-icon-position-only(43, 1);
+    top: -9px;
+    left: 50%;
+    margin-left: -17px;
+  }
+
+  &.active {
+    background-color: $bus-colour;
+    &:hover, &:focus {
+      .bus-option-route-name {
+        background-color: darken($bus-colour, 5%);
+      }
+    }
+    color: #fff;
+    position: relative;
+    overflow: visible;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-color: $bus-colour transparent transparent;
+      border-width: 8px;
+      border-style: solid;
+      top: 100%;
+      left: 50%;
+      margin-left: -8px;
+    }
+  }
+}
+

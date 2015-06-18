@@ -1,0 +1,39 @@
+<%@include file="/WEB-INF/jspf/pageCommon.jspf" %>
+
+<!-- <script src="scripts/travelcard.js"></script> -->
+<script type="text/javascript">
+    var pageName = "${pageName}";
+    var shortDatePattern = '<%=DateConstant.SHORT_DATE_PATTERN_PARTIAL_YEAR%>';
+</script>
+    		
+<div class="r" style="padding-top: 20px;">
+    
+               <input type="hidden" id="travelCardTicketType" name="ticketType" value="travelCard" />
+        <div class="box borderless">
+            <to:head2 id="travelCardOptions"/>
+            <form:errors cssClass="field-validation-error"/>
+            <nemo-tfl:selectList id="travelCardType" path="travelCardType" selectList="${travelCardTypes}"
+                                 mandatory="true" selectedValue="${cartItemCmd.travelCardType}"/>
+            <form:errors path="travelCardType" cssClass="field-validation-error"/>
+            <nemo-tfl:selectList id="startZone" path="startZone" selectList="${travelCardZones}"
+                                 mandatory="true" selectedValue="${cartItemCmd.startZone}"/>
+            <form:errors path="startZone" cssClass="field-validation-error"/>
+            <nemo-tfl:selectList id="endZone" path="endZone" selectList="${travelCardZones}"
+                                 mandatory="true" selectedValue="${cartItemCmd.endZone}"/>
+            <form:errors path="endZone" cssClass="field-validation-error"/>
+            <nemo-tfl:selectList id="startDate" path="startDate" selectList="${startDates}"
+                                 mandatory="true" selectedValue="${cartItemCmd.startDate}"
+                                 useManagedContentForMeanings="false"/>
+            <form:errors path="startDate" cssClass="field-validation-error"/>
+            <to:text id="endDate" cssClass="date"></to:text>
+            <nemo-tfl:selectList id="emailReminder" path="emailReminder" selectList="${basketEmailReminders}"
+                                 mandatory="true" selectedValue="${cartItemCmd.emailReminder}" showPlaceholder="false"/>
+            <form:errors path="emailReminder" cssClass="field-validation-error"/>
+            <div class="form-with-tooltips" style="clear:both;">
+                <to:secondaryButton id="travelCardContinue" buttonType="button" targetAction="<%= PageParameterValue.ADD_TO_CART %>"/>
+            </div>
+
+        </div>
+    
+</div>
+<script type="text/javascript" src="scripts/travelCard.js" ></script>

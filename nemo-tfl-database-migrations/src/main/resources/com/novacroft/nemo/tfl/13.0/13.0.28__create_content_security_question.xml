@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.28">
+        <sql splitStatements="false">
+            <![CDATA[
+BEGIN
+   content_installer.install('SecurityQuestion.title', 'Oyster online - Transport for London - Register card');
+   content_installer.install('SecurityQuestion.securityQuestion.heading', 'Security Question');
+   content_installer.install('SecurityQuestion.upper.text1', 'A quick and easy way to top up your Oyster card and/or renew your Travelcard');
+   content_installer.install('SecurityQuestion.upper.text2', 'Your Oyster card will be protected against loss or theft');
+   content_installer.install('SecurityQuestion.upper.text3', 'You can view your pay as you go journey history');
+   content_installer.install('SecurityQuestion.upper.text4', 'You will receive email updates on planned disruptions to your regular route');
+   content_installer.install('SecurityQuestion.cardRegistration.heading', 'Card registration');
+   content_installer.install('SecurityQuestion.info.text', 'Please choose a security question. You will need this for any telephone query or telesales purchases relating to this card.');
+END;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

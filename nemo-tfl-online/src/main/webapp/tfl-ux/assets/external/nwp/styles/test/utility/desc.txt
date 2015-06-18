@@ -1,0 +1,1 @@
+This is the utility folder, it contains functions and variables for the entire project.

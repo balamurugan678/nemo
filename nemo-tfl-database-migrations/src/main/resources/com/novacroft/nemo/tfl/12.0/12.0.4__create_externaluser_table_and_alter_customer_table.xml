@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="12.0.4">
+        <createTable tableName="externaluser" schemaName="${schemaName}" tablespace="${tableTablespace}">
+            <column name="id" type="number(38)">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="externaluser_pk"/>
+            </column>
+            <column name="createduserid" type="varchar2(64)" remarks="Who created the record">
+                <constraints nullable="false"/>
+            </column>
+            <column name="createddatetime" type="date" remarks="When (date and time) the record was created">
+                <constraints nullable="false"/>
+            </column>
+            <column name="modifieduserid" type="varchar2(64)" remarks="Who last modified the record"/>
+            <column name="modifieddatetime" type="date" remarks="When (date and time) the record was last modified"/>
+            <column name="username" type="varchar2(50)" remarks="External user's username"/>
+            <column name="password" type="varchar2(128)" remarks="Hashed Password"/>
+            <column name="status" type="varchar2(50)" remarks="Status of External User"/>
+        </createTable>
+
+        <createSequence schemaName="${schemaName}" sequenceName="external_user_seq"/>
+
+
+        <addColumn tableName="customer" schemaName="${schemaName}">
+            <column name="externalUserId" type="number(38)" remarks="Reference to External User">
+                <constraints foreignKeyName="externaluser_fk" references="externaluser(id)" nullable="true"/>
+            </column>
+        </addColumn>
+
+        <addColumn tableName="customer_AUD" schemaName="${schemaName}">
+            <column name="externalUserId" type="number(38)" remarks="Reference to External User">
+            </column>
+        </addColumn>
+
+    </changeSet>
+</databaseChangeLog>

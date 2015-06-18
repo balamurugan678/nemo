@@ -1,0 +1,10 @@
+﻿<div class="kml-pin<%= chosen ? ' kml-pin-chosen' : '' %>">
+	<% if (iconUrl) { %>
+		<div class="modes">
+			<div class="mode mode-custom">
+				<img src="<%= iconUrl %>" />
+			</div>
+		</div>
+	<% } %>
+    <div class="label<%= (iconUrl)  ? '' : ' no-icon' %>"><%= label %></div>
+</div>

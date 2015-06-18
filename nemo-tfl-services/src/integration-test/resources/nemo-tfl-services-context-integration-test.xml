@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${test.jdbc.driverClassName}"/>
+        <property name="url" value="${test.jdbc.url}"/>
+        <property name="username" value="${test.jdbc.username}"/>
+        <property name="password" value="${test.jdbc.password}"/>
+    </bean>
+
+    <import resource="classpath*:nemo-tfl-common-context-core.xml"/>
+    <import resource="classpath:nemo-tfl-services-context-core.xml"/>
+
+    <ctx:property-placeholder
+            location="classpath:nemo-tfl-common.properties, classpath:nemo-tfl-services.properties, classpath:nemo-tfl-common-test.properties"
+            ignore-unresolvable="true" ignore-resource-not-found="true"/>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.services.integration_test.step_definition"/>
+</beans>

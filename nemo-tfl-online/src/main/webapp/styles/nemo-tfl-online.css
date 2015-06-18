@@ -1,0 +1,114 @@
+.right-aligned {
+    text-align: right;
+}
+
+.left-aligned {
+    text-align: left;
+}
+
+.top-aligned {
+    vertical-align: top;
+}
+
+table.displayTable {
+	width: 100%;
+	table-collapse:collapse;
+}
+
+table.displayTable th {
+	background-color: #aabbaa;
+	font-weight: bold;
+	text-align: left;
+	border: 1px solid #888;
+}
+
+table.displayTable td {
+    background-color: #DAEBF8;
+    text-align: left;
+    border: 1px solid #888;
+    padding: 0px;
+}
+
+table.displayTable tr.otherrow td {
+    background-color: #fff;
+}
+
+ol.presentationList {
+	list-style: none;
+	width: 100%;
+}
+
+ol.presentationList li{
+    clear:both;
+}
+
+ol.presentationList li span{
+    min-width:100px; 
+    display:block; 
+    float: left; 
+    margin-right: 30px;   
+}
+
+ol.presentationList li span.numericValue{
+    text-align: right;
+}
+
+
+ol.presentationList li ul{
+    width: 100%;
+}
+
+clickableArea {
+	width: 50px;
+	height: 40px;
+	text-align: center;
+
+}
+
+td a:hover {
+	text-decoration: none;
+}
+
+td .strong {
+	font-weight: bold;
+}
+
+div .white {
+	width: 100%;
+	background-color: #FFFFFF;
+	float: left;
+	padding: 10px 15px;
+}
+
+div .blue {
+	background-color: #DAEBF8;
+	float: left;
+	padding: 4px 15px;
+}
+
+div .greyText {
+	width: 100%;
+	color: #A4A4A4;
+	float: left;
+}
+
+td .column1 {
+	display: block;
+	text-align: left;
+	width: 65%;
+	float: left;
+}
+
+td .column2 {
+	display: block;
+	font-weight: bold;
+	width: 20%;
+	float: left;
+}
+
+td .column3 {
+	display: block;
+	font-weight: bold;
+	width: 4%;
+	float: right;
+}

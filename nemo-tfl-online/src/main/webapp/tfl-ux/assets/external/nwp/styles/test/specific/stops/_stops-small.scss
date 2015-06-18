@@ -1,0 +1,150 @@
+.stops-placeholder {
+  height: 100px;
+  width: 100%;
+  &.station {
+    background-image: url('/static/' +$version+ '/images/placeholder/station-street_small.jpg');
+  }
+  &.station-street-view {
+    display: none;
+  }
+  &.mode {
+    background-image: url('/static/' +$version+ '/images/placeholder/emirates_tab.jpg');
+  }
+  &.pier {
+    background-image: url('/static/' +$version+ '/images/placeholder/tram_tab.jpg');
+  }
+}
+
+.disruption-message.hidden {
+  display: none;
+}
+
+.station-details {
+  padding-top: 20px;
+  .moving-source-order {
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // would be better to remove duplicate code - issue remains, that blanket hover on rainbow board isn't always applicable, but is widely used on site now
+  .lines-status .no-disruption {
+    &:hover, &:focus {
+      .service-status {
+        background-color: #fff;
+      }
+      td.bakerloo {
+        background-color: $bakerloo-line-colour;
+      }
+      td.central {
+        background-color: $central-line-colour;
+      }
+      td.circle {
+        background-color: $circle-line-colour;
+      }
+      td.district {
+        background-color: $district-line-colour;
+      }
+      td.dlr, td.docklands, td.docklands-light-railway {
+        background-color: $dlr-colour;
+      }
+      td.hammersmith {
+        background-color: $hammersmith-line-colour;
+      }
+      td.jubilee {
+        background-color: $jubilee-line-colour;
+      }
+      td.metropolitan {
+        background-color: $metropolitan-line-colour;
+      }
+      td.northern {
+        background-color: $northern-line-colour;
+      }
+      td.overground {
+        background-color: $overground-colour;
+      }
+      td.piccadilly {
+        background-color: $piccadilly-line-colour;
+      }
+      td.victoria {
+        background-color: $victoria-line-colour;
+      }
+      td.waterloo {
+        background-color: $waterloo-line-colour;
+      }
+      td.tramlink1 {
+        background-color: $tram-route-one-colour;
+      }
+      td.tramlink2 {
+        background-color: $tram-route-two-colour;
+      }
+      td.tramlink3 {
+        background-color: $tram-route-three-colour;
+      }
+      td.tramlink4 {
+        background-color: $tram-route-four-colour;
+      }
+      td.rb1 {
+        background-color: $rivers-rb1;
+      }
+      td.rb2 {
+        background-color: $rivers-rb2;
+      }
+      td.rb3 {
+        background-color: $rivers-rb3;
+      }
+      td.rb4 {
+        background-color: $rivers-rb4;
+      }
+      td.rb5 {
+        background-color: $rivers-rb5;
+      }
+      td.rb6 {
+        background-color: $rivers-rb6;
+      }
+      td.city-cruises {
+        @include darken-hover-and-focus($rivers-city-cruises, 5%);
+      }
+      td.westminster-greenwich {
+        @include darken-hover-and-focus($rivers-westminster-greenwich, 5%);
+      }
+      td.westminster-st-katherines-circular {
+        @include darken-hover-and-focus($rivers-westminster-st-katherines-circular, 5%);
+      }
+      td.westminster-passenger-services-association, td.wetsminster-passenger-services-association {
+        @include darken-hover-and-focus($rivers-westminster-passenger-services-association, 5%);
+      }
+      td.woolwich-free-ferry {
+        @include darken-hover-and-focus($rivers-woolwich-free-ferry, 5%);
+      }
+      td.emirates {
+        background-color: $cable-car-colour;
+      }
+    }
+  }
+}
+
+.loading-throbber {
+  @extend %loading;
+}
+
+#facilities {
+  thead {
+    visibility: hidden;
+  }
+}
+
+.opening-hours {
+  margin-bottom: 20px;
+}
+
+#first-last-details {
+  .twenty-four-hour-icon {
+    content: "";
+    position: absolute;
+    top: -6px;
+  }
+  .service-message {
+    margin-left: 40px;
+  }
+}

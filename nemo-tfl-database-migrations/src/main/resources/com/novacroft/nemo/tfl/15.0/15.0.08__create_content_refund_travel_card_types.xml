@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.08">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  select_list_installer.un_install_option('RefundTravelCardTypes', '7 Day Travelcard');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', 'Monthly Travelcard');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', '3 Month Travelcard');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', '6 Month Travelcard');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', 'Annual Travelcard');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', 'Other Travelcard');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', 'Annual Bus Pass');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', 'Monthly Bus Pass');
+			      select_list_installer.un_install_option('RefundTravelCardTypes', '7 Day Bus Pass');
+			      
+			      select_list_installer.install_option('RefundTravelCardTypes', '7Day Travelcard', 10);
+			      select_list_installer.install_option('RefundTravelCardTypes', '1Month Travelcard', 20);
+			      select_list_installer.install_option('RefundTravelCardTypes', '1Month Travelcard', 30);
+			      select_list_installer.install_option('RefundTravelCardTypes', '6Month Travelcard', 40);
+			      select_list_installer.install_option('RefundTravelCardTypes', 'Annual Travelcard', 50);
+			      select_list_installer.install_option('RefundTravelCardTypes', 'Unknown Travelcard', 60);
+			      select_list_installer.install_option('RefundTravelCardTypes', 'Annual Bus Pass', 70);
+			      select_list_installer.install_option('RefundTravelCardTypes', '1Month Bus Pass', 80);
+			      select_list_installer.install_option('RefundTravelCardTypes', '7Day Bus Pass', 90);
+				
+				  content_installer.install('refundtravelcardtypes.7day travelcard.option', '7 Day Travelcard');
+				  content_installer.install('refundtravelcardtypes.1month travelcard.option', 'Monthly TravelCard');
+				  content_installer.install('refundtravelcardtypes.3month travelcard.option', '3 Month Travelcard');
+				  content_installer.install('refundtravelcardtypes.6month travelcard.option', '6 Month Travelcard');
+				  content_installer.install('refundtravelcardtypes.annual travelcard.option', 'Annual Travelcard');
+				  content_installer.install('refundtravelcardtypes.unknown travelcard.option', 'Other');
+				  content_installer.install('refundtravelcardtypes.annual bus pass.option', 'Annual Bus Pass');
+				  content_installer.install('refundtravelcardtypes.1month bus pass.option', 'Monthly Bus Pass');
+				  content_installer.install('refundtravelcardtypes.7day bus pass.option', 'Weekly Bus Pass');
+			   end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,35 @@
+//IE 7
+.lt-ie8 {
+  .homepage-top-links {
+    .flat-button {
+      width: 32%;
+      .text {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+//IE 7&8
+.lt-ie9 {
+  .homepage-style {
+    .content {
+      margin-left: 0;
+      background-color: transparent;
+      .always-visible {
+        margin-bottom: -9px;
+      }
+    }
+  }
+  .homepage-top-links {
+    :first-child {
+      .text {
+        margin-top: 45px;
+      }
+    }
+  }
+}
+

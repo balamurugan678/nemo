@@ -1,0 +1,39 @@
+/**************************************************
+	M035-bus-options
+
+* Author: Alex Faunt
+* Created: 12/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M035-bus-options
+
+**************************************************/
+.no-js {
+  .bus-option {
+    color: $dark-grey;
+    &:hover, &:focus {
+      background-color: #fff;
+    }
+    .bus-option-route-name {
+      cursor: auto;
+    }
+    &:not([data-line-name]) {
+      display: none;
+    }
+    &.active {
+      background-color: #fff;
+      color: $dark-grey;
+      &:after {
+        content: none;
+      }
+    }
+    &.warning {
+      &:hover, &:focus {
+        .bus-option-route-name {
+          background-color: $disruption-colour;
+        }
+      }
+    }
+  }
+  .bus-options.filter .bus-option.active {
+    border-color: $light-grey-border-colour;
+  }
+}

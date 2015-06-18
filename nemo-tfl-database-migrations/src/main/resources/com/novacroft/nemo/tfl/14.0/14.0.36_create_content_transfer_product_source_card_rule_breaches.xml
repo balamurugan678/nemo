@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.36">
+        <sql splitStatements="false">
+            <![CDATA[
+				BEGIN
+				   content_installer.install('transfers.auto.topup.disabled.text', 'Autotop Up is Disabled');
+				   content_installer.install('transfers.passenger.type.text', 'It is not an Adult card');
+				   content_installer.install('transfers.travelcard.atleastoneday.remaining.text', 'Travelcard must have at least one day before expiry');
+				   content_installer.install('transfers.travel.card.discounted.text', 'Travelcard is discounted');
+				   content_installer.install('transfers.producttype.bus.text', 'The card has product of type Bus');
+				   content_installer.install('transfers.card.nodeposit.text', 'The card has no deposit');
+				   content_installer.install('transfers.no.payasyougo.item.text', 'The card has no Pay As You Go');
+				   content_installer.install('transfers.payg.bigger.than.fifty.text', 'Pay as you go is bigger than &pound;50');
+				   content_installer.install('transfers.travelcard.previously.traded.text', 'The travel card has been previously traded');
+				   content_installer.install('transfers.card.discounted.text', 'The card is discounted');
+				   content_installer.install('transfers.travelcard.eighteen.plus.discounted','The Travelcard is 18+ discounted');
+				   content_installer.install('transfers.card.apprentice.discounted','The card is Apprentice discounted');
+				END;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

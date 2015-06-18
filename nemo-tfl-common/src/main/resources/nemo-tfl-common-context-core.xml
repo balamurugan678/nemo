@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:ctx="http://www.springframework.org/schema/context" xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:ehcache="http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring"
+       xmlns:oxm="http://www.springframework.org/schema/oxm"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+    http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring http://ehcache-spring-annotations.googlecode.com/svn/schema/ehcache-spring/ehcache-spring-1.2.xsd
+    http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm.xsd
+    http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <ctx:annotation-config/>
+    <mvc:annotation-driven message-codes-resolver="messageCodesResolver" conversion-service="conversionService"/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <ehcache:annotation-driven/>
+
+    <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"/>
+    <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="jacksonMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.application_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.data_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.data_access"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.validator"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.converter"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.domain"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.listener.hibernate"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.support" resource-pattern="**/NemoUserContext*.*"
+                        scoped-proxy="targetClass"/>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.action.impl"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.application_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.data_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.data_access"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.domain"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.form_validator"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.rules_validator"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.controller"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.converter"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.security"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.service_access"/>
+
+    <bean id="messageCodesResolver"
+          class="org.springframework.validation.DefaultMessageCodesResolver">
+        <property name="messageCodeFormatter">
+            <value
+                    type="org.springframework.validation.DefaultMessageCodesResolver.Format">POSTFIX_ERROR_CODE
+            </value>
+        </property>
+    </bean>
+
+    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="packagesToScan">
+            <list>
+                <value>com.novacroft.nemo</value>
+            </list>
+        </property>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">${hibernate.showSql}</prop>
+                <prop key="hibernate.jdbc.batch_size">${hibernate.jdbc.batch_size}</prop>
+                <prop key="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory
+                </prop>
+                <prop key="hibernate.order_inserts">true</prop>
+				<prop key="hibernate.order_updates">true</prop>   
+                <prop key="hibernate.cache.use_second_level_cache">true</prop>
+                <prop key="hibernate.cache.use_query_cache">true</prop>
+                <prop key="hibernate.generate_statistics">${hibernate.generateStatistics}</prop>
+                <prop key="net.sf.ehcache.configurationResourceName">/ehcache-hibernate.xml</prop>
+            </props>
+        </property>
+        <property name="mappingResources">
+            <list>
+                <value>Content.hbm.xml</value>
+                <value>WebAccount.hbm.xml</value>
+                <value>SelectList.hbm.xml</value>
+                <value>SelectListOption.hbm.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <ehcache:config cache-manager="cacheManager">
+        <ehcache:evict-expired-elements interval="${cacheManager.evictionInterval}"/>
+    </ehcache:config>
+
+    <bean id="cacheManager"
+          class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation" value="classpath:nemo-tfl-common-spring-ehcache.xml"/>
+    </bean>
+
+    <bean id="contentConverter"
+          class="com.novacroft.nemo.common.converter.impl.ContentConverterImpl"/>
+
+    <bean id="contentDAO" class="com.novacroft.nemo.common.data_access.ContentDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="contentDataService"
+          class="com.novacroft.nemo.common.data_service.ContentDataServiceImpl">
+        <property name="converter" ref="contentConverter"/>
+        <property name="dao" ref="contentDAO"/>
+    </bean>
+
+    <bean id="messageSource"
+          class="com.novacroft.nemo.common.support.ReloadableDatabaseMessageSource"
+          init-method="initialiseCache">
+        <property name="dataService" ref="contentDataService"/>
+        <property name="useCache" value="true"/>
+        <property name="useCodeForNullContent" value="${messageSource.useCodeForNullContent}"/>
+        <property name="cacheRefreshIntervalInSeconds" value="${messageSource.cacheRefreshIntervalInSeconds}"/>
+    </bean>
+
+    <bean id="localeResolver"
+          class="org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver"/>
+
+    <bean id="pafDataService"
+          class="com.novacroft.nemo.common.data_service.PAFDataServiceImpl">
+        <property name="searchServiceEndpoint" value="${paf.search.endpoint}"/>
+    </bean>
+
+    <bean id="systemParameterService"
+          class="com.novacroft.nemo.common.application_service.impl.SystemParameterServiceImpl">
+        <property name="systemParameterDataService" ref="systemParameterDataService"/>
+        <property name="useCache" value="true"/>
+        <property name="cacheRefreshIntervalInSeconds" value="${systemParameter.cacheRefreshIntervalInSeconds}"/>
+    </bean>
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="${mailSender.host}"/>
+    </bean>
+
+    <!--
+        <bean id="managementService" class="net.sf.ehcache.management.ManagementService"
+              init-method="init" destroy-method="dispose">
+            <constructor-arg ref="cacheManager"/>
+            <constructor-arg ref="mbeanServer"/>
+            <constructor-arg index="2" value="true"/>
+            <constructor-arg index="3" value="true"/>
+            <constructor-arg index="4" value="true"/>
+            <constructor-arg index="5" value="true"/>
+        </bean>
+    -->
+
+    <!--
+        <bean id="mbeanServer"
+              class="org.springframework.jmx.support.MBeanServerFactoryBean">
+            <property name="locateExistingServerIfPossible" value="true"/>
+        </bean>
+    -->
+
+    <bean id="oysterJourneyJaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="contextPath" value="com.novacroft.tfl.web_service.model.oyster_journey_history"/>
+    </bean>
+
+    <bean id="notificationStatusJaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="packagesToScan">
+            <list>
+                <value>com.novacroft.tfl.web_service.model.incomplete_journey_notification</value>
+                <value>com.novacroft.tfl.web_service.model.incomplete_journey_notification.data</value>
+            </list>
+        </property>
+
+    </bean>
+
+    <bean id="faeJaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="packagesToScan">
+            <list>
+                <value>com.novacroft.tfl.web_service.model.fair_aggreagation_engine</value>
+                <value>com.novacroft.tfl.web_service.model.fair_aggreagation_engine.data</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
+
+    <bean id="oysterJourneyWebServiceTemplate" name="oysterJourneyTemplate"
+          class="org.springframework.ws.client.core.WebServiceTemplate" scope="prototype">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.HttpComponentsMessageSender">
+                <property name="credentials">
+                    <bean class="org.apache.http.auth.UsernamePasswordCredentials">
+                        <constructor-arg value="${oyster.services.username}:${oyster.services.password}"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+        <property name="defaultUri" value="${oyster.services.endpoint}"/>
+        <property name="marshaller" ref="oysterJourneyJaxb2Marshaller"/>
+        <property name="unmarshaller" ref="oysterJourneyJaxb2Marshaller"/>
+        <property name="interceptors">
+            <list>
+                <bean class="com.novacroft.nemo.tfl.common.service_access.impl.PayloadInterceptor" scope="prototype"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="notificationWebServiceTemplate" name="notificationTemplate"
+          class="org.springframework.ws.client.core.WebServiceTemplate" scope="prototype">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.HttpComponentsMessageSender">
+                <property name="credentials">
+                    <bean class="org.apache.http.auth.UsernamePasswordCredentials">
+                        <constructor-arg value="${oyster.services.username}:${oyster.services.password}"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+        <property name="defaultUri" value="${notification.services.endpoint}"/>
+        <property name="marshaller" ref="notificationStatusJaxb2Marshaller"/>
+        <property name="unmarshaller" ref="notificationStatusJaxb2Marshaller"/>
+        <property name="interceptors">
+            <list>
+                <bean class="com.novacroft.nemo.tfl.common.service_access.impl.PayloadInterceptor" scope="prototype"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="fareAggregationEngineWebServiceTemplate" name="fareAggregationEngineTemplate"
+          class="org.springframework.ws.client.core.WebServiceTemplate" scope="prototype">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.HttpComponentsMessageSender">
+                <property name="credentials">
+                    <bean class="org.apache.http.auth.UsernamePasswordCredentials">
+                        <constructor-arg value="${oyster.services.username}:${oyster.services.password}"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+        <property name="defaultUri" value="${fareAggregationEngine.services.endpoint}"/>
+        <property name="marshaller" ref="faeJaxb2Marshaller"/>
+        <property name="unmarshaller" ref="faeJaxb2Marshaller"/>
+        <property name="interceptors">
+            <list>
+                <bean class="com.novacroft.nemo.tfl.common.service_access.impl.PayloadInterceptor" scope="prototype"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <set>
+                <bean class="com.novacroft.nemo.tfl.common.formatter.PenceAnnotationFormatterFactory"/>
+            </set>
+        </property>
+    </bean>
+
+    <oxm:jaxb2-marshaller id="cyberSourceTransactionMarshaller">
+        <oxm:class-to-be-bound name="com.novacroft.cyber_source.web_service.model.transaction.RequestMessage"/>
+        <oxm:class-to-be-bound name="com.novacroft.cyber_source.web_service.model.transaction.ReplyMessage"/>
+    </oxm:jaxb2-marshaller>
+
+    <bean id="cyberSourceTransactionWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate"
+          scope="prototype">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.HttpComponentsMessageSender"/>
+        </property>
+        <property name="defaultUri" value="${CyberSource.soap.url}"/>
+        <property name="marshaller" ref="cyberSourceTransactionMarshaller"/>
+        <property name="unmarshaller" ref="cyberSourceTransactionMarshaller"/>
+        <property name="interceptors">
+            <list>
+                <bean class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor">
+                    <property name="securementActions" value="UsernameToken"/>
+                    <property name="securementUsername" value="${CyberSource.soap.merchantId}"/>
+                    <property name="securementPassword" value="${CyberSource.soap.password}"/>
+                    <property name="securementPasswordType" value="PasswordText"/>
+                    <property name="securementMustUnderstand" value="true"/>
+                </bean>
+                <bean class="com.novacroft.nemo.tfl.common.service_access.impl.PayloadInterceptor" scope="prototype"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="cyberSourceHeartbeatRestTemplate" class="org.springframework.web.client.RestTemplate"/>
+
+    <bean id="nemoUserContext" class="com.novacroft.nemo.common.support.NemoUserContextImpl" scope="session">
+        <aop:scoped-proxy proxy-target-class="true"/>
+    </bean>
+
+</beans>

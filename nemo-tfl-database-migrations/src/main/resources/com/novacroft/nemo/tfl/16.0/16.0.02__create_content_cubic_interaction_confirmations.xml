@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.02">
+     <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   content_installer.install('cubicInteractionReadyForCollection.text', 'Item ready for pick up: ');
+				   content_installer.install('cubicInteractionReadyForCollection.emailSent.text', 'Item ready for pick up notification email sent: ');
+				   content_installer.install('cubicInteractionPickedUp.text', 'Item picked up successfully : ');
+				   content_installer.install('cubicInteractionPickedUp.emailSent.text', 'Item picked up notification email sent: ');
+				   content_installer.install('cubicInteractionPickUpWindowExpired.text', 'Items pickup window expired: ');
+				   content_installer.install('cubicInteractionPickUpWindowExpired.emailSent.text', 'Items pickup window expired notification email sent: ');
+				   content_installer.install('cubicInteractionError.text', 'Item pick up error: ');
+				   content_installer.install('cubicInteractionError.emailSent.text', 'Item pick up error notification email sent: ');				
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

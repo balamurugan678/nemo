@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.17">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+  content_installer.install('CardPreferences.cardPreferences.header', 'Edit Card Preferences');
+  content_installer.install('CardPreferences.statementTermsAccepted', 'Statement Terms Accepted');
+  content_installer.install('CardPreferences.selectedCardNumber.label', 'Card Number');
+  content_installer.install('changeCardPreferences.update.successful.text', 'Card Preferences Updated Successfully');
+  content_installer.install('ViewOysterCard.changeCardPreferences.link', 'Change Card Preferences');
+  content_installer.install('ViewOysterCard.changeCardPreferences.tip', 'Change Card Preferences');
+  content_installer.install('ViewOysterCard.changeCardPreferences.url', 'ChangeCardPreferences.htm');
+  content_installer.install('ChangeCardPreferences.oysterText.text', 'Oyster Card');
+  
+end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

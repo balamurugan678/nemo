@@ -1,0 +1,867 @@
+/**************************************************
+ICONS
+* Author: Rodrigo Lopes
+* Created: 21/02/2013
+* Pattern library URL: http://
+**************************************************/
+.icon-left {
+  position: relative;
+  padding-left: 35px !important;
+  span {
+    padding-left: 8px
+  }
+  &:before {
+    content: '';
+    left: 8px;
+    top: 0;
+    position: absolute !important
+  }
+  &.cycle:before {
+    @extend %sprite-images;
+    @include svg-icon(10, 2, $y-offset: 4px);
+  }
+  &.walking:before {
+    @extend %sprite-images;
+    @include svg-icon(9, 2, $y-offset: 3px);
+  }
+}
+
+.icon {
+  &.bicycle-icon, &.bicycle-easy-icon &.cycle-icon, &.cycle-easy-icon {
+    @extend %standard-sprite;
+    @include svg-icon-position-only(10, 2);
+  }
+  &.walking-icon {
+    @extend %sprite-images;
+    @include svg-icon(9, 2, $img-width: 24px, $x-offset: -4px);
+  }
+}
+
+.footpaths-icon, .footpath-icon, .walking-icon {
+  @extend %sprite-images;
+  @include svg-icon(9, 1, $img-width: 24px, $x-offset: -4px);
+}
+
+.search-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(2, 1);
+}
+
+.search-icon-black {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(2, 2);
+}
+
+.switch-directions-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(3, 1);
+}
+
+.expand-map-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(3, 2);
+}
+
+.facebook-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(8, 1);
+}
+
+.twitter-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(8, 2);
+}
+
+.bicycle-icon, .cycle-icon, .bicycle-easy-icon, .cycle-easy-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(10, 1);
+}
+
+.bus-icon, .bus-icon, .replacement-bus-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(11, 1);
+  &.small-icon {
+    @include svg-icon-scaled(11, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.train-icon, .national-rail-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(12, 1);
+  &.small-icon {
+    @include svg-icon-scaled(12, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.international-rail-icon {
+  display: none !important;
+}
+
+.ferry-icon, .river-bus-icon, .river-icon, .river-bus-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(13, 1);
+  &.small-icon {
+    @include svg-icon-scaled(13, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.river-tour-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(70, 3);
+  &.small-icon {
+    @include svg-icon-scaled(70, 3, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.oyster-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(15, 3);
+}
+
+.oyster-validation-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(15, 2);
+}
+
+.dlr-icon, .docklands-icon, .docklands-light-railway-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(35, 1);
+  &.small-icon {
+    @include svg-icon-scaled(35, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.tram-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(36, 2);
+  &.small-icon {
+    @include svg-icon-scaled(36, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.cablecar-icon, .cable-car-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(16, 1);
+  &.small-icon {
+    @include svg-icon-scaled(16, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.left-arrow {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(19, 1);
+}
+
+.white-up-arrow {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(20, 2);
+}
+
+.right-arrow {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(21, 1);
+}
+
+.down-arrow {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(22, 1);
+}
+
+.white-down-arrow {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(22, 2);
+}
+
+.down-triangle {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(23, 3);
+}
+
+.plus-icon-blue {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(23, 1);
+}
+
+.down-icon-blue {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(23, 3);
+}
+
+.minus-icon-blue {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(24, 1);
+}
+
+.plus-icon-greenblue {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(24, 3);
+}
+
+.disruption-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(27, 1);
+}
+
+.up-stairs {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(28, 1);
+}
+
+.toilets-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(28, 2);
+}
+
+.toilets-disabled-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(28, 3);
+}
+
+.down-stairs {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(29, 1);
+}
+
+.pram-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(29, 2);
+}
+
+.down-lift {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(29, 3);
+}
+
+.up-escalator {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(30, 1);
+}
+
+.walking-access-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(30, 2);
+}
+
+.wheelchair-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(30, 3);
+}
+
+.down-escalator {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(31, 1);
+}
+
+.luggage-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(31, 2);
+}
+
+.headphones-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(31, 3);
+}
+
+.avoid-zone-1-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(32, 1);
+}
+
+.mode-icon {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 7px;
+  text-align: center;
+}
+
+.disrupted .mode-icon:before {
+  content: "";
+  position: absolute;
+
+  @extend %standard-sprite;
+  @include svg-icon-position-only(43, 2);
+
+  bottom: -10px;
+  right: -8px;
+}
+
+.tube-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(34, 1);
+}
+
+.overground-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(34, 3);
+  &.small-icon {
+    @include svg-icon-scaled(36, 3, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.streets-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(5, 1);
+}
+
+.coach-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(36, 1);
+  &.small-icon {
+    @include svg-icon-scaled(36, 1, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.poi-icon, .pointofinterest-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(36, 3);
+  &.small-icon {
+    @include svg-icon-scaled(36, 3, $img-width: 20px, $img-height: 20px);
+  }
+}
+
+.street-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(68, 1);
+}
+
+.plane-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(65, 2);
+}
+
+.mail-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(37, 3);
+}
+
+.dark .favourite-icon {
+  @include svg-icon-position-only(65, 1);
+}
+
+.favourite-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(38, 2);
+  &.active {
+    @include svg-icon-position-only(38, 1);
+  }
+}
+
+.active {
+  .favourite-icon {
+    @include svg-icon-position-only(38, 1);
+  }
+}
+
+.email-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(38, 3);
+}
+
+.phone-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(39, 3);
+}
+
+.small-disrupted-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(43, 2);
+}
+
+.twenty-four-hour-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(43, 1);
+}
+
+.tube-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(45, 2);
+}
+
+.national-rail-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(45, 3);
+}
+
+.overground-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(46, 1);
+}
+
+.dlr-station-icon, .docklands-station-icon, .docklands-light-railway-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(46, 2);
+}
+
+.tram-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(46, 3);
+}
+
+.coach-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(47, 1);
+}
+
+.river-bus-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(47, 2);
+}
+
+.bus-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(47, 3);
+}
+
+.cable-car-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(48, 1);
+}
+
+.taxi-rank-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(48, 2);
+}
+
+.minicab-office-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(48, 3);
+}
+
+.bus-stop-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(49, 1);
+}
+
+.blank-bus-stop-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(49, 2);
+}
+
+.bch-docking-station-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(49, 3);
+
+  &.full-000 {
+    @include svg-icon-position-only(52, 2);
+  }
+  &.full-125 {
+    @include svg-icon-position-only(52, 1);
+  }
+  &.full-250 {
+    @include svg-icon-position-only(51, 3);
+  }
+  &.full-375 {
+    @include svg-icon-position-only(51, 2);
+  }
+  &.full-500 {
+    @include svg-icon-position-only(51, 1);
+  }
+  &.full-625 {
+    @include svg-icon-position-only(50, 3);
+  }
+  &.full-750 {
+    @include svg-icon-position-only(50, 2);
+  }
+  &.full-875 {
+    @include svg-icon-position-only(50, 1);
+  }
+}
+
+.nearby-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(42, 2);
+}
+
+.ticket-halls-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(54, 3);
+}
+
+.gates-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(55, 1);
+}
+
+.photo-booths-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(53, 3);
+}
+
+.cash-machines-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(55, 2);
+}
+
+.car-park-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(53, 2);
+}
+
+.help-points-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(53, 1);
+}
+
+.bridge-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(54, 1);
+}
+
+.waiting-room-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(54, 2);
+}
+
+.wifi-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(55, 3);
+}
+
+.icon-info-interchange {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(56, 1);
+}
+
+.icon-info-full {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(56, 3);
+}
+
+.icon-info-none {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(56, 2);
+}
+
+.icon-info-partial {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(57, 1);
+}
+
+.white-pram-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(57, 2);
+}
+
+.white-wheelchair-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(57, 3);
+}
+
+.info-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(61, 3);
+}
+
+.secondary-plan-journey-icon, .secondary-journey-from-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(63, 1);
+}
+
+.secondary-journey-to-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(62, 3);
+}
+
+.select-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(64, 3);
+}
+
+.nearby-icon-white {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(65, 3);
+}
+
+.menu-icon-alt {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(66, 1);
+}
+
+.menu-icon-blue {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(66, 2);
+}
+
+.menu-icon-white {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(66, 3);
+}
+
+.tick-icon-alt {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(67, 1);
+}
+
+.bicycle-moderate-icon, .cycle-moderate-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(69, 1);
+}
+
+.bicycle-hard-icon, .cycle-hard-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(69, 2);
+}
+
+.print-icon {
+  @extend %standard-sprite;
+  @include svg-icon-position-only(73, 1);
+}
+
+.level-walkway {
+  @extend %sprite-images;
+  @include svg-icon(9, 1, $img-width: 24px, $x-offset: -4px);
+}
+
+.selected .icon, .selected.icon {
+  &.bicycle-icon, &.bicycle-easy-icon, &.cycle-icon, &.cycle-easy-icon {
+    @extend %standard-sprite;
+    @include svg-icon-position-only(10, 1);
+  }
+  &.walking-icon {
+    @extend %sprite-images;
+    @include svg-icon(9, 1, $img-width: 24px, $x-offset: -4px);
+  }
+}
+
+.close-icon {
+  @extend %sprite-images;
+  @include svg-icon(26, 1, $img-width: 24px, $x-offset: 0);
+}
+
+.close-icon-white {
+  @extend %sprite-images;
+  @include svg-icon(26, 2, $img-width: 24px, $x-offset: 0);
+}
+
+.close3-icon {
+  @extend %sprite-images;
+  @include svg-icon(27, 3, $img-width: 24px, $x-offset: 0);
+}
+
+.share-icon {
+  @extend %sprite-images;
+  @include svg-icon(8, 3, $img-width: 24px, $x-offset: -4px);
+}
+
+.link-accordion-icon {
+  padding-left: 34px;
+  position: relative;
+  &:after {
+    @extend %standard-sprite;
+    @include svg-icon-position-only(22, 2);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -16px;
+  }
+  &.link-accordion-expanded:after {
+    @include svg-icon-position-only(20, 2);
+  }
+  &.link-accordion-icon-right {
+    padding-left: 0;
+    //padding-right: 34px;
+    &:after {
+      right: -30px;
+      left: auto;
+    }
+  }
+}
+
+.throbber {
+  @extend %throbber;
+}
+
+.throbber-blue {
+  width: 64px;
+  height: 64px;
+  background-image: url('/static/' +$version+ '/images/throbber-blue-large.gif');
+  background-size: 64px 64px;
+  background-position: 0 0;
+}
+
+.throbber-blue-small {
+  width: 32px;
+  height: 32px;
+  background-image: url('/static/' +$version+ '/images/throbber-blue-small.gif');
+  background-size: 32px 32px;
+  background-position: 0px 0px;
+}
+
+// roundels
+[class*=roundel-icon] {
+  width: 60px;
+  height: 50px;
+  display: block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.roundel-icon-bch {
+  width: 164px;
+  background-image: url('/static/' +$version+ '/images/roundels/BCH.png');
+}
+
+.roundel-icon-bus {
+  background-image: url('/static/' +$version+ '/images/roundels/Buses.png');
+}
+
+.roundel-icon-congestion {
+  width: 50px;
+  background-image: url('/static/' +$version+ '/images/roundels/CC.png');
+}
+
+.roundel-icon-coach {
+  background-image: url('/static/' +$version+ '/images/roundels/Coaches.png');
+}
+
+.roundel-icon-cycle {
+  background-image: url('/static/' +$version+ '/images/roundels/BCH_8.png');
+
+  &.full-000 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_0.png');
+  }
+  &.full-125 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_1.png');
+  }
+  &.full-250 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_2.png');
+  }
+  &.full-375 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_3.png');
+  }
+  &.full-500 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_4.png');
+  }
+  &.full-625 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_5.png');
+  }
+  &.full-750 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_6.png');
+  }
+  &.full-875 {
+    background-image: url('/static/' +$version+ '/images/roundels/BCH_7.png');
+  }
+}
+
+.roundel-icon-dial-a-ride {
+  background-image: url('/static/' +$version+ '/images/roundels/DialARide.png');
+}
+
+.roundel-icon-dlr {
+  background-image: url('/static/' +$version+ '/images/roundels/DLR.png');
+}
+
+.roundel-icon-cable-car {
+  width: 161px;
+  height: 68px;
+  background-image: url('/static/' +$version+ '/images/roundels/EAL.png');
+}
+
+.roundel-icon-lez {
+  height: 48px;
+  width: 48px;
+  background-image: url('/static/' +$version+ '/images/roundels/LEZ.png');
+}
+
+.roundel-icon-overground {
+  background-image: url('/static/' +$version+ '/images/roundels/Overground.png');
+}
+
+.roundel-icon-river-bus {
+  background-image: url('/static/' +$version+ '/images/roundels/River.png');
+}
+
+.roundel-icon-roads {
+  background-image: url('/static/' +$version+ '/images/roundels/Roads.png');
+}
+
+.roundel-icon-taxi {
+  background-image: url('/static/' +$version+ '/images/roundels/Taxi.png');
+}
+
+.roundel-icon-tfl {
+  background-image: url('/static/' +$version+ '/images/roundels/TfL.png');
+}
+
+.roundel-icon-tram {
+  background-image: url('/static/' +$version+ '/images/roundels/Tram.png');
+}
+
+.roundel-icon-tube {
+  background-image: url('/static/' +$version+ '/images/roundels/Tube.png');
+}
+
+.no-letter {
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 1px;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(14, 1, -1px, -2px);
+    height: 27px;
+    width: 29px;
+  }
+}
+
+.circle-icon {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 50%;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  height: 32px;
+  min-width: 30px;
+  line-height: 32px;
+  text-align: center;
+  padding-top: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0px 4px;
+  overflow: hidden;
+  border-radius: 0;
+  margin-left: -1px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 24px;
+    height: 24px;
+    left: 2px;
+    right: 2px;
+    z-index: -1;
+    top: 3px;
+    border-bottom: 2px solid #ccc;
+  }
+
+  &.red:after {
+    background-color: $bus-colour;
+  }
+
+  &.no-letter {
+    width: 31px;
+    &:after {
+      height: 27px;
+    }
+  }
+}
+
+.disrupted {
+  .circle-icon:before {
+    content: "";
+    position: absolute;
+
+    @extend %standard-sprite;
+    @include svg-icon-position-only(43, 2);
+
+    top: 9px;
+    right: -10px;
+
+  }
+}

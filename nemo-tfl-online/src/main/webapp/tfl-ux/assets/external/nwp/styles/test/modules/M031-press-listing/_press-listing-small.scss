@@ -1,0 +1,67 @@
+/**************************************************
+	M031 - Press Listing
+
+* Author: Andrew Spencer
+* Created: 11/09/2013
+* Pattern library URL: \Google Drive\NWP\Front-end\Pattern library\Modules\M031-press-listings
+
+**************************************************/
+
+.press-box {
+  padding: 10px 0;
+  position: relative;
+  margin-bottom: 3px;
+  .press-item-list {
+    margin-bottom: 8px;
+    list-style-type: none;
+    margin-left: 0px;
+    &:after {
+      content: "";
+      display: block;
+      border-bottom: 3px solid $light-grey-border-colour;
+    }
+    .press-item {
+      //padding: 10px;
+      border: 1px solid $light-grey-border-colour;
+      border-bottom: 0px;
+      h3 {
+        margin-top: 8px;
+        margin-bottom: 5px;
+      }
+      .press-date {
+        color: $nav-divider-darker-grey;
+        margin-bottom: 0px;
+      }
+      .plain-button {
+        border: 0px;
+        margin: 0px;
+      }
+    }
+  }
+
+  .press-item-list-single {
+    .press-item {
+      h3 {
+        margin-top: 10px;
+      }
+      .plain-button {
+        &:before {
+          background-color: $primary-blue;
+          width: 80px;
+          position: relative;
+          color: white;
+          line-height: 0.8em;
+          padding-top: 2px;
+          padding-bottom: 2px;
+          padding-left: 5px;
+          padding-right: 5px;
+          font-weight: bold;
+          font-size: 0.9em;
+          content: "LATEST";
+        }
+      }
+    }
+  }
+}
+ 
+

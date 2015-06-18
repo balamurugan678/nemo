@@ -1,0 +1,14 @@
+//IE 8
+.lt-ie8 {
+  .service-status-rainbow-board {
+    tr.visible {
+      display: block;
+    }
+  }
+}
+
+.lt-ie9 {
+  #tubemap {
+    display: none;
+  }
+}

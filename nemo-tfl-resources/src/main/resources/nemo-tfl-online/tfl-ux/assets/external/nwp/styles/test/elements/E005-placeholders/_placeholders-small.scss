@@ -1,0 +1,81 @@
+
+.placeholder-image {
+  color: $dark-grey;
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+
+  &:hover, &:focus {
+    text-underline: none;
+  }
+  &:visited {
+    color: $dark-grey;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    @extend %diagonal-pattern;
+  }
+
+  .placeholder-text {
+    top: 50%;
+    left: 50%;
+    margin: auto;
+    min-width: 120px;
+    min-height: 50px;
+    display: table;
+    text-align: center;
+    margin-left: -60px;
+    margin-top: -25px;
+  }
+}
+
+.placeholder-text {
+  background: #fff;
+  padding: 3px;
+  color: $linkcolour;
+  font-family: "New Johnson";
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+  z-index: 1;
+
+  strong {
+    display: block;
+    font-size: 16px;
+  }
+}
+
+.status-map-placeholder {
+  background-image: url('/static/' +$version+ '/images/placeholder/tube_tab.jpg');
+  height: 60px;
+  width: 100%;
+
+  &.bus {
+    background-image: url('/static/' +$version+ '/images/placeholder/bus-tab.jpg');
+  }
+  &.cable-car {
+    background-image: url('/static/' +$version+ '/images/placeholder/emirates_tab.jpg');
+  }
+  &.tram {
+    background-image: url('/static/' +$version+ '/images/placeholder/tram_tab.jpg');
+  }
+  &.river-bus {
+    background-image: url('/static/' +$version+ '/images/placeholder/river_tab.jpg');
+  }
+  &.national-rail {
+    background-image: url('/static/' +$version+ '/images/placeholder/rail_dt.jpg');
+  }
+}
+
+.map-switcher {
+
+  .placeholder-image, .status-map-placeholder {
+    height: 100%;
+  }
+
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.0.22">
+        <sql splitStatements="false">
+            <![CDATA[
+BEGIN
+   content_installer.install('cartItemCmd.previouslyExchanged.label', 'Previously exchanged?');
+   content_installer.install('addTradedTicket.button.label', 'Add Traded Ticket');
+   
+   content_installer.install('tradedTicket.exchangedDate.label', 'The ticket exchange date');
+   content_installer.install('tradedTicket.travelCardType.label', 'Traded Travel card type');
+   content_installer.install('tradedTicket.rate.label', 'Traded ticket rate');
+   
+   content_installer.install('tradedTicket.startDate.label', 'Start date');
+   content_installer.install('tradedTicket.endDate.label', 'End date');
+   content_installer.install('tradedTicket.startZone.label', 'Start zone of upgrade');
+   content_installer.install('tradedTicket.endZone.label', 'End zone of upgrade');
+   
+END;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,122 @@
+/**************************************************
+	M064 responsive button row
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M064-responsive-button-row
+**************************************************/
+
+.responsive-button-row {
+  margin: 0 0 20px -10px;
+  position: relative;
+  overflow: visible;
+
+  &:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0;
+    float: none;
+  }
+
+  .rbr-button {
+    padding-left: 10px;
+    float: left;
+    white-space: nowrap;
+
+    a {
+      margin: 0;
+    }
+  }
+  .rbr-button, .rbr-group {
+    top: 0;
+  }
+  .rbr-group {
+    display: block;
+    float: left;
+    &:after {
+      display: block;
+      visibility: hidden;
+      clear: both;
+      height: 0;
+      content: " ";
+      font-size: 0;
+      float: none;
+    }
+
+    .rbr-button {
+      display: none;
+    }
+
+    .rbr-group-button {
+      display: block;
+    }
+
+  }
+
+  &.collapsed.opened {
+    min-height: 121px;
+    .rbr-group-button {
+      > a {
+        background-color: $dark-subtle-grey-highlight;
+        border-color: $dark-subtle-grey-highlight;
+        color: #fff;
+        @extend %no-transition;
+
+      }
+      ~ div.rbr-button {
+        display: block;
+        padding: 20px 5px 23px;
+        background-color: $dark-subtle-grey-highlight;
+        position: absolute;
+        bottom: 0;
+        width: auto;
+        top: auto;
+        text-transform: capitalize;
+        @extend %bottom-drop-shadow;
+
+        > a {
+          @extend .secondary-button;
+          margin: 0;
+
+          &.with-icon {
+            display: block;
+            padding-right: 32px;
+          }
+
+          .secondary-journey-from-icon {
+            @include svg-icon-position-only(62, 2);
+          }
+          .secondary-journey-to-icon {
+            @include svg-icon-position-only(62, 1);
+          }
+        }
+
+        &:last-child {
+          padding-right: 10px;
+          right: 0;
+          left: 50%;
+        }
+      }
+      + div.rbr-button {
+        padding-left: 10px;
+        left: 10px;
+        right: 50%;
+      }
+    }
+    .not-opened {
+      display: none;
+    }
+  }
+
+  /// BETA 3 QUICK FIX
+
+  .plain-link.with-icon {
+    padding-left: 32px;
+    .i {
+      left: 0px;
+    }
+  }
+
+}

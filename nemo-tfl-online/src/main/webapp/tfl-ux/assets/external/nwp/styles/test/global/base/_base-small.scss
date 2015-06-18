@@ -1,0 +1,639 @@
+@font-face {
+  font-family: "New Johnson Bold";
+  src: url('/static/' +$version+ '/assets/fonts/NJFont-BookBold.eot');
+  src: url('/static/' +$version+ '/assets/fonts/NJFont-BookBold.eot?#iefix') format('embedded-opentype'),
+url('/static/'+$version+'/assets/fonts/NJFont-BookBold.woff') format("woff"),
+url('/static/'+$version+'/assets/fonts/NJFont-BookBold.otf') format("opentype"),
+url('/static/'+$version+'/assets/fonts/NJFont-BookBold.svg') format("svg");
+}
+
+@font-face {
+  font-family: "New Johnson";
+  src: url('/static/' +$version+ '/assets/fonts/NJFont-Book.eot');
+  src: url('/static/' +$version+ '/assets/fonts/NJFont-Book.eot?#iefix') format('embedded-opentype'),
+url('/static/'+$version+'/assets/fonts/NJFont-Book.woff') format("woff"),
+url('/static/'+$version+'/assets/fonts/NJFont-Book.otf') format("opentype"),
+url('/static/'+$version+'/assets/fonts/NJFont-Book.svg') format("svg");
+}
+
+@font-face {
+  font-family: "NJ Signing";
+  src: url('/static/' +$version+ '/assets/fonts/njfontsigning-medium.eot');
+  src: url('/static/' +$version+ '/assets/fonts/njfontsigning-medium.eot?#iefix') format('embedded-opentype'),
+url('/static/'+$version+'/assets/fonts/njfontsigning-medium.woff') format('woff'),
+url('/static/'+$version+'/assets/fonts/njfontsigning-medium.ttf') format('truetype'),
+url('/static/'+$version+'/assets/fonts/njfontsigning-medium.svg#njfontsigning-medium') format('svg');
+}
+
+//General Global Element stylings
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #FFF;
+  color: $dark-grey;
+}
+
+h1 {
+  @extend %new-johnson-bold;
+  font-size: 28px;
+  line-height: 100%;
+  &.signing {
+    @extend %new-johnson-signing;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $light-grey-border-colour;
+  }
+}
+
+h2 {
+  @extend %new-johnson-bold;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+
+h3 {
+  @extend %new-johnson-bold;
+  font-size: 20px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+
+h4, h5, h6 {
+  font-weight: bold;
+  margin: 0 0 10px;
+}
+
+.section-landing-container {
+  position: relative;
+  padding: 0;
+  //margin-bottom: 0;
+  border-bottom: 1px solid $light-grey-border-colour;
+  padding-bottom: 15px;
+  .landing-page {
+    border-bottom: 1px solid $lighter-grey-border-colour;
+  }
+  &.with-logo {
+    padding-right: 135px;
+  }
+  .heading-logo {
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    > img {
+      //vertical-align: bottom;
+      height: 39px;
+      width: auto;
+    }
+  }
+  .hero-headline {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: $dark-grey;
+  }
+  h1 {
+    @extend %new-johnson-signing;
+  }
+}
+
+.skip-link:focus, .skip-link:active {
+  background: white;
+  z-index: 5;
+  padding: 5px 10px;
+  width: auto;
+  height: auto;
+  clip: auto;
+}
+
+.headline, .hero-headline {
+  @extend %new-johnson-signing;
+  font-weight: normal;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 120%;
+}
+
+.hero-headline {
+  background: $dark-grey;
+  color: #fff;
+  box-shadow: 10px 0 0 $dark-grey, -10px 0 0 $dark-grey;
+  display: inline;
+  padding: 5px 0;
+  line-height: 120%;
+}
+
+.no-background-image {
+  background-image: none !important
+}
+
+p {
+  margin-bottom: 20px;
+  a.external-link {
+    //		margin-right: 25px;
+    //		position: relative;
+    //		&:after {
+    //			margin-top: -5px;
+    //			margin-left: -2px;
+    //			content: "";
+    //			position: absolute;
+    //			right:-30px;
+    //			@extend %standard-sprite;
+    //			@include svg-icon-position-only(37,2);
+    //		}
+  }
+  .ext-span {
+    height: 25px;
+    display: inline-block;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(37, 2);
+  }
+}
+
+p.title {
+  font-size: 110%;
+  line-height: 100%;
+}
+
+p.italic-block, span.italic-block {
+  font-style: italic;
+  color: $light-grey-text;
+}
+
+ul, ol {
+  list-style-position: outside;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+a {
+  text-decoration: none;
+  color: $linkcolour;
+  cursor: pointer;
+  &:focus, &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link2 {
+  color: $linkcolour2;
+}
+
+.arrow-forward {
+  display: block;
+  &:after {
+    @extend %sprite-images;
+    @include svg-icon(21, 1, 28px, 23px, $display: inline-block);
+    content: "";
+  }
+}
+
+table {
+  width: 100%;
+  tr:nth-child(odd) {
+    background-color: $subtler-grey;
+  }
+  &.first-row {
+    background-color: $subtler-grey;
+    z-index: 1;
+    td:first-child, th:first-child {
+      position: absolute;
+      left: 0;
+      background-color: $subtler-grey;
+      height: 100%;
+      vertical-align: bottom;
+      > span {
+        display: block;
+        position: absolute;
+        top: 5px;
+      }
+    }
+  }
+  .right-align {
+    text-align: right;
+  }
+}
+
+th {
+  text-align: left;
+}
+
+th, td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  line-height: 22px;
+  vertical-align: top;
+}
+
+em {
+  font-style: italic;
+}
+
+hr {
+  height: 1px;
+  border: 0;
+  color: $light-grey-border-colour;
+  background-color: $light-grey-border-colour;
+  margin-bottom: 15px;
+}
+
+label {
+  &.heading {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+input[type="text"], input[type='number'] {
+  border-radius: 0;
+  padding: 5px;
+  //margin-bottom: 5px;
+  @extend %shaded-input;
+  width: 100%;
+  &.error {
+    border: 1px solid $error-colour;
+  }
+}
+
+input[type="text"] {
+  &:not(.disable-removable-content) {
+    //padding-right: 10%;//so that text stops where grey cross 'x' starts
+    padding-right: 32px; //so that text stops where grey cross 'x' starts
+  }
+}
+
+//removable content border-bottom-style
+.remove-content-container {
+  float: left;
+  width: 100%;
+  &.empty {
+    input[type="text"] {
+      padding-right: 5px;
+    }
+  }
+  .remove-content {
+    position: relative;
+    display: block;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(26, 3);
+  }
+}
+
+.modal {
+  &.loading {
+    min-height: 100%;
+  }
+}
+
+#content {
+  margin-top: 10px;
+}
+
+.icon {
+  background-image: url('/static/' +$version+ '/images/vsprite.png');
+  background-image: url('/static/' +$version+ '/images/vsprite.png') \9;
+}
+
+span, td {
+  @include service-colours();
+}
+
+.line-text {
+  color: #fff;
+  font-weight: bold;
+  padding: 0 3px;
+  text-shadow: 0 1px 0px rgba(0, 0, 0, 0.6);
+  &.circle,
+  &.hammersmith,
+  &.overground,
+  &.dlr,
+  &.victoria,
+  &.waterloo,
+  &.rb3, &.rb4, &.rb5,
+  &.city-cruises,
+  &.westminster-st-katherines-circular,
+  &.westminster-passenger-services-association,
+  &.wetsminster-passenger-services-association,
+  &.woolwich-free-ferry {
+    text-shadow: 0 1px 0px rgba(255, 255, 255, 0.6);
+    color: #000;
+  }
+}
+
+.plain-button.external-link {
+  color: $linkcolour;
+  &:visited, &:active {
+    color: $linkcolour;
+  }
+  &:after {
+    margin-right: 2px;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(37, 2);
+  }
+}
+
+.teaser-external-link {
+  margin-right: 0px;
+  color: blue;
+  a {
+    .text-link {
+      &:after {
+        margin-right: 2px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(37, 2);
+      }
+    }
+  }
+
+}
+
+.text-external-link {
+  margin-right: 25px;
+  position: relative;
+  &:after {
+    margin-top: -5px;
+    margin-left: -2px;
+    content: "";
+    position: absolute;
+    @extend %standard-sprite;
+    @include svg-icon-position-only(37, 2);
+  }
+}
+
+.info-message {
+  display: block;
+  border: 1px solid $light-grey-border-colour;
+  background: $information-message-colour;
+  padding: 5px;
+  p {
+    margin-bottom: 5px;
+  }
+  &.with-link {
+    padding-right: 30px;
+    position: relative;
+    &:after {
+      content: "";
+      @extend %standard-sprite;
+      @include svg-icon-position-only(21, 1);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+}
+
+.small {
+  display: block
+}
+
+.small-medium {
+  display: block
+}
+
+.medium {
+  display: none
+}
+
+.medium-large {
+  display: none
+}
+
+.large {
+  display: none
+}
+
+#container {
+  min-width: $min-width;
+  //fixes iPhone rotation bug
+  overflow: hidden;
+}
+
+.accordion-title {
+  border: 1px solid #CACACA;
+  border-bottom: none;
+  display: block;
+  padding: 5px;
+}
+
+.broadcast-comms {
+  width: 100%;
+  background: #faf5e1;
+  min-height: 80px;
+  border-bottom: 3px solid $light-grey-border-colour;
+  padding: 20px 0 0 0;
+
+  .broadcast-icon {
+    height: 0px;
+    margin-right: -90px;
+    width: 0px;
+    float: left;
+    background-image: none;
+  }
+
+  .broadcast-text {
+    float: left;
+    margin-right: 2.54%;
+    padding-left: 2.54%;
+    width: 90%;
+  }
+}
+
+.beta-banner {
+  width: 100%;
+  font-family: "New Johnson";
+  font-size: 1.2em;
+  background: $primary-blue;
+  border-bottom: 3px solid $darker-primary-blue;
+  .beta-banner-text {
+    float: left;
+    margin-left: $gridGutterWidth;
+    width: 60%;
+    padding-bottom: 5px;
+  }
+  .beta-banner-button {
+    float: left;
+    margin-left: $gridGutterWidth;
+    width: 32%;
+    text-align: right;
+    display: block;
+    padding-right: 20px;
+  }
+  .beta-banner-link {
+    color: #FFF;
+  }
+  padding: 5px 0 0;
+  color: #FFF;
+}
+
+.image-container > img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  margin-bottom: 10px;
+}
+
+.section-style {
+  @extend %section-style;
+}
+
+.right-to-left {
+  direction: rtl;
+}
+
+// list styling
+//header-two and three styles allowing the number on an ordered list to match the styling on an Li's title.
+.header-two {
+  @extend %new-johnson-bold;
+  font-size: 24px;
+  line-height: 120%;
+  margin-bottom: 0;
+  h2 {
+    margin-bottom: 0;
+  }
+}
+
+.header-three {
+  @extend %new-johnson-bold;
+  font-size: 20px;
+  line-height: 100%;
+  margin-bottom: 0;
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.list-standard {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+
+}
+
+ol.formatted-list {
+  counter-reset: item;
+  list-style-type: none;
+  margin-left: 17px;
+
+  ol {
+    counter-reset: item;
+    list-style-type: none;
+    margin-left: 28px;
+  }
+  ol > li, > li {
+    position: relative;
+    padding-left: 8px;
+  }
+  ol > li:before, > li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+    position: absolute;
+    right: 100%;
+  }
+}
+
+ol ol, ul ul, ol ul, ul ol {
+  margin-bottom: 0;
+}
+
+ul.formatted-list ul {
+  list-style-type: circle;
+
+  ul {
+    list-style-type: square;
+  }
+}
+
+.bus-stop-search {
+  background: $subtler-grey;
+  padding: 10px 70px 10px 10px;
+  position: relative;
+  min-height: 58px;
+
+  input[type=submit] {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+  }
+}
+
+.spot-grid-background {
+  position: relative;
+  background-color: $jp-blue;
+  padding-bottom: 10px;
+  //negate the 50px margin on the footer
+  &.full-page {
+    margin-bottom: -50px;
+  }
+}
+
+.multi-document-download-container {
+  margin: 20px 0;
+  border: 0px;
+  border-bottom: 1px;
+  .document-download-wrap {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px;
+
+    &:last-child {
+      border-bottom: solid 4px $light-grey-border-colour;
+    }
+  }
+
+}
+
+.grey-box {
+  background: $darker-subtle-grey;
+  padding: 20px 10px;
+  @extend %transparent-grey-bottom-border;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  .remove-content-container {
+    margin-bottom: 10px;
+    float: none;
+  }
+
+  .mode-title {
+    line-height: 40px;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.margin-bottom {
+  margin-bottom: 20px;
+}

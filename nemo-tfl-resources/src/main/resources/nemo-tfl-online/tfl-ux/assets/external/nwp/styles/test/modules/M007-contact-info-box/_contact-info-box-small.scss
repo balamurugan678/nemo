@@ -1,0 +1,75 @@
+/**************************************************
+	C2 Contact / M007-contact-info-box
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C2+-+Contact
+
+**************************************************/
+
+.contact-info-box {
+  background-color: $subtle-grey;
+  padding: 15px 0px 15px;
+  //margin: 0px 0px 15px;
+  display: block;
+  .contact-info-header {
+    padding-left: 10px;
+    position: relative;
+    padding-right: 10px;
+    margin-bottom: 0px;
+  }
+
+  .content-group {
+    padding-left: 50px;
+    position: relative;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    .fax-number {
+      margin-left: 1px;
+    }
+
+    > h4, > p {
+      margin: 0px;
+      line-height: 20px;
+    }
+  }
+  .icon {
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+  abbr {
+    font-weight: bold;
+    line-height: 22px;
+  }
+  .contact-name {
+    font-size: 20px;
+    line-height: 100%;
+    margin-top: 10px;
+    font-family: "New Johnson Bold";
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+  }
+
+  .job-title {
+    font-size: 18px;
+    line-height: 100%;
+    margin-top: 5px;
+    font-family: "New Johnson";
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+  }
+
+  > img {
+    width: 100%;
+    margin-bottom: 10px;
+    height: auto;
+  }
+  .vertical-button-container {
+    margin: 10px 10px 0;
+  }
+
+}

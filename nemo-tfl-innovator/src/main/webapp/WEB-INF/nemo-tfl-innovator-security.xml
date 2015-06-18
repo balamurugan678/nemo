@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns="http://www.springframework.org/schema/security"
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <http pattern="/fonts/**" security="none"/>
+    <http pattern="/images/**" security="none"/>
+    <http pattern="/scripts/**" security="none"/>
+    <http pattern="/styles/**" security="none"/>
+
+    <http pattern="/OysterHome.htm" security="none"/>
+    <http pattern="/Login.htm" security="none"/>
+    <http pattern="/OpenAccount.htm" security="none"/>
+    <http pattern="/ValidateCardNumber.htm" security="none"/>
+    <http pattern="/OrderOysterCard.htm" security="none"/>
+    <http pattern="/AccountDetails.htm" security="none"/>
+    <http pattern="/FindPostCode.htm" security="none"/>
+    <http pattern="/ProcessAccountDetails.htm" security="none"/>
+    <http pattern="/ValidateSecurityQuestion.htm" security="none"/>
+    <http pattern="/CardVerification.htm" security="none"/>
+    <http pattern="/ProcessPayment.htm" security="none"/>
+    <http pattern="/AddUnattachedCard.htm" security="none"/>
+
+    <http>
+        <intercept-url pattern="/**" access="ROLE_USER"/>
+        <form-login login-page="/OysterHome.htm"/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider ref="authenticationProvider"/>
+    </authentication-manager>
+
+
+    <beans:bean name="passwordEncoder" class="com.novacroft.nemo.tfl.common.security.TflPasswordEncoder"/>
+
+    <beans:bean name="userDetailsService" class="com.novacroft.nemo.tfl.common.security.TflUserDetailsService">
+        <beans:property name="dataService" ref="customerDataService"/>
+    </beans:bean>
+
+    <beans:bean name="authenticationProvider" class="com.novacroft.nemo.tfl.common.security.TflAuthenticationProvider">
+        <beans:property name="passwordEncoder" ref="passwordEncoder"/>
+        <beans:property name="userDetailsService" ref="userDetailsService"/>
+    </beans:bean>
+
+</beans:beans>

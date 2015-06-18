@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.34">
+		<sql splitStatements="false">
+            <![CDATA[
+				BEGIN
+				   content_installer.install('FailedCardRefund.cartItem.goodwillOtherText.tip', 'Goodwill - Other');
+				   content_installer.install('FailedCardRefund.cartItem.goodwillOtherText.placeholder', 'Goodwill - Other');
+				   content_installer.install('FailedCardRefund.cartItemList[1].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('FailedCardRefund.cartItemList[1].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('FailedCardRefund.cartItemList[1].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('FailedCardRefund.cartItemList[1].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('FailedCardRefund.cartItemList[2].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('FailedCardRefund.cartItemList[2].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('FailedCardRefund.cartItemList[2].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('FailedCardRefund.cartItemList[2].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('FailedCardRefund.cartItemList[3].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('FailedCardRefund.cartItemList[3].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('FailedCardRefund.cartItemList[3].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('FailedCardRefund.cartItemList[3].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('FailedCardRefund.cartItemCmd.goodwillPrice.tip', 'Goodwill amount');
+				   content_installer.install('FailedCardRefund.cartItemCmd.goodwillPrice.placeholder', 'Goodwill amount');
+				   content_installer.install('FailedCardRefund.payAsYouGoValue.tip', 'PAYG value');
+				   content_installer.install('FailedCardRefund.dateOfRefund.tip', 'Date of refund');
+				   content_installer.install('FailedCardRefund.transfer.button.tip', 'Transfer from this card...');
+				   content_installer.install('FailedCardRefund.refund.button.tip', 'Refund');
+				   
+				   content_installer.install('LostRefund.cartItem.goodwillOtherText.tip', 'Goodwill - Other');
+				   content_installer.install('LostRefund.cartItem.goodwillOtherText.placeholder', 'Goodwill - Other');
+				   content_installer.install('LostRefund.cartItemList[1].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('LostRefund.cartItemList[1].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('LostRefund.cartItemList[1].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('LostRefund.cartItemList[1].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('LostRefund.cartItemList[2].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('LostRefund.cartItemList[2].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('LostRefund.cartItemList[2].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('LostRefund.cartItemList[2].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('LostRefund.cartItemList[3].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('LostRefund.cartItemList[3].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('LostRefund.cartItemList[3].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('LostRefund.cartItemList[3].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('LostRefund.cartItemCmd.goodwillPrice.tip', 'Goodwill amount');
+				   content_installer.install('LostRefund.cartItemCmd.goodwillPrice.placeholder', 'Goodwill amount');
+				   content_installer.install('LostRefund.payAsYouGoValue.tip', 'PAYG value');
+				   content_installer.install('LostRefund.dateOfRefund.tip', 'Date of refund');
+				   content_installer.install('LostRefund.transfer.button.tip', 'Transfer from this card...');
+				   content_installer.install('LostRefund.refund.button.tip', 'Refund');
+				   
+				   content_installer.install('StolenRefund.cartItem.goodwillOtherText.tip', 'Goodwill - Other');
+				   content_installer.install('StolenRefund.cartItem.goodwillOtherText.placeholder', 'Goodwill - Other');
+				   content_installer.install('StolenRefund.cartItemList[1].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('StolenRefund.cartItemList[1].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('StolenRefund.cartItemList[1].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('StolenRefund.cartItemList[1].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('StolenRefund.cartItemList[2].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('StolenRefund.cartItemList[2].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('StolenRefund.cartItemList[2].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('StolenRefund.cartItemList[2].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('StolenRefund.cartItemList[3].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('StolenRefund.cartItemList[3].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('StolenRefund.cartItemList[3].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('StolenRefund.cartItemList[3].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('StolenRefund.cartItemCmd.goodwillPrice.tip', 'Goodwill amount');
+				   content_installer.install('StolenRefund.cartItemCmd.goodwillPrice.placeholder', 'Goodwill amount');
+				   content_installer.install('StolenRefund.payAsYouGoValue.tip', 'PAYG value');
+				   content_installer.install('StolenRefund.dateOfRefund.tip', 'Date of refund');
+				   content_installer.install('StolenRefund.transfer.button.tip', 'Transfer from this card...');
+				   content_installer.install('StolenRefund.refund.button.tip', 'Refund');
+				   
+				   content_installer.install('CancelAndSurrender.cartItem.goodwillOtherText.tip', 'Goodwill - Other');
+				   content_installer.install('CancelAndSurrender.cartItem.goodwillOtherText.placeholder', 'Goodwill - Other');
+				   content_installer.install('CancelAndSurrender.cartItemList[1].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('CancelAndSurrender.cartItemList[1].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('CancelAndSurrender.cartItemList[1].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('CancelAndSurrender.cartItemList[1].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('CancelAndSurrender.cartItemList[2].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('CancelAndSurrender.cartItemList[2].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('CancelAndSurrender.cartItemList[2].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('CancelAndSurrender.cartItemList[2].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('CancelAndSurrender.cartItemList[3].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('CancelAndSurrender.cartItemList[3].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('CancelAndSurrender.cartItemList[3].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('CancelAndSurrender.cartItemList[3].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('CancelAndSurrender.cartItemCmd.goodwillPrice.tip', 'Goodwill amount');
+				   content_installer.install('CancelAndSurrender.cartItemCmd.goodwillPrice.placeholder', 'Goodwill amount');
+				   content_installer.install('CancelAndSurrender.payAsYouGoValue.tip', 'PAYG value');
+				   content_installer.install('CancelAndSurrender.dateOfRefund.tip', 'Date of refund');
+				   content_installer.install('CancelAndSurrender.transfer.button.tip', 'Transfer from this card...');
+				   content_installer.install('CancelAndSurrender.refund.button.tip', 'Refund');
+				   
+				   content_installer.install('DestroyedCardRefund.cartItem.goodwillOtherText.tip', 'Goodwill - Other');
+				   content_installer.install('DestroyedCardRefund.cartItem.goodwillOtherText.placeholder', 'Goodwill - Other');
+				   content_installer.install('DestroyedCardRefund.cartItemList[1].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[1].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[1].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[1].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[2].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[2].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[2].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[2].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[3].tradedTicket.exchangedDate.tip', 'Exchange date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[3].tradedTicket.exchangedDate.placeholder', 'Exchange date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[3].tradedTicket.startDate.tip', 'Start date');
+				   content_installer.install('DestroyedCardRefund.cartItemList[3].tradedTicket.startDate.placeholder', 'Start date');
+				   content_installer.install('DestroyedCardRefund.cartItemCmd.goodwillPrice.tip', 'Goodwill amount');
+				   content_installer.install('DestroyedCardRefund.cartItemCmd.goodwillPrice.placeholder', 'Goodwill amount');
+				   content_installer.install('DestroyedCardRefund.payAsYouGoValue.tip', 'PAYG value');
+				   content_installer.install('DestroyedCardRefund.dateOfRefund.tip', 'Date of refund');
+				   content_installer.install('DestroyedCardRefund.transfer.button.tip', 'Transfer from this card...');
+				   content_installer.install('DestroyedCardRefund.refund.button.tip', 'Refund');
+				END;
+				]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

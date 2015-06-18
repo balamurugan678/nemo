@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.1.04">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   select_list_installer.un_install_option('RefundTravelCardTypes', '1Month Travelcard');
+				   
+				   select_list_installer.install_option('RefundTravelCardTypes', '1Month Travelcard', 20);
+				   select_list_installer.install_option('RefundTravelCardTypes', '3Month Travelcard', 30);				
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

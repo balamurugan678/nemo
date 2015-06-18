@@ -1,0 +1,224 @@
+/**************************************************
+List ToDropdown
+
+* Author: J Boyle 
+* Created: 12/07/2013
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/Service+Status+Pages
+
+**************************************************/
+.for-dropdown {
+  position: relative;
+  .dropdown-button {
+    position: relative;
+    padding: 9px 25px 9px 7px;
+    cursor: pointer;
+    background-color: $date-picker-dropdown-blue;
+    border: 1px solid $lighter-grey-border-colour;
+    border-bottom-color: $date-picker-dropdown-blue;
+    &.gla-dropdown {
+      img {
+        margin-bottom: 8px;
+      }
+      background: #202329;
+      &:after {
+        @extend %standard-sprite;
+        //				top: 50%;
+        //				margin-top:-16px;
+        @include svg-icon-position-only(20, 2);
+      }
+    }
+    &.dropdown-closed {
+      background-color: #fff;
+      border-bottom-color: $lighter-grey-border-colour;
+      &:after {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(22, 1);
+      }
+      &.gla-dropdown {
+        background: #202329;
+        &:after {
+          @extend %standard-sprite;
+          @include svg-icon-position-only(22, 2);
+        }
+      }
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 0;
+      @extend %standard-sprite;
+      @include svg-icon-position-only(20, 1);
+    }
+  }
+  .links-list {
+    background-color: $date-picker-dropdown-blue;
+    padding: 10px;
+    margin: 0;
+    border-left: 1px solid $lighter-grey-border-colour;
+    border-right: 1px solid $lighter-grey-border-colour;
+    border-bottom: 1px solid $lighter-grey-border-colour;
+    list-style: none outside none;
+    z-index: 13;
+    &#gla-list {
+      padding: 0;
+      background-color: #202329;
+      border-left: 1px solid #484848;
+      border-right: 1px solid #484848;
+      border-bottom: 1px solid #484848;
+      li {
+        border: 0;
+        //margin: 5px 0;
+
+        @include transition(background-color 0.3s);
+        &:hover, &:focus {
+          @include darken-hover-and-focus(#202329, 5%);
+          @include transition(none);
+          text-decoration: none;
+          //color: $primary-blue;
+        }
+        a {
+          padding: 0 5px;
+          background-color: transparent;
+          color: #fff;
+          padding: 8px 0 5px 40px;
+          @include transition(background-color 0.3s);
+          &:hover, &:focus {
+            @include darken-hover-and-focus(#202329, 5%);
+            @include transition(none);
+            text-decoration: none;
+            //color: $primary-blue;
+          }
+          &:after {
+            content: '';
+            height: 32px;
+            width: 32px;
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            margin-top: -16px;
+            @extend %standard-sprite;
+            @include svg-icon-position-only(67, 3);
+          }
+        }
+        &.greater-london-authority-li {
+          display: none;
+        }
+        &.lldc {
+          margin-top: 0;
+        }
+      }
+    }
+    &:not(.datepicker-dropdown) {
+      a {
+        min-height: 40px;
+      }
+    }
+  }
+  li {
+    display: block;
+    border: solid 1px $lighter-grey-border-colour;
+    border-top-width: 0;
+  }
+  a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: $dark-grey;
+    background-color: #fff;
+    padding: 10px 32px 9px 10px;
+    @include transition(background-color 0.3s);
+    &:hover, &:focus {
+      @include darken-hover-and-focus(#fff, 5%);
+      @include transition(none);
+      text-decoration: none;
+      color: $primary-blue;
+    }
+  }
+  .dropdown-name {
+
+    margin: 4px 10px 0 0;
+    display: inline-block;
+  }
+  .dropdown-icon {
+    margin: 4px 5px 0 -5px;
+    display: inline-block;
+  }
+  .right-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -16px;
+  }
+  .datepicker-dropdown {
+    .no-hover {
+      border: 0;
+      > span {
+        font-weight: bold;
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
+    .fc-row {
+      .highlighted-day {
+        overflow: hidden;
+        a {
+          background-color: $disruption-colour;
+          margin: 0;
+          display: block;
+          height: 100%;
+          padding: 0;
+          > .fc-date {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+          }
+          &:hover, &:focus {
+            @include darken-hover-and-focus($disruption-colour, 5%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.modes-dropdown-placeholder .for-dropdown li > a {
+  padding-left: 42px;
+  position: relative;
+
+  .dropdown-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -16px;
+  }
+}
+
+//GLA List to dropdown
+li.MOL-logo-dropdown {
+  display: none;
+}
+
+.MOL-logo-dropdown, .dropdown-button {
+  .mayor-of-london-logo {
+    color: #fff;
+    @extend %new-johnson-signing;
+    font-size: 16pt;
+    padding-right: 10px;
+    border-right: solid 1px #484848;
+  }
+  .mol-gla {
+    color: #fff;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #484848;
+    @extend %new-johnson-signing;
+    font-size: 14pt;
+  }
+}
+

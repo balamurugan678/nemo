@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="15.0.16">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('dashboard.changePersonalDetails.link', 'Change personal details');
+				  content_installer.install('dashboard.quickBuy.link', 'Quick buy');
+				  content_installer.install('dashboard.incompleteJourney.link', 'Incomplete journeys');
+				  content_installer.install('addExistingCardToAccount.link', 'Add card');
+				  content_installer.install('orderOysterCard.link', 'Order oyster card');
+				  content_installer.install('Dashboard.ViewOrderHistory.link', 'View order history');
+				  content_installer.install('WebAccountCreditStatement.link', 'Web credits statement');
+				  content_installer.install('ManagePaymentCard.link', 'Manage payment cards');
+				  content_installer.install('journeyHistory.link', 'Journey history');
+				  content_installer.install('Dashboard.ViewRefunds.link', 'View refunds');
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

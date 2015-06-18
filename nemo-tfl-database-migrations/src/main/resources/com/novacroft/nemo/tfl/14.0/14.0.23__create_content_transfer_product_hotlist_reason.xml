@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <property name="now" value="SYSDATE" dbms="oracle"/>
+	<changeSet author="Novacroft" id="14.0.23" >
+    	<insert tableName="hotlistreason" schemaName="${schemaName}">
+            <column name="id">32</column> 
+            <column name="createduserid">Installer</column>
+            <column name="createddatetime" valueDate="${now}"/>
+            <column name="modifieduserid">null</column>
+            <column name="modifieddatetime">null</column>
+            <column name="description">Card transferred</column>
+            <column name="externalId" valueComputed="${schemaName}.externalid_seq.nextval"/>
+        </insert>
+	</changeSet>
+</databaseChangeLog>

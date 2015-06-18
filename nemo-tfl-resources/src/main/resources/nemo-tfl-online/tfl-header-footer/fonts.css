@@ -1,0 +1,26 @@
+@font-face {
+    font-family: "New Johnson Bold";
+    src: url('NJFont-BookBold.eot');
+    src: url('NJFont-BookBold.eot?#iefix') format('embedded-opentype'),
+    url('NJFont-BookBold.woff') format("woff"),
+    url('NJFont-BookBold.otf') format("opentype"),
+    url('NJFont-BookBold.svg') format("svg");
+}
+
+@font-face {
+    font-family: "New Johnson";
+    src: url('NJFont-Book.eot');
+    src: url('NJFont-Book.eot?#iefix') format('embedded-opentype'),
+    url('NJFont-Book.woff') format("woff"),
+    url('NJFont-Book.otf') format("opentype"),
+    url('NJFont-Book.svg') format("svg");
+}
+
+@font-face {
+    font-family: "NJ Signing";
+    src: url('njfontsigning-medium.eot');
+    src: url('njfontsigning-medium.eot?#iefix') format('embedded-opentype'),
+    url('njfontsigning-medium.woff') format('woff'),
+    url('njfontsigning-medium.ttf') format('truetype'),
+    url('njfontsigning-medium.svg#njfontsigning-medium') format('svg');
+}

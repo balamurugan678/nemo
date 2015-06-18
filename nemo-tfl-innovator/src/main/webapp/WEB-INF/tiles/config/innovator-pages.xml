@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+    <definition name="Customer" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/customer.jsp"/>
+        <put-attribute name="title" value="Edit Customer"/>
+    </definition>
+    <definition name="CustomerSearch" extends="innovator-search-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/customerSearch.jsp"/>
+        <put-attribute name="pagename" value="customersearch"/>
+    </definition>
+    <definition name="Call" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/call.jsp"/>
+        <put-attribute name="title" value="Add Call"/>
+    </definition>
+    <definition name="CardAdmin" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/cardAdmin.jsp"/>
+        <put-attribute name="title" value="Card Admin"/>
+    </definition>
+    <definition name="JourneyHistory" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/journeyHistory.jsp"/>
+        <put-attribute name="title" value="Journey History"/>
+    </definition>
+    <definition name="Order" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/order.jsp"/>
+        <put-attribute name="title" value="Order"/>
+    </definition>
+    <definition name="Checkout" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/checkout.jsp"/>
+        <put-attribute name="title" value="Checkout"/>
+    </definition>
+    <definition name="Refunds" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/refunds.jsp"/>
+        <put-attribute name="title" value="Refunds"/>
+    </definition>
+    <definition name="FailedCardProducts" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/failedcardproducts.jsp"/>
+        <put-attribute name="title" value="Failed Card Products"/>
+    </definition>
+    <definition name="FailedCardProductsSummary" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/failedcardproductssummary.jsp"/>
+        <put-attribute name="title" value="Failed Card Products Summary"/>
+    </definition>
+    <definition name="CancelAndSurrenderCardRefundCartSummary" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/failedcardproductssummary.jsp"/>
+        <put-attribute name="title" value="Cancel And Surrender Card Refund Cart Summary"/>
+    </definition>
+    <definition name="CancelAndSurrenderCartSummary" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/cancelAndSurrenderCartSummary.jsp"/>
+        <put-attribute name="title" value="Cancel And Surrender Card Refund Cart"/>
+    </definition>
+    <definition name="RefundSummary" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/refundSummary.jsp"/>
+        <put-attribute name="title" value="Failed Card Refund Cart Summary"/>
+    </definition>
+    <definition name="FailedCardRefund" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/failedCardRefund.jsp"/>
+        <put-attribute name="title" value="Failed Card Refund Cart"/>
+    </definition>
+    <definition name="DestroyedCardRefund" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/destroyedCardRefund.jsp"/>
+        <put-attribute name="title" value="Destroyed Card Refund Cart"/>
+    </definition>
+    <definition name="GoodwillRefund" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageGoodwill.jsp"/>
+    </definition>
+    <definition name="TravelCardRefund" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageTravelCards.jsp"/>
+    </definition>
+    <definition name="FailedCardTravelCards" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/failedCardTravelCards.jsp"/>
+    </definition>
+    <definition name="FailedCardPayAsYouGo" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/failedCardPayAsYouGo.jsp"/>
+    </definition>
+    <definition name="StandaloneGoodwill" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/standaloneGoodwill.jsp"/>
+        <put-attribute name="title" value="Standalone Goodwill"/>
+    </definition>
+    <definition name="LostRefund" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/lostRefund.jsp"/>
+        <put-attribute name="title" value="Lost Refund"/>
+    </definition>
+    <definition name="StolenRefund" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/stolenRefund.jsp"/>
+        <put-attribute name="title" value="Stolen Refund"/>
+    </definition>
+    <definition name="AnonymousGoodwillRefundMain" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/anonymousGoodwillRefundMain.jsp"/>
+        <put-attribute name="title" value="Anonymous Goodwill Refund Main"/>
+    </definition>
+    <definition name="AnonymousGoodwillRefundGoodwill" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/anonymousGoodwillRefundGoodwill.jsp"/>
+        <put-attribute name="title" value="Anonymous Goodwill Refund Goodwill"/>
+    </definition> 
+
+    <definition name="OrderAdd" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/orderAdd.jsp"/>
+        <put-attribute name="title" value="Add Order"/>
+    </definition>
+    <definition name="Basket" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/basket.jsp"/>
+        <put-attribute name="title" value="Basket"/>
+    </definition>
+    <definition name="PayAsYouGo" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/payAsYouGo.jsp"/>
+        <put-attribute name="title" value="Basket"/>
+    </definition>
+
+    <definition name="CreateWorkItems" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="createWorkItems" />
+        <put-attribute name="pagetitle" value="createWorkItems" />
+    </definition>
+    <definition name="Approval" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approval.jsp"/>
+        <put-attribute name="title" value="Approval" />
+        <put-attribute name="pagetitle" value="Approval" />
+    </definition>
+    <definition name="ApprovalStage2" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approval.jsp"/>
+        <put-attribute name="title" value="Approval stage 2" />
+        <put-attribute name="pagetitle" value="Approval Stage 2" />
+    </definition>
+    <definition name="ApprovalList" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="Approval List" />
+        <put-attribute name="pagetitle" value="Approval List" />
+    </definition>
+    <definition name="ApprovalListStage1" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="Approval List Stage 1" />
+        <put-attribute name="pagetitle" value="Approval List Stage 1" />
+    </definition>
+    <definition name="ApprovalListStage2" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="Approval List Stage 2" />
+        <put-attribute name="pagetitle" value="Approval List Stage 2" />
+    </definition>
+    <definition name="Refund" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/refundConfirmation.jsp"/>
+        <put-attribute name="title" value="Refund Confirmation" />
+        <put-attribute name="pagetitle" value="Refund Confirmation" />
+    </definition>
+    <definition name="Acknowledgement" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/acknowledgement.jsp"/>
+        <put-attribute name="title" value="Refund Confirmation" />
+        <put-attribute name="pagetitle" value="Refund Confirmation" />
+    </definition>
+    <definition name="Release" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/release.jsp"/>
+        <put-attribute name="title" value="Release a task" />
+        <put-attribute name="pagetitle" value="Release a task" />
+    </definition>
+    <definition name="AgentList" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="Agent List" />
+        <put-attribute name="pagetitle" value="Agent List" />
+    </definition>
+    <definition name="SupervisorList" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="Supervisor List" />
+        <put-attribute name="pagetitle" value="Supervisor List" />
+    </definition>
+    <definition name="ExceptionList" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approvalList.jsp"/>
+        <put-attribute name="title" value="Exception List" />
+        <put-attribute name="pagetitle" value="Exception List" />
+    </definition>
+    <definition name="AgentApproval" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approval.jsp"/>
+        <put-attribute name="title" value="Agent Approval" />
+        <put-attribute name="pagetitle" value="Agent Approval" />
+    </definition>
+    <definition name="FirstStageApproval" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/approval.jsp"/>
+        <put-attribute name="title" value="First Stage Approval" />
+        <put-attribute name="pagetitle" value="First Stage Approval" />
+    </definition>
+    <definition name="ConfirmExistingPaymentCardPayment" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/confirmExistingPaymentCardPayment.jsp"/>
+        <put-attribute name="title" value="Confirm Existing Payment Card Payment" />
+        <put-attribute name="pagetitle" value="Confirm Existing Payment Card Payment" />
+    </definition>
+    <definition name="BusPass" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/busPass.jsp"/>
+        <put-attribute name="title" value="Basket"/>
+    </definition>
+
+    <definition name="TravelCard" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/travelCard.jsp"/>
+        <put-attribute name="title" value="Basket"/>
+    </definition>
+    <definition name="AddUnattachedCard" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addUnattachedCard.jsp"/>
+        <put-attribute name="title" value="Add An Unattached Card"/>
+    </definition>
+    <definition name="System" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/system.jsp"/>
+        <put-attribute name="title" value="System Properties"/>
+    </definition>
+    <definition name="CardPreferences" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/cardPreferences.jsp"/>
+        <put-attribute name="title" value="Card Preferences"/>
+    </definition>
+    <definition name="TestHotlisting" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/testHotlisting.jsp"/>
+        <put-attribute name="title" value="Toggle card hotlisting"/>
+    </definition>
+    <definition name="AddUnlistedProduct" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addUnlistedProduct.jsp"/>
+        <put-attribute name="title" value="Add Unlisted Product"/>
+    </definition>
+    <definition name="AddCancelAndSurrenderUnlistedProduct" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addCancelAndSurrenderUnlistedProduct.jsp"/>
+        <put-attribute name="title" value="Add Unlisted Product"/>
+    </definition>
+    <definition name="CancelAndSurrender" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/cancelAndSurrender.jsp"/>
+        <put-attribute name="title" value="Cancel And Surrender Card"/>
+    </definition>
+    <definition name="ChoosePaymentCard" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/choosePaymentCard.jsp"/>
+    </definition>
+    <definition name="EnterPaymentCardDetails" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/enterPaymentCardDetails.jsp"/>
+    </definition>
+    <definition name="PaymentAccepted" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/paymentAccepted.jsp"/>
+    </definition>
+    <definition name="Content" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/content.jsp"/>
+    </definition>
+    <definition name="AddContent" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/addContent.jsp"/>
+    </definition>
+    <definition name="ManageAutoTopUp" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageAutoTopUp.jsp"/>
+    </definition>
+    <definition name="exportFile" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/exportFile.jsp"/>
+    </definition>
+    <definition name="ViewWorkflowItem" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/workflow/viewWorkflowItem.jsp"/>
+    </definition>
+    <definition name="agentLogSearch" extends="innovator-search-layout">
+        <put-attribute name="title" value="Agent Log-Search"/>
+        <put-attribute name="pagetitle" value="Agent Log-Search" />
+        <put-attribute name="main" value="/WEB-INF/jsp/agentLogSearch.jsp"/>
+    </definition>
+    <definition name="agentLogDetails" extends="innovator-search-layout">
+        <put-attribute name="title" value="Agent Log-Details"/>
+        <put-attribute name="pagetitle" value="Agent Log-Details" />
+        <put-attribute name="main" value="/WEB-INF/jsp/agentLogDetails.jsp"/>
+        
+    </definition>
+    <definition name="RefundSearch" extends="innovator-search-layout">
+        <put-attribute name="title" value="Refund Search"/>
+        <put-attribute name="pagename" value="refundsearch"/>
+        <put-attribute name="pagetitle" value="Refund Search" />
+        <put-attribute name="main" value="/WEB-INF/jsp/refundSearch.jsp"/>
+    </definition>
+    <definition name="RefundCase" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/viewRefundCase.jsp"/>
+        <put-attribute name="pagename" value="Refund Case"/>
+        <put-attribute name="pagetitle" value="Refund Case" />
+        <put-attribute name="title" value="Refund Case"/>
+    </definition>
+        <definition name="ConfirmExistingPaymentCardPayment" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/confirmExistingPaymentCardPayment.jsp"/>
+    </definition>
+    <definition name="InCompleteJourneys" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/incompleteJourneys.jsp"/>
+        <put-attribute name="title" value="Incomplete Journeys"/>
+    </definition>
+    <definition name="CompleteJourney" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/completeJourneyDetails.jsp"/>
+        <put-attribute name="title" value="Process Refund For Incomplete Journey"/>
+    </definition>
+    <definition name="TransferProduct" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/transferProduct.jsp"/>
+        <put-attribute name="title" value="TransferProduct"/>
+    </definition>
+     <definition name="TargetCards" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageTargetCards.jsp"/>
+    </definition>
+     <definition name="TransferAddUnattachedCard" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageAddUnattachedCard.jsp"/>
+    </definition>
+    <definition name="TransferSummary" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/transferSummary.jsp"/>
+        <put-attribute name="title" value="TransferSummary"/>
+    </definition>
+    <definition name="TransferProductsConfirmation" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/transferproductsconfirmation.jsp"/>
+        <put-attribute name="title" value="TransferProductsConfirmation"/>
+    </definition>
+    <definition name="TransferProductRefund" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageTransferProduct.jsp"/>
+    </definition>
+    <definition name="Fulfilment" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/fulfilment.jsp"/>
+        <put-attribute name="title" value="Fulfilment Home"/>
+    </definition>
+    <definition name="FulfilOrder" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/fulfilOrder.jsp"/>
+        <put-attribute name="title" value="Order Fulfilment Page"/>
+    </definition>
+    <definition name="FulfilOrderConfirmation" extends="innovator-main-layout">
+    	<put-attribute name="main" value="/WEB-INF/jsp/fulfilOrderConfirmation.jsp"/>
+    	<put-attribute name="title" value="Fulfil Order Confirmation"/>
+    </definition>
+    <definition name="FulfilOrderReceipt" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+    	<put-attribute name="main" value="/WEB-INF/jsp/fulfilOrderReceipt.jsp"/>
+    </definition>
+    <definition name="VerifySecurityQuestion" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/verifySecurityQuestion.jsp"/>
+    </definition>
+    <definition name="FulfilOrderReceiptConfirmation" template="/WEB-INF/tiles/resources/innovator-ajax-page.jsp">
+        <put-attribute name="main" value="/WEB-INF/jsp/manageFulfilOrderReceipt.jsp"/>
+    </definition>
+    <definition name="ResettleFailedAutoTopUp" extends="innovator-main-layout">
+        <put-attribute name="main" value="/WEB-INF/jsp/ResettleFailedAutoTopUp.jsp"/>
+        <put-attribute name="title" value="Resettle Failed AutoTopUp View Page"/>
+        <put-attribute name="pagetitle" value="Resettle Failed AutoTopUp View Page" />
+    </definition>
+</tiles-definitions>

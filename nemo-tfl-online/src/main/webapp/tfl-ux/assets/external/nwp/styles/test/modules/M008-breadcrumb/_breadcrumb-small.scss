@@ -1,0 +1,66 @@
+/**************************************************
+	A2 Breadcrumbs
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/A2+-+Breadcrumbs
+
+**************************************************/
+
+.breadcrumbs {
+  list-style: none outside none;
+  margin: 10px 0 0 -14px;
+  @extend %new-johnson;
+  padding-right: 14px;
+  li {
+    float: left;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    &.home {
+      a {
+        @extend %sprite-images;
+        @include svg-icon(4, 2, $force-auto-height: true);
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+  a {
+    color: $linkcolour;
+  }
+  a, .last-breadcrumb {
+    display: block;
+    padding: 4px 5px 3px;
+    margin-left: 14px;
+    background-color: $subtle-grey;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 32px;
+      background-size: 100% 100%;
+      top: 0;
+    }
+    &:before {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAA+CAYAAADatWDQAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMTJFN0MyNkU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMTJFN0MyN0U2RUExMUUyOTg1OUMxMTNEREFBMDlCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjFDODhDRjZCRTZFQTExRTI5ODU5QzExM0REQUEwOUJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjFDODhDRjZDRTZFQTExRTI5ODU5QzExM0REQUEwOUJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+d7DV6wAAAk1JREFUeNq02e9KwlAcxvHt4KsYRIGvAqFbCYqgm0iSondB0C0EQdC7SAy7iSASuohuIBB6JQzUiabM9TuywXGes/PvcXBQPNKXfdzZXIZxHGdBEJzQ6AX5NhgMVo/1ev2THo4D0Mbyxw6NSDLfopGgYw0aj+VJ2sPOeDyO0DG+XUrIWrPZLJnP5/CYjLNP45b2LsiyDB6TcbaXy2UvSRJ4bMVJR+GRjHOxWMBjfOtScINzNBp5capiKs4vH05WMSfjbPpwMs08lFMXg3Iyg/fAOJnh+zoyTtvFbho7LHNSvJ2mqRUns1DwXuzM8jNe46TnPzactjEvTuawNp05meOZZ+1SZMrpGuOcDzLOyWQCj/HtmsYG53Q6VXL6xFScdypO35iM81nF6Ruz4kTEjDlRMSNOVMyIExnTcqJjnPNexYmO8T3Yk92g0Ot/0Bh9NwnoFmxafp32bh5FUQqN8c+GgjXJ1EsYhjuwGF1iArrb+eVn/9LUOY0z2NHI+fKL5xWRxcLUgXixZSg+OgDeKPQuWQr7sJiG7xR2bhT4WlV8kJjA91HF5x2z4fOKafieoN9BNHy7sJjAd2PK5xQr8Q1N+ZxiBR89teKzjlXwXej4rGIiH42hbvF6xXK+V1c+41jF4jXmM4qp+OhItOIziqH4tDEVH+2VNV9lDM1XGavg67rwKWMaPq//hDMFXxPJJ40JfD0k30Zsm3xrMZFPvHTQ8waCby1W8NEf7yEWr2qr5b+79CXnPv6LBV9n36hgcROwWrzFDz7b2rN/AQYA/WvmH7gCu90AAAAASUVORK5CYII=);
+      right: 100%;
+    }
+    &:after {
+      background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAA+CAYAAADEfFBjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYxIDY0LjE0MDk0OSwgMjAxMC8xMi8wNy0xMDo1NzowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNS4xIE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMTJFN0MyQUU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMTJFN0MyQkU2RUExMUUyOTg1OUMxMTNEREFBMDlCQSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYxMkU3QzI4RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYxMkU3QzI5RTZFQTExRTI5ODU5QzExM0REQUEwOUJBIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+TIgkLgAAAZxJREFUeNqsmEFKxDAUhjOPLmfjolvBC3iIAb2HIIo7wUMIgjcY0UsIA3MYQXBVaBlasHTR+iKtpGOS5iX/g9AwKR/5/iaZ0lVZloNS6pLbXgmqKArnGI3XLbe1AtUEPeX2jIbquuF2gYbCYjiGQmIgy286hg0aqus1JQYXNCkG8oxFx0AL41ExLEGjYqCAe8QxUOB9ok0RCj2TxEACq+AYSPgMgmKQQoNioIi1vRgDRe7EbZ7nazRUx/CEhuq649lu0FBnDKlQawypUGsMCOi/GFDQWQwo6CyG1fguhaoPbufImU4xPKKhahiGkwwJ7PteVVX1DZ1pXdcanMGgbduqruu+uPtAKO2maXT3lltJKG1+QG/cfYcsflMbsqMM7WutDYEa2jvIKWXTToK6tJOgLu1oqKF9D/k3PdI+QKCTNh/GO8gbSoi2CGpq8ywPEOio/bKkHQz1LfIoqFQ7CCrVXoTGaHuhsdpeaKy2E5qibYUa2lcx2laoob1XCUVI7RkUpT2DorSnysZvdp8I7T/oeP09yX0fBSX1I8AAn/r9FKMSRBsAAAAASUVORK5CYII=);
+      right: -11px;
+      width: 11px;
+    }
+
+  }
+
+}
+
+.breadcrumb-container {
+  overflow-x: hidden;
+  &.scrolling {
+    overflow-x: scroll;
+  }
+}

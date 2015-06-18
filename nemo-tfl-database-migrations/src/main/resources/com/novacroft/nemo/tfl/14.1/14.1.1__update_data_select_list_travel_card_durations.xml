@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+        
+        <property name="now" value="SYSDATE" dbms="oracle"/>
+    <changeSet author="Novacroft" id="14.1.1">
+        <sql splitStatements="false">
+            <![CDATA[
+begin
+   
+   select_list_installer.un_install_option('TravelCardDurations', '7 Day');
+   select_list_installer.un_install_option('TravelCardDurations', 'Monthly');
+   select_list_installer.un_install_option('TravelCardDurations', '3 Month');
+   select_list_installer.un_install_option('TravelCardDurations', '6 Month');
+   select_list_installer.un_install_option('TravelCardDurations', 'Annual');
+   select_list_installer.un_install_option('TravelCardDurations', 'Other');
+   
+   select_list_installer.install_option('TravelCardDurations', '7Day', 10);
+   select_list_installer.install_option('TravelCardDurations', '1Month', 20);
+   select_list_installer.install_option('TravelCardDurations', '3Month', 30);
+   select_list_installer.install_option('TravelCardDurations', '6Month', 40);
+   select_list_installer.install_option('TravelCardDurations', 'Annual', 50);
+   select_list_installer.install_option('TravelCardDurations', 'Unknown', 60);
+   
+   content_installer.un_install('TravelCardDurations.7 Day.option', '7 Day Travelcard');
+   content_installer.un_install('TravelCardDurations.Monthly.option', 'Month Travelcard');
+   content_installer.un_install('TravelCardDurations.3 Month.option', '3 Month Travelcard');
+   content_installer.un_install('TravelCardDurations.6 Month.option', '6 Month Travelcard');
+   content_installer.un_install('TravelCardDurations.Annual.option', 'Annual Travelcard');
+   content_installer.un_install('TravelCardDurations.Other.option', 'Odd Period Travelcard');
+   
+end;
+]]>
+        </sql>
+        
+        
+    </changeSet>
+</databaseChangeLog>

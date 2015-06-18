@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.08">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('Checkout.breadcrumb.link', 'Checkout');
+				  content_installer.install('Payment.breadcrumb.link', 'Payment');
+				  content_installer.install('WebcreditPayment.breadcrumb.link', 'Payment With Webcredit');
+				  content_installer.install('PaymentCardPayment.breadcrumb.link', 'Payment With Card');
+				  content_installer.install('PaymentIncomplete.breadcrumb.link', 'Incomplete Payment');
+				  content_installer.install('PaymentCancelled.breadcrumb.link', 'Payment Cancelled');				
+				end;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

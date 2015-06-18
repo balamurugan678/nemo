@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>content.js Unit Tests</title>
+    <link rel="stylesheet" href="../resources/qunit-1.12.0.css">
+</head>
+<body>
+
+<div id="qunit"></div>
+<div id="qunit-fixture"></div>
+
+<script src="../resources/qunit-1.12.0.js"></script>
+<script src="../../main/webapp/scripts/jquery.min.js"></script>
+<script src="../../main/webapp/scripts/content.js"></script>
+<script src="../../main/webapp/scripts/contentManagement.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var BRITISH_LOCALE = "en_GB";
+        var FRENCH_LOCALE = "fr_FR";
+        var DUMMY_LOCALE = "xx_XX";
+
+        var TEST_CODE_1 = "test-code-1";
+        var TEST_CODE_2 = "test-code-2";
+        var TEST_CODE_3 = "test-code-3";
+        var TEST_CODE_4 = "test-code-4";
+        var TEST_CODE_DUMMY = "test-code-xx";
+
+        var TEST_MESSAGE_1_GB = "test-message-1-en_GB";
+        var TEST_MESSAGE_2_GB = "test-message-2-en_GB";
+        var TEST_MESSAGE_3_GB = "test-message-3-en_GB";
+        var TEST_MESSAGE_4_GB = "test-message-4-en_GB {0} {0} {1}";
+
+        var TEST_MESSAGE_1_FR = "test-message-1-fr_FR";
+        var TEST_MESSAGE_2_FR = "test-message-2-fr_FR";
+
+        content = {"localeMessages": [
+            {"locale": BRITISH_LOCALE, "messages": [
+                {"code": TEST_CODE_1, "message": TEST_MESSAGE_1_GB},
+                {"code": TEST_CODE_2, "message": TEST_MESSAGE_2_GB},
+                {"code": TEST_CODE_3, "message": TEST_MESSAGE_3_GB},
+                {"code": TEST_CODE_4, "message": TEST_MESSAGE_4_GB}
+            ]},
+            {"locale": FRENCH_LOCALE, "messages": [
+                {"code": TEST_CODE_1, "message": TEST_MESSAGE_1_FR},
+                {"code": TEST_CODE_2, "message": TEST_MESSAGE_2_FR}
+            ]}
+        ], "userLocale": FRENCH_LOCALE, "fallBackLocale": BRITISH_LOCALE};
+
+        module("findAllMessagesForLocale");
+        test("should return all messages for valid locale", function () {
+            expect(1);
+            var result = findAllMessagesForLocale(content, BRITISH_LOCALE);
+            equal(result.locale, content.localeMessages[0].locale);
+        });
+        test("should return undefined for non existent locale", function () {
+            expect(1);
+            var result = findAllMessagesForLocale(content, DUMMY_LOCALE);
+            equal(result, undefined);
+        });
+
+        module("findMessageInLocale");
+        test("should return message within locale", function () {
+            expect(1);
+            var result = findMessageInLocale(content.localeMessages[0], TEST_CODE_2);
+            equal(result, TEST_MESSAGE_2_GB);
+        });
+
+        module("findMessage");
+        test("should return message for user locale", function () {
+            expect(1);
+            var result = findMessage(content, TEST_CODE_2, FRENCH_LOCALE, BRITISH_LOCALE);
+            equal(result, TEST_MESSAGE_2_FR);
+        });
+        test("should return message for fall back locale", function () {
+            expect(1);
+            var result = findMessage(content, TEST_CODE_3, FRENCH_LOCALE, BRITISH_LOCALE);
+            equal(result, TEST_MESSAGE_3_GB);
+        });
+        test("should return blank for non existent code", function () {
+            expect(1);
+            var result = findMessage(content, TEST_CODE_DUMMY, FRENCH_LOCALE, BRITISH_LOCALE);
+            equal(result, "");
+        });
+
+        module("applyMessageArguments");
+        test("should return message with no arguments", function () {
+            expect(1);
+            var result = applyMessageArguments("test 1")
+            equal(result, result);
+        });
+        test("should return message with empty arguments", function () {
+            expect(1);
+            var result = applyMessageArguments("test 2", [])
+            equal(result, result);
+        });
+        test("should return message with one argument", function () {
+            expect(1);
+            var result = applyMessageArguments("test {0}", ["three"])
+            equal(result, "test three");
+        });
+        test("should return message with duplicate arguments", function () {
+            expect(1);
+            var result = applyMessageArguments("test {0} {0}", ["four"])
+            equal(result, "test four four");
+        });
+        test("should return message with multiple arguments", function () {
+            expect(1);
+            var result = applyMessageArguments("test {0} {1}", ["five", "six"])
+            equal(result, "test five six");
+        });
+
+        module("getUserLocale");
+        test("should lookup user locale", function () {
+            expect(1);
+            equal(getUserLocale(), FRENCH_LOCALE);
+        });
+
+        module("getFallBackLocale");
+        test("should lookup fall back locale", function () {
+            expect(1);
+            equal(getFallBackLocale(), BRITISH_LOCALE);
+        });
+
+        module("getMessage");
+        test("should get message with no arguments", function () {
+            expect(1);
+            equal(getMessage(TEST_CODE_1), TEST_MESSAGE_1_FR);
+        });
+        test("should get message with arguments", function () {
+            expect(1);
+            equal(getMessage(TEST_CODE_4, [getMessage(TEST_CODE_2), getMessage(TEST_CODE_3)]), "test-message-4-en_GB test-message-2-fr_FR test-message-2-fr_FR test-message-3-en_GB");
+        });
+    });
+</script>
+</body>
+</html>

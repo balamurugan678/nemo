@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ctx="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:oxm="http://www.springframework.org/schema/oxm"
+       xmlns:sec="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+      http://www.springframework.org/schema/oxm http://www.springframework.org/schema/oxm/spring-oxm.xsd
+      http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd"
+       profile="nemo-tfl-common-cyber-source-service-test">
+
+    <!-- Environment specific configuration -->
+    <ctx:property-placeholder location="classpath:nemo-tfl-common-test.properties"/>
+
+    <bean id="applicationProperties"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="location">
+            <value>classpath:nemo-tfl-common-test.properties</value>
+        </property>
+    </bean>
+
+    <ctx:annotation-config/>
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.common.application_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.data_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.data_access"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.validator"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.common.converter"/>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.application_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.data_service"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.data_access"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.domain"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.form_validator"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.rules_validator"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.controller"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.converter"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.security"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.common.service_access"/>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.online.controller"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driverClassName}"/>
+        <property name="url" value="${jdbc.url}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="packagesToScan">
+            <list>
+                <value>com.novacroft.nemo.tfl.common.data_access</value>
+                <value>com.novacroft.nemo.tfl.common.domain</value>
+                <value>com.novacroft.nemo.common.data_access</value>
+                <value>com.novacroft.nemo.common.domain</value>
+            </list>
+        </property>
+        <property name="dataSource" ref="dataSource"/>
+        <property name="mappingResources">
+            <list>
+                <value>Content.hbm.xml</value>
+                <value>WebAccount.hbm.xml</value>
+                <value>SelectList.hbm.xml</value>
+                <value>SelectListOption.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.cache.use_second_level_cache">false</prop>
+                <prop key="hibernate.cache.use_query_cache">false</prop>
+                <prop key="hibernate.generate_statistics">false</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id="contentConverter"
+          class="com.novacroft.nemo.common.converter.impl.ContentConverterImpl"/>
+
+    <bean id="contentDAO" class="com.novacroft.nemo.common.data_access.ContentDAO">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="contentDataService"
+          class="com.novacroft.nemo.common.data_service.ContentDataServiceImpl">
+        <property name="converter" ref="contentConverter"/>
+        <property name="dao" ref="contentDAO"/>
+    </bean>
+
+    <bean id="messageSource"
+          class="com.novacroft.nemo.common.support.ReloadableDatabaseMessageSource"
+          init-method="initialiseCache">
+        <property name="dataService" ref="contentDataService"/>
+        <property name="useCache" value="true"/>
+        <property name="useCodeForNullContent" value="true"/>
+        <property name="cacheRefreshIntervalInSeconds" value="60"/>
+    </bean>
+
+    <bean id="pafDataService"
+          class="com.novacroft.nemo.common.data_service.PAFDataServiceImpl">
+        <property name="searchServiceEndpoint" value="${paf.search.endpoint}"/>
+    </bean>
+
+    <bean id="systemParameterService"
+          class="com.novacroft.nemo.common.application_service.impl.SystemParameterServiceImpl">
+        <property name="systemParameterDataService" ref="systemParameterDataService"/>
+        <property name="useCache" value="true"/>
+        <property name="cacheRefreshIntervalInSeconds" value="60"/>
+    </bean>
+
+    <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+        <property name="host" value="mail.novacroft.com"/>
+    </bean>
+
+    <bean id="oysterJourneyJaxb2Marshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+        <property name="contextPath" value="com.novacroft.tfl.web_service.model.oyster_journey_history"/>
+    </bean>
+
+    <bean id="messageFactory" class="org.springframework.ws.soap.saaj.SaajSoapMessageFactory"/>
+
+    <bean id="oysterJourneyWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate" scope="prototype">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.HttpComponentsMessageSender">
+                <property name="credentials">
+                    <bean class="org.apache.http.auth.UsernamePasswordCredentials">
+                        <constructor-arg value="${oyster.services.username}:${oyster.services.password}"/>
+                    </bean>
+                </property>
+            </bean>
+        </property>
+        <property name="defaultUri" value="${oyster.services.endpoint}"/>
+        <property name="marshaller" ref="oysterJourneyJaxb2Marshaller"/>
+        <property name="unmarshaller" ref="oysterJourneyJaxb2Marshaller"/>
+    </bean>
+
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <set>
+                <bean class="com.novacroft.nemo.tfl.common.formatter.PenceAnnotationFormatterFactory"/>
+            </set>
+        </property>
+    </bean>
+
+    <oxm:jaxb2-marshaller id="cyberSourceTransactionMarshaller">
+        <oxm:class-to-be-bound name="com.novacroft.cyber_source.web_service.model.transaction.RequestMessage"/>
+        <oxm:class-to-be-bound name="com.novacroft.cyber_source.web_service.model.transaction.ReplyMessage"/>
+    </oxm:jaxb2-marshaller>
+
+    <bean id="cyberSourceTransactionWebServiceTemplate" class="org.springframework.ws.client.core.WebServiceTemplate"
+          scope="prototype">
+        <constructor-arg ref="messageFactory"/>
+        <property name="messageSender">
+            <bean class="org.springframework.ws.transport.http.HttpComponentsMessageSender"/>
+        </property>
+        <property name="defaultUri" value="${CyberSource.soap.url}"/>
+        <property name="marshaller" ref="cyberSourceTransactionMarshaller"/>
+        <property name="unmarshaller" ref="cyberSourceTransactionMarshaller"/>
+        <property name="interceptors">
+            <list>
+                <bean class="org.springframework.ws.soap.security.wss4j.Wss4jSecurityInterceptor">
+                    <property name="securementActions" value="UsernameToken"/>
+                    <property name="securementUsername" value="${CyberSource.soap.merchantId}"/>
+                    <property name="securementPassword" value="${CyberSource.soap.password}"/>
+                    <property name="securementPasswordType" value="PasswordText"/>
+                    <property name="securementMustUnderstand" value="true"/>
+                </bean>
+                <bean class="com.novacroft.nemo.tfl.common.service_access.impl.PayloadInterceptor" scope="prototype"/>
+            </list>
+        </property>
+    </bean>
+
+    <sec:authentication-manager>
+        <sec:authentication-provider ref="authenticationProvider"/>
+    </sec:authentication-manager>
+
+    <bean name="passwordEncoder" class="com.novacroft.nemo.tfl.common.security.TflPasswordEncoder"/>
+
+    <bean name="userDetailsService" class="com.novacroft.nemo.tfl.common.security.TflUserDetailsService">
+        <property name="dataService" ref="customerDataService"/>
+    </bean>
+
+    <bean name="authenticationProvider" class="com.novacroft.nemo.tfl.common.security.TflAuthenticationProvider">
+        <property name="passwordEncoder" ref="passwordEncoder"/>
+        <property name="userDetailsService" ref="userDetailsService"/>
+    </bean>
+
+</beans>

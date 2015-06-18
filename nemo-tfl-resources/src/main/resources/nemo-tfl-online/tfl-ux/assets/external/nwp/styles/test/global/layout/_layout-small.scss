@@ -1,0 +1,186 @@
+.main {
+  @extend %c12;
+}
+
+.aside {
+  @extend %c12;
+}
+
+.equal-weight {
+  > div {
+    @extend %c12;
+  }
+}
+
+.module-grid {
+  > div {
+    margin: 0 0 20px;
+    .teaser {
+      padding: 10px 40px 10px 10px;
+      background: $darker-subtle-grey;
+      position: relative;
+      @extend %transparent-grey-bottom-border;
+      p {
+        margin-bottom: 0;
+      }
+      h3 {
+        margin-bottom: 5px;
+      }
+      &:after {
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 1);
+        content: "";
+        position: absolute;
+        top: 50%;
+        margin-top: -16px;
+        right: 5px;
+      }
+    }
+  }
+}
+
+#main-hero {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-container {
+  background: $darker-subtle-grey;
+  padding-top: 33px;
+  background-size: cover;
+  background-position: 50% 50%;
+  margin-bottom: 27px;
+  background-repeat: no-repeat;
+}
+
+.section-overview {
+  background: $darker-subtle-grey;
+  padding: 20px;
+  margin-bottom: 10px;
+  h2 {
+    margin-bottom: 10px;
+  }
+  .main, .aside {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.two-column-divided {
+  @include clearfix;
+  margin-bottom: 20px;
+}
+
+#fullscreen-stage {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  //width: 100%;
+  //height: 100%;
+  right: 0;
+  bottom: 0;
+  display: none;
+  min-width: 300px;
+  .stage-active & {
+    display: block;
+    z-index: 1000;
+  }
+  .panzoom-element {
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.panzoom-element {
+  &.width {
+    min-width: 100%;
+  }
+  &.height {
+    min-height: 100%;
+  }
+}
+
+.panzoom-wrapper {
+  height: 100%;
+}
+
+body.stage-active {
+  overflow: scroll;
+  &.panzoom {
+    overflow: hidden;
+  }
+  #container {
+    display: none;
+  }
+  .map-sliver {
+    height: 100%;
+    border-bottom: 0;
+  }
+}
+
+.map-button {
+  @extend %replica-map-button;
+  display: none;
+  .stage-active &,
+  .breakpoint-Large & {
+    display: block;
+  }
+}
+
+.fullscreen-stage-button {
+  @extend %replica-map-button;
+}
+
+#open-fullscreen-stage {
+  top: 50%;
+  margin-top: -20px;
+  right: 10px;
+  border-bottom-width: 1px;
+  height: 40px;
+  .stage-active &,
+  .loading + .sliver-overlay & {
+    display: none;
+  }
+}
+
+#close-fullscreen-stage {
+  top: 10px;
+  right: 10px;
+  display: block;
+  z-index: 1001;
+  display: none;
+  .stage-active & {
+    display: block;
+  }
+  .showing-map-panel & {
+    display: none;
+  }
+
+}
+
+#zoom-in-fullscreen-stage {
+  top: 10px;
+  left: 10px;
+  display: block;
+  display: none;
+  .stage-active & {
+    display: block;
+  }
+  .active-map .no-disruptions-on-map & {
+    display: none;
+  }
+}
+
+#zoom-out-fullscreen-stage {
+  top: 50px;
+  left: 10px;
+  display: block;
+  display: none;
+  .stage-active & {
+    display: block;
+  }
+  .active-map .no-disruptions-on-map & {
+    display: none;
+  }
+}

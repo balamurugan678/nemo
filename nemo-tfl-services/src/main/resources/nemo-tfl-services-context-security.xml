@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans
+        xmlns:beans="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.springframework.org/schema/security"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+    <http use-expressions="true" create-session="stateless">
+        <intercept-url pattern="/" access="hasRole('ROLE_USER')"/>
+        <http-basic/>
+    </http>
+
+    <authentication-manager>
+        <authentication-provider ref="authenticationProvider"/>
+    </authentication-manager>
+
+    <beans:bean name="passwordEncoder" class="com.novacroft.nemo.tfl.common.security.TflPasswordEncoder"/>
+
+    <beans:bean name="authenticationProvider" class="com.novacroft.nemo.tfl.common.security.TflAuthenticationProvider">
+        <beans:property name="passwordEncoder" ref="passwordEncoder"/>
+        <beans:property name="userDetailsService" ref="userDetailsService"/>
+    </beans:bean>
+
+    <beans:bean name="userDetailsService" class="com.novacroft.nemo.tfl.common.security.TflWebServicesUserDetailsService">
+        <beans:property name="dataService" ref="externalUserDataService"/>
+    </beans:bean>
+
+</beans:beans>

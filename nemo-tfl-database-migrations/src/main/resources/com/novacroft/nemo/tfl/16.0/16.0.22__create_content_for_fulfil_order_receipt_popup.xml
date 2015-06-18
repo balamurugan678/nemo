@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+	<changeSet author="Novacroft" id="16.0.22">
+		<sql splitStatements="false">
+            <![CDATA[
+				begin
+				  content_installer.install('FulfilOrderReceipt.orderSection.heading', 'Order information');
+				  content_installer.install('FulfilOrderReceipt.orderNumber.label', 'Order number');
+				  content_installer.install('FulfilOrderReceipt.orderDate.label', 'Order date');
+				  content_installer.install('FulfilOrderReceipt.customer.heading', 'Customer details');
+				  content_installer.install('FulfilOrderReceipt.productDetails.heading', 'Product details');
+				  content_installer.install('FulfilOrderReceipt.travelCard.tableheader', 'Product name');
+				  content_installer.install('FulfilOrderReceipt.payAsYouGoItem.label', 'Pay as you go credit');
+				  content_installer.install('FulfilOrderReceipt.autoTopUp.label', 'Auto top up');
+				  content_installer.install('FulfilOrderReceipt.cardDepositPrice.label', 'Card deposit');
+				  content_installer.install('FulfilOrderReceipt.delivery.label', 'Delivery');
+				  content_installer.install('FulfilOrderReceipt.webCreditDiscount.label', 'Web credit discount');
+				  content_installer.install('FulfilOrderReceipt.thanksMessage.label', 'Thank you for purchasing through Oyster online. Please keep this receipt for your records.');
+				  content_installer.install('FulfilOrderReceipt.quoteOysterCardNumber.label', 'You may be required to quote your Oyster card number in the future.');
+				  content_installer.install('FulfilOrderReceipt.journeyCall.label', 'Purchases made through Oyster online are fulfilled by Journeycall on behalf of Transport for London');
+				  content_installer.install('FulfilOrderReceipt.tflOysterCard.label', 'Tfl Oyster Card');
+				  content_installer.install('FulfilOrderReceipt.journeyCallAddress.label', 'PO Box 11626, LAURENCEKIRK, AB30 1ZP');
+				  content_installer.install('FulfilOrderReceipt.totalCharged.label', 'Total charged to bank card');
+				  content_installer.install('FulfilOrderReceipt.firstClass.label', 'First class delivery to');
+				  content_installer.install('FulfilOrderReceipt.recordedDelivery.label', 'Recorded delivery to');
+				  
+				end;
+            ]]>
+		</sql>
+	</changeSet>
+</databaseChangeLog>

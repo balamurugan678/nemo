@@ -1,0 +1,85 @@
+<div class='map-options-dialog'>
+	<div class='map-options-dialog-container'>
+		<div class='map-options-dialog-background'></div>
+		<div class='map-options-dialog-inner'>
+      <div class='map-options-title'>
+        <div class='map-options-hamburger'></div>
+        <h1 class='map-options-title-text'>Map options</h1>
+        <div class='map-options-close-button'></div>
+      </div>
+      <div class='map-options-dialog-scroll'>
+        <div class='map-options-dialog-content'>
+          
+          <div class='map-options-map-type-selector-container'>
+            <div class='map-options-map-type-selector'>
+              <% $.each(mapTypeOptions, function (_, mapTypeOption) { %>
+              <div class='map-options-map-type-selector-option' data-maptype='<%= mapTypeOption.value %>'>
+                <div class='map-options-map-type-selector-option-<%= mapTypeOption.value %>'></div>
+                <div class='map-options-map-type-selector-name'>
+                  <%= mapTypeOption.name %>
+                </div>
+                <div class='map-options-map-type-selector-toggle'></div>
+              </div>
+              <% }); %>
+            </div>
+          </div>
+
+          <% if (optionalLayerColumns.length > 0) { %>            
+            <div class='map-options-layers'>
+              <% $.each(optionalLayerColumns, function (columnIndex, optionalLayers) {%>
+                <div class='map-options-column-<%= columnIndex + 1%>-of-<%= optionalLayerColumns.length %>'>
+                  <% $.each(optionalLayers, function (_, layer) { %>
+                    <div class='map-options-layer-container' data-name='<%= layer.name %>'>
+                    <% if (layer.filters) { %>
+                      <% $.each(layer.filters, function (_, filter) { %>
+                        <% $.each(filter.filterValues, function (_, filterValue) { %>
+                        <div  class='map-options-layer-filter' data-name='<%= layer.name %>' data-filtername='<%= filter.name %>' data-filtervaluename='<%= filterValue.name %>'>
+                          <div class='map-options-layer-icon map-options-layer-icon-<%= filterValue.name.toLowerCase() %>'></div>
+                          <%= filterValue.description %>
+                          <div class='map-options-layer-filter-toggle'></div>
+                        </div>
+                        <% }); %>
+                      <% }); %>
+                    <% } else { %>
+                      <div class='map-options-layer' data-name='<%= layer.name %>'>
+                        <div class='map-options-layer-inner'>
+                          <div class='map-options-layer-icon map-options-layer-icon-<%= layer.classSuffix %>'>
+                          </div>
+                          <%= layer.name %>
+                          <div class='map-options-layer-toggle'></div>
+                        </div>
+                      </div>
+                    <% } %>
+                    </div>
+                  <% }); %>
+                </div>
+              <% }); %>
+            </div>
+          <% } %>
+          
+          <% if (layerKeyColumns[0].length > 0) { %>
+            <div class='map-options-key'>
+              <h1>Map Key</h1>
+                <% $.each(layerKeyColumns, function (columnIndex, layerKey) {%>
+                <div class='map-options-column-<%= columnIndex + 1%>-of-<%= layerKeyColumns.length %>'>
+                  <% $.each(layerKey, function (_, layerKeyItem) { %>
+                    <div class='map-options-key-item'>
+                      <% if(layerKeyItem.iconUrl) {%>
+                        <img src='<%= layerKeyItem.iconUrl %>' />
+                      <% } else { %>
+                        <div class='map-options-key-square' style='background-color:<%= layerKeyItem.color %>;'></div>
+                      <% } %>
+                      <%= layerKeyItem.name %>
+                    </div>
+                  <% }); %>
+                  </div>
+                <% }); %>
+              
+            </div>
+          <% } %>
+            
+        </div>
+      </div>
+    </div>
+	</div>
+</div>

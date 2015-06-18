@@ -1,0 +1,3099 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: arial;
+    font-size: 15px
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: bottom;
+    font: inherit;
+    font-size: 100%;
+    line-height: 153.333%
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+    padding: 0;
+    margin: 0
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse
+}
+
+.clearfix:after {
+    display: block;
+    visibility: hidden;
+    clear: both;
+    height: 0;
+    content: " ";
+    font-size: 0
+}
+
+* html .clearfix {
+    zoom: 1
+}
+
+*:first-child + html .clearfix {
+    zoom: 1
+}
+
+.hidden, .icon-replacement-text {
+    display: none
+}
+
+.hide-text {
+    overflow: hidden;
+    text-indent: 200%;
+    white-space: nowrap;
+    *display: block
+}
+
+.bold {
+    font-weight: bold
+}
+
+@media (max-width: 400px) {
+    @-ms-viewport {
+        width: device-width
+    }
+}
+
+@-o-viewport {
+    width: device-width
+}
+
+@-moz-viewport {
+    width: device-width
+}
+
+@-webkit-viewport {
+    width: device-width
+}
+
+input[type=text]::-ms-clear {
+    display: none
+}
+
+.vertical-centre:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle
+}
+
+.vertical-centre > .centre-child {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle
+}
+
+input[type="text"], input[type='number'] {
+    -webkit-box-shadow: inset 0px 3px 0px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0px 3px 0px 0 rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    height: 40px;
+    border: 1px solid #ccc
+}
+
+.extra-nav {
+    font-family: "New Johnson";
+    font-size: 16px
+}
+
+h1, h2, h3, .header-two, .header-three, .navigation-style-1 .item-title {
+    font-family: "New Johnson Bold";
+    font-size: 18px
+}
+
+.section-style, h1.signing, .section-landing-container h1, .headline, .hero-headline, .MOL-logo-dropdown .mayor-of-london-logo, .dropdown-button .mayor-of-london-logo, .MOL-logo-dropdown .mol-gla, .dropdown-button .mol-gla {
+    font-family: "NJ Signing";
+    text-transform: uppercase;
+    letter-spacing: -0.045em
+}
+
+.module-grid > div .teaser, .grey-box {
+    -webkit-background-clip: padding;
+    -moz-background-clip: padding;
+    background-clip: padding-box
+}
+
+.module-grid > div .teaser, .grey-box {
+    border-bottom: 3px solid #ccc;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2)
+}
+
+.cookie-policy-button {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 5.577%
+}
+
+#cookie-policy-text {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 86.747%
+}
+
+.main, .aside, .equal-weight > div {
+    float: left;
+    margin: 0 0 0 2.54%;
+    width: 94.864%
+}
+
+.visually-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0
+}
+
+.collapsible-menu a:hover, .collapsible-menu a:focus, .navigation-style-1 .item-title:hover, .navigation-style-1 .item-title:focus, .navigation-style-1 .selected .item-title:hover, .navigation-style-1 .selected .item-title:focus, .top-row-extras a:hover, .top-row-extras a:focus, .extra-nav .extras a:hover, .extra-nav .extras a:focus, #footer .info-for-link:focus h2.heading, #footer .info-for-link:hover h2.heading, .for-dropdown .links-list#gla-list li:hover, .for-dropdown .links-list#gla-list li:focus, .for-dropdown .links-list#gla-list li a:hover, .for-dropdown .links-list#gla-list li a:focus, .for-dropdown a:hover, .for-dropdown a:focus, .for-dropdown .datepicker-dropdown .fc-row .highlighted-day a:hover, .for-dropdown .datepicker-dropdown .fc-row .highlighted-day a:focus {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    -ms-transition: none;
+    transition: none
+}
+
+th, td, .top-row .logo {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box
+}
+
+.module-grid > div .teaser:after, p a.external-link:after, .remove-content-container .remove-content, .plain-button.external-link:after, .teaser-external-link a .text-link:after, .text-external-link:after, .info-message.with-link:after, .icon.bicycle-icon, .icon.bicycle-easy-icon .icon.cycle-icon, .icon.cycle-easy-icon, .search-icon, .search-icon-black, .switch-directions-icon, .expand-map-icon, .facebook-icon, .twitter-icon, .bicycle-icon, .cycle-icon, .bicycle-easy-icon, .cycle-easy-icon, .bus-icon, .replacement-bus-icon, .train-icon, .national-rail-icon, .ferry-icon, .river-bus-icon, .river-icon, .river-tour-icon, .oyster-icon, .dlr-icon, .docklands-icon, .docklands-light-railway-icon, .tram-icon, .cablecar-icon, .cable-car-icon, .left-arrow, .right-arrow, .down-arrow, .down-triangle, .plus-icon-blue, .down-icon-blue, .minus-icon-blue, .plus-icon-greenblue, .disruption-icon, .up-stairs, .toilets-icon, .toilets-disabled-icon, .down-stairs, .pram-icon, .down-lift, .up-escalator, .walking-access-icon, .wheelchair-icon, .down-escalator, .luggage-icon, .headphones-icon, .avoid-zone-1-icon, .disrupted .mode-icon:before, .tube-icon, .overground-icon, .streets-icon, .coach-icon, .poi-icon, .pointofinterest-icon, .street-icon, .plane-icon, .mail-icon, .favourite-icon, .email-icon, .phone-icon, .small-disrupted-icon, .tube-station-icon, .national-rail-station-icon, .overground-station-icon, .dlr-station-icon, .docklands-station-icon, .docklands-light-railway-station-icon, .tram-station-icon, .coach-station-icon, .river-bus-station-icon, .bus-station-icon, .cable-car-station-icon, .taxi-rank-icon, .minicab-office-icon, .bus-stop-icon, .blank-bus-stop-icon, .bch-docking-station-icon, .nearby-icon, .ticket-halls-icon, .gates-icon, .photo-booths-icon, .cash-machines-icon, .car-park-icon, .help-points-icon, .bridge-icon, .waiting-room-icon, .wifi-icon, .icon-info-interchange, .icon-info-full, .icon-info-none, .icon-info-partial, .white-pram-icon, .white-wheelchair-icon, .info-icon, .secondary-plan-journey-icon, .secondary-journey-from-icon, .secondary-journey-to-icon, .select-icon, .nearby-icon-white, .menu-icon-alt, .menu-icon-blue, .menu-icon-white, .tick-icon-alt, .bicycle-moderate-icon, .cycle-moderate-icon, .bicycle-hard-icon, .cycle-hard-icon, .print-icon, .selected .icon.bicycle-icon, .selected .icon.bicycle-easy-icon, .selected .icon.cycle-icon, .selected .icon.cycle-easy-icon, .selected.icon.bicycle-icon, .selected.icon.bicycle-easy-icon, .selected.icon.cycle-icon, .selected.icon.cycle-easy-icon, .link-accordion-icon:after, .no-letter:after, .disrupted .circle-icon:before, .top-row-extras #search-button, #footer h2.heading:before, #footer .info-for a:after, #footer .expanded h2.heading:before, .languages-footer a:after, .for-dropdown .dropdown-button.gla-dropdown:after, .for-dropdown .dropdown-button.dropdown-closed:after, .for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after, .for-dropdown .dropdown-button:after, .for-dropdown .links-list#gla-list li a:after, .arrow-forward:after, .icon-left.cycle:before, .icon-left.walking:before, .icon.walking-icon, .footpaths-icon, .footpath-icon, .walking-icon, .level-walkway, .selected .icon.walking-icon, .selected.icon.walking-icon, .close-icon, .close3-icon, .share-icon, .top-row .main-roundel, .top-row-extras .login-icon, .top-row-extras .expand, .top-row-extras .collapse, .top-row-extras .search-icon, .more .arrow, #footer .footer-links .languages {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9
+}
+
+.body-cms-preview .module-grid > div .teaser:after, .module-grid > div .body-cms-preview .teaser:after, .body-cms-preview p a.external-link:after, p .body-cms-preview a.external-link:after, .body-cms-preview .remove-content-container .remove-content, .remove-content-container .body-cms-preview .remove-content, .body-cms-preview .plain-button.external-link:after, .body-cms-preview .teaser-external-link a .text-link:after, .teaser-external-link a .body-cms-preview .text-link:after, .body-cms-preview .text-external-link:after, .body-cms-preview .info-message.with-link:after, .body-cms-preview .icon.bicycle-icon, .body-cms-preview .icon.bicycle-easy-icon .icon.cycle-icon, .icon.bicycle-easy-icon .body-cms-preview .icon.cycle-icon, .body-cms-preview .icon.cycle-easy-icon, .body-cms-preview .search-icon, .body-cms-preview .search-icon-black, .body-cms-preview .switch-directions-icon, .body-cms-preview .expand-map-icon, .body-cms-preview .facebook-icon, .body-cms-preview .twitter-icon, .body-cms-preview .bicycle-icon, .body-cms-preview .cycle-icon, .body-cms-preview .bicycle-easy-icon, .body-cms-preview .cycle-easy-icon, .body-cms-preview .bus-icon, .body-cms-preview .replacement-bus-icon, .body-cms-preview .train-icon, .body-cms-preview .national-rail-icon, .body-cms-preview .ferry-icon, .body-cms-preview .river-bus-icon, .body-cms-preview .river-icon, .body-cms-preview .river-tour-icon, .body-cms-preview .oyster-icon, .body-cms-preview .dlr-icon, .body-cms-preview .docklands-icon, .body-cms-preview .docklands-light-railway-icon, .body-cms-preview .tram-icon, .body-cms-preview .cablecar-icon, .body-cms-preview .cable-car-icon, .body-cms-preview .left-arrow, .body-cms-preview .right-arrow, .body-cms-preview .down-arrow, .body-cms-preview .down-triangle, .body-cms-preview .plus-icon-blue, .body-cms-preview .down-icon-blue, .body-cms-preview .minus-icon-blue, .body-cms-preview .plus-icon-greenblue, .body-cms-preview .disruption-icon, .body-cms-preview .up-stairs, .body-cms-preview .toilets-icon, .body-cms-preview .toilets-disabled-icon, .body-cms-preview .down-stairs, .body-cms-preview .pram-icon, .body-cms-preview .down-lift, .body-cms-preview .up-escalator, .body-cms-preview .walking-access-icon, .body-cms-preview .wheelchair-icon, .body-cms-preview .down-escalator, .body-cms-preview .luggage-icon, .body-cms-preview .headphones-icon, .body-cms-preview .avoid-zone-1-icon, .body-cms-preview .disrupted .mode-icon:before, .disrupted .body-cms-preview .mode-icon:before, .body-cms-preview .tube-icon, .body-cms-preview .overground-icon, .body-cms-preview .streets-icon, .body-cms-preview .coach-icon, .body-cms-preview .poi-icon, .body-cms-preview .pointofinterest-icon, .body-cms-preview .street-icon, .body-cms-preview .plane-icon, .body-cms-preview .mail-icon, .body-cms-preview .favourite-icon, .body-cms-preview .email-icon, .body-cms-preview .phone-icon, .body-cms-preview .small-disrupted-icon, .body-cms-preview .tube-station-icon, .body-cms-preview .national-rail-station-icon, .body-cms-preview .overground-station-icon, .body-cms-preview .dlr-station-icon, .body-cms-preview .docklands-station-icon, .body-cms-preview .docklands-light-railway-station-icon, .body-cms-preview .tram-station-icon, .body-cms-preview .coach-station-icon, .body-cms-preview .river-bus-station-icon, .body-cms-preview .bus-station-icon, .body-cms-preview .cable-car-station-icon, .body-cms-preview .taxi-rank-icon, .body-cms-preview .minicab-office-icon, .body-cms-preview .bus-stop-icon, .body-cms-preview .blank-bus-stop-icon, .body-cms-preview .bch-docking-station-icon, .body-cms-preview .nearby-icon, .body-cms-preview .ticket-halls-icon, .body-cms-preview .gates-icon, .body-cms-preview .photo-booths-icon, .body-cms-preview .cash-machines-icon, .body-cms-preview .car-park-icon, .body-cms-preview .help-points-icon, .body-cms-preview .bridge-icon, .body-cms-preview .waiting-room-icon, .body-cms-preview .wifi-icon, .body-cms-preview .icon-info-interchange, .body-cms-preview .icon-info-full, .body-cms-preview .icon-info-none, .body-cms-preview .icon-info-partial, .body-cms-preview .white-pram-icon, .body-cms-preview .white-wheelchair-icon, .body-cms-preview .info-icon, .body-cms-preview .secondary-plan-journey-icon, .body-cms-preview .secondary-journey-from-icon, .body-cms-preview .secondary-journey-to-icon, .body-cms-preview .select-icon, .body-cms-preview .nearby-icon-white, .body-cms-preview .menu-icon-alt, .body-cms-preview .menu-icon-blue, .body-cms-preview .menu-icon-white, .body-cms-preview .tick-icon-alt, .body-cms-preview .bicycle-moderate-icon, .body-cms-preview .cycle-moderate-icon, .body-cms-preview .bicycle-hard-icon, .body-cms-preview .cycle-hard-icon, .body-cms-preview .print-icon, .body-cms-preview .selected .icon.bicycle-icon, .selected .body-cms-preview .icon.bicycle-icon, .body-cms-preview .selected .icon.bicycle-easy-icon, .selected .body-cms-preview .icon.bicycle-easy-icon, .body-cms-preview .selected .icon.cycle-icon, .selected .body-cms-preview .icon.cycle-icon, .body-cms-preview .selected .icon.cycle-easy-icon, .selected .body-cms-preview .icon.cycle-easy-icon, .body-cms-preview .selected.icon.bicycle-icon, .body-cms-preview .selected.icon.bicycle-easy-icon, .body-cms-preview .selected.icon.cycle-icon, .body-cms-preview .selected.icon.cycle-easy-icon, .body-cms-preview .link-accordion-icon:after, .body-cms-preview .no-letter:after, .body-cms-preview .disrupted .circle-icon:before, .disrupted .body-cms-preview .circle-icon:before, .body-cms-preview .top-row-extras #search-button, .top-row-extras .body-cms-preview #search-button, .body-cms-preview #footer h2.heading:before, #footer .body-cms-preview h2.heading:before, .body-cms-preview #footer .info-for a:after, #footer .info-for .body-cms-preview a:after, .body-cms-preview #footer .expanded h2.heading:before, #footer .expanded .body-cms-preview h2.heading:before, .body-cms-preview .languages-footer a:after, .languages-footer .body-cms-preview a:after, .body-cms-preview .for-dropdown .dropdown-button.gla-dropdown:after, .for-dropdown .body-cms-preview .dropdown-button.gla-dropdown:after, .body-cms-preview .for-dropdown .dropdown-button.dropdown-closed:after, .for-dropdown .body-cms-preview .dropdown-button.dropdown-closed:after, .body-cms-preview .for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after, .for-dropdown .body-cms-preview .dropdown-button.dropdown-closed.gla-dropdown:after, .body-cms-preview .for-dropdown .dropdown-button:after, .for-dropdown .body-cms-preview .dropdown-button:after, .body-cms-preview .for-dropdown .links-list#gla-list li a:after, .for-dropdown .links-list#gla-list li .body-cms-preview a:after, .body-cms-preview .arrow-forward:after, .body-cms-preview .icon-left.cycle:before, .body-cms-preview .icon-left.walking:before, .body-cms-preview .icon.walking-icon, .body-cms-preview .footpaths-icon, .body-cms-preview .footpath-icon, .body-cms-preview .walking-icon, .body-cms-preview .level-walkway, .body-cms-preview .selected .icon.walking-icon, .selected .body-cms-preview .icon.walking-icon, .body-cms-preview .selected.icon.walking-icon, .body-cms-preview .close-icon, .body-cms-preview .close3-icon, .body-cms-preview .share-icon, .body-cms-preview .top-row .main-roundel, .top-row .body-cms-preview .main-roundel, .body-cms-preview .top-row-extras .login-icon, .top-row-extras .body-cms-preview .login-icon, .body-cms-preview .top-row-extras .expand, .top-row-extras .body-cms-preview .expand, .body-cms-preview .top-row-extras .collapse, .top-row-extras .body-cms-preview .collapse, .body-cms-preview .top-row-extras .search-icon, .top-row-extras .body-cms-preview .search-icon, .body-cms-preview .more .arrow, .more .body-cms-preview .arrow, .body-cms-preview #footer .footer-links .languages, #footer .footer-links .body-cms-preview .languages {
+    background-image: url("vsprite.png")
+}
+
+.module-grid > div .teaser:after, p a.external-link:after, .remove-content-container .remove-content, .plain-button.external-link:after, .teaser-external-link a .text-link:after, .text-external-link:after, .info-message.with-link:after, .icon.bicycle-icon, .icon.bicycle-easy-icon .icon.cycle-icon, .icon.cycle-easy-icon, .search-icon, .search-icon-black, .switch-directions-icon, .expand-map-icon, .facebook-icon, .twitter-icon, .bicycle-icon, .cycle-icon, .bicycle-easy-icon, .cycle-easy-icon, .bus-icon, .replacement-bus-icon, .train-icon, .national-rail-icon, .ferry-icon, .river-bus-icon, .river-icon, .river-tour-icon, .oyster-icon, .dlr-icon, .docklands-icon, .docklands-light-railway-icon, .tram-icon, .cablecar-icon, .cable-car-icon, .left-arrow, .right-arrow, .down-arrow, .down-triangle, .plus-icon-blue, .down-icon-blue, .minus-icon-blue, .plus-icon-greenblue, .disruption-icon, .up-stairs, .toilets-icon, .toilets-disabled-icon, .down-stairs, .pram-icon, .down-lift, .up-escalator, .walking-access-icon, .wheelchair-icon, .down-escalator, .luggage-icon, .headphones-icon, .avoid-zone-1-icon, .disrupted .mode-icon:before, .tube-icon, .overground-icon, .streets-icon, .coach-icon, .poi-icon, .pointofinterest-icon, .street-icon, .plane-icon, .mail-icon, .favourite-icon, .email-icon, .phone-icon, .small-disrupted-icon, .tube-station-icon, .national-rail-station-icon, .overground-station-icon, .dlr-station-icon, .docklands-station-icon, .docklands-light-railway-station-icon, .tram-station-icon, .coach-station-icon, .river-bus-station-icon, .bus-station-icon, .cable-car-station-icon, .taxi-rank-icon, .minicab-office-icon, .bus-stop-icon, .blank-bus-stop-icon, .bch-docking-station-icon, .nearby-icon, .ticket-halls-icon, .gates-icon, .photo-booths-icon, .cash-machines-icon, .car-park-icon, .help-points-icon, .bridge-icon, .waiting-room-icon, .wifi-icon, .icon-info-interchange, .icon-info-full, .icon-info-none, .icon-info-partial, .white-pram-icon, .white-wheelchair-icon, .info-icon, .secondary-plan-journey-icon, .secondary-journey-from-icon, .secondary-journey-to-icon, .select-icon, .nearby-icon-white, .menu-icon-alt, .menu-icon-blue, .menu-icon-white, .tick-icon-alt, .bicycle-moderate-icon, .cycle-moderate-icon, .bicycle-hard-icon, .cycle-hard-icon, .print-icon, .selected .icon.bicycle-icon, .selected .icon.bicycle-easy-icon, .selected .icon.cycle-icon, .selected .icon.cycle-easy-icon, .selected.icon.bicycle-icon, .selected.icon.bicycle-easy-icon, .selected.icon.cycle-icon, .selected.icon.cycle-easy-icon, .link-accordion-icon:after, .no-letter:after, .disrupted .circle-icon:before, .top-row-extras #search-button, #footer h2.heading:before, #footer .info-for a:after, #footer .expanded h2.heading:before, .languages-footer a:after, .for-dropdown .dropdown-button.gla-dropdown:after, .for-dropdown .dropdown-button.dropdown-closed:after, .for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after, .for-dropdown .dropdown-button:after, .for-dropdown .links-list#gla-list li a:after {
+    background-size: 96px 2400px;
+    height: 32px;
+    width: 32px
+}
+
+.top-row-extras .search, .top-row-extras .login, .top-row-extras input, .top-row-extras span {
+    float: left
+}
+
+.section-style {
+    text-transform: uppercase;
+    background: #2d3039;
+    color: #fff;
+    font-size: 24px;
+    padding: 6px 15px;
+    display: inline-block
+}
+
+.throbber {
+    height: 70px;
+    width: 70px;
+    background-image: url("/static/1/images/throbber.gif")
+}
+
+.map-button, .fullscreen-stage-button {
+    position: absolute;
+    width: 40px;
+    height: 43px;
+    border: 1px solid #ccc;
+    border-bottom-width: 3px;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    background-clip: padding-box;
+    background-color: #fff
+}
+
+.map-button .icon, .fullscreen-stage-button .icon {
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px
+}
+
+.r {
+    max-width: 1140px;
+    min-width: 300px;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    *zoom: 1
+}
+
+.r:before, .r:after {
+    content: " ";
+    display: table
+}
+
+.r:after {
+    clear: both
+}
+
+#full-width-content .r {
+    margin-bottom: 10px
+}
+
+#full-width-content .r.no-overflow {
+    overflow-y: hidden
+}
+
+#full-width-content .r.no-bottom-margin {
+    margin-bottom: 0
+}
+
+#full-width-content .r.no-margin > :first-child {
+    margin-left: 0
+}
+
+#full-width-content .r.no-margin > :last-child {
+    margin-right: 0
+}
+
+.r > :first-child {
+    margin-left: 2.54%
+}
+
+.r > :last-child {
+    margin-right: 2.54%
+}
+
+.module-grid > div {
+    margin: 10px 0
+}
+
+.module-grid > div .teaser {
+    padding: 10px 40px 10px 10px;
+    background: #eee;
+    position: relative
+}
+
+.module-grid > div .teaser p {
+    margin-bottom: 0
+}
+
+.module-grid > div .teaser h3 {
+    margin-bottom: 5px
+}
+
+.module-grid > div .teaser:after {
+    background-position: 0px -640px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 5px
+}
+
+#main-hero {
+    padding-top: 10px;
+    margin-bottom: 10px
+}
+
+.hero-container {
+    background: #eee;
+    padding-top: 33px;
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-bottom: 27px;
+    background-repeat: no-repeat
+}
+
+.section-overview {
+    background: #eee;
+    padding: 20px
+}
+
+.section-overview h2 {
+    margin-bottom: 10px
+}
+
+.section-overview .main, .section-overview .aside {
+    margin-left: 0;
+    width: 100%
+}
+
+.two-column-divided {
+    *zoom: 1;
+    margin-bottom: 20px
+}
+
+.two-column-divided:before, .two-column-divided:after {
+    content: " ";
+    display: table
+}
+
+.two-column-divided:after {
+    clear: both
+}
+
+#fullscreen-stage {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    min-width: 300px
+}
+
+.stage-active #fullscreen-stage {
+    display: block;
+    z-index: 1000
+}
+
+#fullscreen-stage .panzoom-element {
+    min-width: 100%;
+    min-height: 100%
+}
+
+.panzoom-wrapper {
+    height: 100%
+}
+
+body.stage-active {
+    overflow: scroll
+}
+
+body.stage-active.panzoom {
+    overflow: hidden
+}
+
+body.stage-active #container {
+    display: none
+}
+
+body.stage-active .map-sliver {
+    height: 100%;
+    border-bottom: 0
+}
+
+.map-button {
+    display: none
+}
+
+.stage-active .map-button, .breakpoint-Large .map-button {
+    display: block
+}
+
+#open-fullscreen-stage {
+    top: 50%;
+    margin-top: -20px;
+    right: 10px;
+    border-bottom-width: 1px;
+    height: 40px
+}
+
+.stage-active #open-fullscreen-stage, .loading + .sliver-overlay #open-fullscreen-stage {
+    display: none
+}
+
+#close-fullscreen-stage {
+    top: 10px;
+    right: 10px;
+    display: block;
+    z-index: 1001;
+    display: none
+}
+
+.stage-active #close-fullscreen-stage {
+    display: block
+}
+
+.showing-map-panel #close-fullscreen-stage {
+    display: none
+}
+
+#zoom-in-fullscreen-stage {
+    top: 10px;
+    left: 10px;
+    display: block;
+    display: none
+}
+
+.stage-active #zoom-in-fullscreen-stage {
+    display: block
+}
+
+.active-map .no-disruptions-on-map #zoom-in-fullscreen-stage {
+    display: none
+}
+
+#zoom-out-fullscreen-stage {
+    top: 50px;
+    left: 10px;
+    display: block;
+    display: none
+}
+
+.stage-active #zoom-out-fullscreen-stage {
+    display: block
+}
+
+.active-map .no-disruptions-on-map #zoom-out-fullscreen-stage {
+    display: none
+}
+
+@font-face {
+    font-family: "New Johnson Bold";
+    src: url("NJFont-BookBold.eot");
+    src: url("NJFont-BookBold.eot?#iefix") format("embedded-opentype"), url("NJFont-BookBold.woff") format("woff"), url("NJFont-BookBold.otf") format("opentype"), url("NJFont-BookBold.svg") format("svg")
+}
+
+@font-face {
+    font-family: "New Johnson";
+    src: url("NJFont-Book.eot");
+    src: url("NJFont-Book.eot?#iefix") format("embedded-opentype"), url("NJFont-Book.woff") format("woff"), url("NJFont-Book.otf") format("opentype"), url("NJFont-Book.svg") format("svg")
+}
+
+@font-face {
+    font-family: "NJ Signing";
+    src: url("njfontsigning-medium.eot");
+    src: url("njfontsigning-medium.eot?#iefix") format("embedded-opentype"), url("njfontsigning-medium.woff") format("woff"), url("njfontsigning-medium.ttf") format("truetype"), url("njfontsigning-medium.svg#njfontsigning-medium") format("svg")
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%
+}
+
+body {
+    background-color: #FFF;
+    color: #2d3039
+}
+
+h1 {
+    font-size: 28px;
+    line-height: 100%
+}
+
+h1.signing {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ccc
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 10px
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 100%;
+    margin-bottom: 10px
+}
+
+h4, h5, h6 {
+    font-weight: bold;
+    margin: 0 0 10px
+}
+
+.section-landing-container {
+    position: relative;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px
+}
+
+.section-landing-container .landing-page {
+    border-bottom: 1px solid #cacaca
+}
+
+.section-landing-container.with-logo {
+    padding-right: 135px
+}
+
+.section-landing-container .heading-logo {
+    height: 40px;
+    position: absolute;
+    right: 0;
+    bottom: 10px
+}
+
+.section-landing-container .heading-logo > img {
+    height: 39px;
+    width: auto
+}
+
+.section-landing-container .hero-headline {
+    padding: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    box-shadow: none;
+    color: #2d3039
+}
+
+.headline, .hero-headline {
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: 120%
+}
+
+.hero-headline {
+    background: #2d3039;
+    color: #fff;
+    box-shadow: 10px 0 0 #2d3039, -10px 0 0 #2d3039;
+    display: inline;
+    padding: 5px 0;
+    line-height: 120%
+}
+
+.no-background-image {
+    background-image: none !important
+}
+
+p {
+    margin-bottom: 20px
+}
+
+p a.external-link {
+    margin-right: 25px;
+    position: relative
+}
+
+p a.external-link:after {
+    margin-top: -5px;
+    margin-left: -2px;
+    content: "";
+    position: absolute;
+    right: -30px;
+    background-position: -32px -1152px
+}
+
+p.title {
+    font-size: 110%;
+    line-height: 100%
+}
+
+p.italic-block {
+    font-style: italic;
+    color: #676767
+}
+
+ul, ol {
+    list-style-position: outside;
+    margin-left: 25px;
+    margin-bottom: 25px
+}
+
+ul {
+    list-style-type: disc
+}
+
+ol {
+    list-style-type: decimal
+}
+
+a {
+    text-decoration: none;
+    color: #2070b0;
+    cursor: pointer
+}
+
+a:focus, a:hover {
+    text-decoration: underline
+}
+
+.link2 {
+    color: #6cc
+}
+
+.arrow-forward {
+    display: block
+}
+
+.arrow-forward:after {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: 0px -640px;
+    height: 23px;
+    width: 28px;
+    display: inline-block;
+    content: ""
+}
+
+.body-cms-preview .arrow-forward:after {
+    background-image: url("vsprite.png")
+}
+
+table {
+    width: 100%
+}
+
+table tr:nth-child(odd) {
+    background-color: #f7f7f7
+}
+
+table.first-row {
+    background-color: #f7f7f7;
+    z-index: 1
+}
+
+table.first-row td:first-child, table.first-row th:first-child {
+    position: absolute;
+    left: 0;
+    background-color: #f7f7f7;
+    height: 100%;
+    vertical-align: bottom
+}
+
+table.first-row td:first-child > span, table.first-row th:first-child > span {
+    display: block;
+    position: absolute;
+    top: 5px
+}
+
+table .right-align {
+    text-align: right
+}
+
+th {
+    text-align: left
+}
+
+th, td {
+    padding: 5px;
+    vertical-align: top
+}
+
+button {
+    cursor: pointer
+}
+
+strong {
+    font-weight: bold;
+    line-height: 22px
+}
+
+em {
+    font-style: italic
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    color: #ccc;
+    background-color: #ccc;
+    margin-bottom: 15px
+}
+
+label.heading {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px
+}
+
+input[type="text"], input[type='number'] {
+    border-radius: 0;
+    padding: 5px;
+    width: 100%
+}
+
+input[type="text"].error, input[type='number'].error {
+    border: 1px solid #a92727
+}
+
+input[type="text"]:not(.disable-removable-content) {
+    padding-right: 32px
+}
+
+.remove-content-container {
+    float: left;
+    width: 100%
+}
+
+.remove-content-container.empty input[type="text"] {
+    padding-right: 5px
+}
+
+.remove-content-container .remove-content {
+    position: relative;
+    display: block;
+    background-position: -64px -800px
+}
+
+.modal.loading {
+    min-height: 100%
+}
+
+#content {
+    margin-top: 10px
+}
+
+.icon {
+    background-image: url("vsprite.png");
+    background-image: url("vsprite.png") \9
+}
+
+span.emirates, td.emirates {
+    background: #e51937
+}
+
+span.bakerloo, td.bakerloo {
+    background: #894e24
+}
+
+span.central, td.central {
+    background: #dc241f
+}
+
+span.circle, td.circle {
+    background: #ffce00
+}
+
+span.district, td.district {
+    background: #007229
+}
+
+span.hammersmith, span.hammersmith-city, td.hammersmith, td.hammersmith-city {
+    background: #d799af
+}
+
+span.jubilee, td.jubilee {
+    background: #6a7278
+}
+
+span.metropolitan, td.metropolitan {
+    background: #751056
+}
+
+span.northern, td.northern {
+    background: #000
+}
+
+span.piccadilly, td.piccadilly {
+    background: #0019a8
+}
+
+span.victoria, td.victoria {
+    background: #00a0e2
+}
+
+span.waterloo, td.waterloo {
+    background: #76d0bd
+}
+
+span.overground, td.overground {
+    background: #e86a10
+}
+
+span.dlr, span.docklands, span.docklands-light-railway, td.dlr, td.docklands, td.docklands-light-railway {
+    background: #00afad
+}
+
+span.tram, td.tram {
+    background: #7cc144
+}
+
+span.tramlink1, td.tramlink1 {
+    background: #c6d834
+}
+
+span.tramlink2, td.tramlink2 {
+    background: #c6d834
+}
+
+span.tramlink3, td.tramlink3 {
+    background: #79c23f
+}
+
+span.tramlink4, td.tramlink4 {
+    background: #336b14
+}
+
+span.roads-a316, td.roads-a316 {
+    background: #ec83bb
+}
+
+span.roads-a41, td.roads-a41 {
+    background: #8a4088
+}
+
+span.roads-a40, td.roads-a40 {
+    background: #ceff00
+}
+
+span.roads-a23, td.roads-a23 {
+    background: #59ffa3
+}
+
+span.roads-a21, td.roads-a21 {
+    background: #446081
+}
+
+span.roads-a3, td.roads-a3 {
+    background: #5a9262
+}
+
+span.roads-a2, td.roads-a2 {
+    background: #ee3cc2
+}
+
+span.roads-a1, td.roads-a1 {
+    background: #3d8c0f
+}
+
+span.roads-a205, span.roads-south-circular-a205, td.roads-a205, td.roads-south-circular-a205 {
+    background: #6d2039
+}
+
+span.roads-a406, span.roads-north-circular-a406, td.roads-a406, td.roads-north-circular-a406 {
+    background: #a22cd9
+}
+
+span.roads-a24, td.roads-a24 {
+    background: #6e573e
+}
+
+span.roads-a13, td.roads-a13 {
+    background: #56dcfa
+}
+
+span.roads-a12, td.roads-a12 {
+    background: #e86445
+}
+
+span.roads-a10, td.roads-a10 {
+    background: #5b4bcc
+}
+
+span.roads-a4, td.roads-a4 {
+    background: #5bf105
+}
+
+span.roads-a20, td.roads-a20 {
+    background: #f1e77d
+}
+
+span.roads-central-london, span.roads-central-london-red-routes, span.roads-inner-ring, span.roads-southern-river-route, span.roads-bishopsgate-cross-route, span.roads-city-route, span.roads-farringdon-cross-route, span.roads-western-cross-route, td.roads-central-london, td.roads-central-london-red-routes, td.roads-inner-ring, td.roads-southern-river-route, td.roads-bishopsgate-cross-route, td.roads-city-route, td.roads-farringdon-cross-route, td.roads-western-cross-route {
+    background: #9bf46a
+}
+
+span.roads-blackwall-tunnel, td.roads-blackwall-tunnel {
+    background: #ec9c59
+}
+
+span.rb1, td.rb1 {
+    background: #040045
+}
+
+span.rb2, td.rb2 {
+    background: #0072bc
+}
+
+span.rb3, td.rb3 {
+    background: #f172ac
+}
+
+span.rb4, td.rb4 {
+    background: #61c29d
+}
+
+span.rb5, td.rb5 {
+    background: #ba6830
+}
+
+span.rb6, td.rb6 {
+    background: #7164ac
+}
+
+span.city-cruises, td.city-cruises {
+    background: #ec3717
+}
+
+span.westminster-greenwich, td.westminster-greenwich {
+    background: #2a2e98
+}
+
+span.westminster-st-katherines-circular, td.westminster-st-katherines-circular {
+    background: #45b535
+}
+
+span.westminster-passenger-services-association, span.wetsminster-passenger-services-association, td.westminster-passenger-services-association, td.wetsminster-passenger-services-association {
+    background: #fcba00
+}
+
+span.woolwich-free-ferry, td.woolwich-free-ferry {
+    background: #f7931d
+}
+
+span.arriva-trains-wales, td.arriva-trains-wales {
+    background: #00b9b4
+}
+
+span.c2c, td.c2c {
+    background: #f0188c
+}
+
+span.chiltern-railways, td.chiltern-railways {
+    background: #b389c1
+}
+
+span.east-coast, td.east-coast {
+    background: #00b9f3
+}
+
+span.east-midlands-trains, td.east-midlands-trains {
+    background: #e16c16
+}
+
+span.first-capital-connect, td.first-capital-connect {
+    background: #a0005e
+}
+
+span.first-great-western, td.first-great-western {
+    background: #2d2b94
+}
+
+span.first-hull-trains, td.first-hull-trains {
+    background: #1b903f
+}
+
+span.first-transpennine-express, td.first-transpennine-express {
+    background: #f265a0
+}
+
+span.gatwick-express, td.gatwick-express {
+    background: #231f20
+}
+
+span.grand-central, td.grand-central {
+    background: #3f3f40
+}
+
+span.greater-anglia, td.greater-anglia {
+    background: #8b8fa5
+}
+
+span.heathrow-connect, td.heathrow-connect {
+    background: #f6858d
+}
+
+span.heathrow-express, td.heathrow-express {
+    background: #55c4bf
+}
+
+span.island-line, td.island-line {
+    background: #f8b174
+}
+
+span.merseyrail, td.merseyrail {
+    background: #fec95f
+}
+
+span.northern-rail, td.northern-rail {
+    background: #0569a8
+}
+
+span.scotrail, td.scotrail {
+    background: #96a3a9
+}
+
+span.southeastern, td.southeastern {
+    background: #0071bf
+}
+
+span.southern, td.southern {
+    background: #00a74b
+}
+
+span.south-west-trains, td.south-west-trains {
+    background: #f11815
+}
+
+span.cross-country, td.cross-country {
+    background: #a03467
+}
+
+span.eurostar, td.eurostar {
+    background: #b9a977
+}
+
+span.london-midland, td.london-midland {
+    background: #8bc831
+}
+
+span.stanstead-express, td.stanstead-express {
+    background: #636366
+}
+
+span.virgin-trains, td.virgin-trains {
+    background: #a8652c
+}
+
+.line-text {
+    color: #fff;
+    font-weight: bold;
+    padding: 0 3px;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.6)
+}
+
+.line-text.circle, .line-text.hammersmith, .line-text.overground, .line-text.victoria, .line-text.waterloo, .line-text.rb3, .line-text.rb4, .line-text.rb5, .line-text.city-cruises, .line-text.westminster-st-katherines-circular, .line-text.westminster-passenger-services-association, .line-text.wetsminster-passenger-services-association, .line-text.woolwich-free-ferry {
+    text-shadow: 0 1px 0px rgba(255, 255, 255, 0.6);
+    color: #000
+}
+
+.plain-button.external-link {
+    color: #2070b0
+}
+
+.plain-button.external-link:visited, .plain-button.external-link:active {
+    color: #2070b0
+}
+
+.plain-button.external-link:after {
+    margin-right: 2px;
+    background-position: -32px -1152px
+}
+
+.teaser-external-link {
+    margin-right: 0px;
+    color: blue
+}
+
+.teaser-external-link a .text-link:after {
+    margin-right: 2px;
+    background-position: -32px -1152px
+}
+
+.text-external-link {
+    margin-right: 25px;
+    position: relative
+}
+
+.text-external-link:after {
+    margin-top: -5px;
+    margin-left: -2px;
+    content: "";
+    position: absolute;
+    background-position: -32px -1152px
+}
+
+.info-message {
+    display: block;
+    border: 1px solid #ccc;
+    background: #faf5e1;
+    padding: 5px
+}
+
+.info-message p {
+    margin-bottom: 5px
+}
+
+.info-message.with-link {
+    padding-right: 30px;
+    position: relative
+}
+
+.info-message.with-link:after {
+    content: "";
+    background-position: 0px -640px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -16px
+}
+
+.small {
+    display: block
+}
+
+.small-medium {
+    display: block
+}
+
+.medium {
+    display: none
+}
+
+.medium-large {
+    display: none
+}
+
+.large {
+    display: none
+}
+
+#container {
+    min-width: 300px;
+    overflow: hidden
+}
+
+.accordion-title {
+    border: 1px solid #CACACA;
+    border-bottom: none;
+    display: block;
+    padding: 5px
+}
+
+.broadcast-comms {
+    width: 100%;
+    background: #faf5e1;
+    min-height: 80px;
+    border-bottom: 3px solid #ccc;
+    padding: 20px 0 0 0
+}
+
+.broadcast-comms .broadcast-icon {
+    height: 0px;
+    margin-right: -90px;
+    width: 0px;
+    float: left;
+    background-image: none
+}
+
+.broadcast-comms .broadcast-text {
+    float: left;
+    margin-right: 2.54%;
+    padding-left: 2.54%;
+    width: 90%
+}
+
+.beta-banner {
+    width: 100%;
+    font-family: "New Johnson";
+    font-size: 1.2em;
+    background: #1a5a92;
+    border-bottom: 3px solid #103e66;
+    padding: 5px 0 0;
+    color: #FFF
+}
+
+.beta-banner .beta-banner-text {
+    float: left;
+    margin-left: 2.54%;
+    width: 60%;
+    padding-bottom: 5px
+}
+
+.beta-banner .beta-banner-button {
+    float: left;
+    margin-left: 2.54%;
+    width: 32%;
+    text-align: right;
+    display: block;
+    padding-right: 20px
+}
+
+.beta-banner .beta-banner-link {
+    color: #FFF
+}
+
+.image-container > img {
+    width: 100%;
+    height: auto
+}
+
+.image-container {
+    margin-bottom: 10px
+}
+
+.right-to-left {
+    direction: rtl
+}
+
+.header-two {
+    font-size: 24px;
+    line-height: 120%;
+    margin-bottom: 0
+}
+
+.header-two h2 {
+    margin-bottom: 0
+}
+
+.header-three {
+    font-size: 20px;
+    line-height: 100%;
+    margin-bottom: 0
+}
+
+.header-three h3 {
+    margin-bottom: 0
+}
+
+.list-standard {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px
+}
+
+ol.formatted-list {
+    counter-reset: item;
+    list-style-type: none;
+    margin-left: 17px
+}
+
+ol.formatted-list ol {
+    counter-reset: item;
+    list-style-type: none;
+    margin-left: 28px
+}
+
+ol.formatted-list ol > li, ol.formatted-list > li {
+    position: relative;
+    padding-left: 8px
+}
+
+ol.formatted-list ol > li:before, ol.formatted-list > li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item;
+    position: absolute;
+    right: 100%
+}
+
+ol ol, ul ul, ol ul, ul ol {
+    margin-bottom: 0
+}
+
+ul.formatted-list ul {
+    list-style-type: circle
+}
+
+ul.formatted-list ul ul {
+    list-style-type: square
+}
+
+.bus-stop-search {
+    background: #f7f7f7;
+    padding: 10px 70px 10px 10px;
+    position: relative;
+    min-height: 58px
+}
+
+.bus-stop-search input[type=submit] {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px
+}
+
+.spot-grid-background {
+    position: relative;
+    background-color: #ccdde8;
+    padding-bottom: 10px
+}
+
+.spot-grid-background.full-page {
+    margin-bottom: -50px
+}
+
+.multi-document-download-container {
+    margin: 20px 0;
+    border: 0px;
+    border-bottom: 1px
+}
+
+.multi-document-download-container .document-download-wrap {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border-bottom: 1px
+}
+
+.multi-document-download-container .document-download-wrap:last-child {
+    border-bottom: solid 4px #ccc
+}
+
+.grey-box {
+    background: #eee;
+    padding: 20px 10px;
+    position: relative;
+    display: block;
+    margin-bottom: 20px
+}
+
+.grey-box > :last-child {
+    margin-bottom: 0
+}
+
+.grey-box .remove-content-container {
+    margin-bottom: 10px;
+    float: none
+}
+
+.grey-box .mode-title {
+    line-height: 40px
+}
+
+.icon-left {
+    position: relative;
+    padding-left: 35px !important
+}
+
+.icon-left span {
+    padding-left: 8px
+}
+
+.icon-left:before {
+    content: '';
+    left: 8px;
+    top: 0;
+    position: absolute !important
+}
+
+.icon-left.cycle:before {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -32px -284px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .icon-left.cycle:before {
+    background-image: url("vsprite.png")
+}
+
+.icon-left.walking:before {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -32px -253px;
+    height: 32px;
+    width: 32px;
+    display: block
+}
+
+.body-cms-preview .icon-left.walking:before {
+    background-image: url("vsprite.png")
+}
+
+.icon.bicycle-icon, .icon.bicycle-easy-icon .icon.cycle-icon, .icon.cycle-easy-icon {
+    background-position: -32px -288px
+}
+
+.icon.walking-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -36px -256px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .icon.walking-icon {
+    background-image: url("vsprite.png")
+}
+
+.footpaths-icon, .footpath-icon, .walking-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -4px -256px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .footpaths-icon, .body-cms-preview .footpath-icon, .body-cms-preview .walking-icon {
+    background-image: url("vsprite.png")
+}
+
+.search-icon {
+    background-position: 0px -32px
+}
+
+.search-icon-black {
+    background-position: -32px -32px
+}
+
+.switch-directions-icon {
+    background-position: 0px -64px
+}
+
+.expand-map-icon {
+    background-position: -32px -64px
+}
+
+.facebook-icon {
+    background-position: 0px -224px
+}
+
+.twitter-icon {
+    background-position: -32px -224px
+}
+
+.bicycle-icon, .cycle-icon, .bicycle-easy-icon, .cycle-easy-icon {
+    background-position: 0px -288px
+}
+
+.bus-icon, .bus-icon, .replacement-bus-icon {
+    background-position: 0px -320px
+}
+
+.bus-icon.small-icon, .bus-icon.small-icon, .replacement-bus-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -200px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.train-icon, .national-rail-icon {
+    background-position: 0px -352px
+}
+
+.train-icon.small-icon, .national-rail-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -220px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.international-rail-icon {
+    display: none !important
+}
+
+.ferry-icon, .river-bus-icon, .river-icon, .river-bus-icon {
+    background-position: 0px -384px
+}
+
+.ferry-icon.small-icon, .river-bus-icon.small-icon, .river-icon.small-icon, .river-bus-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -240px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.river-tour-icon {
+    background-position: -64px -2208px
+}
+
+.river-tour-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: -40px -1380px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.oyster-icon {
+    background-position: -64px -448px
+}
+
+.dlr-icon, .docklands-icon, .docklands-light-railway-icon {
+    background-position: 0px -1088px
+}
+
+.dlr-icon.small-icon, .docklands-icon.small-icon, .docklands-light-railway-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -680px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.tram-icon {
+    background-position: -32px -1120px
+}
+
+.tram-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -700px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.cablecar-icon, .cable-car-icon {
+    background-position: 0px -480px
+}
+
+.cablecar-icon.small-icon, .cable-car-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -300px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.left-arrow {
+    background-position: 0px -576px
+}
+
+.right-arrow {
+    background-position: 0px -640px
+}
+
+.down-arrow {
+    background-position: 0px -672px
+}
+
+.down-triangle {
+    background-position: -64px -704px
+}
+
+.plus-icon-blue {
+    background-position: 0px -704px
+}
+
+.down-icon-blue {
+    background-position: -64px -704px
+}
+
+.minus-icon-blue {
+    background-position: 0px -736px
+}
+
+.plus-icon-greenblue {
+    background-position: -64px -736px
+}
+
+.disruption-icon {
+    background-position: 0px -832px
+}
+
+.up-stairs {
+    background-position: 0px -864px
+}
+
+.toilets-icon {
+    background-position: -32px -864px
+}
+
+.toilets-disabled-icon {
+    background-position: -64px -864px
+}
+
+.down-stairs {
+    background-position: 0px -896px
+}
+
+.pram-icon {
+    background-position: -32px -896px
+}
+
+.down-lift {
+    background-position: -64px -896px
+}
+
+.up-escalator {
+    background-position: 0px -928px
+}
+
+.walking-access-icon {
+    background-position: -32px -928px
+}
+
+.wheelchair-icon {
+    background-position: -64px -928px
+}
+
+.down-escalator {
+    background-position: 0px -960px
+}
+
+.luggage-icon {
+    background-position: -32px -960px
+}
+
+.headphones-icon {
+    background-position: -64px -960px
+}
+
+.avoid-zone-1-icon {
+    background-position: 0px -992px
+}
+
+.mode-icon {
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    padding-top: 7px;
+    text-align: center
+}
+
+.disrupted .mode-icon:before {
+    content: "";
+    position: absolute;
+    background-position: -32px -1344px;
+    bottom: -10px;
+    right: -8px
+}
+
+.tube-icon {
+    background-position: 0px -1056px
+}
+
+.overground-icon {
+    background-position: -64px -1056px
+}
+
+.overground-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: -40px -700px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.streets-icon {
+    background-position: 0px -128px
+}
+
+.coach-icon {
+    background-position: 0px -1120px
+}
+
+.coach-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: 0px -700px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.poi-icon, .pointofinterest-icon {
+    background-position: -64px -1120px
+}
+
+.poi-icon.small-icon, .pointofinterest-icon.small-icon {
+    background-size: 60px 1500px;
+    background-position: -40px -700px;
+    height: 20px;
+    width: 20px;
+    display: block
+}
+
+.street-icon {
+    background-position: 0px -2144px
+}
+
+.plane-icon {
+    background-position: -32px -2048px
+}
+
+.mail-icon {
+    background-position: -64px -1152px
+}
+
+.dark .favourite-icon {
+    background-position: 0px -2048px
+}
+
+.favourite-icon {
+    background-position: -32px -1184px
+}
+
+.favourite-icon.active {
+    background-position: 0px -1184px
+}
+
+.active .favourite-icon {
+    background-position: 0px -1184px
+}
+
+.email-icon {
+    background-position: -64px -1184px
+}
+
+.phone-icon {
+    background-position: -64px -1216px
+}
+
+.small-disrupted-icon {
+    background-position: -32px -1344px
+}
+
+.tube-station-icon {
+    background-position: -32px -1408px
+}
+
+.national-rail-station-icon {
+    background-position: -64px -1408px
+}
+
+.overground-station-icon {
+    background-position: 0px -1440px
+}
+
+.dlr-station-icon, .docklands-station-icon, .docklands-light-railway-station-icon {
+    background-position: -32px -1440px
+}
+
+.tram-station-icon {
+    background-position: -64px -1440px
+}
+
+.coach-station-icon {
+    background-position: 0px -1472px
+}
+
+.river-bus-station-icon {
+    background-position: -32px -1472px
+}
+
+.bus-station-icon {
+    background-position: -64px -1472px
+}
+
+.cable-car-station-icon {
+    background-position: 0px -1504px
+}
+
+.taxi-rank-icon {
+    background-position: -32px -1504px
+}
+
+.minicab-office-icon {
+    background-position: -64px -1504px
+}
+
+.bus-stop-icon {
+    background-position: 0px -1536px
+}
+
+.blank-bus-stop-icon {
+    background-position: -32px -1536px
+}
+
+.bch-docking-station-icon {
+    background-position: -64px -1536px
+}
+
+.bch-docking-station-icon.full-000 {
+    background-position: -32px -1632px
+}
+
+.bch-docking-station-icon.full-125 {
+    background-position: 0px -1632px
+}
+
+.bch-docking-station-icon.full-250 {
+    background-position: -64px -1600px
+}
+
+.bch-docking-station-icon.full-375 {
+    background-position: -32px -1600px
+}
+
+.bch-docking-station-icon.full-500 {
+    background-position: 0px -1600px
+}
+
+.bch-docking-station-icon.full-625 {
+    background-position: -64px -1568px
+}
+
+.bch-docking-station-icon.full-750 {
+    background-position: -32px -1568px
+}
+
+.bch-docking-station-icon.full-875 {
+    background-position: 0px -1568px
+}
+
+.nearby-icon {
+    background-position: -32px -1312px
+}
+
+.ticket-halls-icon {
+    background-position: -64px -1696px
+}
+
+.gates-icon {
+    background-position: 0px -1728px
+}
+
+.photo-booths-icon {
+    background-position: -64px -1664px
+}
+
+.cash-machines-icon {
+    background-position: -32px -1728px
+}
+
+.car-park-icon {
+    background-position: -32px -1664px
+}
+
+.help-points-icon {
+    background-position: 0px -1664px
+}
+
+.bridge-icon {
+    background-position: 0px -1696px
+}
+
+.waiting-room-icon {
+    background-position: -32px -1696px
+}
+
+.wifi-icon {
+    background-position: -64px -1728px
+}
+
+.icon-info-interchange {
+    background-position: 0px -1760px
+}
+
+.icon-info-full {
+    background-position: -64px -1760px
+}
+
+.icon-info-none {
+    background-position: -32px -1760px
+}
+
+.icon-info-partial {
+    background-position: 0px -1792px
+}
+
+.white-pram-icon {
+    background-position: -32px -1792px
+}
+
+.white-wheelchair-icon {
+    background-position: -64px -1792px
+}
+
+.info-icon {
+    background-position: -64px -1920px
+}
+
+.secondary-plan-journey-icon, .secondary-journey-from-icon {
+    background-position: 0px -1984px
+}
+
+.secondary-journey-to-icon {
+    background-position: -64px -1952px
+}
+
+.select-icon {
+    background-position: -64px -2016px
+}
+
+.nearby-icon-white {
+    background-position: -64px -2048px
+}
+
+.menu-icon-alt {
+    background-position: 0px -2080px
+}
+
+.menu-icon-blue {
+    background-position: -32px -2080px
+}
+
+.menu-icon-white {
+    background-position: -64px -2080px
+}
+
+.tick-icon-alt {
+    background-position: 0px -2112px
+}
+
+.bicycle-moderate-icon, .cycle-moderate-icon {
+    background-position: 0px -2176px
+}
+
+.bicycle-hard-icon, .cycle-hard-icon {
+    background-position: -32px -2176px
+}
+
+.print-icon {
+    background-position: 0px -2304px
+}
+
+.level-walkway {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -4px -256px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .level-walkway {
+    background-image: url("vsprite.png")
+}
+
+.selected .icon.bicycle-icon, .selected .icon.bicycle-easy-icon, .selected .icon.cycle-icon, .selected .icon.cycle-easy-icon, .selected.icon.bicycle-icon, .selected.icon.bicycle-easy-icon, .selected.icon.cycle-icon, .selected.icon.cycle-easy-icon {
+    background-position: 0px -288px
+}
+
+.selected .icon.walking-icon, .selected.icon.walking-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -4px -256px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .selected .icon.walking-icon, .body-cms-preview .selected.icon.walking-icon {
+    background-image: url("vsprite.png")
+}
+
+.close-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: 0px -800px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .close-icon {
+    background-image: url("vsprite.png")
+}
+
+.close3-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -64px -832px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .close3-icon {
+    background-image: url("vsprite.png")
+}
+
+.share-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -68px -224px;
+    height: 32px;
+    width: 24px;
+    display: block
+}
+
+.body-cms-preview .share-icon {
+    background-image: url("vsprite.png")
+}
+
+.link-accordion-icon {
+    padding-left: 34px;
+    position: relative
+}
+
+.link-accordion-icon:after {
+    background-position: -32px -672px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 4px;
+    margin-top: -16px
+}
+
+.link-accordion-icon.link-accordion-expanded:after {
+    background-position: -32px -608px
+}
+
+.link-accordion-icon.link-accordion-icon-right {
+    padding-left: 0
+}
+
+.link-accordion-icon.link-accordion-icon-right:after {
+    right: -30px;
+    left: auto
+}
+
+.throbber-blue {
+    width: 64px;
+    height: 64px;
+    background-image: url("/static/1/images/throbber-blue-large.gif");
+    background-size: 64px 64px;
+    background-position: 0 0
+}
+
+.throbber-blue-small {
+    width: 32px;
+    height: 32px;
+    background-image: url("/static/1/images/throbber-blue-small.gif");
+    background-size: 32px 32px;
+    background-position: 0px 0px
+}
+
+[class*=roundel-icon] {
+    width: 60px;
+    height: 50px;
+    display: block;
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+
+.roundel-icon-bch {
+    width: 164px;
+    background-image: url("/static/1/images/roundels/BCH.png")
+}
+
+.roundel-icon-bus {
+    background-image: url("/static/1/images/roundels/Buses.png")
+}
+
+.roundel-icon-congestion {
+    width: 50px;
+    background-image: url("/static/1/images/roundels/CC.png")
+}
+
+.roundel-icon-coach {
+    background-image: url("/static/1/images/roundels/Coaches.png")
+}
+
+.roundel-icon-cycle {
+    background-image: url("/static/1/images/roundels/BCH_8.png")
+}
+
+.roundel-icon-cycle.full-000 {
+    background-image: url("/static/1/images/roundels/BCH_0.png")
+}
+
+.roundel-icon-cycle.full-125 {
+    background-image: url("/static/1/images/roundels/BCH_1.png")
+}
+
+.roundel-icon-cycle.full-250 {
+    background-image: url("/static/1/images/roundels/BCH_2.png")
+}
+
+.roundel-icon-cycle.full-375 {
+    background-image: url("/static/1/images/roundels/BCH_3.png")
+}
+
+.roundel-icon-cycle.full-500 {
+    background-image: url("/static/1/images/roundels/BCH_4.png")
+}
+
+.roundel-icon-cycle.full-625 {
+    background-image: url("/static/1/images/roundels/BCH_5.png")
+}
+
+.roundel-icon-cycle.full-750 {
+    background-image: url("/static/1/images/roundels/BCH_6.png")
+}
+
+.roundel-icon-cycle.full-875 {
+    background-image: url("/static/1/images/roundels/BCH_7.png")
+}
+
+.roundel-icon-dial-a-ride {
+    background-image: url("/static/1/images/roundels/DialARide.png")
+}
+
+.roundel-icon-dlr {
+    background-image: url("/static/1/images/roundels/DLR.png")
+}
+
+.roundel-icon-cable-car {
+    width: 161px;
+    height: 68px;
+    background-image: url("/static/1/images/roundels/EAL.png")
+}
+
+.roundel-icon-lez {
+    height: 48px;
+    width: 48px;
+    background-image: url("/static/1/images/roundels/LEZ.png")
+}
+
+.roundel-icon-overground {
+    background-image: url("/static/1/images/roundels/Overground.png")
+}
+
+.roundel-icon-river-bus {
+    background-image: url("/static/1/images/roundels/River.png")
+}
+
+.roundel-icon-roads {
+    background-image: url("/static/1/images/roundels/Roads.png")
+}
+
+.roundel-icon-taxi {
+    background-image: url("/static/1/images/roundels/Taxi.png")
+}
+
+.roundel-icon-tfl {
+    background-image: url("/static/1/images/roundels/TfL.png")
+}
+
+.roundel-icon-tram {
+    background-image: url("/static/1/images/roundels/Tram.png")
+}
+
+.roundel-icon-tube {
+    background-image: url("/static/1/images/roundels/Tube.png")
+}
+
+.no-letter:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 1px;
+    background-position: -1px -418px;
+    height: 27px;
+    width: 29px
+}
+
+.circle-icon {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    border-radius: 50%;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    height: 32px;
+    min-width: 30px;
+    line-height: 32px;
+    text-align: center;
+    padding-top: 2px;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0px 4px;
+    overflow: hidden;
+    border-radius: 0;
+    margin-left: -1px
+}
+
+.circle-icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 24px;
+    height: 24px;
+    left: 2px;
+    right: 2px;
+    z-index: -1;
+    top: 3px;
+    border-bottom: 2px solid #ccc
+}
+
+.circle-icon.red:after {
+    background-color: #c33
+}
+
+.circle-icon.no-letter {
+    width: 31px
+}
+
+.circle-icon.no-letter:after {
+    height: 27px
+}
+
+.disrupted .circle-icon:before {
+    content: "";
+    position: absolute;
+    background-position: -32px -1344px;
+    top: 9px;
+    right: -10px
+}
+
+.cookie-policy-button a {
+    float: right
+}
+
+.cookie-policy-notice {
+    display: none;
+    background-color: #1F2025;
+    color: #ffffff;
+    padding: 4px 0;
+    border-bottom: 1px solid #A1A1A2;
+    font-size: 80%;
+    *zoom: 1
+}
+
+.cookie-policy-notice:before, .cookie-policy-notice:after {
+    content: " ";
+    display: table
+}
+
+.cookie-policy-notice:after {
+    clear: both
+}
+
+.cookie-policy-notice p {
+    padding: 5px 0;
+    margin-bottom: 0
+}
+
+.top-row {
+    border-bottom: 3px solid #121315;
+    background-color: #2d3039;
+    max-height: 58px
+}
+
+.top-row.show-search {
+    max-height: 113px
+}
+
+.top-row a, .top-row a:visited {
+    color: #fff
+}
+
+.top-row .logo {
+    float: left;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding: 6px 1% 6px 2.54%;
+    width: 48px;
+    height: 43px;
+    background-color: #113B92;
+    background-position: center center;
+    text-transform: none;
+    cursor: pointer
+}
+
+.top-row .logo a:focus, .top-row .logo a:hover {
+    text-decoration: none
+}
+
+.top-row .main-roundel {
+    position: absolute;
+    background-size: 126px 3150px;
+    background-position: -42px -210px;
+    height: 42px;
+    width: 42px;
+    display: block
+}
+
+.top-row .tfl-name {
+    display: none;
+    margin: 7px 0 0 52px;
+    font-size: 16px;
+    font-family: "New Johnson Bold";
+    line-height: 100%;
+    text-transform: uppercase
+}
+
+.collapsible-menu .plan-journey, .collapsible-menu .status-update, .collapsible-menu .maps, .collapsible-menu .fares-and-payments {
+    display: none
+}
+
+.collapsible-menu a {
+    -webkit-transition: background-color 0.3s, border-color, 0.3s;
+    -moz-transition: background-color 0.3s, border-color, 0.3s;
+    transition: background-color 0.3s, border-color, 0.3s;
+    border-bottom: 3px solid transparent;
+    background-color: transparent
+}
+
+.collapsible-menu a:hover, .collapsible-menu a:focus {
+    background-color: #444856;
+    border-bottom: 3px solid #2070b0;
+    margin-bottom: -3px
+}
+
+.menu-visible .mainnav {
+    border-bottom: 3px solid #ccc
+}
+
+.menu-visible .more a:hover, .menu-visible .more a:focus {
+    border-bottom: 0
+}
+
+.extra-nav .plan-journey, .extra-nav .status-update, .extra-nav .maps, .extra-nav .fares-and-payments {
+    display: block
+}
+
+.navigation-style-1 {
+    padding: 0;
+    margin: 0 0 10px 0
+}
+
+.navigation-style-1 > li {
+    display: block;
+    border-bottom: 1px solid #ccc;
+    background: #eee
+}
+
+.navigation-style-1 .item-title {
+    display: block;
+    padding: 10px 30px 10px 10px;
+    color: #2d3039;
+    font-size: 20px;
+    text-decoration: none;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+
+.navigation-style-1 .item-title:hover, .navigation-style-1 .item-title:focus {
+    background-color: #e1e1e1
+}
+
+.navigation-style-1 .footer-link {
+    display: block;
+    text-align: right;
+    padding: 9px 5px
+}
+
+.navigation-style-1 .selected {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-bottom: 3px solid #cacaca
+}
+
+.navigation-style-1 .selected .item-title:hover, .navigation-style-1 .selected .item-title:focus {
+    background-color: #f2f2f2
+}
+
+.top-row-extras div {
+    float: left
+}
+
+.top-row-extras a {
+    display: block;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+
+.top-row-extras a:hover, .top-row-extras a:focus {
+    background-color: #444856;
+    border-bottom: 3px solid #2070b0;
+    margin-bottom: -3px
+}
+
+.top-row-extras .login {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    border-left: 1px solid #565961;
+    border-right: 1px solid #1e2228
+}
+
+.top-row-extras .login a {
+    padding: 13px 8px 42px
+}
+
+.top-row-extras input[type="text"] {
+    position: relative;
+    margin: 8px 2.54%;
+    padding: 5px;
+    width: 94.92%;
+    height: 40px;
+    border: 1px solid #ccc
+}
+
+.top-row-extras .login-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -34px -128px;
+    height: 32px;
+    width: 28px;
+    display: block
+}
+
+.body-cms-preview .top-row-extras .login-icon {
+    background-image: url("vsprite.png")
+}
+
+.top-row-extras .expand {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -76px -672px;
+    height: 32px;
+    width: 8px;
+    display: block
+}
+
+.body-cms-preview .top-row-extras .expand {
+    background-image: url("vsprite.png")
+}
+
+.top-row-extras .collapse {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -76px -608px;
+    height: 32px;
+    width: 8px;
+    display: none
+}
+
+.body-cms-preview .top-row-extras .collapse {
+    background-image: url("vsprite.png")
+}
+
+.top-row-extras .search-icon {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -2px -32px;
+    height: 32px;
+    width: 28px;
+    display: block
+}
+
+.body-cms-preview .top-row-extras .search-icon {
+    background-image: url("vsprite.png")
+}
+
+.top-row-extras .texts {
+    position: absolute;
+    right: 0;
+    width: 110px
+}
+
+.top-row-extras .search {
+    border-left: 1px solid #565961
+}
+
+.top-row-extras .search a {
+    padding: 13px 14px 42px 4px
+}
+
+.top-row-extras .search-tools {
+    padding: 8px 2.54%;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 55px;
+    background: #2d3039
+}
+
+.top-row-extras .search-tools input[type='text'] {
+    margin: 0;
+    padding-right: 32px;
+    width: 100%
+}
+
+.top-row-extras #search-button {
+    position: absolute;
+    right: 3.54%;
+    margin-top: 5px;
+    background-position: -64px -32px;
+    border: 0;
+    background-color: transparent;
+    color: #ccc;
+    line-height: 10px
+}
+
+.top-row-extras #search-button span {
+    text-indent: 1000%
+}
+
+.top-row-extras .more {
+    position: absolute;
+    right: 109px;
+    border-right: 1px solid #1e2228
+}
+
+.show-search {
+    border-bottom: 3px solid #ccc
+}
+
+.show-search .top-row-extras {
+    height: 110px
+}
+
+.show-search .top-row-extras .search-tools {
+    background-color: #eff6fd;
+    display: block
+}
+
+.show-search .top-row-extras .search-tools a.remove-content:hover {
+    background-color: transparent;
+    border-bottom: none
+}
+
+.show-search .top-row-extras .texts .search {
+    background-color: #d7dee4;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7dee4), color-stop(100%, #eff6fd));
+    background-image: -webkit-linear-gradient(#d7dee4, #eff6fd);
+    background-image: linear-gradient(#d7dee4, #eff6fd)
+}
+
+.show-search .top-row-extras .texts .search a:hover, .show-search .top-row-extras .texts .search a:focus {
+    background-color: transparent
+}
+
+.show-search .top-row-extras .texts .search a span.search-icon {
+    background-position: -34px -32px
+}
+
+.show-search .top-row-extras .texts .search a span.expand {
+    display: none
+}
+
+.show-search .top-row-extras .texts .search a span.collapse {
+    display: block
+}
+
+.collapsible-menu {
+    float: left;
+    margin-left: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+    font-size: 14px
+}
+
+.collapsible-menu li {
+    float: left
+}
+
+.collapsible-menu li.more {
+    display: none
+}
+
+.collapsible-menu a {
+    display: block;
+    padding: 18px 15px 13px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "New Johnson";
+    margin-bottom: -2px
+}
+
+.more a {
+    display: block;
+    padding: 18px 8px 37px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "New Johnson"
+}
+
+.more .arrow {
+    display: inline-block;
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: -64px -672px;
+    height: 28px;
+    width: 21px;
+    display: inline-block;
+    margin: -4px 0 0 -8px
+}
+
+.body-cms-preview .more .arrow {
+    background-image: url("vsprite.png")
+}
+
+.more a.expanded, .more a.expanded:visited {
+    background-color: #d7dee4;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #d7dee4), color-stop(100%, #eff6fd));
+    background-image: -webkit-linear-gradient(#d7dee4, #eff6fd);
+    background-image: linear-gradient(#d7dee4, #eff6fd);
+    color: #000;
+    margin-bottom: -3px;
+    padding-bottom: 40px;
+    border-bottom: 0
+}
+
+.more a.expanded .arrow, .more a.expanded:visited .arrow {
+    background-position: -64px -608px
+}
+
+#mainnav {
+    background-color: #eff6fd
+}
+
+.extra-nav {
+    display: none;
+    padding-bottom: 2%
+}
+
+.extra-nav.expanded, .extra-nav a {
+    display: block
+}
+
+.extra-nav .extras {
+    margin: 10px 3% 0 3%
+}
+
+.extra-nav .extras li {
+    float: left;
+    width: 48%
+}
+
+.extra-nav .extras .plan-journey, .extra-nav .extras .maps {
+    margin-right: 4%
+}
+
+.extra-nav .extras a {
+    text-align: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 3px -2px 2px rgba(0, 0, 0, 0.15);
+    padding: 10px 0;
+    margin-bottom: 10px;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+
+.extra-nav .extras a:hover, .extra-nav .extras a:focus {
+    text-decoration: none;
+    background-color: #f2f2f2;
+    background-color: #f2f2f2;
+    color: #185585
+}
+
+.extra-nav .extras a:active {
+    box-shadow: none;
+    margin-top: 3px;
+    margin-bottom: 7px
+}
+
+.extra-nav h2 {
+    color: #2d3039;
+    font-size: 16px;
+    margin: 10px 0 0
+}
+
+.extra-nav .menu-sub-section {
+    margin: 0 3%;
+    width: 94%
+}
+
+.extra-nav .menu-sub-section ul {
+    border-left: 1px solid #ccc;
+    margin-left: 5px;
+    margin-bottom: 0;
+    padding-left: 5px;
+    list-style-type: none
+}
+
+.extra-nav .menu-sub-section a {
+    padding: 0 0 5px
+}
+
+.extra-nav .getting-around li {
+    float: left;
+    width: 50%
+}
+
+#footer {
+    border-top: 3px solid #ccc;
+    margin-top: 50px;
+    background-color: #202329;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0px, #292c34), color-stop(6px, #373d48), color-stop(300px, #1f2329));
+    background-image: -webkit-linear-gradient(#292c34 0px, #373d48 6px, #1f2329 300px);
+    background-image: linear-gradient(#292c34 0px, #373d48 6px, #1f2329 300px)
+}
+
+#footer ul {
+    list-style-type: none;
+    margin-bottom: 0
+}
+
+#footer a, #footer a:visited {
+    color: #CDCDCD;
+    font-size: 14px;
+    padding: 7px 0;
+    display: block
+}
+
+#footer .footer-links {
+    padding-top: 10px;
+    height: 100%;
+    margin: 0 2.54% 10px
+}
+
+#footer .footer-links .languages {
+    background-image: url("vsprite_x2.png");
+    background-image: url("vsprite.png") \9;
+    background-size: 96px 2400px;
+    background-position: 0px -1312px;
+    height: 25px;
+    width: 32px;
+    display: inline-block
+}
+
+.body-cms-preview #footer .footer-links .languages {
+    background-image: url("vsprite.png")
+}
+
+#footer h2.heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    display: block;
+    padding: 10px 9px 10px 30px;
+    background-color: #2d3039;
+    color: #fff;
+    border-bottom: 3px solid #1B1D21;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 2.54%;
+    position: relative
+}
+
+#footer h2.heading:before {
+    background-position: -32px -704px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px
+}
+
+#footer .info-for-link {
+    padding: 0
+}
+
+#footer .info-for-link:visited, #footer .info-for-link:active {
+    padding: 0
+}
+
+#footer .info-for-link:focus, #footer .info-for-link:hover {
+    text-decoration: none
+}
+
+#footer .info-for-link:focus h2.heading, #footer .info-for-link:hover h2.heading {
+    background-color: #444856
+}
+
+#footer .info-for {
+    margin-bottom: 10px;
+    margin-left: 2.54%;
+    background-color: #202329
+}
+
+#footer .info-for li {
+    display: none;
+    padding: 0;
+    border-right: 1px solid #868F98;
+    border-bottom: 1px solid #868F98;
+    border-left: 1px solid #868F98
+}
+
+#footer .info-for a {
+    display: block;
+    padding: 18px 10px;
+    position: relative
+}
+
+#footer .info-for a:after {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 2px;
+    content: "";
+    background-position: -32px -640px
+}
+
+#footer .expanded li {
+    display: block
+}
+
+#footer .expanded h2.heading:before {
+    background-position: -32px -736px
+}
+
+#footer .secondary-footer {
+    background-color: #2C2F38;
+    font-style: italic
+}
+
+#footer .secondary-footer span.heading {
+    margin-left: 2.54%;
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#footer .secondary-footer a, #footer .secondary-footer a:visited {
+    color: #66CCCC;
+    text-decoration: underline;
+    font-size: 14px
+}
+
+.footer-MOL-logo {
+    float: left;
+    padding: 0 2.54% 10px 2.54%;
+    width: 100%
+}
+
+.languages-footer a {
+    position: relative;
+    padding-left: 28px
+}
+
+.languages-footer a:after {
+    background-position: 0px -1312px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -16px;
+    margin-left: -5px
+}
+
+.for-dropdown {
+    position: relative
+}
+
+.for-dropdown .dropdown-button {
+    position: relative;
+    padding: 9px 25px 9px 7px;
+    cursor: pointer;
+    background-color: #eff6fe;
+    border: 1px solid #cacaca;
+    border-bottom-color: #eff6fe
+}
+
+.for-dropdown .dropdown-button.gla-dropdown {
+    background: #202329
+}
+
+.for-dropdown .dropdown-button.gla-dropdown img {
+    margin-bottom: 8px
+}
+
+.for-dropdown .dropdown-button.gla-dropdown:after {
+    background-position: -32px -608px
+}
+
+.for-dropdown .dropdown-button.dropdown-closed {
+    background-color: #fff;
+    border-bottom-color: #cacaca
+}
+
+.for-dropdown .dropdown-button.dropdown-closed:after {
+    background-position: 0px -672px
+}
+
+.for-dropdown .dropdown-button.dropdown-closed.gla-dropdown {
+    background: #202329
+}
+
+.for-dropdown .dropdown-button.dropdown-closed.gla-dropdown:after {
+    background-position: -32px -672px
+}
+
+.for-dropdown .dropdown-button:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    right: 0;
+    background-position: 0px -608px
+}
+
+.for-dropdown .links-list {
+    background-color: #eff6fe;
+    padding: 15px;
+    margin: 0;
+    border-left: 1px solid #cacaca;
+    border-right: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+    list-style: none outside none;
+    z-index: 13
+}
+
+.for-dropdown .links-list#gla-list {
+    padding: 0;
+    background-color: #202329;
+    border-left: 1px solid #484848;
+    border-right: 1px solid #484848;
+    border-bottom: 1px solid #484848
+}
+
+.for-dropdown .links-list#gla-list li {
+    border: 0;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+
+.for-dropdown .links-list#gla-list li:hover, .for-dropdown .links-list#gla-list li:focus {
+    background-color: #15171b;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    text-decoration: none
+}
+
+.for-dropdown .links-list#gla-list li a {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #fff;
+    padding: 8px 0 5px 40px;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+
+.for-dropdown .links-list#gla-list li a:hover, .for-dropdown .links-list#gla-list li a:focus {
+    background-color: #15171b;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    text-decoration: none
+}
+
+.for-dropdown .links-list#gla-list li a:after {
+    content: '';
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    left: 2px;
+    top: 50%;
+    margin-top: -16px;
+    background-position: -64px -2112px
+}
+
+.for-dropdown .links-list#gla-list li.greater-london-authority-li {
+    display: none
+}
+
+.for-dropdown .links-list#gla-list li.lldc {
+    margin-top: 0
+}
+
+.for-dropdown .links-list:not(.datepicker-dropdown) a {
+    min-height: 40px
+}
+
+.for-dropdown li {
+    display: block;
+    border: solid 1px #cacaca;
+    border-top-width: 0
+}
+
+.for-dropdown a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #2d3039;
+    background-color: #fff;
+    padding: 7px 32px 9px 10px;
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    transition: background-color 0.3s
+}
+
+.for-dropdown a:hover, .for-dropdown a:focus {
+    background-color: #f2f2f2;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    text-decoration: none;
+    color: #1a5a92
+}
+
+.for-dropdown .dropdown-name {
+    margin: 4px 10px 0 0;
+    display: inline-block
+}
+
+.for-dropdown .dropdown-icon {
+    margin: 4px 5px 0 -5px;
+    display: inline-block
+}
+
+.for-dropdown .right-arrow {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -16px
+}
+
+.for-dropdown .datepicker-dropdown .no-hover {
+    border: 0
+}
+
+.for-dropdown .datepicker-dropdown .no-hover > span {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px
+}
+
+.for-dropdown .datepicker-dropdown .fc-row .highlighted-day {
+    overflow: hidden
+}
+
+.for-dropdown .datepicker-dropdown .fc-row .highlighted-day a {
+    background-color: #faf5e1;
+    margin: 0;
+    display: block;
+    height: 100%;
+    padding: 0
+}
+
+.for-dropdown .datepicker-dropdown .fc-row .highlighted-day a > .fc-date {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    margin-left: -10px
+}
+
+.for-dropdown .datepicker-dropdown .fc-row .highlighted-day a:hover, .for-dropdown .datepicker-dropdown .fc-row .highlighted-day a:focus {
+    background-color: #f6eecb
+}
+
+.modes-dropdown-placeholder .for-dropdown li > a {
+    padding-left: 42px;
+    position: relative
+}
+
+.modes-dropdown-placeholder .for-dropdown li > a .dropdown-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    margin-top: -16px
+}
+
+li.MOL-logo-dropdown {
+    display: none
+}
+
+.MOL-logo-dropdown .mayor-of-london-logo, .dropdown-button .mayor-of-london-logo {
+    color: #fff;
+    font-size: 16pt;
+    padding-right: 10px;
+    border-right: solid 1px #484848
+}
+
+.MOL-logo-dropdown .mol-gla, .dropdown-button .mol-gla {
+    color: #fff;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #484848;
+    font-size: 14pt
+}

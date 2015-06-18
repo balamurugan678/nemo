@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.novacroft.nemo.tfl.common.domain">
+    <class name="WebAccount" table="webaccount" lazy="false">
+        <id column="id" name="id">
+            <generator class="sequence">
+                <param name="sequence">webaccount_seq</param>
+            </generator>
+        </id>
+        <property name="username" type="java.lang.String" column="username"/>
+        <property name="emailAddress" type="java.lang.String" column="emailaddress"/>
+        <property name="salt" type="java.lang.String" column="salt"/>
+        <property name="password" type="java.lang.String" column="password"/>
+        <property name="photoCardNumber" type="java.lang.String" column="photocardnumber"/>
+        <property name="unformattedEmailAddress" type="java.lang.String" column="unformattedemailaddress"/>
+        <property name="anonymised" type="java.lang.Integer" column="anonymised"/>
+        <property name="readOnly" type="java.lang.Integer" column="readonly"/>
+        <property name="passwordChangeRequired" type="java.lang.Integer" column="passwordchangerequired"/>
+        <property name="deactivated" type="java.lang.Integer" column="deactivated"/>
+        <property name="deactivationReason" type="java.lang.String" column="deactivationReason"/>
+        <property name="createdUserId" type="java.lang.String" column="createduserid"/>
+        <property name="createdDateTime" type="timestamp" column="createddatetime"/>
+        <property name="modifiedUserId" type="java.lang.String" column="modifieduserid"/>
+        <property name="modifiedDateTime" type="timestamp" column="modifieddatetime"/>
+        <property name="customerId" type="java.lang.Long" column="customerid"/>
+    </class>
+</hibernate-mapping>

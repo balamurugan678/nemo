@@ -1,0 +1,100 @@
+/**************************************************
+	M073 more info header
+* Author: Alex Faunt
+* Created: 10/12/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M073-more-info-header
+**************************************************/
+
+.more-info-header {
+
+  .header {
+    position: relative;
+    padding-right: 128px;
+  }
+
+  &.expanded {
+    .more-info {
+      display: block;
+    }
+  }
+
+  .more-info {
+    background-color: $jp-subtle-blue;
+    padding: 20px 10px;
+    border-bottom: 3px solid $light-grey-border-colour;
+    border-top: 3px solid $light-grey-border-colour;
+    z-index: 10;
+    position: relative;
+    margin-top: 20px;
+    display: none;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      top: -20px;
+      right: 20px;
+      border-width: 10px;
+      height: 0;
+      width: 0;
+      border-style: solid;
+      border-color: transparent transparent $jp-subtle-blue;
+      z-index: 12;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      top: -27px;
+      right: 17px;
+      border-width: 13px;
+      height: 0;
+      width: 0;
+      border-style: solid;
+      border-color: transparent transparent $light-grey-border-colour;
+      z-index: 11;
+    }
+  }
+
+  .show-more-info {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    padding-right: 42px;
+    .info-icon {
+      position: absolute;
+      top: 50%;
+      margin-top: -16px;
+      right: 0;
+    }
+  }
+
+  &.widget-wrapper {
+    .header {
+      padding-right: 138px;
+      .show-more-info {
+        font-size: 15px;
+        font-weight: normal;
+        bottom: auto;
+        top: 16px;
+        right: 10px;
+        font-family: arial;
+      }
+    }
+
+    &.expanded {
+      .widget-heading {
+        padding-bottom: 12px;
+      }
+    }
+
+    .more-info {
+      margin-top: 0px;
+
+    }
+
+  }
+
+}

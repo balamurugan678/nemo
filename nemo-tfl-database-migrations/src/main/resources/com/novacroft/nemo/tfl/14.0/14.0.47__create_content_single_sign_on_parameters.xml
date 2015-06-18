@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="14.0.47">
+        <sql splitStatements="false">
+            <![CDATA[
+				BEGIN
+				   content_installer.install('singleSignOnBaseURL', 'http://localhost/nemo-mock-single-sign-on');
+				   content_installer.install('singleSignOnAuthentication', 'Off');
+				   content_installer.install('singleSignOnAuthenticationFailMessage', 'Single Sign On Authentication Failed.');
+				END;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

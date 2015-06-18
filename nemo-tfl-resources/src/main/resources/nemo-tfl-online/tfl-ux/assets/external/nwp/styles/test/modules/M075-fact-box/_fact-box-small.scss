@@ -1,0 +1,213 @@
+/**************************************************
+	M046-fact-box
+* Author: John Boyle
+* Created: 31/10/2013
+* Pattern library URL:
+**************************************************/
+
+.fact-box-wrapper {
+  width: 100%;
+  border: solid 1px #a8a8a8;
+  padding: 10px;
+  margin-bottom: 20px;
+  span {
+    @extend %new-johnson-signing;
+    font-size: 30px;
+    display: block;
+    line-height: 1;
+    width: 100%;
+    &.blue-span {
+      color: $linkcolour;
+      margin: 0 0 10px 0;
+    }
+  }
+  &.blue-fact-box {
+    background: #eff6fc;
+    border-color: #eff6fc;
+  }
+  .vertical-button-container {
+    margin: 20px 0 5px;
+  }
+
+}
+
+//.ribbon{
+//		height:40px;
+//		width: calc(100% - 80px);
+//		text-align:center;
+//		margin:auto;
+//		position:relative;
+//		background:$subtler-grey;
+//	}
+//	.ribbon:after,.ribbon:before{
+//		content:'';
+//		position:absolute;
+//		height:0px;
+//		width:50px;
+//		border:20px solid $darker-subtle-grey;
+//		top:20px;
+//		z-index:-1;
+//		border-left: 10px solid $darker-subtle-grey;
+//		border-right: 10px solid $darker-subtle-grey;
+//	}
+//	.ribbon:after{
+//		left:-40px;
+//		top:5px;
+//		border-left-color: transparent;   
+//	}
+//	.ribbon:before{
+//		right:-40px;
+//		top:5px;
+//		border-right-color: transparent;    
+//	}
+//	.ribbon-content{
+//		width:100%;
+//		height:100%;
+//		padding:10px;
+//		box-sizing:border-box;
+//		h3{
+//			margin: auto;
+//			display: table;
+//			position: relative;
+//		} 
+//		h3:after{
+//			content: "";
+//			position: absolute;
+//			left: -35px;
+//			top: -8px;
+//			@extend %sprite-images;
+//			@include svg-icon(5, 1, 32px, 32px);
+//		} 
+//	}
+//	.ribbon-content:before,.ribbon-content:after{
+//		position: absolute;
+//		content: '';
+//		width:  0px;
+//		height: 0px;
+//		border-color: $light-grey-border-colour;
+//		border-style: solid;
+//	}
+//	.ribbon-content:before{
+//		left: 0;
+//		bottom:-5px;
+//		border-width: 0 30px 5px 0;
+//		border-color:$light-grey-border-colour $light-grey-border-colour rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
+//	}
+//	.ribbon-content:after{
+//		right: 0;
+//		bottom:-5px;
+//		border-width: 0 0 5px 30px;
+//		border-color:$light-grey-border-colour rgba(255, 255, 255, 0) rgba(255, 255, 255, 0) $light-grey-border-colour;
+//	}
+//	.fact-box-content{
+//		background: #fff;
+//		width: 93%;
+//		margin: auto;
+//		text-align: center;
+//		padding: 20px 10px 1px 10px;
+//		position: relative;
+//		z-index: -2;
+//		border:1px solid $link-border-colour;
+//		top: -5px;
+//	}
+//		
+//		&.tfl{
+//			h3:after {
+//				@include svg-icon(5, 1, 32px, 32px);
+//			}
+//		}
+//		&.underground{
+//			h3:after {
+//				@include svg-icon(34, 1, 32px, 32px);
+//			}
+//		}
+//		&.dlr{
+//			h3:after {
+//				@include svg-icon(59, 1, 32px, 32px);
+//			}
+//		}
+//		&.overground{
+//			h3:after {
+//				@include svg-icon(59, 2, 32px, 32px);
+//			}
+//		}
+//		&.bus{
+//			h3:after {
+//				@include svg-icon(59, 3, 32px, 32px);
+//			}
+//		}
+//		&.cycle{
+//			h3:after {
+//				@include svg-icon(35, 3, 32px, 32px);
+//			}
+//		}
+//		&.streets{
+//			h3:after {
+//				@include svg-icon(35, 2, 32px, 32px);
+//			}
+//		}
+//		&.river{
+//			h3:after {
+//				@include svg-icon(60, 1, 32px, 32px);
+//			}
+//		}
+//		&.coach{
+//			h3:after {
+//				@include svg-icon(60, 2, 32px, 32px);
+//			}
+//		}
+//		&.dial-a-ride{
+//			h3:after {
+//				@include svg-icon(60, 3, 32px, 32px);
+//			}
+//		}
+//		&.taxi{
+//			h3:after {
+//				@include svg-icon(61, 1, 32px, 32px);
+//			}
+//		}
+//		&.tram{
+//			h3:after {
+//				@include svg-icon(61, 2, 32px, 32px);
+//			}
+//		}
+//		&.emirates{
+//			h3:after {
+//				@include svg-icon(16, 1, 32px, 32px);
+//				top:1px;
+//			}
+//		}
+//		&.red-on-grey{
+//			.ribbon{
+//				background:#d5242b;
+//			}
+//			.ribbon:after,.ribbon:before{
+//				border-color:#c81620;
+//				border-left-color:#c81620;
+//				border-right-color:#c81620;
+//			}
+//			.ribbon-content:before,.ribbon-content:after{
+//				border-color:#c81620;
+//			}
+//			.ribbon-content:before,.ribbon-content:after{
+//				border-color:$lighter-dark-grey;
+//			}
+//			.ribbon-content:before{
+//				border-width: 0 30px 5px 0;
+//				border-color:$lighter-dark-grey $lighter-dark-grey transparent transparent;
+//			}
+//			.ribbon-content:after{
+//				border-width: 0 0 5px 30px;
+//				border-color:$lighter-dark-grey transparent transparent $lighter-dark-grey;
+//			}
+//			h3{
+//				color:white;
+//			}
+//			.fact-box-content{
+//				background: #eff6fc;
+//				border:none;
+//			}  
+//			
+//		}
+//		&.blue-on-grey{}
+//		&.blue-on-blue{} 

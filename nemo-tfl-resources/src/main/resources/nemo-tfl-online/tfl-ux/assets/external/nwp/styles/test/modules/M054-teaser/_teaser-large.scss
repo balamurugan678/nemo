@@ -1,0 +1,14 @@
+
+.content-area {
+  width: 48%;
+  right: 0;
+  &.no-caption {
+    width: 100%;
+  }
+}
+
+.tertiary-teaser {
+  img {
+    display: block
+  }
+}

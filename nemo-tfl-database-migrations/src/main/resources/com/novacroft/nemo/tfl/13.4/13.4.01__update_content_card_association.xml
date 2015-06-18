@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="13.4.01">
+    <sql splitStatements="false">
+            <![CDATA[
+begin
+   content_installer.install('card.alreadyAssociated.error', 'Card is already associated to the customer');
+   content_installer.install('card.alreadyAssociated.otherCustomer.error', 'Card is already associated to another customer');
+end;
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

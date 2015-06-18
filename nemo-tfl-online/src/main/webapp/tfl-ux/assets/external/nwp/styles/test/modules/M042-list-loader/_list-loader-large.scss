@@ -1,0 +1,150 @@
+/**************************************************
+	M042-list-loader
+* Author: Alex Faunt
+* Created: 25/09/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M042-list-loader
+**************************************************/
+
+.list-loader {
+
+  .list-loader-wrapper {
+    width: 35%;
+  }
+  .list-loader-results {
+    width: 65%;
+    max-width: 692px;
+
+    .routes-list {
+      margin-top: 1px;
+      > li {
+        border-top: 1px solid $light-grey-border-colour;
+        float: left;
+        width: 49%;
+        margin-top: -1px;
+        &:nth-child(even) {
+          margin-left: 2%;
+          &:after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+        }
+        &:nth-child(odd) {
+          clear: both;
+        }
+      }
+
+      &.full-width {
+        width: 100%;
+        padding: 0;
+      }
+
+      .flexbox & {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -moz-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .route {
+          display: -webkit-flex;
+          display: -moz-flex;
+          display: -ms-flex;
+          display: flex;
+          > a {
+            width: 100%;
+          }
+        }
+      }
+      .no-flexbox & {
+        .river {
+          > a {
+            min-height: 85px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bus-list {
+  > li {
+    width: 10%;
+  }
+
+  &.groups {
+    > li {
+      width: 25%;
+    }
+  }
+}
+
+.list-loader-results > .large > .list-loader-result {
+
+  .bus-list.groups {
+    > li.list-loader-option {
+      padding: 0;
+      > .list-loader-link > a {
+        border-top: 1px solid $light-grey-border-colour;
+        border-right: 1px solid $light-grey-border-colour;
+        border-bottom: 1px solid $light-grey-border-colour;
+        border-left: 0px none;
+      }
+
+      &:first-child {
+        padding-left: 10px;
+        > .list-loader-link > a {
+          border-left: 1px solid $light-grey-border-colour;
+        }
+      }
+
+      &.end-of-row {
+        padding-right: 10px;
+      }
+
+      &.expanded, &.prev {
+        padding-bottom: 10px;
+      }
+      &.expanded {
+        ~ .list-loader-option {
+          padding-bottom: 10px;
+        }
+        ~ .end-of-row ~ .list-loader-option, &.end-of-row ~ .list-loader-option {
+          padding-bottom: 0;
+        }
+      }
+    }
+    > li.list-loader-result {
+
+      + .list-loader-option {
+        padding-left: 10px;
+        > .list-loader-link > a {
+          border-left: 1px solid $light-grey-border-colour;
+        }
+      }
+
+      &.expanded {
+        ~ .list-loader-option {
+          padding-top: 10px;
+
+        }
+        ~ .end-of-row ~ .list-loader-option {
+          padding-top: 0;
+        }
+        .bus-list li:nth-child(-n+10) {
+          @extend %top-drop-shadow;
+          &:after {
+            opacity: 0.1;
+          }
+        }
+      }
+    }
+
+  }
+}

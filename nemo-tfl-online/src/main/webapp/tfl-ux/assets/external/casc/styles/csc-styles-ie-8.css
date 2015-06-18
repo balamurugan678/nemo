@@ -1,0 +1,30 @@
+/* IE 8 and earlier fix for vertical height of input fields */
+.shaded-input {
+    line-height: 1.5em;
+}
+
+/* IE 8 fix for empty content causing 'ticked' style change to not display */
+.checkbox-list label:after,
+.radiobutton-list label:after,
+.checkbox-list label .after,
+.radiobutton-list label .after {
+    content: " ";
+}
+
+/* IE 8 and earlier fix for journey details vertical alignment */
+.csc-journey-from-to.no-extra-info .heading {
+    top: 25%;
+}
+
+/* Disable with indicator in ie8 or earlier */
+.with-indicator:before, .with-indicator:after {
+    border: 0 none;
+}
+
+/* IE provide solid colour equivalent for borders usually defined with alpha rgba */
+.box,
+.expanded .with-learn-more, .expanded .info-message,
+.container,
+ul.clean li a.container {
+    border-bottom: solid 1px #cccccc;
+}

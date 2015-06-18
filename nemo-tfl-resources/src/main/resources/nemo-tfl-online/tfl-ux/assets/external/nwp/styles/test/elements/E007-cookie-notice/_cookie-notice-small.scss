@@ -1,0 +1,32 @@
+#cookie-policy-text {
+  @extend %c11
+}
+
+.cookie-policy-button {
+  @extend %c1;
+  a {
+    float: right;
+  }
+}
+
+.cookie-policy-notice {
+  display: none;
+  background-color: #1F2025;
+  color: #ffffff;
+  padding: 4px 0;
+  border-bottom: 1px solid #A1A1A2;
+  font-size: 80%;
+  @include clearfix;
+  p {
+    padding: 5px 0;
+    margin-bottom: 0;
+  }
+  .link2 {
+    &:after {
+      content: "";
+      @extend %standard-sprite;
+      @include svg-icon(74, 2, $img-height: 12px, $y-offset: -10px, $img-width: 15px, $x-offset: -6px, $display: inline-block);
+      margin-bottom: -2px;
+    }
+  }
+}

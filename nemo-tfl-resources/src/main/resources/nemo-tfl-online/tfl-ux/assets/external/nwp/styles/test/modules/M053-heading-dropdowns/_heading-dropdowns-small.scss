@@ -1,0 +1,54 @@
+////**************************************************
+//HEADING DROPDOWNS MODULE
+//* Author: Steven Swinbank
+//* Created: 13/03/2013
+//* Modified by: Steven Swinbank
+//* Modified date: 24/07/2013
+//* Pattern library URL: http://
+//**************************************************
+
+//hide bullet points when javascript is turned on
+/*.service-status-links, .heading-dropdown-links {
+    display: none;
+}
+.status-dropdowns-wrap, .heading-dropdown-wrap {
+	position: relative;
+	float: left;
+	width: 100%;
+}
+.status-update-heading {
+	.heading-dropdown {
+		float: right;
+		width:100%;
+		margin: 10px 0;
+	}
+	.date-dropdown-placeholder {
+		float: right;
+		width:100%;
+		margin: 0px 0 10px 0;
+	}
+}
+*/
+.heading-dropdowns-wrap {
+  .dropdowns-wrap {
+    padding: 10px 0;
+    border-top: 1px solid $light-grey-border-colour;
+  }
+  .heading-dropdown {
+    &:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.service-status-links {
+  display: none;
+}
+
+.date-link-container {
+  display: none;
+}
+
+.advance-month-container {
+  display: none;
+}

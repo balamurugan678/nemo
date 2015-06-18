@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.161">
+        <sql splitStatements="false">
+            <![CDATA[
+DECLARE
+  l_sql VARCHAR2(1024);
+  CURSOR c_objects IS
+    SELECT
+      o.object_name
+    FROM user_objects o
+    WHERE o.object_type = 'TABLE';
+BEGIN
+  FOR r_object IN c_objects LOOP
+    l_sql := 'grant select, insert, update, delete on "' || r_object.object_name || '" to ${innovatorUserSchemaName}';
+    EXECUTE IMMEDIATE l_sql;
+  END LOOP;
+  EXCEPTION
+  WHEN OTHERS THEN
+  raise_application_error(-20000, 'Error: ' || sqlcode || ' - ' || sqlerrm || ' on: ' || l_sql);
+END;
+            ]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

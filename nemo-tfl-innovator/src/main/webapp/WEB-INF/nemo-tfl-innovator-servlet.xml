@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ctx="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <ctx:property-placeholder location="classpath:nemo-tfl-common.properties, classpath:nemo-tfl-innovator.properties"
+                              ignore-unresolvable="true"/>
+
+    <bean id="applicationProperties"
+          class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="ignoreResourceNotFound" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:nemo-tfl-common.properties</value>
+                <value>classpath:nemo-tfl-innovator.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.innovator.controller"/>
+    <!-- TODO: confirm online.controller package is needed -->
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.online.controller"/>
+    <ctx:component-scan base-package="com.novacroft.nemo.tfl.innovator.workflow"/>
+
+    <bean id="tilesViewResolver"
+          class="com.novacroft.nemo.common.support.CachingUrlTilesViewResolver"/>
+
+    <bean id="tilesConfigurer"
+          class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+        <property name="definitions">
+            <list>
+                <value>/WEB-INF/tiles/config/innovator-layouts.xml</value>
+                <value>/WEB-INF/tiles/config/innovator-pages.xml</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="contentNegotiationManager"
+          class="org.springframework.web.accept.ContentNegotiationManagerFactoryBean">
+        <property name="favorPathExtension" value="false"/>
+    </bean>
+
+    <bean id="freemarkerConfiguration" class="freemarker.template.Configuration">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="templateExceptionHandler">
+            <value type="freemarker.template.TemplateExceptionHandler">HTML_DEBUG_HANDLER</value>
+        </property>
+    </bean>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <property name="messageConverters">
+            <list>
+                <bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>
+                <bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="sessionFilter"
+          class="com.novacroft.nemo.tfl.innovator.servlet.filter.SessionFilter"
+          scope="singleton">
+        <property name="restTemplate" ref="restTemplate"/>
+    </bean>
+
+</beans>

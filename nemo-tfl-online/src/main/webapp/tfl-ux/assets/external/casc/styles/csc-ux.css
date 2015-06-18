@@ -1,0 +1,268 @@
+/*Reset firefox button style*/
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* Prevent any focus dotted outline around a radio button  */
+input[type="radio"]:focus {
+    outline: none;
+}
+
+.widget-heading {
+    width: 100%;
+}
+
+.csc-loader {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: #FFF;
+    display: none;
+}
+
+.csc-loader p {
+    width: 200px;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: block;
+    text-align: center;
+    font-family: Tahoma, Verdana, Arial, Trebuchet MS;
+    font-size: 0.8em;
+    color: #565656;
+}
+
+.csc-loader img {
+    width: 45px;
+    margin: 0 auto;
+    display: block;
+}
+
+.oyster-panel {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.csc-notification .error-icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.dashboard-notification {
+    margin-bottom: 0px !important;
+}
+
+.dashboard-notification-padding {
+    width: 200px;
+}
+
+.button-as-hyperlink {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    color: #2070b6;
+}
+
+.prominent-text {
+    font-size: medium;
+    font-weight: bold;
+}
+
+.button-as-hyperlink:hover {
+    text-decoration: underline;
+    cursor: pointer
+}
+
+.csc-notification button {
+    width: 100%;
+    padding: 10px 32px 10px 44px;
+    background: none !important;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button.csc-button-as-link {
+    width: 100%;
+    text-align: left;
+}
+
+button.csc-button-as-select {
+    width: 100%;
+    text-align: left;
+    display: block;
+    padding: 0px;
+    margin-bottom: 10px;
+    color: #2d3039;
+    background-color: #fff;
+    border: 0;
+    position: relative;
+}
+
+.csc-margin {
+    margin-bottom: 10px;
+}
+
+.csc-autocompleted-journey-label, .csc-payment-adjustment-details-label {
+    display: block;
+    padding: 5px 0 0 15px;
+    font-size: 12px;
+}
+
+.field-validation-error {
+    margin-bottom: 10px;
+}
+
+.csc-journey-header {
+    height: 48px;
+    padding-top: 8px;
+    padding-left: 8px;
+    position: relative;
+    border-left: 1px solid #ccc;
+}
+
+.csc-journey-div {
+    margin-left: 0;
+}
+
+button.link-button {
+    font-size: 15px;
+}
+
+.button-container .reverse :first-child {
+    margin-right: auto;
+    float: right;
+}
+
+.button-container .reverse :last-child {
+    margin-right: 3%;
+}
+
+a.csc-edit-card-nickname {
+    padding-left: 10px;
+}
+
+div.half-width {
+    width: 320px;
+}
+
+a.short-link {
+    width: 300px;
+}
+
+textarea {
+    resize: none;
+}
+
+.margin-bottom-20,
+ul.clean.margin-bottom-20 {
+    margin-bottom: 20px;
+}
+
+ul.clean {
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.clean li a {
+    margin-bottom: 0;
+    border-bottom: 1px;
+}
+
+ul.clean li:last-child a {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+h2.with-card-logo {
+    position: relative;
+}
+
+h2.with-card-logo .card-logo-container {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 61px;
+    height: 100%;
+}
+
+h2.with-card-logo .card-logo-container .card-logo {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+}
+
+.header-icon {
+    height: 29px;
+    padding-left: 10px;
+}
+
+.schemes {
+    padding: 20px 0;
+}
+
+.scheme-logo {
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+.scheme-logo-multiple {
+    width: 33.3%;
+    text-align: center;
+    float: left;
+}
+
+.scheme-logo-sm {
+    padding: 10px 0;
+    text-align: center;
+}
+
+.pad0 {
+    padding: 0;
+}
+
+.amex-logo {
+    padding-top: 5px;
+}
+
+.amex-logo-sm {
+    width: 74px;
+}
+
+.mc-logo {
+    padding-top: 4px;
+}
+
+.csc-ri-label {
+    color: #418418;
+}
+
+.csc-ri-failed-label {
+    color: #a92727;
+}
+
+.todays-travel-statement .csc-ri-label,
+.todays-travel-statement .csc-ri-failed-label {
+    color: black;
+}
+
+.csc-sdr-warning {
+    color: #a92727;
+    font-weight: bold;
+}
+
+.blue-heading {
+    color: #2070b6;
+}
+
+.no-text-transform {
+    text-transform: none;
+}

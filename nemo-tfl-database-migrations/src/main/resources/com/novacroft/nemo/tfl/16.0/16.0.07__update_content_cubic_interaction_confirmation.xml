@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="16.0.07">
+        <sql splitStatements="false">
+            <![CDATA[
+				begin
+				   content_installer.install('cubicInteractionReadyForCollectionEmail.body.text', '<p>
+						Your next step is to...Touch your Oyster card on a yellow card reader when you make a journey at {0} stop from (tomorrow) to activate your order.<br>
+						Please ensure you activate the order before : {1}.<br> These changes will not be made to your order if you do not activate them before the date mentioned<br>
+						Your Reference : {2}</p>');
+				   content_installer.install('cubicInteractionPickedUpEmail.body.text', '<p>
+						This is to confirm your order successfully picked up at {0} on {1}.<br>Thanks for your order.</p>');
+				   content_installer.install('cubicInteractionPickUpWindowExpiredEmail.body.text', '<p>
+						Unfortunately you are not able to activate the order before {0}.<br> Can you please contact us to proceed further and please quote the reference : {1} </p>');
+				   content_installer.install('cubicInteractionErrorEmail.body.text', '<p>
+						Unfortunately your attempt to activate the order at {0} on {1} has failed.<br> Can you please contact us to proceed further and please quote the reference : {2} </p>');				
+				end;
+				]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

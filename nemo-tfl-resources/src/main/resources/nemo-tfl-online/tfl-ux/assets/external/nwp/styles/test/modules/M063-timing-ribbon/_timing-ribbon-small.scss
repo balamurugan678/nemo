@@ -1,0 +1,211 @@
+/**************************************************
+	M063-timing-ribbon
+* Author: Andrew Spencer
+* Created: 17/10/2013
+* Pattern library URL: 
+**************************************************/
+
+.TDM-table {
+  display: none;
+}
+
+.TDM-chart {
+  position: relative;
+  margin-top: 20px;
+  height: 182px;
+  width: 100%;
+  cursor: default;
+  overflow: visible;
+  background-color: #F4F4F4;
+}
+
+.TDM-box {
+  position: relative;
+  margin: 0 0 20px 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #F4F4F4;
+  display: block;
+}
+
+.barCollection {
+  width: 100%;
+  position: relative;
+  top: 30px;
+  height: 110px;
+  background-color: white;
+}
+
+.TDM-bar {
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  background-color: #99CC33;
+  //margin-left: -1px;
+  //border-left: 1px dashed rgba(0, 0, 0, .2);;
+  border-bottom: 3px solid rgba(0, 0, 0, .1)
+}
+
+.TDM-column {
+  float: left;
+  height: 110px;
+  width: 8.33%;
+  position: relative;
+  display: inline;
+  //border-left: 1px dashed rgba(0, 0, 0, .2);
+  z-index: 2;
+  &:before {
+    content: attr(data-content);
+    position: absolute;
+    font-size: 11px;
+    top: -20px;
+    left: -1px;
+  }
+  &:after {
+    width: 0px;
+    content: '';
+    border-left: 1px dashed rgba(0, 0, 0, .2);
+    height: 100%;
+    background: none;
+    left: 0;
+    position: absolute;
+  }
+
+  &:nth-child(even) {
+    &:before {
+      content: "";
+    }
+    height: 100px;
+    top: 10px;
+
+    .hatch-box {
+      top: 0px;
+    }
+  }
+
+  .hatch-box {
+    background-image: url('/static/1/images/TDM-stripe-pattern.png');
+    background-repeat: repeat;
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    top: 10px;
+    right: -10px;
+    height: 100px;
+  }
+
+  .connected-hatch {
+    right: 0px;
+  }
+  .follow-hatch {
+    left: -0px;
+    right: -10px;
+  }
+  .middle-hatch {
+    left: -0px;
+    right: 0px;
+  }
+}
+
+.chartedge-top {
+
+  width: 100%;
+  height: 40px;
+  top: 0px;
+  background-color: #F4F4F4;
+  clear: both;
+  position: absolute;
+  z-index: 1;
+}
+
+.chartedge-bottom {
+  display: block;
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  bottom: 0px;
+  background-color: #F4F4F4;
+  padding: 10px;
+  .chart-scale {
+    position: absolute;
+    left: 35px;
+    &:before {
+      content: " ";
+      background-image: url('/static/1/images/TDM-stripe-pattern.png');
+      background-repeat: repeat;
+      position: absolute;
+      left: -35px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+
+  a {
+    &:hover {
+      .text-link {
+        text-decoration: underline;
+      }
+
+    }
+  }
+  .text-link {
+
+    right: 40px;
+    position: absolute;
+    &:before {
+      @include svg-icon(12, 3);
+      position: absolute;
+      top: -5px;
+      left: 80px;
+      content: ' ';
+    }
+  }
+}
+
+//
+//	
+//	.content{
+//		margin-left: 20px;
+//		border-bottom: 2px;
+//	}
+
+//	.TDM-chart {
+//		margin-top: 50px; 
+//		border: 1px solid #C8C8C8;
+//		border-right: 3px solid #E0E0E0;
+//		border-left: 3px solid #E0E0E0;
+//		width:297px;
+//	}
+
+//	.TDM-column {
+//		float: left;
+//		height: 100px;
+//		position: relative;
+//		display: inline;
+//		border-left: 1px dashed #B0B0B0;
+//
+//		&:before {
+//			content: attr(data-content);
+//			position: absolute;
+//			font-size: 12px;
+//			top: -20px;
+//			left: -16px;
+//		}
+//	}
+
+//	.chartedge-top {
+//		width:594px; 
+//		height:40px;
+//		position: relative; 
+//		background-color: #F8F8F8;
+//		clear: both;
+//			display: block;
+//	}
+//
+//	.chartedge-bottom {
+//		display: block;
+//	}
+
+	

@@ -1,0 +1,128 @@
+/**************************************************
+	C5 Calendar view
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/C6+-+Calendar+view
+
+**************************************************/
+
+.fc-calendar-wrapper {
+  border: 1px solid $light-grey-border-colour;
+  min-width: 240px;
+  .current-month {
+    //@extend %new-johnson;
+    text-align: center;
+    font-size: 16px;
+    background-color: $darker-subtle-grey;
+    padding: 5px;
+    position: relative;
+    .calendar-previous-month, .calendar-next-month {
+      @extend %main-gradient-with-border;
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      top: 0;
+      display: block;
+      padding: 0;
+      &.disabled {
+        @extend %alt-gradient-with-border;
+        @include linear-gradient(bottom, darken(#DCDCDC, 10%) 0%, darken(#DCDCDC, 10%) 2px, darken(#F3F3F3, 10%) 2px, darken(#FFFFFF, 10%) 100%, $fallback: darken(#F3F3F3, 10%));
+        cursor: default;
+      }
+    }
+    .calendar-previous-month {
+      left: 0px;
+      &:after {
+        content: "";
+        @extend %standard-sprite;
+        @include svg-icon-position-only(19, 2);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    .calendar-next-month {
+      right: 0;
+      &:after {
+        content: "";
+        @extend %standard-sprite;
+        @include svg-icon-position-only(21, 2);
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  .fc-calendar {
+    background: #fff;
+    .fc-head {
+      height: 35px;
+      padding: 6px;
+      border-bottom: 1px solid $lighter-grey-border-colour;
+      > div {
+        text-align: center;
+      }
+    }
+    .fc-row > div, .fc-head > div {
+      float: left;
+      height: 100%;
+      width: 14.28%; /* 100% / 7 */
+      position: relative;
+    }
+    .fc-row {
+      border-bottom: 1px solid $lighter-grey-border-colour;
+      height: 45px;
+      a {
+        text-align: center;
+        margin-top: 5px;
+      }
+      .highlighted-day {
+        background: $disruption-colour;
+        color: $linkcolour;
+        font-weight: bold;
+        a {
+          border-bottom: 3px solid transparent;
+          &:hover, &:focus {
+            border-bottom: 3px solid #feb914;
+          }
+        }
+      }
+      &:last-child {
+        border-bottom: none;
+      }
+      > div {
+        border-right: 1px solid $lighter-grey-border-colour;
+        position: relative;
+        font-weight: normal;
+        &:hover {
+          //border-bottom: 3px solid $linkcolour;
+        }
+        &:empty {
+          background: $subtle-grey;
+          border-bottom: none;
+        }
+        &.fc-today {
+          font-weight: bold;
+          border: 1px solid $dark-grey;
+        }
+        > span.fc-date {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 20px;
+          height: 20px;
+          margin-top: -10px;
+          margin-left: -10px;
+          text-align: center;
+        }
+        > span.fc-weekday {
+          display: none;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

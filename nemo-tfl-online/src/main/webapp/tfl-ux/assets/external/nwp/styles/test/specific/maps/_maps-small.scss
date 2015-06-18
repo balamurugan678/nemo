@@ -1,0 +1,79 @@
+.map-sliver-container {
+  display: block;
+  position: relative;
+  z-index: 0;
+  .active-map & {
+    //  display: none;
+  }
+}
+
+.map-sliver {
+  height: 63px;
+  border-bottom: 3px solid $transparent-light-grey-border-colour;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  outline: none;
+
+  &.loading {
+    border-bottom: 0;
+  }
+}
+
+.sliver-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+body.active-map {
+  overflow: hidden;
+  #container {
+    display: none;
+  }
+}
+
+.map-panel {
+  .stage-active & {
+    position: absolute;
+    //width: 100%;
+    height: 100%;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    top: -80px;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    transform: translateY(100%);
+    -webkit-transition: -webkit-transform 0.3s, top 0.3s;
+    -moz-transition: -moz-transform 0.3s, top 0.3s;
+    -ms-transition: -ms-transform 0.3s, top 0.3s;
+    transition: transform 0.3s, top 0.3s;
+    z-index: 1001;
+    &.loading {
+      &:after {
+        top: 5px;
+        margin-top: 0;
+      }
+    }
+    &.full-panel {
+      overflow-y: auto;
+      top: 0;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+}
+
+.routes-map-and-panel, .maps-page-map, .embedded-map-wrapper {
+  margin-bottom: 20px;
+}

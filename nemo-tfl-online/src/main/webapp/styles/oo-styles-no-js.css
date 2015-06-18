@@ -1,0 +1,24 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.4.3 on 17-04-2014@03:04  by Creative*/
+.no-js .hidden-content-editable-form {
+  display: block;
+}
+.no-js .csc-toggle-content-start-hidden {
+  border-top: 1px solid #cccccc;
+}
+.no-js .oo-selector span:before {
+  border: 0;
+  width: 0;
+  height: 0;
+}
+.no-js .oo-selector select {
+  margin-top: 40px;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.no-js .label-in-accordian {
+  padding: 0;
+}
+.no-js .filter-submit.hidden {
+  display: block;
+}

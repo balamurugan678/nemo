@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.10">
+        <createProcedure schemaName="${schemaName}">
+            <![CDATA[
+create or replace package body system_parameter_installer
+as
+
+  l_user_id varchar2(64) := 'Installer';
+  l_error_prefix varchar2(16) := 'Error: ';
+  l_error_code_message_separator varchar2(16) := '; ';
+
+  procedure install
+  (p_code varchar
+  ,p_value varchar
+  ,p_purpose varchar)
+  is
+
+    l_id number;
+
+    cursor c_parameter(p_code varchar)
+    is
+      select p.id
+      from   systemparameter p
+      where  p.code = p_code;
+
+  begin
+
+    open c_parameter(p_code);
+    fetch c_parameter into l_id;
+    if c_parameter%notfound
+    then
+
+      insert into systemparameter
+      (id, createduserid, createddatetime, code, value, purpose)
+      values
+      (systemparameter_seq.nextval, l_user_id, sysdate, p_code, p_value, p_purpose);
+
+    else
+
+      update systemparameter
+      set    value = p_value
+      ,      purpose = p_purpose
+      ,      modifieduserid = l_user_id
+      ,      modifieddatetime = sysdate
+      where  id = l_id;
+
+    end if;
+    close c_parameter;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end install;
+
+  procedure un_install
+  (p_code varchar)
+  is
+
+  begin
+
+    delete from systemparameter
+    where  code = p_code;
+
+  exception
+    when others then
+      rollback;
+      raise_application_error(-20000, l_error_prefix || sqlcode || l_error_code_message_separator || sqlerrm);
+
+  end un_install;
+
+end system_parameter_installer;
+            ]]>
+        </createProcedure>
+        <rollback>
+            drop package body system_parameter_installer;
+        </rollback>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,112 @@
+/**************************************************
+	M001 Accordion
+
+* Author: 
+* Created: 
+* Pattern library URL: \\Google Drive\NWP\Front-end\Pattern library\Modules\M001-accordion
+
+**************************************************/
+
+.accordion {
+  margin-bottom: 20px;
+  .expandable-box {
+    .accordion-heading, .controls {
+      border-bottom: none;
+    }
+    .start-hidden {
+      border-top: 1px solid $light-grey-border-colour;
+    }
+    &:last-child {
+      .accordion-heading {
+        border-bottom: 1px solid $light-grey-border-colour;
+      }
+      .expanded {
+        .start-hidden {
+          border-top: none;
+          border-bottom: 1px solid $light-grey-border-colour;
+        }
+      }
+    }
+    .expanded {
+      .start-hidden {
+        border-bottom: none;
+      }
+    }
+    .content {
+      border-bottom: 0px none;
+    }
+  }
+}
+
+.accordion.basic {
+  overflow: hidden;
+  margin: -1px 0 11px;
+
+  .expandable-box {
+    position: relative;
+    top: 1px;
+    left: 0;
+    background-color: $darker-subtle-grey;
+
+    .content {
+      margin-left: 0px;
+      border-style: solid;
+      border-width: 0px 0px 1px;
+      border-color: $light-grey-border-colour;
+      margin: 0px 11px;
+      background-color: transparent;
+
+      .accordion-heading {
+        display: block;
+        padding-left: 0;
+        padding-right: 30px;
+        border: 0px;
+        *height: 26px;
+
+        @extend %new-johnson-bold;
+        color: $dark-grey;
+        font-size: 20px;
+        text-decoration: none;
+        position: relative;
+
+        &:active {
+          background-color: transparent;
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          position: absolute;
+          right: -10px;
+          top: 9px;
+          @extend %standard-sprite;
+          @include svg-icon-position-only(23, 1);
+        }
+      }
+
+      .start-hidden {
+        border: 0px;
+      }
+
+      &.expanded {
+        background-color: #fff;
+        border-width: 1px 1px 3px;
+        margin: -1px 0 0;
+
+        .accordion-heading {
+          padding-left: 10px;
+          border-bottom: 1px solid $light-grey-border-colour;
+
+          &:after {
+            right: 0px;
+            @include svg-icon-position-only(24, 1);
+          }
+        }
+      }
+    }
+
+    &:last-child .content.expanded {
+      border-width: 1px 1px 4px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+    <changeSet author="Novacroft" id="11.0.21">
+        <sql>
+            <![CDATA[
+INSERT INTO ${innovatorNewSchemaName}.project
+( ID
+, DISABLED
+, CREATEDDATE
+, STARTDATE
+, ENDDATE
+, DESCRIPTION
+, ORGANISATIONID)
+SELECT 'TFL_OYSTER',
+  'N',
+  SYSDATE,
+  SYSDATE,
+  NULL,
+  'TfL Oyster Scheme',
+  'TFL'
+FROM DUAL
+WHERE NOT exists(SELECT
+                   id
+                 FROM ${innovatorNewSchemaName}.project
+                 WHERE id = 'TFL_OYSTER');
+
+INSERT INTO ${innovatorNewSchemaName}.ORGANISATIONACCESS
+SELECT ORGANISATIONID,
+  'TFL_OYSTER'
+FROM ${innovatorNewSchemaName}.ORGANISATIONACCESS
+WHERE projectid = 'TFL_CCS0506';
+]]>
+        </sql>
+    </changeSet>
+</databaseChangeLog>

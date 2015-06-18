@@ -1,0 +1,303 @@
+﻿/**************************************************
+	B2 Form
+
+* Author: 
+* Created: 
+* Pattern library URL: https://tflonline.atlassian.net/wiki/display/NWP/B2+-+Form
+
+**************************************************/
+
+.selector {
+  padding: 0;
+  margin-bottom: 10px;
+  height: 40px;
+  background-color: #fff;
+  border: 1px solid $light-grey-border-colour;
+  select, span {
+    display: block;
+    position: relative;
+    z-index: 52;
+    appearance: normal;
+    -moz-appearance: normal;
+    -webkit-appearance: normal;
+  }
+  select {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    border: 0;
+    padding: 0;
+    width: 100%;
+    height: 37px;
+    line-height: 40px;
+    cursor: pointer;
+    top: -40px;
+  }
+  span {
+    height: 40px;
+    line-height: 30px;
+    padding: 4px 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    &:after {
+      content: "";
+      position: absolute;
+      @include svg-icon(22, 1);
+      top: 2px;
+      right: 0;
+      background-color: #fff;
+    }
+    &.downloading:after {
+      @extend .throbber-blue-small;
+    }
+    &:before {
+      content: "";
+      @include background-image(linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%));
+      position: absolute;
+      right: 32px;
+      top: 0;
+      bottom: 2px;
+      height: auto;
+      width: 15px;
+    }
+  }
+  &.focus {
+    border: 1px dashed $linkcolour;
+  }
+  &.disabled {
+    filter: Alpha(opacity=30);
+    opacity: 0.3;
+    select {
+      cursor: default;
+    }
+  }
+}
+
+.checkbox-list, .radiobutton-list {
+  margin-bottom: 10px;
+  input[type="checkbox"] {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  ul {
+    margin-left: 0;
+    list-style-type: none;
+    border-top: 1px solid $light-grey-border-colour;
+    border-left: 1px solid $light-grey-border-colour;
+    border-right: 1px solid $light-grey-border-colour;
+  }
+  li {
+    position: relative;
+    @extend %alt-gradient;
+    border-bottom: 1px solid $light-grey-border-colour;
+    &.ticked {
+      background: #fff;
+      label:after {
+        @extend %sprite-images;
+        @include svg-icon(25, 1, 25px, 24px, -4px, -4px);
+      }
+    }
+    &.focus {
+      border: 1px dashed $linkcolour;
+      margin: -1px -1px 0px -1px;
+    }
+  }
+  input {
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    top: 9px;
+  }
+  label {
+    cursor: pointer;
+    display: block;
+    color: #000;
+    padding: 7px 37px 7px 5px;
+    &:after {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      content: "";
+      margin-top: -13px;
+      line-height: 14px;
+      height: 24px;
+      width: 25px;
+      border: 1px solid $light-grey-border-colour;
+      background-color: #fff;
+      text-indent: 0;
+      @extend %shaded-input;
+    }
+  }
+}
+
+.radiobutton-list {
+  input[type="radio"] {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  label:after {
+    border-radius: 12px;
+  }
+  li.ticked {
+    label {
+      &:after {
+        @extend %sprite-images;
+        @include svg-icon(37, 1, 24px, 24px, -4px, -4px);
+        height: 24px;
+        width: 25px;
+      }
+    }
+  }
+}
+
+.styled-checkbox {
+  position: relative;
+  input[type="checkbox"] {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  }
+  label {
+    position: relative;
+    padding-left: 5px;
+    &:before {
+      position: absolute;
+      left: -27px;
+      top: 10px;
+      content: "";
+      margin-top: -13px;
+      line-height: 14px;
+      height: 24px;
+      width: 25px;
+      border: 1px solid $light-grey-border-colour;
+      background-color: #fff;
+      @extend %shaded-input;
+    }
+    &.heading {
+      display: inline;
+    }
+  }
+  &.ticked label:before {
+    @extend %sprite-images;
+    @include svg-icon(25, 1, 25px, 24px, -4px, -4px);
+  }
+  &.focus label:before {
+    border: 1px dashed $linkcolour;
+  }
+}
+
+.field-validation-error, .field-validation-information, .field-validation-suggestion {
+  clear: both;
+  display: block;
+  padding: 10px 10px 10px 50px;
+  position: relative;
+  &:before {
+    content: "";
+    @extend %standard-sprite;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    margin-top: -16px;
+  }
+  &.hidden {
+    display: none;
+  }
+}
+
+.field-validation-error {
+  color: $error-colour;
+  background-color: $error-text-background-colour;
+  &:before {
+    @include svg-icon-position-only(27, 2);
+  }
+}
+
+.field-validation-information {
+  //color: $disruption-colour;
+  background-color: $disruption-colour;
+  &:before {
+    @include svg-icon-position-only(27, 1);
+  }
+}
+
+.field-validation-suggestion {
+  //color: $disruption-colour;
+  background-color: $suggestion-colour;
+  &:before {
+    @include svg-icon-position-only(61, 3);
+  }
+}
+
+#search-filter {
+  margin-bottom: 65px;
+  input {
+    @extend %float-left;
+  }
+
+  input[type="text"] {
+    margin: 5px 25px 0 0;
+    width: 75%;
+  }
+
+  input[type="submit"] {
+    width: 20%;
+  }
+}
+
+.twitter-typeahead.downloading:not(.geocoded):after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 34px;
+  background-color: #fff;
+  @extend .throbber-blue-small;
+  input[type="text"] {
+    margin-right: 64px;
+  }
+}
+
+.horizontal-toggle-buttons {
+  margin: 0 0 10px;
+  list-style: none outside none;
+  li {
+    float: left;
+    border: 1px solid $light-grey-border-colour;
+    border-bottom: 3px solid $light-grey-border-colour;
+    background-color: $subtlest-grey;
+    position: relative;
+    color: $linkcolour;
+  }
+  label {
+    display: block;
+    padding: 6px 5px 6px 5px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .selected {
+    background-color: #fff;
+    color: $dark-grey;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    margin-top: 2px;
+    label {
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 5px;
+        @extend %standard-sprite;
+        @include svg-icon-position-only(25, 1);
+      }
+    }
+  }
+  .focus {
+    border-color: $linkcolour;
+    border-style: dashed;
+  }
+  input {
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+  }
+}
+

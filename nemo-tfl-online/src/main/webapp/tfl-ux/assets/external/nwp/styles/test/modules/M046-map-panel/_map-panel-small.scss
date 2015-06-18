@@ -1,0 +1,193 @@
+/**************************************************
+	M046-map-panel
+
+* Author: Adrian Osmond
+* Created: 07/10/2013
+* Pattern library URL: Google Drive\NWP\Front-end\Pattern library\Modules\M046-map-panel
+
+**************************************************/
+
+.map-panel {
+  background-color: $dark-grey;
+  color: #fff;
+  position: relative;
+  padding: 15px;
+  //display: none;
+  .showing-map-panel & {
+    display: block;
+  }
+  .close3-icon {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    z-index: 10;
+  }
+  .nearby-list-heading {
+    @extend %new-johnson-bold;
+    display: block;
+    font-size: 20px;
+    padding-top: 3px;
+    line-height: 26px;
+  }
+  .nearby-mode-information {
+    position: static;
+    float: left;
+    height: 35px;
+    margin: -2px 5px 0 -2px;
+    .mode-icon {
+      width: 31px;
+      position: static;
+      float: left;
+    }
+  }
+  .nearby-mode-details {
+    padding: 0 20px 3px 0px;
+    margin-bottom: 15px;
+  }
+  .mode-icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding-top: 7px;
+    text-align: center;
+  }
+
+  .multi-modal-station {
+    .mode-icon {
+      display: none;
+    }
+  }
+
+  &.loading {
+    min-height: 80px;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      @extend .throbber;
+      top: 50%;
+      left: 50%;
+      margin-top: -35px;
+      margin-left: -35px;
+    }
+    > .map-panel-info {
+      display: none;
+    }
+  }
+
+  .map-panel-info > .link-button {
+    + .link-button {
+      margin-top: -21px;
+    }
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  .widget-wrapper {
+    color: #333;
+  }
+
+  .map-panel-heading {
+    @extend %new-johnson-bold;
+    display: block;
+    font-size: 20px;
+    padding-top: 3px;
+    line-height: 26px;
+    position: relative;
+    padding-left: 33px;
+    padding-right: 20px;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -4px;
+      top: 50%;
+      margin-top: -16px;
+      @extend %standard-sprite;
+    }
+    &.Minimal:after {
+      @include svg-icon-position-only(44, 1);
+    }
+    &.Moderate:after {
+      @include svg-icon-position-only(44, 2);
+    }
+    &.Serious:after {
+      @include svg-icon-position-only(44, 3);
+    }
+    &.Severe:after {
+      @include svg-icon-position-only(45, 1);
+    }
+
+    &.jam-cam:after {
+      @include svg-icon-position-only(68, 3);
+    }
+    &.variable-message:after {
+      @include svg-icon-position-only(69, 3);
+    }
+    &.coach:after {
+      @include svg-icon-position-only(47, 1);
+    }
+
+  }
+  .map-panel-subheading {
+    font-weight: normal;
+    padding-left: 33px;
+    text-transform: capitalize;
+  }
+
+  .map-panel-content {
+    background-color: #fff;
+    color: $dark-grey;
+    padding: 15px;
+
+    .description {
+      margin-bottom: 15px;
+    }
+
+    .cost {
+      padding-left: 32px;
+      position: relative;
+      min-height: 28px;
+      vertical-align: middle;
+
+      &:before {
+        content: "";
+        @extend %standard-sprite;
+        @include svg-icon-position-only(55, 2);
+        position: absolute;
+        left: -5px;
+        top: 50%;
+        margin-top: -16px;
+      }
+    }
+
+    & > :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .contact {
+    background: #fff;
+    padding: 10px 15px 10px 42px;
+    color: $dark-grey;
+    position: relative;
+    margin-top: 15px;
+
+    &:before {
+      content: "";
+      @extend %standard-sprite;
+      @include svg-icon-position-only(39, 3);
+      position: absolute;
+      left: 7px;
+      top: 50%;
+      margin-top: -16px;
+    }
+  }
+}
+

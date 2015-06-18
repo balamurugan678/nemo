@@ -1,0 +1,3 @@
+This is the "specific" folder, the intended use of this folder is for unique instances , usually pages, which require additional styling, e.g. an unconventionally layout for a particular page.
+
+At the time of first refactoring, this has stylesheets from the old system , which need breaking down into particular modules.

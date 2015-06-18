@@ -1,0 +1,27 @@
+/* HTML, CSS and JS Templates for Oyster Online 
+ Build v0.4.3 on 17-04-2014@03:04  by Creative*/
+@charset "CP850";
+.breadcrumb-container .breadcrumbs a:after, .breadcrumb-container .breadcrumbs .last-breadcrumb:after, .breadcrumb-container .breadcrumbs .last-breadcrumb:before {
+  border-style: dotted;
+  border-width: 0;
+  border-color: blue;
+}
+.breadcrumb-container .breadcrumbs a:before {
+  border-style: dotted;
+  border-width: 0;
+  border-color: blue;
+}
+
+.breadcrumbs li.home a span {
+  position: static;
+}
+
+.breadcrumbs li {
+  background-color: white;
+}
+
+.breadcrumbs .last-breadcrumb:before {
+  display: block;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAA+CAYAAADatWDQAAAAGXRFW…EWr2qr5b+79CXnPv6LBV9n36hgcROwWrzFDz7b2rN/AQYA/WvmH7gCu90AAAAASUVORK5CYII=);
+  right: 100%;
+}
